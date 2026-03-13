@@ -33,7 +33,7 @@ async def fetch_all_papers(client, limit: int = None) -> list[dict]:
 
 
 async def update_citations_batch(
-    supabase,
+    db_client,
     updates: list[tuple[str, int]],
     batch_size: int = 100,
 ) -> int:
@@ -45,7 +45,7 @@ async def update_citations_batch(
 
         for arxiv_id, citation_count in batch:
             try:
-                if supabase.update_paper(arxiv_id, {"citation_count": citation_count}):
+                if db_client.update_paper(arxiv_id, {"citation_count": citation_count}):
                     updated += 1
             except Exception as e:
                 logger.warning(f"Failed to update {arxiv_id}: {e}")
@@ -66,13 +66,13 @@ async def main():
 
     setup_logging()
 
-    supabase = get_db_client()
+    db_client = get_db_client()
     s2_client = SemanticScholarClient(batch_size=min(args.batch_size, 500))
 
     try:
         # Fetch papers from database
         logger.info("Fetching papers from database...")
-        papers = await fetch_all_papers(supabase, limit=args.limit)
+        papers = await fetch_all_papers(db_client, limit=args.limit)
         logger.info(f"Total papers: {len(papers)}")
 
         # Get arxiv IDs
@@ -106,7 +106,7 @@ async def main():
         # Update database
         logger.info("Updating database with citation counts...")
         updates = [(arxiv_id, count) for arxiv_id, count in citations.items()]
-        updated = await update_citations_batch(supabase, updates)
+        updated = await update_citations_batch(db_client, updates)
 
         logger.info(f"Updated {updated} papers in database")
 

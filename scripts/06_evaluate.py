@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-arXiv RAG v1 - Search Quality Evaluation Script (Optimized)
+arXiv RAG v3 - Search Quality Evaluation Script
 
 Evaluates search quality using:
 - Mean Reciprocal Rank (MRR)
@@ -24,22 +24,16 @@ import json
 import sys
 import time
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
+import shutil
 from typing import Optional
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.rag.retriever import (
-    HybridRetriever,
-    HybridFullRetriever,
-    OpenAIRetriever,
-    ColBERTRetriever,
-    SearchResponse,
-)
-from src.rag.qdrant_retriever import (
-    QdrantHybridRetriever,
-)
+from src.rag.retriever import SearchResponse
+from src.rag.qdrant_retriever import QdrantHybridRetriever
 
 
 @dataclass
@@ -74,6 +68,16 @@ class EvalMetrics:
     difficulty: str = ""
 
 
+V2_RESULT_BACKUP_TARGETS = [
+    Path("data/eval/full_corpus_v2.json"),
+    Path("data/eval/full_corpus_eval.json"),
+    Path("data/eval/synthetic_eval.json"),
+    Path("data/eval/v2_batch_test.json"),
+    Path("data/eval/parallel_results"),
+    Path("data/eval/old"),
+]
+
+
 class RetrieverPool:
     """
     Type-based retriever pool for efficient model reuse.
@@ -86,27 +90,7 @@ class RetrieverPool:
     """
 
     def __init__(self):
-        self._hybrid: Optional[HybridRetriever] = None
-        self._hybrid_full: Optional[HybridFullRetriever] = None
         self._qdrant: Optional[QdrantHybridRetriever] = None
-        self._openai: Optional[OpenAIRetriever] = None
-        self._colbert: Optional[ColBERTRetriever] = None
-
-    @property
-    def hybrid(self) -> HybridRetriever:
-        """Get or create HybridRetriever (Supabase-based)."""
-        if self._hybrid is None:
-            print("  [Pool] Loading HybridRetriever (BGE-M3)...")
-            self._hybrid = HybridRetriever()
-        return self._hybrid
-
-    @property
-    def hybrid_full(self) -> HybridFullRetriever:
-        """Get or create HybridFullRetriever (dense + sparse + ColBERT)."""
-        if self._hybrid_full is None:
-            print("  [Pool] Loading HybridFullRetriever (BGE-M3 + ColBERT)...")
-            self._hybrid_full = HybridFullRetriever()
-        return self._hybrid_full
 
     @property
     def qdrant(self) -> QdrantHybridRetriever:
@@ -116,22 +100,6 @@ class RetrieverPool:
             self._qdrant = QdrantHybridRetriever()
         return self._qdrant
 
-    @property
-    def openai(self) -> OpenAIRetriever:
-        """Get or create OpenAIRetriever (API-based, no GPU)."""
-        if self._openai is None:
-            print("  [Pool] Loading OpenAIRetriever (API)...")
-            self._openai = OpenAIRetriever()
-        return self._openai
-
-    @property
-    def colbert(self) -> ColBERTRetriever:
-        """Get or create ColBERTRetriever."""
-        if self._colbert is None:
-            print("  [Pool] Loading ColBERTRetriever (BGE-M3)...")
-            self._colbert = ColBERTRetriever()
-        return self._colbert
-
     def unload_all(self) -> None:
         """
         Unload all cached retrievers to free GPU memory.
@@ -140,36 +108,12 @@ class RetrieverPool:
         """
         print("  [Pool] Unloading all retrievers...")
 
-        if self._hybrid is not None:
-            try:
-                self._hybrid.unload_models()
-            except Exception:
-                pass
-            self._hybrid = None
-
-        if self._hybrid_full is not None:
-            try:
-                self._hybrid_full.unload_models()
-            except Exception:
-                pass
-            self._hybrid_full = None
-
         if self._qdrant is not None:
             try:
                 self._qdrant.unload_models()
             except Exception:
                 pass
             self._qdrant = None
-
-        if self._colbert is not None:
-            try:
-                self._colbert.unload_models()
-            except Exception:
-                pass
-            self._colbert = None
-
-        # OpenAI doesn't need GPU unload (API-based)
-        self._openai = None
 
         # Clear CUDA cache
         try:
@@ -206,53 +150,28 @@ def evaluate_query_with_pool(
     """
     Evaluate a single query using the retriever pool.
 
-    This function is for NON-RERANK modes only.
+    This function is for NON-RERANK v3 Qdrant modes only.
     Rerank modes should use evaluate_query_with_rerank() instead.
     """
     start_time = time.time()
 
-    # Get the appropriate retriever from pool based on mode
-    if mode == "hybrid":
-        response = pool.hybrid.search(eval_query.query, top_k=top_k)
-    elif mode == "dense":
-        response = pool.hybrid.search_dense_only(eval_query.query, top_k=top_k)
-    elif mode == "sparse":
-        response = pool.hybrid.search_sparse_only(eval_query.query, top_k=top_k)
-    elif mode == "openai":
-        response = pool.openai.search(eval_query.query, top_k=top_k)
-    elif mode == "colbert":
-        import time as time_mod
-        search_start = time_mod.time()
-        results = pool.colbert.search(eval_query.query, top_k=top_k)
-        response = SearchResponse(
-            query=eval_query.query,
-            results=results,
-            total_found=len(results),
-            colbert_count=len(results),
-            search_time_ms=(time_mod.time() - search_start) * 1000,
-        )
-    elif mode == "hybrid_full":
-        response = pool.hybrid_full.search(eval_query.query, top_k=top_k)
-    elif mode == "qdrant_hybrid":
+    # v3 evaluation is Qdrant-only.
+    if mode == "qdrant_hybrid":
         response = pool.qdrant.search(eval_query.query, top_k=top_k)
     elif mode == "qdrant_dense":
         response = pool.qdrant.search_dense_only(eval_query.query, top_k=top_k)
     elif mode == "qdrant_sparse":
         response = pool.qdrant.search_sparse_only(eval_query.query, top_k=top_k)
     elif mode == "qdrant_3large":
-        # OpenAI text-embedding-3-large via Qdrant (dense_3large vector)
         response = pool.qdrant.search_dense_3large(eval_query.query, top_k=top_k)
     elif mode == "qdrant_hybrid_3large":
-        # OpenAI dense (3large) + BGE sparse hybrid via Qdrant
         response = pool.qdrant.search_hybrid_3large(eval_query.query, top_k=top_k)
     elif mode == "qdrant_adaptive":
-        # Adaptive search with query classification + HyDE for conceptual
         response = pool.qdrant.search_adaptive(eval_query.query, top_k=top_k, use_hyde=True)
     elif mode == "qdrant_adaptive_no_hyde":
-        # Adaptive search without HyDE expansion
         response = pool.qdrant.search_adaptive(eval_query.query, top_k=top_k, use_hyde=False)
     else:
-        raise ValueError(f"Unknown non-rerank mode: {mode}")
+        raise ValueError(f"Unknown v3 evaluation mode: {mode}")
 
     search_time = (time.time() - start_time) * 1000
 
@@ -284,71 +203,41 @@ def evaluate_query_with_rerank(
     owns_reranker = reranker is None  # Track if we created it
     owns_retriever = retriever is None  # Track if we created it
 
-    # Use provided retriever or create new one
-    if base_mode in ("hybrid", "dense", "sparse"):
-        if retriever is None:
-            retriever = HybridRetriever()
-        if base_mode == "hybrid":
-            response = retriever.search(eval_query.query, top_k=top_k)
-        elif base_mode == "dense":
-            response = retriever.search_dense_only(eval_query.query, top_k=top_k)
-        else:  # sparse
-            response = retriever.search_sparse_only(eval_query.query, top_k=top_k)
-        # Only unload if we created it
-        if owns_retriever:
-            retriever.unload_models()
-
-    elif base_mode == "hybrid_full":
-        if retriever is None:
-            retriever = HybridFullRetriever()
-        response = retriever.search(eval_query.query, top_k=top_k)
-        if owns_retriever:
-            retriever.unload_models()
-
-    elif base_mode == "colbert":
-        if retriever is None:
-            retriever = ColBERTRetriever()
-        results = retriever.search(eval_query.query, top_k=top_k)
-        response = SearchResponse(
-            query=eval_query.query,
-            results=results,
-            total_found=len(results),
-            colbert_count=len(results),
-            search_time_ms=0,
-        )
-        if owns_retriever:
-            retriever.unload_models()
-
-    elif base_mode in ("qdrant_hybrid", "qdrant_dense", "qdrant_sparse"):
+    # v3 reranking is Qdrant-only.
+    if base_mode in ("qdrant_hybrid", "qdrant_dense", "qdrant_sparse"):
         if retriever is None:
             retriever = QdrantHybridRetriever()
         if base_mode == "qdrant_hybrid":
             response = retriever.search(eval_query.query, top_k=top_k)
         elif base_mode == "qdrant_dense":
             response = retriever.search_dense_only(eval_query.query, top_k=top_k)
-        else:  # qdrant_sparse
+        else:
             response = retriever.search_sparse_only(eval_query.query, top_k=top_k)
-        # Only unload if we created it
         if owns_retriever:
             retriever.unload_models()
-
     elif base_mode == "qdrant_3large":
-        # OpenAI dense_3large via Qdrant (API-based, no GPU unload needed)
         if retriever is None:
             retriever = QdrantHybridRetriever()
         response = retriever.search_dense_3large(eval_query.query, top_k=top_k)
-
     elif base_mode == "qdrant_hybrid_3large":
-        # OpenAI dense + BGE sparse hybrid via Qdrant
         if retriever is None:
             retriever = QdrantHybridRetriever()
         response = retriever.search_hybrid_3large(eval_query.query, top_k=top_k)
-        # Only unload if we created it
         if owns_retriever:
             retriever.unload_models()
-
+    elif base_mode in ("qdrant_adaptive", "qdrant_adaptive_no_hyde"):
+        if retriever is None:
+            retriever = QdrantHybridRetriever()
+        response = retriever.search_adaptive(
+            eval_query.query,
+            top_k=top_k,
+            use_hyde=(base_mode == "qdrant_adaptive"),
+            use_reranker=False,
+        )
+        if owns_retriever:
+            retriever.unload_models()
     else:
-        raise ValueError(f"Unknown rerank mode: {mode}")
+        raise ValueError(f"Unknown v3 rerank mode: {mode}")
 
     # Clear CUDA cache before loading reranker
     try:
@@ -477,9 +366,104 @@ def get_default_eval_queries() -> list[EvalQuery]:
     ]
 
 
+def backup_v2_eval_artifacts(backup_root: Path) -> Path | None:
+    """Copy existing v2 evaluation artifacts to a timestamped backup directory."""
+    existing_targets = [path for path in V2_RESULT_BACKUP_TARGETS if path.exists()]
+    if not existing_targets:
+        return None
+
+    backup_dir = backup_root / f"v2_eval_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    backup_dir.mkdir(parents=True, exist_ok=True)
+
+    for source in existing_targets:
+        destination = backup_dir / source.name
+        if source.is_dir():
+            shutil.copytree(source, destination)
+        else:
+            shutil.copy2(source, destination)
+
+    return backup_dir
+
+
+def filter_queries_for_embedded_papers(queries: list[EvalQuery]) -> tuple[list[EvalQuery], list[dict], dict]:
+    """
+    Filter benchmark queries so v3 evaluation only uses papers present in the embedded corpus.
+
+    Queries with no remaining relevant papers are dropped. Hard negatives are also pruned to
+    embedded papers to avoid stale IDs.
+    """
+    from src.storage import get_db_client
+
+    db_client = get_db_client()
+    embedded_rows = db_client.get_papers(fields=["arxiv_id"], status="embedded", limit=None, order_by="arxiv_id", desc=False)
+    embedded_ids = {row["arxiv_id"] for row in embedded_rows}
+
+    valid_queries: list[EvalQuery] = []
+    invalid_queries: list[dict] = []
+    filtered_relevant = 0
+
+    for query in queries:
+        original_relevant = list(query.relevant_papers)
+        filtered_relevant_papers = [paper_id for paper_id in original_relevant if paper_id in embedded_ids]
+        filtered_hard_negatives = [paper_id for paper_id in query.hard_negatives if paper_id in embedded_ids]
+        filtered_relevant += len(original_relevant) - len(filtered_relevant_papers)
+
+        if not filtered_relevant_papers:
+            invalid_queries.append(
+                {
+                    "query": query.query,
+                    "style": query.style,
+                    "difficulty": query.difficulty,
+                    "category": query.category,
+                    "dropped_relevant_papers": original_relevant,
+                    "reason": "no_relevant_papers_embedded_in_v3",
+                }
+            )
+            continue
+
+        valid_queries.append(
+            EvalQuery(
+                query=query.query,
+                relevant_papers=filtered_relevant_papers,
+                relevant_chunks=query.relevant_chunks,
+                category=query.category,
+                original_relevant_count=len(original_relevant),
+                style=query.style,
+                hard_negatives=filtered_hard_negatives,
+                difficulty=query.difficulty,
+                metadata=query.metadata,
+            )
+        )
+
+    stats = {
+        "input_queries": len(queries),
+        "valid_queries": len(valid_queries),
+        "dropped_queries": len(invalid_queries),
+        "embedded_paper_count": len(embedded_ids),
+        "filtered_relevant_papers": filtered_relevant,
+    }
+    return valid_queries, invalid_queries, stats
+
+
+def save_query_filter_artifacts(base_path: Path, valid_queries: list[EvalQuery], invalid_queries: list[dict], stats: dict) -> None:
+    """Persist filtered benchmark inputs for reproducible v3 evaluation."""
+    base_path.parent.mkdir(parents=True, exist_ok=True)
+
+    valid_payload = [q.__dict__ for q in valid_queries]
+    invalid_path = base_path.with_name(f"{base_path.stem}.invalid{base_path.suffix}")
+    stats_path = base_path.with_name(f"{base_path.stem}.stats.json")
+
+    with base_path.open("w", encoding="utf-8") as f:
+        json.dump(valid_payload, f, indent=2, ensure_ascii=False)
+    with invalid_path.open("w", encoding="utf-8") as f:
+        json.dump(invalid_queries, f, indent=2, ensure_ascii=False)
+    with stats_path.open("w", encoding="utf-8") as f:
+        json.dump(stats, f, indent=2, ensure_ascii=False)
+
+
 def run_evaluation(
     queries: list[EvalQuery],
-    modes: list[str] = ["hybrid", "dense", "sparse"],
+    modes: list[str] = ["qdrant_hybrid", "qdrant_dense", "qdrant_sparse"],
     top_k: int = 10,
     use_reranker: bool = False,
     lightweight_reranker: bool = False,
@@ -771,11 +755,11 @@ def main():
     parser.add_argument(
         "--modes",
         nargs="+",
-        default=["hybrid", "dense", "sparse"],
-        help="""Search modes to evaluate. Available modes:
-            Supabase: hybrid, dense, sparse, openai, colbert, hybrid_full
+        default=["qdrant_hybrid", "qdrant_dense", "qdrant_sparse"],
+        help="""Search modes to evaluate. Preferred v3 modes:
             Qdrant: qdrant_hybrid, qdrant_dense, qdrant_sparse, qdrant_3large, qdrant_hybrid_3large
             Adaptive: qdrant_adaptive (with HyDE), qdrant_adaptive_no_hyde
+            Legacy Supabase modes are deprecated and may fail in v3.
             Add '+rerank' suffix for reranking (e.g., qdrant_hybrid+rerank)""",
     )
     parser.add_argument(
@@ -819,8 +803,36 @@ def main():
         default=False,
         help="Show metrics breakdown by difficulty level (easy, medium, hard)",
     )
+    parser.add_argument(
+        "--backup-v2-results",
+        action="store_true",
+        default=False,
+        help="Copy existing v2 evaluation artifacts to a timestamped backup directory before running v3 evaluation",
+    )
+    parser.add_argument(
+        "--backup-dir",
+        type=str,
+        default="data/eval/backups",
+        help="Directory for v2 evaluation backups (default: data/eval/backups)",
+    )
+    parser.add_argument(
+        "--filter-unavailable",
+        action="store_true",
+        default=False,
+        help="Filter benchmark queries to papers that are actually embedded in the current v3 corpus",
+    )
+    parser.add_argument(
+        "--filtered-queries-output",
+        type=str,
+        help="Optional output path for the filtered v3 benchmark query file",
+    )
 
     args = parser.parse_args()
+
+    legacy_modes = {"hybrid", "dense", "sparse", "openai", "colbert", "hybrid_full"}
+    requested_legacy = [m for m in args.modes if m.split("+")[0] in legacy_modes]
+    if requested_legacy:
+        raise SystemExit(f"Legacy Supabase evaluation modes are deprecated in v3: {requested_legacy}")
 
     # Load queries
     if args.queries:
@@ -829,6 +841,20 @@ def main():
             queries = [EvalQuery(**q) for q in query_data]
     else:
         queries = get_default_eval_queries()
+
+    if args.backup_v2_results:
+        backup_dir = backup_v2_eval_artifacts(Path(args.backup_dir))
+        if backup_dir:
+            print(f"Backed up existing v2 evaluation artifacts to: {backup_dir}")
+        else:
+            print("No existing v2 evaluation artifacts found to back up.")
+
+    if args.filter_unavailable:
+        queries, invalid_queries, filter_stats = filter_queries_for_embedded_papers(queries)
+        print(f"Filtered queries for embedded v3 corpus: {filter_stats}")
+        if args.filtered_queries_output:
+            save_query_filter_artifacts(Path(args.filtered_queries_output), queries, invalid_queries, filter_stats)
+            print(f"Saved filtered query artifacts to: {args.filtered_queries_output}")
 
     print(f"Running evaluation with {len(queries)} queries")
     print(f"Modes: {args.modes}")

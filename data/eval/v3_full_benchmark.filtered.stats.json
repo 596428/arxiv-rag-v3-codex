@@ -1,0 +1,7 @@
+{
+  "input_queries": 9544,
+  "valid_queries": 9096,
+  "dropped_queries": 448,
+  "embedded_paper_count": 2376,
+  "filtered_relevant_papers": 448
+}

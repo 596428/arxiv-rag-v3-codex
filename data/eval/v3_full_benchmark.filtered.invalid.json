@@ -1,0 +1,4482 @@
+[
+  {
+    "query": "RLHF PPO DPO effective semantic diversity LLM",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2504.12522v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does preference tuning reduce the diversity of large language model outputs?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2504.12522v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do reinforcement learning techniques affect the balance between syntactic variety and high-quality semantic content in open-ended generation tasks?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2504.12522v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating if training software to match user tastes impacts the range of unique ideas shared while maintaining high standards.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2504.12522v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "DLCoT long chain-of-thought R1 distillation data segmentation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2503.16385v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can we improve long chain-of-thought distillation performance?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2503.16385v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does the DLCoT framework improve long reasoning distillation through data segmentation, simplification, and optimization of intermediate error states?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2503.16385v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Methods for refining extensive step-by-step thinking patterns to move problem-solving abilities across different types of software while improving speed.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2503.16385v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "agentic workflows education reflection multi-agent essay scoring",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2504.20082v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can agentic workflows improve automated essay scoring in classrooms?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2504.20082v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do the four paradigms of reflection, planning, tool use, and collaboration enhance the performance of educational AI agents?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2504.20082v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating a structure where several independent digital thinkers work together to analyze and provide feedback on written school assignments.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2504.20082v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "BiLSTM multi-scale attention sequence pattern mining multivariate time series",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2504.15223v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does multi-scale attention enhance BiLSTM for sequence pattern mining?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2504.15223v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "To what extent does a deep learning architecture using bidirectional recurrent units and adaptive multi-window weighting improve accuracy in complex multivariate time series analysis?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2504.15223v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "An investigation into how processing chronological data from both directions and using variable-sized observation windows improves the recognition of hidden rhythmic behaviors.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2504.15223v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "model parallelism data parallelism LLM recommendation systems hybrid parallelism",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.DC",
+    "dropped_relevant_papers": [
+      "2506.17551v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How to optimize distributed training for large language model recommendation systems?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.DC",
+    "dropped_relevant_papers": [
+      "2506.17551v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do adaptive load-balancing and gradient compression techniques improve training throughput and resource utilization in large-scale distributed neural recommendation engines?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.DC",
+    "dropped_relevant_papers": [
+      "2506.17551v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Strategies for spreading heavy computational workloads across several processors to maximize the speed of suggestion software using extensive datasets.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.DC",
+    "dropped_relevant_papers": [
+      "2506.17551v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Structured Memory Mechanisms gated writing forgetting function context representation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2505.22921v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can structured memory mechanisms improve context retention in language models?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2505.22921v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does the integration of explicit storage units and gated update functions help maintain semantic consistency across extensive text documents and interactions?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2505.22921v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A design for keeping track of important ideas over long periods by using a system that decides what to save and what to discard.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2505.22921v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "knowledge graph fine-tuning GNN gating mechanism structural reasoning",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.14427v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can knowledge graphs improve structural reasoning in large language models?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.14427v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does integrating graph neural networks and gating mechanisms during fine-tuning enhance entity-level semantic understanding and logical consistency in language models?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.14427v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Merging external databases of interconnected facts with neural word predictors to boost their ability to solve problems requiring organized logic.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.14427v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Structured Gradient Guidance few-shot LLM adaptation gradient alignment",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2506.00726v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does structured gradient guidance improve few-shot adaptation in models?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2506.00726v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can gradient direction consistency and magnitude control enhance the stability and generalization of large language models during low-resource fine-tuning?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2506.00726v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Methods for supervising the trajectory of learning signals to ensure reliable updates when teaching intelligent systems using limited demonstration samples.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2506.00726v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Selective embedding deep learning time-domain data loading strategy",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2507.13399v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does selective embedding enhance deep learning model generalization?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2507.13399v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does alternating data segments from multiple sources in a single channel improve training efficiency and robustness for time-series classification tasks?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2507.13399v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "An approach to feeding information into artificial intelligence models that rotates between different data streams to mimic human cognitive perception.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2507.13399v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "contrastive distillation noise-robust training secure alignment LLM fine-tuning",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.27077v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can contrastive distillation improve safety alignment in large language models?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.27077v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does combining contrastive knowledge transfer with robust optimization and noise perturbations enhance the security and semantic consistency of fine-tuned language models?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.27077v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Methods for improving AI behavioral consistency and reliability by copying patterns from an expert while maintaining stability under unpredictable input variations.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.27077v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "human-centered LLM support systems role-based framework evaluation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.HC",
+    "dropped_relevant_papers": [
+      "2511.03729v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can LLMs be used as human-centered support systems?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.HC",
+    "dropped_relevant_papers": [
+      "2511.03729v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the design principles and evaluation metrics for using large language models as companions and coaches in sensitive human-centered settings?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.HC",
+    "dropped_relevant_papers": [
+      "2511.03729v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Guidelines for constructing digital helpers that offer guidance and conflict resolution while focusing on user confidence and lasting benefits.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.HC",
+    "dropped_relevant_papers": [
+      "2511.03729v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "multi-teacher collaborative distillation entropy-driven dynamic weighting parameter-efficient",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2507.15198v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can multiple teacher models improve the distillation of smaller language models?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2507.15198v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does integrating outputs and semantic features from multiple source models through a dynamic weighting mechanism enhance the performance of compressed linguistic systems?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2507.15198v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Methods for shrinking complex computational linguistics tools by aggregating the expertise of various larger versions through an adaptive learning process.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2507.15198v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM ADN dispatch multi-LLM coordination automated modeling",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2507.21162v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do large language models automate active distribution network optimization?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2507.21162v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does a multi-agent framework using large language models improve the efficiency of modeling and code programming for power system operators?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2507.21162v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Automating the mathematical setup of power grid distribution by translating conversational input into executable script using advanced text processors.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2507.21162v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Large Language Models supply chain optimization decision-making automation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2507.21502v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can large language models simplify complex supply chain decision making?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2507.21502v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can generative artificial intelligence reduce the time required for business executives to interpret and update mathematical models in logistics planning?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2507.21502v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using advanced neural conversational systems to help non-experts manage global delivery systems and understand complex analytical recommendations more effectively.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2507.21502v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Aligned Multi Objective Optimization gradient-based multi-task learning",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2502.14096v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can we optimize multiple non-conflicting goals in machine learning?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2502.14096v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Which gradient-based methods provide theoretical guarantees for scaling multi-goal training when different tasks are synergistic rather than competing for resources?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2502.14096v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Techniques for enhancing numerous metrics simultaneously in situations where the different aims are compatible and help one another reach success.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2502.14096v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "deep learning energy-efficient laser cutting CNN VGG16",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2511.14952v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can deep learning reduce energy use in laser cutting machines?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2511.14952v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does a closed-loop system using CNN-based material classification and smoke detection optimize exhaust suction pump power for sustainable manufacturing?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2511.14952v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using image recognition and adaptive feedback loops to minimize power usage in industrial fabrication ventilation systems.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2511.14952v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Gemma3 Llama4 score averaging research quality LLM",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.DL",
+    "dropped_relevant_papers": [
+      "2510.22389v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How well can small language models rate scientific paper quality?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.DL",
+    "dropped_relevant_papers": [
+      "2510.22389v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What is the effectiveness of using small LLMs and score averaging techniques to evaluate the research quality of medical and life science articles?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.DL",
+    "dropped_relevant_papers": [
+      "2510.22389v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating if compact artificial intelligence can judge the caliber of academic writing through repetitive estimation techniques.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.DL",
+    "dropped_relevant_papers": [
+      "2510.22389v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "automated item difficulty prediction transformer-based architectures systematic review large-scale assessment",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.23486v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do text-based approaches model item difficulty in large-scale assessments?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.23486v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the latest findings and performance benchmarks for using language models to predict question hardness in standardized testing?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.23486v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A comprehensive analysis of using software to estimate how hard test questions are based on their written content.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.23486v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "speech-based cognitive screening dementia detection LLM adaptation strategies",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.03525v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How effective is speech-based dementia detection using adapted language models?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.03525v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "The research examines how various tuning and prompting methods for linguistic software impact the accuracy of identifying mental decline from spoken recordings.",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.03525v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Researching different ways to modify computer software to detect memory loss by analyzing patterns in spoken communication.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.03525v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "short answer grading transferability STSB Mohler SPRAG",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.15837v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can existing models be transferred to new short answer grading datasets?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.15837v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do statistical comparisons of semantic similarity across different text collections influence the ability of automated scoring systems to work on new tasks?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.15837v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating whether educational evaluation software built for one group of tests can accurately function when applied to a completely different set of written exams.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.15837v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Innovator-VL multimodal scientific LLM supervised fine-tuning",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2601.19325v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What is the Innovator-VL model for multimodal scientific discovery?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2601.19325v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does Innovator-VL achieve strong scientific reasoning performance through a transparent and data-efficient multimodal training pipeline using limited samples?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2601.19325v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A transparent vision-language framework for specialized analytical tasks that emphasizes data quality and procedural clarity over massive dataset scaling.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2601.19325v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "RECALL model merging representation-aligned hierarchical fusion catastrophic-forgetting",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20479v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can hierarchical model merging reduce catastrophic forgetting in LLMs?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20479v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does aligning internal layer-wise representations during model merging enable effective continual learning without needing access to any historical training data?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20479v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A way to combine different versions of an artificial brain so it remembers old skills while picking up new ones without seeing old lessons.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20479v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "RAEC pipeline DSPy clinical error ontology patient-portal messaging",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.22565v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can LLM-drafted patient portal messages be evaluated effectively?",
+    "style": "natural_short",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.22565v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does a retrieval-augmented evaluation pipeline using a two-stage prompting architecture improve the quality of AI-generated responses in clinical communication?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.22565v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using previous successful correspondences to verify the safety and accuracy of automated replies in a healthcare environment.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.22565v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "GPT-4o DeepSeek-V3 Mixture-of-Experts LLM comparison",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.21377v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do GPT-4o and DeepSeek-V3 compare in LLM applications?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.21377v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the primary trade-offs between closed source models like GPT-4o and open source Mixture-of-Experts architectures like DeepSeek-V3 across different industries?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.21377v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Comparing proprietary versus publicly accessible massive linguistic processing systems regarding their operational constraints and performance in various professional sectors.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.21377v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "test-time scaling, verification design, reward models, process-based verification, inference scaling laws",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.16665v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the current verification strategies for scaling performance during inference?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.16665v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can different types of outcome and process verifiers be categorized and used to optimize the decoding search space of large language models?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.16665v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A detailed overview of techniques used to assess and improve the reasoning quality of machine learning systems while they are running.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2508.16665v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "representational alignment, unimodal networks, semantic code, Pick-a-Pic task, exemplar aggregation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2509.20751v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Do separate vision and language models share a common internal representation?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2509.20751v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does the convergence of internal data structures in separate image and text processors reflect human-like understanding and semantic consistency across different layers?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2509.20751v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating whether separate digital tools for processing different types of information spontaneously develop similar hidden patterns that correspond to human thought.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2509.20751v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "BERT self-attention context similarity matrix token vector similarities",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.21956v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does the BERT architecture utilize self-attention for text segmentation?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.21956v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does measuring the scalar products between internal word representations across different neural network layers reveal the specialized functions of individual processing units?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.21956v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating the internal patterns of how deep learning models prioritize specific elements in a sequence to understand their underlying organizational logic.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.21956v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "structure-aware decoding complex entity extraction nested overlapping entities candidate span generation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.13980v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can language models extract nested and overlapping entities?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.13980v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the benefits of using structure-aware decoding and candidate span generation for improving the recognition of complex hierarchical entities in long documents?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.13980v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Identifying items that sit inside or run across one another within documents by focusing on the underlying organization and connections.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.13980v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "neuro-theoretical framework human cognition explainable artificial intelligence",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.00683v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can neuro-theoretical frameworks improve the explainability of artificial intelligence?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.00683v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can a biologically inspired theoretical model provide a unifying explanation for cognitive processes like decision-making while reducing the operational costs of intelligent systems?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.00683v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A way of organizing computer thought based on how living organisms process information to make digital reasoning clearer and less expensive.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.00683v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Gricean pragmatics Relevance Theory implied meanings LLM",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.26253v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can linguistic theories improve how models interpret implied meanings?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.26253v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does including an overview of Gricean pragmatics in prompts lead to better step-by-step reasoning for understanding implied intent in language models?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.26253v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Strengthening machine interpretation of non-literal conversation by integrating scholarly concepts regarding the way people communicate hidden intentions.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.26253v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "spatial reasoning LLM grid-based geometric transformations",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20198v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How effective are large language models at spatial reasoning tasks?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20198v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "To what extent does the accuracy of language models decrease when performing multi-step navigation and coordinate-based operations as the problem size scales up?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20198v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Assessing whether text-focused artificial intelligence can maintain accuracy when navigating virtual layouts and manipulating objects as the environment grows more complex.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20198v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "generative language models automated essay scoring summarization QWK",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.22830v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do generative models improve automated scoring for long essays?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.22830v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can using summarization and prompting with generative language models improve the accuracy of automated scoring for essays exceeding five hundred tokens?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.22830v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Improving the grading of lengthy student writing by condensing information and providing guidance to bypass input size restrictions.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.22830v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "gaslighting attacks speech LLMs adversarial robustness benchmarking",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.19858v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do gaslighting attacks affect the performance of speech LLMs?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.19858v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "To what extent do manipulative prompts and acoustic perturbations degrade the reasoning and behavioral reliability of multi-modal speech large language models?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.19858v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating how deceptive vocal interactions and mental pressure tactics can compromise the output accuracy and stability of voice-controlled computational systems.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.19858v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "CAD2DMD-SET synthetic data Large Vision-Language Models DMDs",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2508.21732v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does synthetic data improve vision models reading digital meters?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2508.21732v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can synthetic datasets generated from 3D models improve the robustness of vision-language models when reading instruments in cluttered or blurry environments?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2508.21732v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Creating artificial training examples from digital blueprints to help machines recognize and interpret the numbers shown on electronic gauges during poor visibility.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2508.21732v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "AI compute architecture seven-layer model Scale-Up Scale-Out contextual memory",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2508.21394v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the stages of LLM evolution in the seven-layer model?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2508.21394v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "This research explores a seven-layer hierarchy for computing power to analyze how large language models progress from physical hardware to autonomous agent ecosystems.",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2508.21394v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Which structural framework tracks the advancement of high-level processing units from electronic pathways through to sophisticated multi-component digital environments?",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2508.21394v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM generative-retrieval architectures RAG web research survey",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.IR",
+    "dropped_relevant_papers": [
+      "2602.17450v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How are large language models transforming traditional web research pipelines?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.IR",
+    "dropped_relevant_papers": [
+      "2602.17450v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the key developments and challenges of using retrieval-augmented generation to replace traditional pipelines in modern web-based information systems?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.IR",
+    "dropped_relevant_papers": [
+      "2602.17450v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A study on how advanced digital assistants are changing the way people find and synthesize knowledge across the global internet.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.IR",
+    "dropped_relevant_papers": [
+      "2602.17450v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "prompt engineering, RAG, Small Language Models, multi-hop QA, Qwen2.5, Gemma3",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.13890v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What prompt engineering techniques work best for RAG in small models?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.13890v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Which prompt template designs are most effective for improving multi-hop question-answering performance in resource-constrained language models using external knowledge retrieval?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.13890v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Testing various ways to phrase instructions for compact artificial intelligence programs to better answer complex questions using information from outside sources.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.13890v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "reasoning language models RLMs child protection parental cooperation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2602.14216v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can reasoning language models evaluate parental cooperation in child protection cases?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2602.14216v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do different parameter sizes of reasoning models perform when assessing complex parental involvement from social work case reports?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2602.14216v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating the level of collaboration between guardians and social welfare workers using logic-based machine learning on written narratives.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2602.14216v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "RNA design autoregressive language model reinforcement learning sequence generation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2602.12470v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can language models be used for target-driven biological sequence design?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2602.12470v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can an autoregressive language model combined with reinforcement learning efficiently map target folding patterns to specific genetic sequences?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2602.12470v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Applying predictive text synthesis tools to find chemical strings that organize themselves into a desired three-dimensional arrangement.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2602.12470v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Chemical Language Models CLM molecular property prediction MPP",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2602.11618v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Do large-scale chemical language models perform well on downstream tasks?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2602.11618v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Do improvements in pretraining metrics for chemical language models consistently lead to better performance on diverse molecular property prediction tasks when scaling?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2602.11618v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Assessing if increasing training data and model complexity for domain-specific sequence processing leads to better outcomes in specialized practical evaluation scenarios.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2602.11618v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "DeepQuali user story quality assessment requirements engineering GPT-4o",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.SE",
+    "dropped_relevant_papers": [
+      "2602.08887v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can generative AI be used to assess the quality of requirements?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.SE",
+    "dropped_relevant_papers": [
+      "2602.08887v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "To what extent can automated systems provide valid feedback on the quality of documentation in agile workflows when compared to human professional judgment?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.SE",
+    "dropped_relevant_papers": [
+      "2602.08887v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating the effectiveness of using linguistic software agents to determine if short-form project objectives meet high-standard professional benchmarks.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.SE",
+    "dropped_relevant_papers": [
+      "2602.08887v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "GPT-4o Theory of Mind causal model mental states consistency",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2602.12150v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does GPT-4o truly possess a human-like theory of mind?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2602.12150v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does GPT-4o have a domain-general causal model of mental states or is its social proficiency just an approximation of human judgments?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2602.12150v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Assessing if modern interactive software genuinely interprets internal perspectives or simply predicts social outcomes based on statistical patterns.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2602.12150v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Qwen2-VL-7B artwork scoring critique multi-task learning",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2602.13306v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can vision-language models provide automated scores and critiques for paintings?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2602.13306v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can a large vision-language model be fine-tuned with a regression head to produce both numerical creativity scores and detailed textual feedback?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2602.13306v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using multimodal artificial intelligence to evaluate the quality of visual creations and generate explanatory justifications based on standardized judging criteria.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2602.13306v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Rongzhixue teaching Chinese foreign language butterfly model bilingual thinking AI",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2602.06992v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does Rongzhixue improve teaching Chinese as a foreign language?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2602.06992v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can the Rongzhixue framework and butterfly model transform Chinese language education through bilingual thinking training and artificial intelligence integration?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2602.06992v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "innovative pedagogical approaches for instruction of a major East Asian speech using cross-border knowledge systems and machine intelligence",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2602.06992v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "RAG clinical data extraction MIMIC III EHR",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.20674v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using language models for clinical data querying and information extraction.",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.20674v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How effective are retrieval-augmented language models at performing structured data analysis and extracting facts from free-text medical records in large healthcare databases?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.20674v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Applying smart software to find specific answers within hospital files and convert narrative doctor notes into organized information using automated search aids.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.20674v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "GPT o3-mini-high DeepSeek R1 Claude 3.5 Sonnet GUI accessibility",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.HC",
+    "dropped_relevant_papers": [
+      "2601.22759v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How well do large language models perform in automated graphical interface design?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.HC",
+    "dropped_relevant_papers": [
+      "2601.22759v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does an expert analysis of AI-generated dashboards and chat systems reveal significant gaps in accessibility standards and interactive functionality for end users?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.HC",
+    "dropped_relevant_papers": [
+      "2601.22759v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Reviewing how effectively computer programs generate visual layouts and whether these structures meet human standards for ease of use and inclusivity.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.HC",
+    "dropped_relevant_papers": [
+      "2601.22759v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "TicToc, temporal blindness, tool use, human time perception, agent alignment",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.23853v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do virtual agents misalign with human perception of time?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.23853v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "To what extent does the ignorance of real-world clock time between dialogue turns cause conversational assistants to make redundant or outdated function calls?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.23853v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigation into how software assistants struggle to recognize the duration between interactions and the impact on their choice to access external resources.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.23853v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "NL2LOGIC AST-guided first-order logic translation LLM",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2602.13237v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does NL2LOGIC translate natural language into first-order logic?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2602.13237v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the benefits of using abstract syntax trees as intermediate representations for translating human text into symbolic logic using transformer models?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2602.13237v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A system for turning prose into rigorous mathematical expressions by following hierarchical structural blueprints to increase the reliability of automated deduction processes.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2602.13237v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Allan deviation semantic dynamics stochastic trajectory sentence embeddings power-law scaling",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.21678v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can precision measurement tools track the stability of meaning in writing?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.21678v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does the application of signal stability analysis to text embeddings reveal differences in semantic coherence between human authors and artificial generators?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.21678v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using mathematical rules from the field of clock calibration to examine how a series of thoughts follows persistent patterns",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.21678v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Graph-Structured Deep Learning Framework multi-task contention identification high-dimensional metrics",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.DC",
+    "dropped_relevant_papers": [
+      "2601.20389v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does graph modeling help identify resource contention in high-dimensional systems?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.DC",
+    "dropped_relevant_papers": [
+      "2601.20389v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can a multi-task graph-based framework using adaptive loss weighting accurately classify different types of resource interference in high-dimensional environments?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.DC",
+    "dropped_relevant_papers": [
+      "2601.20389v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "An approach for diagnosing simultaneous performance bottlenecks by analyzing interconnected patterns of data points in shared computing environments.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.DC",
+    "dropped_relevant_papers": [
+      "2601.20389v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "FP8-RL low-precision stack LLM reinforcement learning rollout",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2601.18150v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can FP8 quantization stabilize reinforcement learning rollouts for large language models?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2601.18150v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What techniques are required to mitigate train-inference mismatch and memory bottlenecks when using eight-bit floating point precision for large language model alignment?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2601.18150v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Improving the speed of teaching computer programs through rewards by using lower mathematical detail in the prediction stage while maintaining accuracy.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2601.18150v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "large language models virtual personas Moral Foundations Theory CEOs organizational research",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.18512v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can LLMs create realistic virtual versions of top corporate managers?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.18512v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can a framework using large language models to simulate executive personas provide a valid method for studying organizational behavior and decision-making?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.18512v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating whether advanced text generation systems can replicate the professional judgment and ethical stances of senior leaders for academic study.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.18512v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Viral Collaborative Wisdom AI alignment dialogical reasoning peace studies multi-model framework",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.20604v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can multi-model dialogues improve artificial intelligence alignment strategies?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.20604v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "To what extent can structured interactions between different automated architectures using negotiation principles surface new insights for ensuring machine goals match human values?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.20604v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating if comparative discussions between diverse computational entities can resolve conflicts and improve the safety of complex thinking machines.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.20604v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "deduction induction abduction out-of-domain generalization symbolic reasoning trajectories",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.08658v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do fundamental reasoning paradigms affect language model generalization?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.08658v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does fine-tuning models on symbolic logical trajectories help them perform better on realistic tasks involving real-world knowledge and natural language?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.08658v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating whether teaching software basic human-like logical frameworks allows it to handle new scenarios it was not specifically trained for.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.08658v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "EigenTrack RMT-KD spectral geometry random matrix theory",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2601.17357v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can random matrix theory help detect LLM hallucinations?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2601.17357v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using spectral statistics of hidden activations and random matrix theory to improve model compression and identify out-of-distribution behavior in vision-language models.",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2601.17357v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Analyzing the mathematical distribution of internal signals to reduce storage needs and identify when software generates fictitious facts.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2601.17357v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Reasoning Dependency Generation RDG choice supportive bias LLM",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.03082v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does reasoning dependency generation mitigate choice-supportive bias in models?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.03082v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does using a data generation framework that unlinks evidence from justifications help reduce the tendency of models to favor their own decisions?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.03082v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Improving impartial decision-making in automated text tools by training on datasets that decouple initial selections from the provided explanations.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.03082v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "MiLMMT-46 Gemma3 multilingual machine translation scaling model data",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.11961v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does MiLMMT-46 perform in multilingual machine translation tasks?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.11961v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the effects of scaling model size and data volume when adapting open language models for translation across forty-six different languages?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.11961v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluation of how increasing training samples and parameter counts affects automated language conversion systems across a diverse set of international tongues.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.11961v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "large language model prompts score extraction messy text dataset",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.DL",
+    "dropped_relevant_papers": [
+      "2601.18271v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How to extract numerical scores from messy text using LLM prompts?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.DL",
+    "dropped_relevant_papers": [
+      "2601.18271v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What methods of prompt engineering improve the accuracy of extracting specific numerical research quality ratings from inconsistent and noisy textual datasets?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.DL",
+    "dropped_relevant_papers": [
+      "2601.18271v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating how well tailored instructions guide machine learning models to recover hidden quantitative values from disorganized written records.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.DL",
+    "dropped_relevant_papers": [
+      "2601.18271v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM prompt evaluation Glicko2 tournament-style pedagogical strategies",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.16134v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How to systematically evaluate LLM prompts for educational use?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.16134v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What systematic approach can researchers use to evaluate and improve prompt designs for generating personalized and pedagogically aligned follow-up questions in dialogues?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.16134v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Measuring the effectiveness of specific automated instructions in tutoring software by using a competitive scoring method to compare different teaching approaches.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.16134v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "AdaptEvolve adaptive LLM selection evolutionary refinement inference efficiency",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.11931v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can adaptive model selection improve evolutionary AI agent efficiency?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.11931v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does using generation confidence for real-time model selection in evolutionary refinement frameworks affect the trade-off between computational cost and reasoning accuracy?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.11931v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Optimizing the speed of iterative software assistants by switching between processing units of varying power based on task complexity.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.11931v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Bones and Joints Benchmark VLM clinical reasoning",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2512.22275v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Do multimodal models accurately interpret orthopedic images for clinical diagnosis?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2512.22275v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does the performance of artificial intelligence in healthcare decrease when moving from multiple-choice tests to complex tasks involving the integration of medical scans and textual data?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2512.22275v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating how well dual-modality software handles healthcare decision-making when comparing standard pick-lists against deep analysis of visual and written patient information.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CV",
+    "dropped_relevant_papers": [
+      "2512.22275v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "AlignAR generative Arabic-English sentence alignment literary legal corpora",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.21842v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does AlignAR improve Arabic-English sentence alignment in literary texts?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.21842v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do generative sentence alignment methods handle complex one-to-many mappings in Arabic-English datasets compared to traditional alignment techniques?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.21842v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Techniques for synchronizing difficult translation pairs in complex professional writings without relying on simple word-for-word patterns.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.21842v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM developmental trajectories affective dynamics gambling task Pavlovian approach",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2601.14268v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How has the psychology of machine models changed over time?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2601.14268v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "To what extent do successive versions of generative systems mimic human emotional reactions and risk-taking behaviors when faced with probabilistic reward scenarios?",
+    "style": "natural_long",
+    "difficulty": "hard",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2601.14268v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "An investigation into the changing behavioral tendencies and internal states of evolving software versions compared to real people in game-based tests.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2601.14268v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "TeachBench syllabus-grounded framework evaluating LLM teaching",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.21375v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can the teaching ability of large language models be measured?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.21375v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating pedagogical performance in large scale language processors by analyzing improvements in student scores following curriculum-based multi-turn instructional sessions.",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.21375v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A method for measuring how well interactive digital assistants can help learners grasp academic curriculum topics by monitoring performance improvements.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.21375v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM laziness decoding suboptimality context degradation instruction-following",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.20662v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Why do advanced language models exhibit laziness and context degradation?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.20662v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Quantifying how modern generative agents fail to complete complex instructions or select optimal answers despite maintaining information over long conversational windows.",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.20662v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating the tendency of sophisticated linguistic tools to produce incomplete results or lose focus during extremely long interactive dialogues.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.20662v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "adversarial robustness deep neural networks time-efficient evaluation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2512.20893v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can we efficiently evaluate and improve adversarial robustness in DNNs?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2512.20893v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the most time-efficient methods for identifying vulnerabilities and enhancing security in deep neural networks using a red-blue framework?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2512.20893v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Techniques for rapidly assessing and boosting how well intricate layered programs withstand deliberate attempts to trick them into making errors.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2512.20893v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LDM ADA Large Discourse Models ontological triad",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.19117v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Should we replace Large Language Models with the Artificial Discursive Agent category?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.19117v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does the Large Discourse Model framework provide an ontological basis for shifting generative AI evaluation toward social governance and public trials?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.19117v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A novel strategy for grouping automated scripts by observing how they participate in communal exchanges rather than purely tracking vocabulary patterns.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.19117v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "active inference expected free energy Bayesian Model Reduction structure learning",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "q-bio.NC",
+    "dropped_relevant_papers": [
+      "2512.21129v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can active inference and information gain be used for artificial reasoning?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "q-bio.NC",
+    "dropped_relevant_papers": [
+      "2512.21129v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using Bayesian Model Reduction and expected free energy to choose actions that maximize information gain and improve structure learning in synthetic agents.",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "q-bio.NC",
+    "dropped_relevant_papers": [
+      "2512.21129v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Methods for an autonomous system to decide which actions provide the most clarity about the hidden logical frameworks governing its environment.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "q-bio.NC",
+    "dropped_relevant_papers": [
+      "2512.21129v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "thinking budget LLM self-consistency reflection reasoning compute",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.19585v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does increasing the thinking budget affect LLM reasoning performance?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.19585v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Is scaling the length of internal reasoning processes more effective than using configurations like self-consistency and self-reflection in language models?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.19585v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does allocating more internal processing time to artificial intelligence systems yield better outcomes than implementing iterative verification or group consensus techniques?",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.19585v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM medical follow-up modular pipeline task decomposition semantic clustering",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.18999v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can structured control mechanisms improve medical follow-up chatbots?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.18999v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does a modular framework utilizing task decomposition and semantic clustering improve dialogue stability and extraction accuracy in medical follow-up tasks?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.18999v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does dividing complex health-related patient monitoring tasks into smaller supervised steps outperform single-step automated conversational agents in accuracy and efficiency?",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.18999v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "FineInstructions synthetic instruction pre-training token-for-token training",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.22146v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can we pre-train LLMs using only synthetic instruction-tuning data?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.22146v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does scaling synthetic instruction-answer pairs derived from internet documents affect the performance of language models pre-trained from scratch?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.22146v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A system for transforming vast amounts of unstructured web content into training examples that look like user requests and model responses.",
+    "style": "conceptual",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.22146v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "TOGGLE Signal Temporal Logic LLM compression edge",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.16855v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can TOGGLE compress LLMs for edge devices effectively?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.16855v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can Signal Temporal Logic be used to provide formal guarantees for linguistic property preservation during the pruning and quantization of large language models?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.16855v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A way to shrink complex language programs for mobile processors while mathematically ensuring the output quality remains high without extra training.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.16855v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM trustworthiness PEACE-Reviews cognitive-affective signatures probing",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.10719v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do language models internally represent the concept of trustworthiness?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.10719v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does the internal structure of modern language models contain identifiable markers that correspond to how humans judge the reliability and fairness of text?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.10719v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A study into whether automated reasoning tools naturally develop a sense for the honesty and integrity of information found in online stories.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2601.10719v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "AES large language models human rater agreement automatic essay scoring PRISMA synthesis Quadratic Weighted Kappa",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.14561v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Are large language models as reliable as humans for grading essays?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.14561v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What does the current body of literature reveal about the correlation between scores provided by generative AI and human judges for written work?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.14561v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "An overview of multiple studies comparing the marks assigned by software to those given by people when assessing academic compositions.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.14561v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "SteerEval inference-time interventions multilingual neural summarization metrics pivot",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.15809v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can SteerEval improve multilingual neural metrics for summarization tasks?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.15809v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does steering activations toward an English pivot during inference improve the correlation of multilingual neural metrics with human judgments in summarization?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.15809v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Improving the reliability of automated quality checkers across different human communication forms by adjusting internal processing signals during the final stage.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2601.15809v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Large Language Models Science of Science scientometric knowledge-enhanced RAG",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.15370v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do large language models improve scientific research evaluation?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.15370v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can the application of advanced linguistic models and agent-based frameworks automate the detection of research fronts and the construction of knowledge structures?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.15370v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating the ways in which massive text-processing algorithms can transform the statistical analysis of global scholarly production and academic trend discovery.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.15370v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Large Language Models LLM R&D innovation management",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.14709v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do large language models improve research and development efficiency?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.14709v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "This research examines how massive AI architectures facilitate faster breakthroughs and more efficient knowledge synthesis within complex organizational innovation systems.",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.14709v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating how next-generation text processors help speed up the journey from initial concept to commercial availability in high-tech corporate settings.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.14709v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "GPT-4o-mini item-to-standard alignment candidate filtering hybrid pipelines",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19749v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How effective are large language models at aligning assessment items to standards?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19749v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can automated language processors reduce manual workload by identifying misalignments and matching educational tasks to specific learning skills with high accuracy?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19749v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Automating the verification of whether school testing materials correspond to required educational targets using sophisticated software to save labor.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19749v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Traditional Chinese Medicine imagistic thinking DeepSeek V3.1 prompt engineering evaluation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.23059v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can prompt engineering improve imagistic thinking in TCM translations?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.23059v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does a human-in-the-loop framework using DeepSeek and prompt-based cognitive scaffolding effectively convey metaphorical networks in ancient Chinese medical canons?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.23059v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Assessing the ability of computational linguistic tools to interpret and transfer symbolic diagnostic logic from heritage texts into a second language.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.23059v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "multimodal chunking strategies cross-modal alignment semantic preservation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.00185v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the best methods for segmenting multimodal data streams?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.00185v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A comprehensive review of how various media formats are partitioned into smaller units to maintain meaning and synchronization within intelligent systems.",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.00185v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Techniques for breaking down diverse digital content into smaller logical components to improve how computers interpret and connect different sensory inputs.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2512.00185v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM system-level taxonomy failure modes reasoning drift observability",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19933v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are common failure modes in production LLM applications?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19933v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can we categorize the various ways large language model systems fail in real-world deployment through a system-level engineering lens?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19933v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "An organized list of unexpected errors that occur when integrating massive language processors into larger software frameworks.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19933v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM RAG Multi-Agent System Biomechanics Engineering Education",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.15752v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can AI agents enhance biomechanics engineering education?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.15752v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "To what extent does a dual-module framework using retrieval-augmented generation and multi-agent systems enhance the problem-solving capabilities of language models in biomechanics?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.15752v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Implementing sophisticated digital reasoning systems and information retrieval to help pupils understand the physical dynamics of the human body.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.15752v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM General Self-Efficacy Scale GSES psychometric",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19872v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do large language models perform on psychometric self-efficacy tests?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19872v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does applying psychological testing frameworks to artificial intelligence help measure the alignment between its perceived competence and its actual task success?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19872v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Checking whether a machine's personal belief in its ability to succeed matches its actual results on a variety of tasks.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.19872v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Mistral LLaMA 3 decentralized technologies Blockchain IPFS post-hoc XAI",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2512.04108v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can decentralized tech improve accountability in high-stakes AI decisions?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2512.04108v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can integrating human-expert collaboration with blockchain and IPFS technologies facilitate the responsible deployment of large language models in financial contexts?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2512.04108v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Securing automated judgment systems through distributed ledger verification and manual oversight protocols to ensure traceability and reliability in sensitive industries.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2512.04108v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Claude 3.5 Sonnet DeepSeek R1 EFL writing error analysis taxonomy",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.00392v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can large language models automate detailed error analysis for English learners?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.00392v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can advanced generative models be utilized to categorize and correct linguistic mistakes in non-native writing based on classical pedagogical classification systems?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.00392v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Evaluating modern software capabilities in identifying and classifying mistakes made by people learning a second language using established academic frameworks.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.00392v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Progressive localization localist LLMs polynomial schedules semantic block partitioning",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.18375v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does progressive attention localization improve language model interpretability?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.18375v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does an architecture with adaptive semantic block partitioning and polynomial schedules maintain performance while providing clearer internal attention patterns?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.18375v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Studying if gradually limiting the range of internal information sharing makes it easier to understand how a digital mind works.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.18375v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "DRIFT dual-model implicit fact tokens long-context inference",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.10021v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does DRIFT improve long-context inference in language models?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.10021v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does decoupling knowledge extraction from reasoning with implicit fact tokens enhance the scalability and efficiency of language models on long-context tasks?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.10021v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A method for separating data retrieval from cognitive processing by converting text into hidden symbols to process massive amounts of information.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2602.10021v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Morality LLM architecture Murdoch transformer attention frameworks",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "q-bio.NC",
+    "dropped_relevant_papers": [
+      "2511.20689v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can we embed moral values into large language model architectures?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "q-bio.NC",
+    "dropped_relevant_papers": [
+      "2511.20689v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does using Iris Murdoch's philosophical theories to modify transformer attention mechanisms provide a viable path for internalizing ethics in artificial intelligence systems?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "q-bio.NC",
+    "dropped_relevant_papers": [
+      "2511.20689v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Developing text-generation tools with an innate sense of goodness built into their fundamental blueprint to avoid relying on outside corrections.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "q-bio.NC",
+    "dropped_relevant_papers": [
+      "2511.20689v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "RAG retrieval quality VMD PSO BiLSTM XGBoost",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.19481v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does document relevance impact the quality of retrieval augmented generation?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.19481v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does a machine learning regression model using particle swarm optimization provide better accuracy in predicting the performance of information retrieval systems?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.19481v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating how mathematical forecasting tools can determine if a computer program is providing useful background information when creating written responses.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.19481v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Generative AI LLMs accounting research framework",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.16055v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How is generative artificial intelligence transforming accounting research?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.16055v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What framework classifies AI-driven accounting studies and how do generative models change the research process for scholars and doctoral candidates?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.16055v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A structural guide for organizing automated intelligence within the study of financial documentation and its impact on investigative tasks.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2511.16055v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Viable Systems Model ChatGPT REF research evaluation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2511.21790v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can large language models automate the evaluation of research quality?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2511.21790v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can large language models assist in the internal assessment of research excellence to reduce administrative costs associated with university evaluations?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2511.21790v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating the use of computational text predictors to assist in measuring the merit of academic publications to minimize management overhead.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2511.21790v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "REFLEX fact-checking self-refining steering vectors activation signals",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.20233v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does REFLEX improve fact-checking through self-refining latent explanations?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.20233v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can contrastive activation signals and self-refining paradigms enhance the reliability and interpretability of large language model based fact checking systems?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.20233v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Techniques for validating claims by looking at the internal states of a computer program to separate factual content from presentation.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.20233v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Liberating Logic computational thinking natural language programming education",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2511.17696v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How is the role of traditional programming changing in the age of automation?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2511.17696v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the best practices for reforming university curricula when human speech becomes the primary way to interact with and command powerful computing tools?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2511.17696v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Exploring the evolution of instructional strategies where articulating intent into machine-executable results replaces the requirement for manually drafting line-by-line instructions.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CY",
+    "dropped_relevant_papers": [
+      "2511.17696v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "RareSeek R1 clinical reasoning graph grounded retrieval diagnosis",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.14638v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does RareSeek R1 assist in diagnosing rare medical conditions?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.14638v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can a specialized reasoning system using structured knowledge lookup and step-by-step logic help doctors identify uncommon illnesses from complex patient records?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.14638v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A specialized digital assistant that finds hard-to-detect sicknesses by looking through patient stories and linking them to maps of biological facts.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.14638v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Mentalization-Based Treatment MBT Large Language Model linguistic structure reflective thought",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.08945v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can a large language model replicate the linguistic structure of mentalization?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.08945v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "To what extent can artificial intelligence mimic human reflective thought and cognitive-affective integration according to psychiatric evaluation frameworks and axes?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.08945v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Testing if a computer program can simulate the way individuals perceive and interpret their internal feelings and the intentions of others during conversation.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.08945v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "ethical entropy value drift alignment work gamma_eff",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.03047v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can ethical entropy be used to measure AI value drift?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.03047v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can the Second Law of Intelligence framework be operationalized to measure alignment work and prevent value drift in frontier model deployment?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.03047v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using measures of statistical disorder to track how automated reasoning systems deviate from programmed behavioral standards during continuous use.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2512.03047v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "ContextCite Inseq multilingual CoT reasoning attribution Qwen2.5 MGSM",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.15886v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do attribution methods examine reasoning steps in multilingual chain-of-thought prompting?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.15886v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do different granularity levels of attribution reveal the faithfulness and interpretability of multi-step logical sequences in diverse linguistic contexts?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.15886v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Investigating the reliability and clarity of intermediate logical pathways in automated software by tracing which inputs influence specific pieces of evidence.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2511.15886v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Failure to Mix, probability distributions, probabilistic exploration, step function",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.14630v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Why are language models unable to produce outputs following requested probability distributions?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.14630v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does the optimization of artificial intelligence for accuracy on specific benchmarks hinder its capacity to explore different ideas according to a set frequency?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.14630v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A study on why advanced predictive systems fail to distribute their responses according to requested odds despite being told to vary them.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.14630v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "fine-tuned LLaMA3-8B-Instruct NER domain-specific summarization tagging",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.25460v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does fine-tuning LLMs improve domain-specific summarization and tagging?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.25460v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does integrating fine-tuned language models with named entity recognition provide a robust solution for transforming unstructured security text into actionable insights?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.25460v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Research on customizing large-scale predictive text tools to automatically condense and categorize specialized jargon used in safety monitoring contexts.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.25460v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Bayesian Optimization BoTorch qEHVI inverse design WizardMath-7B",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.00070v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can generative AI replace Bayesian optimization for multi-objective inverse design tasks?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.00070v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do fine-tuned mathematical reasoning models compare against specialized optimization frameworks for solving high-dimensional property-to-structure mapping problems in materials informatics?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.00070v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Assessing the effectiveness of general-purpose algorithmic learners against traditional statistical search methods for finding ideal material compositions under multiple conflicting requirements.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2511.00070v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "gLLMs quantitative content analysis prompt engineering codebook development validation",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.24337v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can generative AI be used for content analysis in communication studies?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.24337v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What are the best practices and critical challenges for researchers using generative language models to automate the coding of media texts in social sciences?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.24337v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A manual for social investigators using sophisticated word generation software to sort through vast amounts of information while upholding strict data quality.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.24337v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Depth and Autonomy framework LLM qualitative social science",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.25432v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can LLMs be used effectively in qualitative social science research?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.25432v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "What framework evaluates large language model applications in social sciences based on the dimensions of interpretive depth and autonomy to ensure reliability and transparency?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.25432v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A method for measuring the level of independence and complexity of automated tools used in interpretive academic investigations to ensure accountability.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.25432v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM COPE ontology chemical engineering process control",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2510.26898v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can ontologies improve LLM accuracy in chemical engineering?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2510.26898v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does integrating the COPE ontology with large language models improve the reliability and interpretability of control systems in the chemical industry?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2510.26898v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Merging organized database schemas with predictive text processors to ensure industrial automation follows strict logical rules and verified facts.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.LG",
+    "dropped_relevant_papers": [
+      "2510.26898v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "large language models folktale motifs clustering Cinderella",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.18561v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can language models automate motif detection in collections of traditional stories?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.18561v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can language models and pattern analysis techniques identify similarities across different versions of the same story for large-scale digital humanities research?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.18561v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Using electronic methods to find repeating themes in old legends to help study similarities across different languages and regions.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.18561v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "LLM CONSORT checklist ECE RCE calibration prompt",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.19139v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do large language models evaluate medical trial reporting standards?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.19139v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Are domain-specialized language models better calibrated than general ones when auditing clinical research papers against standardized reporting guidelines?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.19139v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Assessing the reliability of automated text tools in verifying the accuracy and completeness of medical experiment documentation without being too sure of mistakes.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.19139v2"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "VAR Visual Attention Reasoning MLLM hierarchical search self-verification",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.18619v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does hierarchical search with self-verification prevent hallucinations in multimodal large language models?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.18619v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A reinforcement learning framework that reformulates multimodal reasoning as a tree-search process with explicit evidence grounding and geometric rewards to mitigate hallucination errors.",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.18619v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A technique for image-capable software to minimize false information by mapping specific regions of a picture to logic steps and checking its own work.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.18619v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "MedQA clinical decision-making LLM evaluation paradigm",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20001v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can we evaluate AI models for real-world medical practice?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20001v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can a two-dimensional framework focusing on scenarios and queries better assess the utility of smart systems in actual healthcare settings?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20001v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A new methodology for measuring how well sophisticated software assists experts with practical diagnostic tasks in high-stakes healthcare scenarios.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.20001v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "MINED benchmark multimodal time-sensitive knowledge editing",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.19457v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Do multimodal models struggle with information that changes over time?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.19457v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does the MINED benchmark evaluate the temporal awareness and knowledge updating capabilities of large multimodal models across different factual categories?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.19457v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Testing and refining the capacity of multi-sensory artificial intelligence to stay current with information that frequently evolves or expires.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2510.19457v3"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "automated model discovery AnalyzerVLM EvaluatorVLM agentic multi-modal pipeline",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2509.25946v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do multi-modal agents facilitate automated model discovery?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2509.25946v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does a multi-step pipeline using vision-language models for proposal and evaluation improve the balance between fine-grained model details and overall generalizability?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2509.25946v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A system using diverse sensory inputs and iterative logic to select appropriate frameworks for data representation.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2509.25946v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "IKnow instruction-knowledge-aware continual pretraining domain adaptation llm",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.20377v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can IKnow improve domain adaptation for instruction-tuned models?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.20377v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Does formulating self-supervised objectives in an instruction-response format allow for effective domain adaptation of language models without using external knowledge bases?",
+    "style": "natural_long",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.20377v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "A method for updating pre-existing conversational systems on new subjects while maintaining task-following skills without using outside information sources.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.20377v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "fine-tuned small language models item alignment content standards",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.26431v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Can small language models automate the alignment of test items?",
+    "style": "natural_short",
+    "difficulty": "easy",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.26431v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How do fine-tuned small language models compare to embedding-based methods for mapping assessment questions to granular educational skill requirements?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.26431v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Determining the accuracy of automated text analysis tools for ensuring that specific examination tasks map correctly to the desired educational goals.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.CL",
+    "dropped_relevant_papers": [
+      "2509.26431v4"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "in-context learning pre-training context length transformer framework",
+    "style": "keyword",
+    "difficulty": "easy",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.22594v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How does pre-training distribution impact in-context learning?",
+    "style": "natural_short",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.22594v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "How can we mathematically quantify the influence of training data diversity and prompt examples on the predictive success of neural architectures?",
+    "style": "natural_long",
+    "difficulty": "medium",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.22594v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  },
+  {
+    "query": "Establishing a formal metric to understand how exposing a system to brief instances of a goal helps it overcome its initial data biases.",
+    "style": "conceptual",
+    "difficulty": "hard",
+    "category": "cs.AI",
+    "dropped_relevant_papers": [
+      "2510.22594v1"
+    ],
+    "reason": "no_relevant_papers_embedded_in_v3"
+  }
+]

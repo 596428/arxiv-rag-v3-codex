@@ -372,8 +372,8 @@ async def collect_month(
 
     # Save to database
     if final_papers:
-        supabase = get_db_client()
-        inserted = supabase.batch_insert_papers(final_papers)
+        db_client = get_db_client()
+        inserted = db_client.batch_insert_papers(final_papers)
         logger.info(f"Inserted {inserted} papers to database")
 
     # Save edge cases for human review (only Gemini-filtered ones)

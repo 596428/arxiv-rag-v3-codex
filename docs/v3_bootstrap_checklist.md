@@ -70,9 +70,10 @@
 ### Phase 2. Reprocessing
 
 - [ ] `src/embedding/models.py` 주석과 DB dict 구조 정리
-- [ ] `scripts/11_reprocess_pipeline.py` 신규 생성
-- [ ] 파싱 재실행 + Qdrant recreate + chunks truncate 자동화
-- [ ] BGE-M3 / OpenAI 3-large 재임베딩 연결
+- [x] `scripts/11_reprocess_pipeline.py` 신규 생성
+- [x] 파싱 재실행 + Qdrant recreate + chunks truncate 자동화
+- [x] BGE-M3 재임베딩 연결
+- [ ] OpenAI 3-large 재임베딩 연결
 
 ## Codebase Comparison
 
@@ -86,8 +87,6 @@
 ### Remaining Gaps
 
 - `scripts/10_fetch_authors.py` 없음
-- `scripts/11_reprocess_pipeline.py` 없음
-- `src/parsing/latex_parser.py`에는 `_extract_macros()`, `_apply_macros()`, `_strip_noisy_environments()`가 아직 없음
 - `src/storage/supabase_client.py`의 `get_chunks_by_paper()`는 아직 `metadata->chunk_index` 정렬
 - 일부 보조 스크립트는 여전히 legacy Supabase 경로 또는 평가용 legacy retriever import에 의존
 

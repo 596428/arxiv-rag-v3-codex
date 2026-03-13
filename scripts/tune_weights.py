@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-arXiv RAG v1 - RRF Weight Tuning
+arXiv RAG v3 - RRF Weight Tuning
 
 Grid search for optimal RRF weights across dense, sparse, and ColBERT retrievers.
 
 Usage:
     python scripts/tune_weights.py                    # Run with default eval queries
     python scripts/tune_weights.py --queries queries.json  # Custom queries
-    python scripts/tune_weights.py --use-qdrant       # Use Qdrant instead of Supabase
+    python scripts/tune_weights.py                    # Use Qdrant-based tuning
 """
 
 import argparse
@@ -72,60 +72,15 @@ def calculate_ndcg(relevance: list[float], k: int) -> float:
     return actual_dcg / ideal_dcg if ideal_dcg > 0 else 0.0
 
 
-def evaluate_weight_config_supabase(
+def evaluate_weight_config_legacy(
     queries: list[EvalQuery],
     dense_weight: float,
     sparse_weight: float,
     colbert_weight: float,
     top_k: int = 10,
 ) -> TuningResult:
-    """Evaluate a weight configuration using Supabase retriever."""
-    import time
-    from src.rag.retriever import HybridFullRetriever
-
-    retriever = HybridFullRetriever(
-        dense_weight=dense_weight,
-        sparse_weight=sparse_weight,
-        colbert_weight=colbert_weight,
-    )
-
-    mrr_scores = []
-    ndcg_scores = []
-    precision_scores = []
-    latencies = []
-
-    for eq in queries:
-        start = time.time()
-        response = retriever.search(eq.query, top_k=top_k)
-        latency = (time.time() - start) * 1000
-        latencies.append(latency)
-
-        # Calculate relevance
-        relevance = []
-        for result in response.results:
-            is_relevant = (
-                result.paper_id in eq.relevant_papers or
-                result.chunk_id in eq.relevant_chunks
-            )
-            relevance.append(1.0 if is_relevant else 0.0)
-
-        mrr_scores.append(calculate_mrr(relevance))
-        ndcg_scores.append(calculate_ndcg(relevance, 10))
-        precision_scores.append(sum(relevance[:5]) / 5 if len(relevance) >= 5 else sum(relevance) / max(len(relevance), 1))
-
-    # Cleanup
-    retriever.unload_models()
-
-    return TuningResult(
-        dense_weight=dense_weight,
-        sparse_weight=sparse_weight,
-        colbert_weight=colbert_weight,
-        avg_mrr=sum(mrr_scores) / len(mrr_scores) if mrr_scores else 0,
-        avg_ndcg_10=sum(ndcg_scores) / len(ndcg_scores) if ndcg_scores else 0,
-        avg_precision_5=sum(precision_scores) / len(precision_scores) if precision_scores else 0,
-        avg_latency_ms=sum(latencies) / len(latencies) if latencies else 0,
-        num_queries=len(queries),
-    )
+    """Deprecated legacy entry point kept only for explicit failure."""
+    raise RuntimeError("Legacy Supabase tuning is removed in v3. Use Qdrant tuning only.")
 
 
 def evaluate_weight_config_qdrant(
@@ -232,7 +187,7 @@ def get_default_eval_queries() -> list[EvalQuery]:
 
 def run_grid_search(
     queries: list[EvalQuery],
-    use_qdrant: bool = False,
+    use_qdrant: bool = True,
     weight_step: float = 0.1,
     top_k: int = 10,
 ) -> list[TuningResult]:
@@ -241,7 +196,7 @@ def run_grid_search(
 
     Args:
         queries: Evaluation queries
-        use_qdrant: Use Qdrant instead of Supabase
+        use_qdrant: Use Qdrant backend
         weight_step: Step size for weight grid
         top_k: Number of results to retrieve
 
@@ -263,7 +218,9 @@ def run_grid_search(
 
     logger.info(f"Testing {len(combinations)} weight combinations...")
 
-    evaluate_fn = evaluate_weight_config_qdrant if use_qdrant else evaluate_weight_config_supabase
+    if not use_qdrant:
+        raise RuntimeError("Legacy weight tuning is removed in v3. Use Qdrant mode.")
+    evaluate_fn = evaluate_weight_config_qdrant
 
     results = []
     for i, (d, s, c) in enumerate(combinations):
@@ -292,7 +249,7 @@ def main():
     parser.add_argument(
         "--use-qdrant",
         action="store_true",
-        help="Use Qdrant instead of Supabase",
+        help="Use Qdrant-based tuning (required in v3)",
     )
     parser.add_argument(
         "--weight-step",
@@ -329,7 +286,10 @@ def main():
         queries = get_default_eval_queries()
 
     print(f"Running grid search with {len(queries)} queries")
-    print(f"Backend: {'Qdrant' if args.use_qdrant else 'Supabase'}")
+    if not args.use_qdrant:
+        raise SystemExit('Supabase tuning is deprecated in v3. Re-run with --use-qdrant.')
+
+    print('Backend: Qdrant')
     print(f"Weight step: {args.weight_step}")
 
     # Run grid search
@@ -390,7 +350,7 @@ def main():
                 for r in results
             ],
             "num_queries": len(queries),
-            "backend": "qdrant" if args.use_qdrant else "supabase",
+            "backend": "qdrant",
         }
 
         with open(output_path, "w") as f:

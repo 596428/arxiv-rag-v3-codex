@@ -45,6 +45,17 @@ from src.parsing import (
 logger = logging.getLogger(__name__)
 
 
+def _looks_like_pdf(path: Path | None) -> bool:
+    """Detect a PDF file even if it has a misleading extension."""
+    if not path or not path.exists():
+        return False
+    try:
+        with path.open("rb") as f:
+            return f.read(4) == b"%PDF"
+    except OSError:
+        return False
+
+
 class ParsingPipeline:
     """
     Document parsing pipeline.
@@ -117,6 +128,7 @@ class ParsingPipeline:
         doc = None
         error = None
         method_used = None
+        fallback_pdf_path = pdf_path if pdf_path and pdf_path.exists() else None
 
         # Strategy 1: Try LaTeX first (unless marker_only)
         if latex_path and latex_path.exists() and not self.marker_only:
@@ -130,13 +142,15 @@ class ParsingPipeline:
                 logger.debug(f"LaTeX parsing failed for {arxiv_id}: {e}")
                 self.stats.latex_failed += 1
                 error = str(e)
+                if fallback_pdf_path is None and _looks_like_pdf(latex_path):
+                    fallback_pdf_path = latex_path
 
         # Strategy 2: Fall back to Marker (unless latex_only)
-        if doc is None and pdf_path and pdf_path.exists() and not self.latex_only:
+        if doc is None and fallback_pdf_path and not self.latex_only:
             try:
                 logger.debug(f"Trying Marker parser for {arxiv_id}")
                 parser = self._get_marker_parser()
-                doc = parser.parse_pdf(pdf_path, arxiv_id)
+                doc = parser.parse_pdf(fallback_pdf_path, arxiv_id)
                 method_used = ParseMethod.MARKER
                 self.stats.marker_success += 1
                 logger.info(f"Marker parsing successful: {arxiv_id}")
@@ -245,7 +259,7 @@ class ParsingPipeline:
 
 
 def get_papers_to_parse(
-    supabase_client,
+    db_client,
     limit: int = None,
     arxiv_id: str = None,
 ) -> list[dict]:
@@ -253,10 +267,10 @@ def get_papers_to_parse(
 
     if arxiv_id:
         # Get specific paper
-        paper = supabase_client.get_paper(arxiv_id)
+        paper = db_client.get_paper(arxiv_id)
         return [paper] if paper else []
 
-    return supabase_client.get_papers(
+    return db_client.get_papers(
         fields=["arxiv_id", "pdf_path", "latex_path", "citation_count"],
         limit=limit,
         status="pending",
@@ -265,7 +279,7 @@ def get_papers_to_parse(
 
 
 def update_paper_status(
-    supabase_client,
+    db_client,
     arxiv_id: str,
     status: str,
     parse_method: str = None,
@@ -275,7 +289,7 @@ def update_paper_status(
     if parse_method:
         update_data["parse_method"] = parse_method
 
-    supabase_client.update_paper(arxiv_id, update_data)
+    db_client.update_paper(arxiv_id, update_data)
 
 
 def main():
@@ -309,8 +323,8 @@ def main():
         }]
     else:
         # Get from database
-        supabase = get_db_client()
-        papers = get_papers_to_parse(supabase, limit=args.limit, arxiv_id=args.arxiv_id)
+        db_client = get_db_client()
+        papers = get_papers_to_parse(db_client, limit=args.limit, arxiv_id=args.arxiv_id)
 
         if not papers:
             logger.info("No papers to parse")
@@ -338,7 +352,7 @@ def main():
 
     # Update database status
     if not args.dry_run and not args.skip_db_update and not args.arxiv_id:
-        supabase = get_db_client()
+        db_client = get_db_client()
         success_count = stats.latex_success + stats.marker_success
         logger.info(f"Updating database status for {success_count} papers")
 
@@ -348,7 +362,7 @@ def main():
             # Check which method was used (simplified)
             parsed_file = settings.parsed_dir / f"{arxiv_id.replace('/', '_')}.json"
             if parsed_file.exists():
-                update_paper_status(supabase, arxiv_id, "parsed")
+                update_paper_status(db_client, arxiv_id, "parsed")
 
     # Print summary
     print("\n" + "=" * 50)

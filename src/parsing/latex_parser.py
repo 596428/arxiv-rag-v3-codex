@@ -10,6 +10,7 @@ import os
 import re
 import tarfile
 import tempfile
+import zipfile
 from pathlib import Path
 from typing import Optional
 
@@ -36,6 +37,35 @@ from .models import (
 from .latex_cleaner import clean_latex_text, clean_section_title, clean_equation_latex, clean_paper_title
 
 logger = logging.getLogger(__name__)
+
+
+NOISY_ENVIRONMENTS = [
+    "tikzpicture",
+    "pgfpicture",
+    "pspicture",
+    "algorithm",
+    "algorithmic",
+    "algorithmicx",
+    "lstlisting",
+    "minted",
+    "verbatim",
+    "figure",
+    "figure*",
+    "wrapfigure",
+    "table",
+    "table*",
+]
+
+
+def is_latex_noisy(text: str, threshold: float = 0.3) -> bool:
+    """Heuristically detect paragraphs dominated by raw LaTeX commands."""
+    stripped = text.strip()
+    if not stripped:
+        return False
+
+    command_chars = len(re.findall(r"\\[A-Za-z@]+", stripped))
+    token_count = max(1, len(re.findall(r"\S+", stripped)))
+    return (command_chars / token_count) > threshold
 
 
 class LatexParseError(Exception):
@@ -99,8 +129,7 @@ class LatexParser:
         with tempfile.TemporaryDirectory() as tmpdir:
             # Extract archive
             try:
-                with tarfile.open(archive_path, "r:gz") as tar:
-                    tar.extractall(tmpdir, filter="data")
+                self._extract_archive(archive_path, Path(tmpdir))
             except Exception as e:
                 raise LatexParseError(f"Failed to extract archive: {e}")
 
@@ -111,6 +140,26 @@ class LatexParser:
 
             # Parse the main file
             return self._parse_tex_file(tex_file, arxiv_id, str(archive_path))
+
+    def _extract_archive(self, archive_path: Path, output_dir: Path) -> None:
+        """Extract tar/zip LaTeX sources and reject mislabeled PDFs early."""
+        with archive_path.open("rb") as f:
+            header = f.read(8)
+
+        if header.startswith(b"%PDF"):
+            raise LatexParseError("Archive path points to a PDF, not a LaTeX source archive")
+
+        if tarfile.is_tarfile(archive_path):
+            with tarfile.open(archive_path, "r:*") as tar:
+                tar.extractall(output_dir, filter="data")
+            return
+
+        if zipfile.is_zipfile(archive_path):
+            with zipfile.ZipFile(archive_path) as zf:
+                zf.extractall(output_dir)
+            return
+
+        raise LatexParseError("Unsupported archive format")
 
     def _find_main_tex(self, directory: Path) -> Optional[Path]:
         """
@@ -144,6 +193,29 @@ class LatexParser:
 
         # Return first .tex file
         return tex_files[0] if tex_files else None
+
+    def _extract_braced_content(self, text: str, start: int) -> tuple[str, int] | tuple[None, int]:
+        """Extract balanced brace content starting at `start`."""
+        if start >= len(text) or text[start] != "{":
+            return None, start
+
+        depth = 1
+        pos = start + 1
+        while pos < len(text) and depth > 0:
+            char = text[pos]
+            if char == "\\":
+                pos += 2
+                continue
+            if char == "{":
+                depth += 1
+            elif char == "}":
+                depth -= 1
+            pos += 1
+
+        if depth != 0:
+            return None, start
+
+        return text[start + 1:pos - 1], pos
 
     def _resolve_inputs(self, content: str, base_dir: Path, resolved_files: set | None = None) -> str:
         """
@@ -204,6 +276,163 @@ class LatexParser:
 
         return re.sub(pattern, replacer, content)
 
+    def _extract_macros(self, content: str) -> dict[str, tuple[str, int]]:
+        """Extract simple macro definitions from LaTeX source."""
+        macros: dict[str, tuple[str, int]] = {}
+
+        for cmd in ("newcommand", "renewcommand", "providecommand", "DeclareMathOperator"):
+            search_pos = 0
+            token = f"\\{cmd}"
+            while True:
+                idx = content.find(token, search_pos)
+                if idx == -1:
+                    break
+                pos = idx + len(token)
+                while pos < len(content) and content[pos].isspace():
+                    pos += 1
+
+                name = None
+                if pos < len(content) and content[pos] == "{":
+                    group, pos = self._extract_braced_content(content, pos)
+                    if group:
+                        name = group.strip().lstrip("\\")
+                elif pos < len(content) and content[pos] == "\\":
+                    match = re.match(r"\\([A-Za-z@]+)", content[pos:])
+                    if match:
+                        name = match.group(1)
+                        pos += len(match.group(0))
+
+                if not name:
+                    search_pos = idx + len(token)
+                    continue
+
+                while pos < len(content) and content[pos].isspace():
+                    pos += 1
+
+                num_args = 0
+                if pos < len(content) and content[pos] == "[":
+                    close = content.find("]", pos)
+                    if close != -1:
+                        try:
+                            num_args = int(content[pos + 1:close].strip())
+                            pos = close + 1
+                        except ValueError:
+                            pass
+
+                while pos < len(content) and content[pos].isspace():
+                    pos += 1
+
+                body = None
+                if pos < len(content) and content[pos] == "{":
+                    body, pos = self._extract_braced_content(content, pos)
+
+                if body is not None:
+                    macros[name] = (body, num_args)
+
+                search_pos = idx + len(token)
+
+        for match in re.finditer(r"\\def\\([A-Za-z@]+)((?:#\d+)*)", content):
+            name = match.group(1)
+            arg_spec = match.group(2) or ""
+            num_args = arg_spec.count("#")
+            pos = match.end()
+            while pos < len(content) and content[pos].isspace():
+                pos += 1
+            if pos < len(content) and content[pos] == "{":
+                body, _ = self._extract_braced_content(content, pos)
+                if body is not None:
+                    macros[name] = (body, num_args)
+
+        return macros
+
+    def _apply_macros(self, content: str, macros: dict[str, tuple[str, int]]) -> str:
+        """Apply extracted macro substitutions to LaTeX source."""
+        if not macros:
+            return content
+
+        macro_names = sorted(macros.keys(), key=len, reverse=True)
+
+        def substitute_once(text: str) -> tuple[str, bool]:
+            parts: list[str] = []
+            pos = 0
+            changed = False
+
+            while pos < len(text):
+                if text[pos] != "\\":
+                    parts.append(text[pos])
+                    pos += 1
+                    continue
+
+                matched = False
+                for name in macro_names:
+                    token = f"\\{name}"
+                    if not text.startswith(token, pos):
+                        continue
+
+                    end = pos + len(token)
+                    if end < len(text) and (text[end].isalnum() or text[end] == "@"):
+                        continue
+
+                    replacement, num_args = macros[name]
+                    args: list[str] = []
+                    cursor = end
+
+                    for _ in range(num_args):
+                        while cursor < len(text) and text[cursor].isspace():
+                            cursor += 1
+                        if cursor >= len(text) or text[cursor] != "{":
+                            args = []
+                            break
+                        arg, cursor = self._extract_braced_content(text, cursor)
+                        if arg is None:
+                            args = []
+                            break
+                        args.append(arg)
+
+                    if num_args and len(args) != num_args:
+                        continue
+
+                    rendered = replacement
+                    for i, arg in enumerate(args, start=1):
+                        rendered = rendered.replace(f"#{i}", arg)
+
+                    parts.append(rendered)
+                    pos = cursor
+                    matched = True
+                    changed = True
+                    break
+
+                if not matched:
+                    parts.append(text[pos])
+                    pos += 1
+
+            return "".join(parts), changed
+
+        result = content
+        for _ in range(3):
+            result, changed = substitute_once(result)
+            if not changed:
+                break
+        return result
+
+    def _strip_noisy_environments(self, body: str) -> str:
+        """Remove raw LaTeX environments that pollute text chunking."""
+        cleaned = body
+        for env in NOISY_ENVIRONMENTS:
+            pattern = r"\\begin\{%s\}.*?\\end\{%s\}" % (re.escape(env), re.escape(env))
+            cleaned = re.sub(pattern, "\n\n", cleaned, flags=re.DOTALL)
+
+        kept_paragraphs = []
+        for paragraph in re.split(r"\n\s*\n", cleaned):
+            stripped = paragraph.strip()
+            if not stripped:
+                continue
+            if is_latex_noisy(stripped):
+                continue
+            kept_paragraphs.append(stripped)
+
+        return "\n\n".join(kept_paragraphs)
+
     def _parse_tex_file(
         self, tex_path: Path, arxiv_id: str, source_file: str
     ) -> ParsedDocument:
@@ -216,6 +445,8 @@ class LatexParser:
         # Resolve \input{} and \include{} commands BEFORE parsing
         # This fixes multi-file LaTeX projects that produce zero sections
         content = self._resolve_inputs(content, tex_path.parent)
+        macros = self._extract_macros(content)
+        content = self._apply_macros(content, macros)
 
         # Extract document body
         body = self._extract_document_body(content)
@@ -228,13 +459,14 @@ class LatexParser:
         # Extract abstract
         abstract = self._extract_abstract(content)
 
-        # Parse sections
-        sections = self._parse_sections(body, arxiv_id)
-
         # Extract equations, figures, tables
         equations = self._extract_equations(body, arxiv_id)
         figures = self._extract_figures(body, arxiv_id, tex_path.parent)
         tables = self._extract_tables(body, arxiv_id)
+        body_clean = self._strip_noisy_environments(body)
+
+        # Parse sections from text-oriented body only
+        sections = self._parse_sections(body_clean, arxiv_id)
 
         doc = ParsedDocument(
             arxiv_id=arxiv_id,

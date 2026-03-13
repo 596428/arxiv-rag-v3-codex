@@ -5,9 +5,9 @@ arXiv RAG v2 - Embedding Pipeline
 Chunks parsed documents and generates embeddings using BGE-M3.
 Optionally adds OpenAI embeddings for comparison.
 
-v2 Architecture:
-- Supabase: metadata only (no vectors)
-- Qdrant: vector storage (dense, sparse, colbert)
+v3 Architecture:
+- Local PostgreSQL: metadata only (no vectors)
+- Qdrant: vector storage (dense, sparse, colbert, dense_3large)
 
 Usage:
     python scripts/03_embed.py                     # Process all parsed papers
@@ -15,7 +15,7 @@ Usage:
     python scripts/03_embed.py --with-openai       # Include OpenAI embeddings
     python scripts/03_embed.py --dry-run           # Preview only
     python scripts/03_embed.py --limit 10          # Process first N papers
-    python scripts/03_embed.py --supabase-only     # Skip Qdrant (metadata only)
+    python scripts/03_embed.py --supabase-only     # Deprecated alias for metadata-only mode
 """
 
 import argparse
@@ -102,7 +102,7 @@ def run_embedding_pipeline(
     with_openai: bool = False,
     dry_run: bool = False,
     save_to_db: bool = True,
-    supabase_only: bool = False,
+    metadata_only: bool = False,
 ) -> tuple[ChunkingStats, EmbeddingStats]:
     """
     Run the full embedding pipeline (v2 architecture).
@@ -118,7 +118,7 @@ def run_embedding_pipeline(
         with_openai: Whether to add OpenAI embeddings
         dry_run: Preview only, don't save
         save_to_db: Whether to save to databases
-        supabase_only: Skip Qdrant, save metadata to Supabase only
+        metadata_only: Skip Qdrant, save metadata only to the configured DB backend
 
     Returns:
         Tuple of (chunking stats, embedding stats)
@@ -128,9 +128,8 @@ def run_embedding_pipeline(
     bge_embedder = BGEEmbedder(embedding_config)
     openai_embedder = OpenAIEmbedder(embedding_config) if with_openai else None
 
-    # v2: Initialize both storage clients
-    supabase_client = get_db_client() if save_to_db and not dry_run else None
-    qdrant_client = get_qdrant_client() if save_to_db and not dry_run and not supabase_only else None
+    db_client = get_db_client() if save_to_db and not dry_run else None
+    qdrant_client = get_qdrant_client() if save_to_db and not dry_run and not metadata_only else None
 
     if qdrant_client:
         # Ensure collection exists
@@ -141,7 +140,7 @@ def run_embedding_pipeline(
             logger.warning(f"Qdrant collection setup failed: {e}")
             qdrant_client = None
 
-    total_chunks_supabase = 0
+    total_chunks_db = 0
     total_chunks_qdrant = 0
     embedding_stats = EmbeddingStats()
 
@@ -199,28 +198,28 @@ def run_embedding_pipeline(
                 logger.error(f"  OpenAI embedding failed: {e}")
                 embedding_stats.openai_failed += len(embedded_chunks)
 
-        # Step 4a: Save metadata to Supabase (v2 - no vectors)
-        if supabase_client:
+        # Step 4a: Save metadata to the configured DB backend
+        if db_client:
             try:
-                # v2: Convert to metadata-only format
+                # Store metadata only in the configured DB backend
                 metadata_chunks = [ec.to_supabase_dict() for ec in embedded_chunks]
 
                 # Batch insert metadata only
-                inserted = supabase_client.batch_insert_chunks_metadata(metadata_chunks)
-                total_chunks_supabase += inserted
-                logger.info(f"  Supabase: {inserted} chunks (metadata)")
+                inserted = db_client.batch_insert_chunks_metadata(metadata_chunks)
+                total_chunks_db += inserted
+                logger.info(f"  Metadata DB: {inserted} chunks")
 
                 # Update paper status
                 from src.collection.models import PaperStatus
-                supabase_client.update_paper_status(doc.arxiv_id, PaperStatus.EMBEDDED)
+                db_client.update_paper_status(doc.arxiv_id, PaperStatus.EMBEDDED)
 
             except Exception as e:
-                logger.error(f"  Supabase save failed: {e}")
+                logger.error(f"  Metadata DB save failed: {e}")
 
-        # Step 4b: Save vectors to Qdrant (v2)
+        # Step 4b: Save vectors to Qdrant
         if qdrant_client:
             try:
-                # v2: Convert to Qdrant format with vectors
+                # Convert to Qdrant format with vectors
                 qdrant_points = [ec.to_qdrant_dict() for ec in embedded_chunks]
 
                 # Batch upsert to Qdrant
@@ -237,7 +236,7 @@ def run_embedding_pipeline(
     embedding_stats.total_chunks = chunker.stats.total_chunks
 
     logger.info(f"\nPipeline complete.")
-    logger.info(f"  Supabase: {total_chunks_supabase} chunks (metadata)")
+    logger.info(f"  Metadata DB: {total_chunks_db} chunks")
     logger.info(f"  Qdrant: {total_chunks_qdrant} chunks (vectors)")
 
     return chunker.stats, embedding_stats
@@ -403,7 +402,7 @@ def main():
         with_openai=args.with_openai,
         dry_run=args.dry_run,
         save_to_db=not args.no_db,
-        supabase_only=args.supabase_only,
+        metadata_only=args.supabase_only,
     )
 
     elapsed = time.time() - start_time

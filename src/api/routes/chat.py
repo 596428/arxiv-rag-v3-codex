@@ -219,7 +219,7 @@ async def chat(request: ChatRequest):
         retrieval_start = time.time()
 
         qdrant = get_qdrant_client()
-        supabase = get_db_client()
+        db_client = get_db_client()
 
         # Get embeddings based on model choice
         if request.embedding_model == "openai":
@@ -269,7 +269,7 @@ async def chat(request: ChatRequest):
 
             # Get paper title (cached)
             if paper_id not in paper_cache:
-                paper = supabase.get_paper(paper_id)
+                paper = db_client.get_paper(paper_id)
                 paper_cache[paper_id] = paper.get("title", paper_id) if paper else paper_id
 
             sources.append(ChatSource(

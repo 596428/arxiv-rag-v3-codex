@@ -32,10 +32,10 @@ def get_reranker():
 
 
 @st.cache_resource
-def get_db_client():
+def get_cached_db_client():
     """Load database client (cached)."""
-    from src.storage import get_db_client
-    return get_db_client()
+    from src.storage import get_db_client as build_db_client
+    return build_db_client()
 
 
 def format_score(score: Optional[float]) -> str:
@@ -103,7 +103,7 @@ def main():
         # Database stats
         st.header("📊 Database Stats")
         try:
-            client = get_db_client()
+            client = get_cached_db_client()
             stats = client.get_collection_stats()
             chunk_count = client.get_chunk_count()
 
