@@ -131,3 +131,33 @@ set -a; source .env; set +a
 - `scripts/11_reprocess_pipeline.py`
 - `src/parsing/latex_parser.py`
 - `src/storage/postgres_client.py`
+
+
+## TODO
+
+### Next evaluation work
+- [ ] Add `RAGAS`-based answer-quality evaluation for v3
+- [ ] Build an evaluation set that measures whether the system retrieves the right evidence from the right paper, not just the right paper itself
+- [ ] Generate v2 and v3 answers on the same question set and compare:
+  - faithfulness
+  - answer relevancy
+  - context precision
+  - context recall
+
+### GraphRAG work
+- [ ] Design and implement `GraphRAG` on top of the v3 Local PG + Qdrant architecture
+- [ ] Add graph metadata flow for `citation_edges` and `entities`
+- [ ] Decide whether graph-enriched retrieval requires payload-only refresh, reindexing, or full re-embedding
+
+### Post-GraphRAG validation
+- [ ] Create GraphRAG-focused benchmark queries
+- [ ] Run comparative evaluation for:
+  - current v3 baseline
+  - v3 + GraphRAG
+- [ ] Measure both retrieval metrics and answer-quality metrics after GraphRAG integration
+
+### Recommended order
+1. Add `RAGAS` evaluation and validate current v3 answer quality
+2. Implement `GraphRAG`
+3. Build GraphRAG-specific benchmark queries
+4. Re-run evaluation on both retrieval quality and answer quality
