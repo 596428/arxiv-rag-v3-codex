@@ -1,11 +1,6 @@
-"""
-arXiv RAG v1 - Configuration Management
-
-환경변수 기반 설정 관리
-"""
-
-from pathlib import Path
 from functools import lru_cache
+from pathlib import Path
+from urllib.parse import urlparse
 
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -23,9 +18,24 @@ class Settings(BaseSettings):
     # -------------------------------------------
     # Supabase
     # -------------------------------------------
+    db_backend: str = Field(default="local", description="Database backend: local or supabase")
     supabase_url: str = Field(default="", description="Supabase project URL")
     supabase_key: str = Field(default="", description="Supabase anon key")
     supabase_service_key: str = Field(default="", description="Supabase service role key")
+
+    # -------------------------------------------
+    # Local PostgreSQL
+    # -------------------------------------------
+    pg_host: str = Field(default="localhost", description="PostgreSQL host")
+    pg_port: int = Field(default=5432, description="PostgreSQL port")
+    pg_database: str = Field(default="arxiv_rag", description="PostgreSQL database name")
+    pg_user: str = Field(default="", description="PostgreSQL user")
+    pg_password: str = Field(default="", description="PostgreSQL password")
+
+    # -------------------------------------------
+    # Vector DB
+    # -------------------------------------------
+    qdrant_url: str = Field(default="http://localhost:6333", description="Qdrant base URL")
 
     # -------------------------------------------
     # AI APIs
@@ -81,6 +91,23 @@ class Settings(BaseSettings):
     def has_supabase(self) -> bool:
         """Check if Supabase is configured."""
         return bool(self.supabase_url and self.supabase_key)
+
+    @property
+    def has_postgres(self) -> bool:
+        """Check if local PostgreSQL is configured."""
+        return bool(self.pg_host and self.pg_database and self.pg_user and self.pg_password)
+
+    @property
+    def qdrant_host(self) -> str:
+        """Extract Qdrant host from URL if present."""
+        parsed = urlparse(self.qdrant_url)
+        return parsed.hostname or "localhost"
+
+    @property
+    def qdrant_port(self) -> int:
+        """Extract Qdrant port from URL if present."""
+        parsed = urlparse(self.qdrant_url)
+        return parsed.port or 6333
 
     @property
     def has_gemini(self) -> bool:

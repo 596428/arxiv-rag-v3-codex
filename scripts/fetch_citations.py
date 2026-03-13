@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.collection.semantic_scholar import SemanticScholarClient, close_client
-from src.storage.supabase_client import get_supabase_client
+from src.storage import get_db_client
 from src.utils.logging import get_logger, setup_logging
 
 logger = get_logger("fetch_citations")
@@ -27,33 +27,9 @@ logger = get_logger("fetch_citations")
 
 async def fetch_all_papers(client, limit: int = None) -> list[dict]:
     """Fetch all papers from database."""
-    all_papers = []
-    offset = 0
-    batch_size = 1000
-
-    while True:
-        query = (
-            client.client.table("papers")
-            .select("arxiv_id, citation_count")
-            .range(offset, offset + batch_size - 1)
-        )
-
-        result = query.execute()
-        batch = result.data or []
-
-        if not batch:
-            break
-
-        all_papers.extend(batch)
-        logger.info(f"Fetched {len(all_papers)} papers from DB...")
-
-        if limit and len(all_papers) >= limit:
-            all_papers = all_papers[:limit]
-            break
-
-        offset += batch_size
-
-    return all_papers
+    rows = client.get_papers(fields=["arxiv_id", "citation_count"], limit=limit, order_by="citation_count")
+    logger.info(f"Fetched {len(rows)} papers from DB...")
+    return rows
 
 
 async def update_citations_batch(
@@ -69,10 +45,8 @@ async def update_citations_batch(
 
         for arxiv_id, citation_count in batch:
             try:
-                supabase.client.table("papers").update({
-                    "citation_count": citation_count
-                }).eq("arxiv_id", arxiv_id).execute()
-                updated += 1
+                if supabase.update_paper(arxiv_id, {"citation_count": citation_count}):
+                    updated += 1
             except Exception as e:
                 logger.warning(f"Failed to update {arxiv_id}: {e}")
 
@@ -92,7 +66,7 @@ async def main():
 
     setup_logging()
 
-    supabase = get_supabase_client()
+    supabase = get_db_client()
     s2_client = SemanticScholarClient(batch_size=min(args.batch_size, 500))
 
     try:

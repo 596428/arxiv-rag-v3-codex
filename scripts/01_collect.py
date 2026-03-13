@@ -36,7 +36,7 @@ from src.collection import (
     get_downloader,
     close_downloader,
 )
-from src.storage import get_supabase_client
+from src.storage import get_db_client
 from src.utils.config import settings
 from src.utils.logging import get_logger, setup_logging
 from src.utils.gemini import get_gemini_client
@@ -349,7 +349,7 @@ async def save_to_database(papers: list[Paper]) -> int:
     logger.info("Saving to Database")
     logger.info("=" * 60)
 
-    db = get_supabase_client()
+    db = get_db_client()
     count = db.batch_insert_papers(papers)
 
     logger.info(f"Saved {count} papers to database")

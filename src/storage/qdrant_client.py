@@ -51,8 +51,8 @@ class QdrantConfig:
     def from_env(cls) -> "QdrantConfig":
         """Create config from environment variables."""
         return cls(
-            host=os.getenv("QDRANT_HOST", "localhost"),
-            port=int(os.getenv("QDRANT_PORT", "6333")),
+            host=os.getenv("QDRANT_HOST", settings.qdrant_host),
+            port=int(os.getenv("QDRANT_PORT", str(settings.qdrant_port))),
             grpc_port=int(os.getenv("QDRANT_GRPC_PORT", "6334")),
             api_key=os.getenv("QDRANT_API_KEY"),
             # Use REST by default to avoid gRPC version compatibility issues
@@ -68,7 +68,7 @@ class QdrantVectorClient:
     Collection schema:
     - vectors:
         - dense_bge: 1024-dim BGE-M3 dense embeddings
-        - dense_openai: 1024-dim OpenAI text-embedding-3-large
+        - dense_3large: 3072-dim OpenAI text-embedding-3-large
         - colbert: Multi-vector ColBERT token embeddings
     - sparse_vectors:
         - sparse_bge: BGE-M3 sparse/lexical weights (inverted index)
@@ -200,7 +200,7 @@ class QdrantVectorClient:
             content: Chunk text content
             section_title: Section title
             dense_bge: BGE-M3 dense vector (1024 dims)
-            dense_openai: OpenAI dense vector (1024 dims)
+            dense_openai: OpenAI dense vector (3072 dims)
             sparse_indices: Sparse vector token indices
             sparse_values: Sparse vector token weights
             colbert_tokens: ColBERT token embeddings (variable length)
@@ -215,7 +215,7 @@ class QdrantVectorClient:
             if dense_bge:
                 vectors["dense_bge"] = dense_bge
             if dense_openai:
-                vectors["dense_openai"] = dense_openai
+                vectors["dense_3large"] = dense_openai
 
             # Build sparse vectors dict
             sparse_vectors = {}
@@ -374,8 +374,8 @@ class QdrantVectorClient:
         Search using dense vectors.
 
         Args:
-            query_vector: Query embedding (1024 dims)
-            vector_name: Which dense vector to search (dense_bge or dense_openai)
+            query_vector: Query embedding for the selected vector field
+            vector_name: Which dense vector to search (dense_bge or dense_3large)
             top_k: Number of results
             paper_id_filter: Optional filter by paper ID
 

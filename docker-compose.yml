@@ -31,6 +31,25 @@ services:
       retries: 3
       start_period: 10s
 
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: arxiv-rag-postgres
+    restart: "no"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=${PG_DATABASE:-arxiv_rag}
+      - POSTGRES_USER=${PG_USER}
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
   # FastAPI Backend
   api:
     image: arxiv-rag-api:latest
@@ -41,9 +60,18 @@ services:
     depends_on:
       qdrant:
         condition: service_healthy
+      postgres:
+        condition: service_healthy
     environment:
+      - DB_BACKEND=${DB_BACKEND:-local}
+      - QDRANT_URL=${QDRANT_URL:-http://qdrant:6333}
       - QDRANT_HOST=qdrant
       - QDRANT_PORT=6333
+      - PG_HOST=postgres
+      - PG_PORT=5432
+      - PG_DATABASE=${PG_DATABASE:-arxiv_rag}
+      - PG_USER=${PG_USER}
+      - PG_PASSWORD=${PG_PASSWORD}
       - SUPABASE_URL=${SUPABASE_URL}
       - SUPABASE_KEY=${SUPABASE_KEY}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
@@ -60,4 +88,6 @@ services:
 
 volumes:
   qdrant_storage:
+    driver: local
+  postgres_data:
     driver: local

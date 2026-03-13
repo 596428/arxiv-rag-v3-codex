@@ -144,9 +144,88 @@ class SupabaseClient:
             logger.error(f"Failed to get paper {arxiv_id}: {e}")
             return None
 
+    def update_paper(self, arxiv_id: str, data: dict) -> bool:
+        """Update arbitrary paper fields."""
+        if not data:
+            return True
+
+        payload = dict(data)
+        payload.setdefault("updated_at", datetime.utcnow().isoformat())
+
+        try:
+            result = (
+                self.client.table("papers")
+                .update(payload)
+                .eq("arxiv_id", arxiv_id)
+                .execute()
+            )
+            return bool(result.data)
+        except Exception as e:
+            logger.error(f"Failed to update paper {arxiv_id}: {e}")
+            return False
+
     def paper_exists(self, arxiv_id: str) -> bool:
         """Check if a paper exists in the database."""
         return self.get_paper(arxiv_id) is not None
+
+    def get_papers(
+        self,
+        fields: list[str] | None = None,
+        limit: int | None = 100,
+        offset: int = 0,
+        status: str | None = None,
+        order_by: str = "citation_count",
+        desc: bool = True,
+        require_abstract: bool = False,
+    ) -> list[dict]:
+        """Get papers with optional filtering, sorting, and pagination."""
+        select_fields = ", ".join(fields) if fields else "*"
+        rows: list[dict] = []
+        batch_size = limit if limit is not None else 1000
+        current_offset = offset
+
+        while True:
+            query = self.client.table("papers").select(select_fields)
+
+            if status:
+                query = query.eq("parse_status", status)
+            if require_abstract:
+                query = query.not_.is_("abstract", "null")
+
+            query = query.order(order_by, desc=desc)
+            query = query.range(current_offset, current_offset + batch_size - 1)
+            result = query.execute()
+            batch = result.data or []
+            rows.extend(batch)
+
+            if limit is not None:
+                return rows[:limit]
+            if len(batch) < batch_size:
+                return rows
+            current_offset += batch_size
+
+    def list_papers(
+        self,
+        page_size: int,
+        offset: int = 0,
+        status: str | None = None,
+        sort_by: str = "citation_count",
+        desc: bool = True,
+        fields: list[str] | None = None,
+    ) -> tuple[list[dict], int]:
+        """List papers with total count for pagination."""
+        select_fields = ", ".join(fields) if fields else "*"
+        query = self.client.table("papers").select(select_fields, count="exact")
+
+        if status:
+            query = query.eq("parse_status", status)
+
+        result = (
+            query.order(sort_by, desc=desc)
+            .range(offset, offset + page_size - 1)
+            .execute()
+        )
+        return result.data or [], result.count or 0
 
     def get_papers_by_status(
         self,
@@ -198,27 +277,12 @@ class SupabaseClient:
         Returns:
             True if successful
         """
-        data = {
-            "parse_status": status.value,
-            "updated_at": datetime.utcnow().isoformat(),
-        }
+        data = {"parse_status": status.value}
 
         if parse_method:
             data["parse_method"] = parse_method.value
 
-        try:
-            result = (
-                self.client.table("papers")
-                .update(data)
-                .eq("arxiv_id", arxiv_id)
-                .execute()
-            )
-
-            return bool(result.data)
-
-        except Exception as e:
-            logger.error(f"Failed to update paper status: {e}")
-            return False
+        return self.update_paper(arxiv_id, data)
 
     def update_paper_paths(
         self,
@@ -237,26 +301,14 @@ class SupabaseClient:
         Returns:
             True if successful
         """
-        data = {"updated_at": datetime.utcnow().isoformat()}
+        data = {}
 
         if pdf_path:
             data["pdf_path"] = pdf_path
         if latex_path:
             data["latex_path"] = latex_path
 
-        try:
-            result = (
-                self.client.table("papers")
-                .update(data)
-                .eq("arxiv_id", arxiv_id)
-                .execute()
-            )
-
-            return bool(result.data)
-
-        except Exception as e:
-            logger.error(f"Failed to update paper paths: {e}")
-            return False
+        return self.update_paper(arxiv_id, data)
 
     def batch_insert_papers(self, papers: list[Paper]) -> int:
         """

@@ -25,7 +25,7 @@ from collections import defaultdict
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.storage.supabase_client import get_supabase_client
+from src.storage import get_db_client
 from src.utils.logging import get_logger
 
 logger = get_logger("compute_scores")
@@ -78,26 +78,11 @@ TOPIC_KEYWORDS = {
 
 def fetch_citation_counts() -> dict[str, int]:
     """Fetch citation counts from database."""
-    supabase = get_supabase_client()
+    client = get_db_client()
     citation_map = {}
-    offset = 0
-    batch_size = 1000
-
-    while True:
-        result = (
-            supabase.client.table("papers")
-            .select("arxiv_id, citation_count")
-            .range(offset, offset + batch_size - 1)
-            .execute()
-        )
-        batch = result.data or []
-        if not batch:
-            break
-
-        for row in batch:
-            citation_map[row["arxiv_id"]] = row.get("citation_count") or 0
-
-        offset += batch_size
+    rows = client.get_papers(fields=["arxiv_id", "citation_count"], limit=None, order_by="arxiv_id", desc=False)
+    for row in rows:
+        citation_map[row["arxiv_id"]] = row.get("citation_count") or 0
 
     logger.info(f"Fetched citation counts for {len(citation_map)} papers from DB")
     return citation_map

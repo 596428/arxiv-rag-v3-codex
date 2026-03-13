@@ -64,6 +64,8 @@ class Chunk(BaseModel):
             "content": self.content,
             "section_title": self.section_title,
             "chunk_type": self.chunk_type.value,
+            "chunk_index": self.chunk_index,
+            "token_count": self.token_count,
             "metadata": {
                 "section_id": self.section_id,
                 "paragraph_ids": self.paragraph_ids,
@@ -175,7 +177,10 @@ class EmbeddedChunk(BaseModel):
     embedding_sparse: Optional[SparseVector] = Field(None, description="Sparse vector (top-128)")
 
     # OpenAI embedding (comparison)
-    embedding_openai: Optional[list[float]] = Field(None, description="OpenAI vector (1024 dims, MRL)")
+    embedding_openai: Optional[list[float]] = Field(
+        None,
+        description="OpenAI vector (3072 dims, text-embedding-3-large)",
+    )
 
     # ColBERT embedding (token-level for MaxSim)
     embedding_colbert: Optional[ColBERTVector] = Field(None, description="ColBERT token embeddings")

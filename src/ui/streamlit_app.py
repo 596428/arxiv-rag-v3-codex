@@ -19,9 +19,9 @@ st.set_page_config(
 # Lazy imports to avoid slow startup
 @st.cache_resource
 def get_retriever():
-    """Load retriever (cached)."""
-    from src.rag.retriever import HybridRetriever
-    return HybridRetriever()
+    """Load Qdrant retriever (cached)."""
+    from src.rag.qdrant_retriever import QdrantHybridRetriever
+    return QdrantHybridRetriever()
 
 
 @st.cache_resource
@@ -34,8 +34,8 @@ def get_reranker():
 @st.cache_resource
 def get_db_client():
     """Load database client (cached)."""
-    from src.storage.supabase_client import get_supabase_client
-    return get_supabase_client()
+    from src.storage import get_db_client
+    return get_db_client()
 
 
 def format_score(score: Optional[float]) -> str:
@@ -68,9 +68,9 @@ def main():
 
         search_mode = st.selectbox(
             "Search Mode",
-            options=["hybrid", "dense", "sparse"],
+            options=["adaptive", "qdrant_hybrid", "dense", "sparse"],
             index=0,
-            help="Hybrid combines dense (semantic) and sparse (lexical) search"
+            help="Adaptive uses query-aware Qdrant retrieval; hybrid combines dense and sparse search"
         )
 
         top_k = st.slider(
@@ -158,8 +158,10 @@ def main():
                     response = retriever.search_dense_only(query, top_k=top_k)
                 elif search_mode == "sparse":
                     response = retriever.search_sparse_only(query, top_k=top_k)
+                elif search_mode == "adaptive":
+                    response = retriever.search_adaptive(query, top_k=top_k, use_reranker=False)
                 else:
-                    response = retriever.search(query, top_k=top_k)
+                    response = retriever.search(query, top_k=top_k, use_reranker=False)
 
                 results = response.results
 

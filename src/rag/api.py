@@ -11,15 +11,11 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from ..storage.supabase_client import get_supabase_client
+from ..storage import get_db_client
 from ..utils.logging import get_logger
-from .retriever import HybridRetriever, SearchResponse, SearchResult
+from .retriever import SearchResponse, SearchResult
 from .reranker import BGEReranker
-from .qdrant_retriever import (
-    QdrantHybridRetriever,
-    qdrant_adaptive_search,
-    qdrant_hybrid_search,
-)
+from .qdrant_retriever import QdrantHybridRetriever
 
 logger = get_logger("api")
 
@@ -40,17 +36,8 @@ app.add_middleware(
 )
 
 # Global instances (lazy loaded)
-_retriever: Optional[HybridRetriever] = None
 _qdrant_retriever: Optional[QdrantHybridRetriever] = None
 _reranker: Optional[BGEReranker] = None
-
-
-def get_retriever() -> HybridRetriever:
-    """Get or create retriever instance."""
-    global _retriever
-    if _retriever is None:
-        _retriever = HybridRetriever()
-    return _retriever
 
 
 def get_qdrant_retriever() -> QdrantHybridRetriever:
@@ -82,7 +69,7 @@ class SearchRequest(BaseModel):
     rerank_top_k: int = Field(default=5, ge=1, le=20, description="Results after reranking")
     search_mode: str = Field(
         default="adaptive",
-        description="Search mode: adaptive (auto strategy), qdrant_hybrid, hybrid (legacy), dense, sparse"
+        description="Search mode: adaptive (auto strategy), qdrant_hybrid, dense, sparse"
     )
     use_hyde: bool = Field(default=True, description="Enable HyDE expansion for conceptual queries (adaptive mode)")
 
@@ -159,7 +146,7 @@ async def root():
 async def health_check():
     """Health check endpoint."""
     try:
-        client = get_supabase_client()
+        client = get_db_client()
         count = client.get_chunk_count()
         return {
             "status": "healthy",
@@ -181,7 +168,6 @@ async def search(request: SearchRequest):
     Supports multiple search modes:
     - adaptive: Auto-selects strategy based on query type (recommended)
     - qdrant_hybrid: Qdrant RRF hybrid search
-    - hybrid: Legacy Supabase hybrid search
     - dense: Dense-only semantic search
     - sparse: Sparse-only lexical search
     """
@@ -233,9 +219,7 @@ async def search(request: SearchRequest):
             response = qdrant_retriever.search_sparse_only(request.query, top_k=request.top_k)
 
         else:
-            # Legacy Supabase hybrid search
-            retriever = get_retriever()
-            response = retriever.search(request.query, top_k=request.top_k)
+            raise HTTPException(status_code=400, detail=f"Invalid search_mode: {request.search_mode}")
 
         results = response.results
         reranked = False
@@ -303,7 +287,7 @@ async def search_get(
 async def get_paper(arxiv_id: str):
     """Get paper details by arXiv ID."""
     try:
-        client = get_supabase_client()
+        client = get_db_client()
         paper = client.get_paper(arxiv_id)
 
         if not paper:
@@ -334,7 +318,7 @@ async def get_paper(arxiv_id: str):
 async def get_paper_chunks(arxiv_id: str):
     """Get paper with all its chunks."""
     try:
-        client = get_supabase_client()
+        client = get_db_client()
         paper = client.get_paper(arxiv_id)
 
         if not paper:
@@ -380,7 +364,7 @@ async def get_paper_chunks(arxiv_id: str):
 async def get_chunk(chunk_id: str):
     """Get a single chunk by ID."""
     try:
-        client = get_supabase_client()
+        client = get_db_client()
         chunk = client.get_chunk(chunk_id)
 
         if not chunk:
@@ -405,7 +389,7 @@ async def get_chunk(chunk_id: str):
 async def get_stats():
     """Get database statistics."""
     try:
-        client = get_supabase_client()
+        client = get_db_client()
         stats = client.get_collection_stats()
 
         return StatsResponse(
@@ -428,7 +412,7 @@ async def list_papers(
 ):
     """List papers with pagination."""
     try:
-        client = get_supabase_client()
+        client = get_db_client()
 
         if status:
             from ..collection.models import PaperStatus
@@ -471,25 +455,21 @@ async def list_papers(
 async def startup_event():
     """Initialize resources on startup."""
     logger.info("arXiv RAG API starting...")
-    # Pre-warm Supabase connection
+    # Pre-warm metadata DB connection
     try:
-        client = get_supabase_client()
+        client = get_db_client()
         count = client.get_chunk_count()
-        logger.info(f"Connected to Supabase: {count} chunks indexed")
+        logger.info(f"Connected to metadata DB: {count} chunks indexed")
     except Exception as e:
-        logger.error(f"Failed to connect to Supabase: {e}")
+        logger.error(f"Failed to connect to metadata DB: {e}")
 
 
 @app.on_event("shutdown")
 async def shutdown_event():
     """Cleanup resources on shutdown."""
-    global _retriever, _qdrant_retriever, _reranker
+    global _qdrant_retriever, _reranker
 
     logger.info("arXiv RAG API shutting down...")
-
-    if _retriever:
-        _retriever.embedder.unload()
-        _retriever = None
 
     if _qdrant_retriever:
         _qdrant_retriever.unload_models()

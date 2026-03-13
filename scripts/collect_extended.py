@@ -35,7 +35,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.collection.arxiv_client import ArxivClient
 from src.collection.ng_keywords import get_ng_keywords_manager, filter_by_ng_keywords
 from src.collection.models import Paper
-from src.storage.supabase_client import get_supabase_client
+from src.storage import get_db_client
 from src.utils.logging import get_logger
 
 logger = get_logger("collect_extended")
@@ -372,7 +372,7 @@ async def collect_month(
 
     # Save to database
     if final_papers:
-        supabase = get_supabase_client()
+        supabase = get_db_client()
         inserted = supabase.batch_insert_papers(final_papers)
         logger.info(f"Inserted {inserted} papers to database")
 

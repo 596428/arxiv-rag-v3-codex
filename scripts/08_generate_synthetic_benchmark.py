@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import google.generativeai as genai
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from src.storage.supabase_client import get_supabase_client
+from src.storage import get_db_client
 from src.storage.qdrant_client import get_qdrant_client
 from src.utils.config import settings
 from src.utils.logging import get_logger
@@ -943,35 +943,14 @@ class BenchmarkGeneratorV2:
 # =============================================================================
 
 def get_papers_with_abstracts(client, limit: int = 1000) -> list[dict]:
-    """Fetch papers with title and abstract from Supabase with pagination."""
+    """Fetch papers with title and abstract from the configured metadata DB."""
     try:
-        all_papers = []
-        batch_size = 1000  # Supabase max per request
-        offset = 0
-
-        while len(all_papers) < limit:
-            fetch_limit = min(batch_size, limit - len(all_papers))
-            result = (
-                client.client.table("papers")
-                .select("arxiv_id, title, abstract, categories")
-                .not_.is_("abstract", "null")
-                .order("citation_count", desc=True)
-                .range(offset, offset + fetch_limit - 1)
-                .execute()
-            )
-
-            if not result.data:
-                break
-
-            all_papers.extend(result.data)
-            logger.info(f"Fetched {len(all_papers)} papers so far...")
-
-            if len(result.data) < fetch_limit:
-                break  # No more data
-
-            offset += fetch_limit
-
-        return all_papers[:limit]
+        return client.get_papers(
+            fields=["arxiv_id", "title", "abstract", "categories"],
+            limit=limit,
+            order_by="citation_count",
+            require_abstract=True,
+        )
     except Exception as e:
         logger.error(f"Failed to fetch papers: {e}")
         return []
@@ -1166,7 +1145,7 @@ Examples:
 
     # Initialize
     logger.info("Initializing v2 benchmark generator...")
-    client = get_supabase_client()
+    client = get_db_client()
 
     generator = BenchmarkGeneratorV2(
         model_name=args.model,

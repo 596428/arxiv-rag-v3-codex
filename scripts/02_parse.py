@@ -27,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.utils.config import get_settings
 from src.utils.logging import setup_logging, ProgressLogger
-from src.storage import get_supabase_client
+from src.storage import get_db_client
 from src.collection.models import PaperStatus, ParseMethod
 from src.parsing import (
     LatexParser,
@@ -253,39 +253,15 @@ def get_papers_to_parse(
 
     if arxiv_id:
         # Get specific paper
-        result = supabase_client.client.table("papers").select("*").eq("arxiv_id", arxiv_id).execute()
-        return result.data if result.data else []
+        paper = supabase_client.get_paper(arxiv_id)
+        return [paper] if paper else []
 
-    # Get papers with status = pending (need parsing)
-    # Use pagination to get all papers (Supabase default limit is 1000)
-    all_papers = []
-    batch_size = 1000
-    offset = 0
-
-    while True:
-        query = (
-            supabase_client.client.table("papers")
-            .select("arxiv_id, pdf_path, latex_path, citation_count")
-            .eq("parse_status", "pending")
-            .order("citation_count", desc=True)
-            .range(offset, offset + batch_size - 1)
-        )
-
-        result = query.execute()
-        batch = result.data if result.data else []
-
-        if not batch:
-            break
-
-        all_papers.extend(batch)
-        offset += batch_size
-
-        # Check if we've reached user-specified limit
-        if limit and len(all_papers) >= limit:
-            all_papers = all_papers[:limit]
-            break
-
-    return all_papers
+    return supabase_client.get_papers(
+        fields=["arxiv_id", "pdf_path", "latex_path", "citation_count"],
+        limit=limit,
+        status="pending",
+        order_by="citation_count",
+    )
 
 
 def update_paper_status(
@@ -295,14 +271,11 @@ def update_paper_status(
     parse_method: str = None,
 ):
     """Update paper status in database."""
-    update_data = {
-        "parse_status": status,
-        "updated_at": datetime.now().isoformat(),
-    }
+    update_data = {"parse_status": status}
     if parse_method:
         update_data["parse_method"] = parse_method
 
-    supabase_client.client.table("papers").update(update_data).eq("arxiv_id", arxiv_id).execute()
+    supabase_client.update_paper(arxiv_id, update_data)
 
 
 def main():
@@ -336,7 +309,7 @@ def main():
         }]
     else:
         # Get from database
-        supabase = get_supabase_client()
+        supabase = get_db_client()
         papers = get_papers_to_parse(supabase, limit=args.limit, arxiv_id=args.arxiv_id)
 
         if not papers:
@@ -365,7 +338,7 @@ def main():
 
     # Update database status
     if not args.dry_run and not args.skip_db_update and not args.arxiv_id:
-        supabase = get_supabase_client()
+        supabase = get_db_client()
         success_count = stats.latex_success + stats.marker_success
         logger.info(f"Updating database status for {success_count} papers")
 

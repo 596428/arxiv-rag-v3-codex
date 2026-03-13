@@ -13,8 +13,8 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.collection import Paper, get_downloader, close_downloader
-from src.storage import get_supabase_client
+from src.collection import Paper, close_downloader, get_downloader
+from src.storage import get_db_client
 from src.utils.logging import get_logger, setup_logging
 
 logger = get_logger("download")
@@ -22,30 +22,23 @@ logger = get_logger("download")
 
 async def load_papers_from_db(limit: int = None) -> list[Paper]:
     """Load papers from database."""
-    client = get_supabase_client()
-
-    query = client.client.table('papers').select('*').order('citation_count', desc=True)
-
-    if limit:
-        query = query.limit(limit)
-
-    result = query.execute()
-
-    papers = []
-    for row in result.data:
-        paper = Paper(
-            arxiv_id=row['arxiv_id'],
-            title=row['title'],
-            abstract=row['abstract'],
-            authors=row.get('authors', []),
-            categories=row.get('categories', []),
-            published_date=row.get('published_date'),
-            pdf_url=row.get('pdf_url'),
-            citation_count=row.get('citation_count', 0),
+    client = get_db_client()
+    rows = client.get_papers(limit=limit, order_by="citation_count", fields=[
+        "arxiv_id", "title", "abstract", "authors", "categories", "published_date", "pdf_url", "citation_count"
+    ])
+    return [
+        Paper(
+            arxiv_id=row["arxiv_id"],
+            title=row["title"],
+            abstract=row.get("abstract", ""),
+            authors=row.get("authors", []),
+            categories=row.get("categories", []),
+            published_date=row.get("published_date"),
+            pdf_url=row.get("pdf_url"),
+            citation_count=row.get("citation_count", 0),
         )
-        papers.append(paper)
-
-    return papers
+        for row in rows
+    ]
 
 
 async def download_papers(
@@ -73,7 +66,6 @@ async def download_papers(
     finally:
         await close_downloader()
 
-    # Count successes
     pdf_count = sum(1 for p in downloaded if p.pdf_path)
     latex_count = sum(1 for p in downloaded if p.latex_path)
 
@@ -88,18 +80,15 @@ async def download_papers(
 
 async def update_db_paths(papers: list[Paper]) -> int:
     """Update database with download paths."""
-    client = get_supabase_client()
-
+    client = get_db_client()
     updated = 0
     for paper in papers:
         if paper.pdf_path or paper.latex_path:
-            update_data = {}
-            if paper.pdf_path:
-                update_data['pdf_path'] = str(paper.pdf_path)
-            if paper.latex_path:
-                update_data['latex_path'] = str(paper.latex_path)
-
-            client.client.table('papers').update(update_data).eq('arxiv_id', paper.arxiv_id).execute()
+            client.update_paper_paths(
+                paper.arxiv_id,
+                pdf_path=str(paper.pdf_path) if paper.pdf_path else None,
+                latex_path=str(paper.latex_path) if paper.latex_path else None,
+            )
             updated += 1
 
     logger.info(f"Updated {updated} paper paths in database")
@@ -109,27 +98,24 @@ async def update_db_paths(papers: list[Paper]) -> int:
 async def load_papers_from_json(json_path: str) -> list[Paper]:
     """Load papers from JSON file (final_papers.json format)."""
     import json
-    with open(json_path, 'r') as f:
+
+    with open(json_path, "r") as f:
         data = json.load(f)
 
-    # Handle both formats: list or {"papers": [...]}
     papers_data = data.get("papers", data) if isinstance(data, dict) else data
-
-    papers = []
-    for row in papers_data:
-        paper = Paper(
-            arxiv_id=row['arxiv_id'],
-            title=row['title'],
-            abstract=row.get('abstract', ''),
-            authors=row.get('authors', []),
-            categories=row.get('categories', []),
-            published_date=row.get('published_date'),
-            pdf_url=row.get('pdf_url'),
-            citation_count=row.get('citation_count', 0),
+    return [
+        Paper(
+            arxiv_id=row["arxiv_id"],
+            title=row["title"],
+            abstract=row.get("abstract", ""),
+            authors=row.get("authors", []),
+            categories=row.get("categories", []),
+            published_date=row.get("published_date"),
+            pdf_url=row.get("pdf_url"),
+            citation_count=row.get("citation_count", 0),
         )
-        papers.append(paper)
-
-    return papers
+        for row in papers_data
+    ]
 
 
 async def main():
@@ -144,9 +130,9 @@ async def main():
     args = parser.parse_args()
 
     import logging
+
     setup_logging(level=logging.DEBUG if args.verbose else logging.INFO)
 
-    # Load papers from JSON or DB
     if args.input:
         logger.info(f"Loading papers from {args.input}...")
         papers = await load_papers_from_json(args.input)
@@ -161,20 +147,16 @@ async def main():
 
     if args.dry_run:
         logger.info("Dry run - no files will be downloaded")
-        for i, p in enumerate(papers[:10]):
-            print(f"  {i+1}. {p.arxiv_id}: {p.title[:50]}...")
+        for i, paper in enumerate(papers[:10], start=1):
+            print(f"  {i}. {paper.arxiv_id}: {paper.title[:50]}...")
         if len(papers) > 10:
             print(f"  ... and {len(papers) - 10} more")
         return
 
-    # Determine what to download
     download_pdf = not args.latex_only
     download_latex = not args.pdf_only
 
-    # Download
     downloaded = await download_papers(papers, download_pdf, download_latex)
-
-    # Update database with paths
     await update_db_paths(downloaded)
 
     print("\nDownload complete!")

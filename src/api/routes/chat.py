@@ -15,8 +15,9 @@ from pydantic import BaseModel, Field
 from ...embedding.bge_embedder import BGEEmbedder
 from ...embedding.openai_embedder import OpenAIEmbedder
 from ...embedding.models import EmbeddingConfig
+from ...storage import get_db_client
 from ...storage.qdrant_client import get_qdrant_client
-from ...storage.supabase_client import get_supabase_client
+from ...utils.config import settings
 from ...utils.logging import get_logger
 
 logger = get_logger("api.chat")
@@ -146,7 +147,7 @@ async def generate_with_gemini(prompt: str, stream: bool = False):
 
         genai.configure(api_key=api_key)
 
-        model = genai.GenerativeModel("gemini-2.0-flash")
+        model = genai.GenerativeModel(settings.gemini_model)
 
         if stream:
             response = model.generate_content(prompt, stream=True)
@@ -218,7 +219,7 @@ async def chat(request: ChatRequest):
         retrieval_start = time.time()
 
         qdrant = get_qdrant_client()
-        supabase = get_supabase_client()
+        supabase = get_db_client()
 
         # Get embeddings based on model choice
         if request.embedding_model == "openai":

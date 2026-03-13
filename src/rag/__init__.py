@@ -1,28 +1,6 @@
-"""
-arXiv RAG v1 - RAG Module
+"""RAG module exports for Qdrant-based retrieval."""
 
-Hybrid retrieval and search functionality.
-- Supabase-based retrievers (legacy pgvector)
-- Qdrant-based retrievers (optimized with native sparse indexing)
-"""
-
-from .retriever import (
-    SearchResult,
-    SearchResponse,
-    DenseRetriever,
-    SparseRetriever,
-    HybridRetriever,
-    HybridFullRetriever,
-    ColBERTRetriever,
-    OpenAIRetriever,
-    hybrid_search,
-    dense_search,
-    sparse_search,
-    colbert_search,
-    openai_search,
-    hybrid_full_search,
-)
-
+from .retriever import SearchResult, SearchResponse
 from .qdrant_retriever import (
     QdrantDenseRetriever,
     QdrantSparseRetriever,
@@ -32,32 +10,12 @@ from .qdrant_retriever import (
     qdrant_sparse_search,
     qdrant_adaptive_search,
 )
-
-from .reranker import (
-    BGEReranker,
-    LightweightReranker,
-    rerank_results,
-)
-
+from .reranker import BGEReranker, LightweightReranker, rerank_results
 from .api import app as api_app
 
 __all__ = [
-    # Supabase Retriever (legacy)
     "SearchResult",
     "SearchResponse",
-    "DenseRetriever",
-    "SparseRetriever",
-    "HybridRetriever",
-    "HybridFullRetriever",
-    "ColBERTRetriever",
-    "OpenAIRetriever",
-    "hybrid_search",
-    "dense_search",
-    "sparse_search",
-    "colbert_search",
-    "openai_search",
-    "hybrid_full_search",
-    # Qdrant Retriever (optimized)
     "QdrantDenseRetriever",
     "QdrantSparseRetriever",
     "QdrantHybridRetriever",
@@ -65,10 +23,8 @@ __all__ = [
     "qdrant_dense_search",
     "qdrant_sparse_search",
     "qdrant_adaptive_search",
-    # Reranker
     "BGEReranker",
     "LightweightReranker",
     "rerank_results",
-    # API
     "api_app",
 ]

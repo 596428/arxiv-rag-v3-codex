@@ -1,15 +1,11 @@
-"""
-arXiv RAG v1 - Papers API Routes
-
-Paper metadata endpoints using Supabase.
-"""
+"""Paper metadata endpoints using the configured metadata DB."""
 
 from typing import Optional
 
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel
 
-from ...storage.supabase_client import get_supabase_client
+from ...storage import get_db_client
 from ...utils.logging import get_logger
 
 logger = get_logger("api.papers")
@@ -19,6 +15,7 @@ router = APIRouter()
 
 class PaperSummary(BaseModel):
     """Paper summary for list view."""
+
     arxiv_id: str
     title: str
     authors: list[str]
@@ -30,6 +27,7 @@ class PaperSummary(BaseModel):
 
 class PaperDetail(BaseModel):
     """Full paper details."""
+
     arxiv_id: str
     title: str
     authors: list[str]
@@ -46,6 +44,7 @@ class PaperDetail(BaseModel):
 
 class PapersListResponse(BaseModel):
     """Papers list response."""
+
     papers: list[PaperSummary]
     total: int
     page: int
@@ -60,91 +59,56 @@ async def list_papers(
     sort_by: str = Query(default="citation_count", description="Sort field"),
     order: str = Query(default="desc", description="Sort order (asc/desc)"),
 ):
-    """
-    List papers with pagination.
-
-    Args:
-        page: Page number (1-indexed)
-        page_size: Number of results per page
-        status: Filter by parse status (pending, parsed, embedded, failed)
-        sort_by: Sort field (citation_count, published_date, title)
-        order: Sort order
-
-    Returns:
-        Paginated list of papers
-    """
+    """List papers with pagination."""
     try:
-        supabase = get_supabase_client()
+        client = get_db_client()
         offset = (page - 1) * page_size
-
-        # Build query
-        query = supabase.client.table("papers").select(
-            "arxiv_id, title, authors, published_date, categories, citation_count, parse_status",
-            count="exact"
+        rows, total = client.list_papers(
+            page_size=page_size,
+            offset=offset,
+            status=status,
+            sort_by=sort_by,
+            desc=order.lower() == "desc",
+            fields=[
+                "arxiv_id",
+                "title",
+                "authors",
+                "published_date",
+                "categories",
+                "citation_count",
+                "parse_status",
+            ],
         )
-
-        # Apply status filter
-        if status:
-            query = query.eq("parse_status", status)
-
-        # Apply sorting
-        desc = order.lower() == "desc"
-        query = query.order(sort_by, desc=desc)
-
-        # Apply pagination
-        query = query.range(offset, offset + page_size - 1)
-
-        result = query.execute()
 
         papers = [
             PaperSummary(
-                arxiv_id=p["arxiv_id"],
-                title=p["title"],
-                authors=p.get("authors", []),
-                published_date=p.get("published_date"),
-                categories=p.get("categories", []),
-                citation_count=p.get("citation_count"),
-                parse_status=p.get("parse_status"),
+                arxiv_id=row["arxiv_id"],
+                title=row["title"],
+                authors=row.get("authors", []),
+                published_date=row.get("published_date"),
+                categories=row.get("categories", []),
+                citation_count=row.get("citation_count"),
+                parse_status=row.get("parse_status"),
             )
-            for p in result.data
+            for row in rows
         ]
 
-        return PapersListResponse(
-            papers=papers,
-            total=result.count or len(papers),
-            page=page,
-            page_size=page_size,
-        )
-
+        return PapersListResponse(papers=papers, total=total, page=page, page_size=page_size)
     except Exception as e:
-        logger.error(f"Failed to list papers: {e}")
+        logger.error("Failed to list papers: %s", e)
         raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.get("/papers/{arxiv_id}", response_model=PaperDetail)
 async def get_paper(arxiv_id: str):
-    """
-    Get paper details by arXiv ID.
-
-    Args:
-        arxiv_id: arXiv paper identifier (e.g., "2401.12345")
-
-    Returns:
-        Full paper details including abstract
-    """
+    """Get paper details by arXiv ID."""
     try:
-        supabase = get_supabase_client()
-
-        # Get paper
-        paper = supabase.get_paper(arxiv_id)
-
+        client = get_db_client()
+        paper = client.get_paper(arxiv_id)
         if not paper:
             raise HTTPException(status_code=404, detail=f"Paper not found: {arxiv_id}")
 
-        # Get chunk count
-        chunks = supabase.get_chunks_by_paper(arxiv_id)
-        chunk_count = len(chunks)
-
+        chunk_count = len(client.get_chunks_by_paper(arxiv_id))
         return PaperDetail(
             arxiv_id=paper["arxiv_id"],
             title=paper["title"],
@@ -159,11 +123,10 @@ async def get_paper(arxiv_id: str):
             parse_method=paper.get("parse_method"),
             chunk_count=chunk_count,
         )
-
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Failed to get paper {arxiv_id}: {e}")
+        logger.error("Failed to get paper %s: %s", arxiv_id, e)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -172,28 +135,14 @@ async def get_paper_chunks(
     arxiv_id: str,
     include_embeddings: bool = Query(default=False, description="Include embedding vectors"),
 ):
-    """
-    Get all chunks for a paper.
-
-    Args:
-        arxiv_id: arXiv paper identifier
-        include_embeddings: Whether to include embedding vectors
-
-    Returns:
-        List of chunks with content and metadata
-    """
+    """Get all chunks for a paper."""
     try:
-        supabase = get_supabase_client()
-
-        # Verify paper exists
-        paper = supabase.get_paper(arxiv_id)
+        client = get_db_client()
+        paper = client.get_paper(arxiv_id)
         if not paper:
             raise HTTPException(status_code=404, detail=f"Paper not found: {arxiv_id}")
 
-        # Get chunks
-        chunks = supabase.get_chunks_by_paper(arxiv_id)
-
-        # Format response
+        chunks = client.get_chunks_by_paper(arxiv_id)
         response_chunks = []
         for chunk in chunks:
             chunk_data = {
@@ -202,12 +151,10 @@ async def get_paper_chunks(
                 "section_title": chunk.get("section_title"),
                 "metadata": chunk.get("metadata", {}),
             }
-
             if include_embeddings:
                 chunk_data["has_dense_embedding"] = chunk.get("embedding_dense") is not None
                 chunk_data["has_sparse_embedding"] = chunk.get("embedding_sparse") is not None
                 chunk_data["has_colbert_embedding"] = chunk.get("embedding_colbert") is not None
-
             response_chunks.append(chunk_data)
 
         return {
@@ -216,11 +163,10 @@ async def get_paper_chunks(
             "chunks": response_chunks,
             "total": len(response_chunks),
         }
-
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Failed to get chunks for {arxiv_id}: {e}")
+        logger.error("Failed to get chunks for %s: %s", arxiv_id, e)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -228,16 +174,9 @@ async def get_paper_chunks(
 async def get_stats():
     """Get collection statistics."""
     try:
-        supabase = get_supabase_client()
-        stats = supabase.get_collection_stats()
-
-        return {
-            "papers": stats,
-            "chunks": {
-                "total": supabase.get_chunk_count(),
-            }
-        }
-
+        client = get_db_client()
+        stats = client.get_collection_stats()
+        return {"papers": stats, "chunks": {"total": client.get_chunk_count()}}
     except Exception as e:
-        logger.error(f"Failed to get stats: {e}")
+        logger.error("Failed to get stats: %s", e)
         raise HTTPException(status_code=500, detail=str(e))

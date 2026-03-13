@@ -36,7 +36,7 @@ from src.embedding import (
     EmbeddingStats,
 )
 from src.parsing.models import ParsedDocument
-from src.storage import get_supabase_client, get_qdrant_client
+from src.storage import get_db_client, get_qdrant_client
 from src.utils.config import settings
 from src.utils.logging import setup_logging, get_logger
 
@@ -129,7 +129,7 @@ def run_embedding_pipeline(
     openai_embedder = OpenAIEmbedder(embedding_config) if with_openai else None
 
     # v2: Initialize both storage clients
-    supabase_client = get_supabase_client() if save_to_db and not dry_run else None
+    supabase_client = get_db_client() if save_to_db and not dry_run else None
     qdrant_client = get_qdrant_client() if save_to_db and not dry_run and not supabase_only else None
 
     if qdrant_client:

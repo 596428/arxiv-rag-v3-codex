@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.embedding.bge_embedder import BGEEmbedder
 from src.embedding.models import EmbeddingConfig
-from src.storage.supabase_client import get_supabase_client
+from src.storage import get_db_client
 from src.utils.logging import get_logger
 
 logger = get_logger("semantic_filter")
@@ -126,25 +126,12 @@ def main():
         logger.info(f"Loaded {len(papers)} papers from {args.input}")
     else:
         # Fetch all papers from database
-        supabase = get_supabase_client()
-        # Use pagination to fetch all papers (Supabase has 1000 row limit per request)
-        all_papers = []
-        offset = 0
-        batch_size = 1000
-        while True:
-            result = (
-                supabase.client.table("papers")
-                .select("arxiv_id, title, abstract, categories, citation_count, published_date")
-                .range(offset, offset + batch_size - 1)
-                .execute()
-            )
-            batch = result.data or []
-            if not batch:
-                break
-            all_papers.extend(batch)
-            logger.info(f"Fetched {len(all_papers)} papers...")
-            offset += batch_size
-        papers = all_papers
+        client = get_db_client()
+        papers = client.get_papers(
+            fields=["arxiv_id", "title", "abstract", "categories", "citation_count", "published_date"],
+            limit=None,
+            order_by="citation_count",
+        )
         logger.info(f"Loaded {len(papers)} papers from database")
 
     if not papers:
