@@ -1,0 +1,787 @@
+[
+  {
+    "arxiv_id": "2402.19262v1",
+    "title": "Masks, Signs, And Learning Rate Rewinding",
+    "abstract": "Learning Rate Rewinding (LRR) has been established as a strong variant of Iterative Magnitude Pruning (IMP) to find lottery tickets in deep overparameterized neural networks. While both iterative pruning schemes couple structure and parameter learning, understanding how LRR excels in both aspects can bring us closer to the design of more flexible deep learning algorithms that can optimize diverse sets of sparse architectures. To this end, we conduct experiments that disentangle the effect of mas",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.19197v2",
+    "title": "Fine Structure-Aware Sampling: A New Sampling Training Scheme for Pixel-Aligned Implicit Models in Single-View Human Reconstruction",
+    "abstract": "Pixel-aligned implicit models, such as PIFu, PIFuHD, and ICON, are used for single-view clothed human reconstruction. These models need to be trained using a sampling training scheme. Existing sampling training schemes either fail to capture thin surfaces (e.g. ears, fingers) or cause noisy artefacts in reconstructed meshes. To address these problems, we introduce Fine Structured-Aware Sampling (FSS), a new sampling training scheme to train pixel-aligned implicit models for single-view human rec",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.18920v5",
+    "title": "Spectral Meets Spatial: Harmonising 3D Shape Matching and Interpolation",
+    "abstract": "Although 3D shape matching and interpolation are highly interrelated, they are often studied separately and applied sequentially to relate different 3D shapes, thus resulting in sub-optimal performance. In this work we present a unified framework to predict both point-wise correspondences and shape interpolation between 3D shapes. To this end, we combine the deep functional map framework with classical surface deformation models to map shapes in both spectral and spatial domains. On the one hand",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.18830v2",
+    "title": "Training-set-free two-stage deep learning for spectroscopic data de-noising",
+    "abstract": "De-noising is a prominent step in the spectra post-processing procedure. Previous machine learning-based methods are fast but mostly based on supervised learning and require a training set that may be typically expensive in real experimental measurements. Unsupervised learning-based algorithms are slow and require many iterations to achieve convergence. Here, we bridge this gap by proposing a training-set-free two-stage deep learning method. We show that the fuzzy fixed input in previous methods",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.LG",
+      "physics.data-an"
+    ]
+  },
+  {
+    "arxiv_id": "2402.18505v1",
+    "title": "Evolving machine learning workflows through interactive AutoML",
+    "abstract": "Automatic workflow composition (AWC) is a relevant problem in automated machine learning (AutoML) that allows finding suitable sequences of preprocessing and prediction models together with their optimal hyperparameters. This problem can be solved using evolutionary algorithms and, in particular, grammar-guided genetic programming (G3P). Current G3P approaches to AWC define a fixed grammar that formally specifies how workflow elements can be combined and which algorithms can be included. In this",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.18281v2",
+    "title": "Towards Better Understanding of Contrastive Sentence Representation Learning: A Unified Paradigm for Gradient",
+    "abstract": "Sentence Representation Learning (SRL) is a crucial task in Natural Language Processing (NLP), where contrastive Self-Supervised Learning (SSL) is currently a mainstream approach. However, the reasons behind its remarkable effectiveness remain unclear. Specifically, many studies have investigated the similarities between contrastive and non-contrastive SSL from a theoretical perspective. Such similarities can be verified in classification tasks, where the two approaches achieve comparable perfor",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17732v4",
+    "title": "Batched Nonparametric Contextual Bandits",
+    "abstract": "We study nonparametric contextual bandits under batch constraints, where the expected reward for each action is modeled as a smooth function of covariates, and the policy updates are made at the end of each batch of observations. We establish a minimax regret lower bound for this setting and propose a novel batch learning algorithm that achieves the optimal regret (up to logarithmic factors). In essence, our procedure dynamically splits the covariate space into smaller bins, carefully aligning t",
+    "categories": [
+      "math.ST",
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17701v1",
+    "title": "Real-time Low-latency Music Source Separation using Hybrid Spectrogram-TasNet",
+    "abstract": "There have been significant advances in deep learning for music demixing in recent years. However, there has been little attention given to how these neural networks can be adapted for real-time low-latency applications, which could be helpful for hearing aids, remixing audio streams and live shows. In this paper, we investigate the various challenges involved in adapting current demixing models in the literature for this use case. Subsequently, inspired by the Hybrid Demucs architecture, we pro",
+    "categories": [
+      "eess.AS",
+      "cs.LG",
+      "cs.SD"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17666v1",
+    "title": "Multi-Agent Deep Reinforcement Learning for Distributed Satellite Routing",
+    "abstract": "This paper introduces a Multi-Agent Deep Reinforcement Learning (MA-DRL) approach for routing in Low Earth Orbit Satellite Constellations (LSatCs). Each satellite is an independent decision-making agent with a partial knowledge of the environment, and supported by feedback received from the nearby agents. Building on our previous work that introduced a Q-routing solution, the contribution of this paper is to extend it to a deep learning framework able to quickly adapt to the network and traffic ",
+    "categories": [
+      "cs.LG",
+      "cs.IT"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17655v2",
+    "title": "Confidence-Aware Multi-Field Model Calibration",
+    "abstract": "Accurately predicting the probabilities of user feedback, such as clicks and conversions, is critical for advertisement ranking and bidding. However, there often exist unwanted mismatches between predicted probabilities and true likelihoods due to the rapid shift of data distributions and intrinsic model biases. Calibration aims to address this issue by post-processing model predictions, and field-aware calibration can adjust model output on different feature field values to satisfy fine-grained",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17544v1",
+    "title": "Adapting Learned Image Codecs to Screen Content via Adjustable Transformations",
+    "abstract": "As learned image codecs (LICs) become more prevalent, their low coding efficiency for out-of-distribution data becomes a bottleneck for some applications. To improve the performance of LICs for screen content (SC) images without breaking backwards compatibility, we propose to introduce parameterized and invertible linear transformations into the coding pipeline without changing the underlying baseline codec's operation flow. We design two neural networks to act as prefilters and postfilters in o",
+    "categories": [
+      "eess.IV",
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17402v2",
+    "title": "Beacon, a lightweight deep reinforcement learning benchmark library for flow control",
+    "abstract": "Recently, the increasing use of deep reinforcement learning for flow control problems has led to a new area of research, focused on the coupling and the adaptation of the existing algorithms to the control of numerical fluid dynamics environments. Although still in its infancy, the field has seen multiple successes in a short time span, and its fast development pace can certainly be partly imparted to the open-source effort that drives the expansion of the community. Yet, this emerging domain st",
+    "categories": [
+      "physics.comp-ph",
+      "cs.LG",
+      "eess.SY"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17343v1",
+    "title": "Enhanced Bayesian Optimization via Preferential Modeling of Abstract Properties",
+    "abstract": "Experimental (design) optimization is a key driver in designing and discovering new products and processes. Bayesian Optimization (BO) is an effective tool for optimizing expensive and black-box experimental design processes. While Bayesian optimization is a principled data-driven approach to experimental optimization, it learns everything from scratch and could greatly benefit from the expertise of its human (domain) experts who often reason about systems at different abstraction levels using p",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17232v3",
+    "title": "Two-scale Neural Networks for Partial Differential Equations with Small Parameters",
+    "abstract": "We propose a two-scale neural network method for solving partial differential equations (PDEs) with small parameters using physics-informed neural networks (PINNs). We directly incorporate the small parameters into the architecture of neural networks. The proposed method enables solving PDEs with small parameters in a simple fashion, without adding Fourier features or other computationally taxing searches of truncation parameters. Various numerical examples demonstrate reasonable accuracy in cap",
+    "categories": [
+      "math.NA",
+      "cs.LG",
+      "physics.comp-ph"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17217v2",
+    "title": "Temporal Logic Specification-Conditioned Decision Transformer for Offline Safe Reinforcement Learning",
+    "abstract": "Offline safe reinforcement learning (RL) aims to train a constraint satisfaction policy from a fixed dataset. Current state-of-the-art approaches are based on supervised learning with a conditioned policy. However, these approaches fall short in real-world applications that involve complex tasks with rich temporal and logical structures. In this paper, we propose temporal logic Specification-conditioned Decision Transformer (SDT), a novel framework that harnesses the expressive power of signal t",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17061v1",
+    "title": "A Multi-Fidelity Methodology for Reduced Order Models with High-Dimensional Inputs",
+    "abstract": "In the early stages of aerospace design, reduced order models (ROMs) are crucial for minimizing computational costs associated with using physics-rich field information in many-query scenarios requiring multiple evaluations. The intricacy of aerospace design demands the use of high-dimensional design spaces to capture detailed features and design variability accurately. However, these spaces introduce significant challenges, including the curse of dimensionality, which stems from both high-dimen",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17018v2",
+    "title": "A Curious Case of Remarkable Resilience to Gradient Attacks via Fully Convolutional and Differentiable Front End with a Skip Connection",
+    "abstract": "We experimented with front-end enhanced neural models where a differentiable and fully convolutional model with a skip connection is added before a frozen backbone classifier. By training such composite models using a small learning rate for about one epoch, we obtained models that retained the accuracy of the backbone classifier while being unusually resistant to gradient attacks-including APGD and FAB-T attacks from the AutoAttack package-which we attribute to gradient masking. Although gradie",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17016v1",
+    "title": "Multi-Task Contrastive Learning for 8192-Token Bilingual Text Embeddings",
+    "abstract": "We introduce a novel suite of state-of-the-art bilingual text embedding models that are designed to support English and another target language. These models are capable of processing lengthy text inputs with up to 8192 tokens, making them highly versatile for a range of natural language processing tasks such as text retrieval, clustering, and semantic textual similarity (STS) calculations.   By focusing on bilingual models and introducing a unique multi-task learning objective, we have signific",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.IR"
+    ]
+  },
+  {
+    "arxiv_id": "2402.16828v2",
+    "title": "Training Neural Networks from Scratch with Parallel Low-Rank Adapters",
+    "abstract": "The scalability of deep learning models is fundamentally limited by computing resources, memory, and communication. Although methods like low-rank adaptation (LoRA) have reduced the cost of model finetuning, its application in model pre-training remains largely unexplored. This paper explores extending LoRA to model pre-training, identifying the inherent constraints and limitations of standard LoRA in this context. We introduce LoRA-the-Explorer (LTE), a novel bi-level optimization algorithm des",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2402.16788v4",
+    "title": "Why Transformers Need Adam: A Hessian Perspective",
+    "abstract": "SGD performs worse than Adam by a significant margin on Transformers, but the reason remains unclear. In this work, we provide an explanation through the lens of Hessian: (i) Transformers are \"heterogeneous\": the Hessian spectrum across parameter blocks vary dramatically, a phenomenon we call \"block heterogeneity\"; (ii) Heterogeneity hampers SGD: SGD performs worse than Adam on problems with block heterogeneity. To validate (i) and (ii), we check various Transformers, CNNs, MLPs, and quadratic p",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.16299v1",
+    "title": "Against Filter Bubbles: Diversified Music Recommendation via Weighted Hypergraph Embedding Learning",
+    "abstract": "Recommender systems serve a dual purpose for users: sifting out inappropriate or mismatched information while accurately identifying items that align with their preferences. Numerous recommendation algorithms are designed to provide users with a personalized array of information tailored to their preferences. Nevertheless, excessive personalization can confine users within a \"filter bubble\". Consequently, achieving the right balance between accuracy and diversity in recommendations is a pressing",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.15978v2",
+    "title": "Shaving Weights with Occam's Razor: Bayesian Sparsification for Neural Networks Using the Marginal Likelihood",
+    "abstract": "Neural network sparsification is a promising avenue to save computational time and memory costs, especially in an age where many successful AI models are becoming too large to na\u00efvely deploy on consumer hardware. While much work has focused on different weight pruning criteria, the overall sparsifiability of the network, i.e., its capacity to be pruned without quality loss, has often been overlooked. We present Sparsifiability via the Marginal likelihood (SpaM), a pruning framework that highligh",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.15905v1",
+    "title": "Explainable Contrastive and Cost-Sensitive Learning for Cervical Cancer Classification",
+    "abstract": "This paper proposes an efficient system for classifying cervical cancer cells using pre-trained convolutional neural networks (CNNs). We first fine-tune five pre-trained CNNs and minimize the overall cost of misclassification by prioritizing accuracy for certain classes that have higher associated costs or importance. To further enhance the performance of the models, supervised contrastive learning is included to make the models more adept at capturing important features and patterns. Extensive ",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.16897v2",
+    "title": "Reliable Conflictive Multi-View Learning",
+    "abstract": "Multi-view learning aims to combine multiple features to achieve more comprehensive descriptions of data. Most previous works assume that multiple views are strictly aligned. However, real-world multi-view data may contain low-quality conflictive instances, which show conflictive information in different views. Previous methods for this problem mainly focus on eliminating the conflictive data instances by removing them or replacing conflictive views. Nevertheless, real-world applications usually",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.15418v3",
+    "title": "Reputational Algorithm Aversion",
+    "abstract": "People are often reluctant to incorporate information produced by algorithms into their decisions, a phenomenon called ``algorithm aversion''. This paper shows how algorithm aversion arises when the choice to follow an algorithm conveys information about a human's ability. I develop a model in which workers make forecasts of an uncertain outcome based on their own private information and an algorithm's signal. Low-skill workers receive worse information than the algorithm and hence should always",
+    "categories": [
+      "econ.TH",
+      "cs.AI",
+      "cs.GT",
+      "cs.HC"
+    ]
+  },
+  {
+    "arxiv_id": "2403.00798v1",
+    "title": "Helen: Optimizing CTR Prediction Models with Frequency-wise Hessian Eigenvalue Regularization",
+    "abstract": "Click-Through Rate (CTR) prediction holds paramount significance in online advertising and recommendation scenarios. Despite the proliferation of recent CTR prediction models, the improvements in performance have remained limited, as evidenced by open-source benchmark assessments. Current researchers tend to focus on developing new models for various datasets and settings, often neglecting a crucial question: What is the key challenge that truly makes CTR prediction so demanding?   In this paper",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.15347v2",
+    "title": "Information-Theoretic Safe Bayesian Optimization",
+    "abstract": "We consider a sequential decision making task, where the goal is to optimize an unknown function without evaluating parameters that violate an a~priori unknown (safety) constraint. A common approach is to place a Gaussian process prior on the unknown functions and allow evaluations only in regions that are safe with high probability. Most current methods rely on a discretization of the domain and cannot be directly extended to the continuous case. Moreover, the way in which they exploit regulari",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.15283v1",
+    "title": "When in Doubt, Think Slow: Iterative Reasoning with Latent Imagination",
+    "abstract": "In an unfamiliar setting, a model-based reinforcement learning agent can be limited by the accuracy of its world model. In this work, we present a novel, training-free approach to improving the performance of such agents separately from planning and learning. We do so by applying iterative inference at decision-time, to fine-tune the inferred agent states based on the coherence of future state representations. Our approach achieves a consistent improvement in both reconstruction accuracy and tas",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.15258v1",
+    "title": "High Resolution Guitar Transcription via Domain Adaptation",
+    "abstract": "Automatic music transcription (AMT) has achieved high accuracy for piano due to the availability of large, high-quality datasets such as MAESTRO and MAPS, but comparable datasets are not yet available for other instruments. In recent work, however, it has been demonstrated that aligning scores to transcription model activations can produce high quality AMT training data for instruments other than piano. Focusing on the guitar, we refine this approach to training on score data using a dataset of ",
+    "categories": [
+      "eess.AS",
+      "cs.LG",
+      "cs.SD"
+    ]
+  },
+  {
+    "arxiv_id": "2402.15141v1",
+    "title": "A note on the adjoint method for neural ordinary differential equation network",
+    "abstract": "Perturbation and operator adjoint method are used to give the right adjoint form rigourously. From the derivation, we can have following results: 1) The loss gradient is not an ODE, it is an integral and we shows the reason; 2) The traditional adjoint form is not equivalent with the back propagation results. 3) The adjoint operator analysis shows that if and only if the discrete adjoint has the same scheme with the discrete neural ODE, the adjoint form would give the same results as BP does.",
+    "categories": [
+      "math.NA",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.14974v2",
+    "title": "Towards Spatially-Lucid AI Classification in Non-Euclidean Space: An Application for MxIF Oncology Data",
+    "abstract": "Given multi-category point sets from different place-types, our goal is to develop a spatially-lucid classifier that can distinguish between two classes based on the arrangements of their points. This problem is important for many applications, such as oncology, for analyzing immune-tumor relationships and designing new immunotherapies. It is challenging due to spatial variability and interpretability needs. Previously proposed techniques require dense training data or have limited ability to ha",
+    "categories": [
+      "eess.IV",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.14804v1",
+    "title": "Measuring Multimodal Mathematical Reasoning with MATH-Vision Dataset",
+    "abstract": "Recent advancements in Large Multimodal Models (LMMs) have shown promising results in mathematical reasoning within visual contexts, with models approaching human-level performance on existing benchmarks such as MathVista. However, we observe significant limitations in the diversity of questions and breadth of subjects covered by these benchmarks. To address this issue, we present the MATH-Vision (MATH-V) dataset, a meticulously curated collection of 3,040 high-quality mathematical problems with",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "math.HO"
+    ]
+  },
+  {
+    "arxiv_id": "2402.14901v2",
+    "title": "A Usage-centric Take on Intent Understanding in E-Commerce",
+    "abstract": "Identifying and understanding user intents is a pivotal task for E-Commerce. Despite its essential role in product recommendation and business user profiling analysis, intent understanding has not been consistently defined or accurately benchmarked. In this paper, we focus on predicative user intents as \"how a customer uses a product\", and pose intent understanding as a natural language reasoning task, independent of product ontologies. We identify two weaknesses of FolkScope, the SOTA E-Commerc",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.14646v2",
+    "title": "CoLoRA: Continuous low-rank adaptation for reduced implicit neural modeling of parameterized partial differential equations",
+    "abstract": "This work introduces reduced models based on Continuous Low Rank Adaptation (CoLoRA) that pre-train neural networks for a given partial differential equation and then continuously adapt low-rank weights in time to rapidly predict the evolution of solution fields at new physics parameters and new initial conditions. The adaptation can be either purely data-driven or via an equation-driven variational approach that provides Galerkin-optimal approximations. Because CoLoRA approximates solution fiel",
+    "categories": [
+      "cs.LG",
+      "math.NA",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.14279v3",
+    "title": "Mitigating the Linguistic Gap with Phonemic Representations for Robust Cross-lingual Transfer",
+    "abstract": "Approaches to improving multilingual language understanding often struggle with significant performance gaps between high-resource and low-resource languages. While there are efforts to align the languages in a single latent space to mitigate such gaps, how different input-level representations influence such gaps has not been investigated, particularly with phonemic inputs. We hypothesize that the performance gaps are affected by representation discrepancies between these languages, and revisit",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.14118v1",
+    "title": "Masked Matrix Multiplication for Emergent Sparsity",
+    "abstract": "Artificial intelligence workloads, especially transformer models, exhibit emergent sparsity in which computations perform selective sparse access to dense data. The workloads are inefficient on hardware designed for dense computations and do not map well onto sparse data representations. We build a vectorized and parallel matrix-multiplication system A X B = C that eliminates unnecessary computations and avoids branches based on a runtime evaluation of sparsity. We use a combination of dynamic c",
+    "categories": [
+      "cs.DS",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.14101v2",
+    "title": "Cost-Efficient Subjective Task Annotation and Modeling through Few-Shot Annotator Adaptation",
+    "abstract": "In subjective NLP tasks, where a single ground truth does not exist, the inclusion of diverse annotators becomes crucial as their unique perspectives significantly influence the annotations. In realistic scenarios, the annotation budget often becomes the main determinant of the number of perspectives (i.e., annotators) included in the data and subsequent modeling. We introduce a novel framework for annotation collection and modeling in subjective tasks that aims to minimize the annotation budget",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13914v2",
+    "title": "Position: Explain to Question not to Justify",
+    "abstract": "Explainable Artificial Intelligence (XAI) is a young but very promising field of research. Unfortunately, the progress in this field is currently slowed down by divergent and incompatible goals. We separate various threads tangled within the area of XAI into two complementary cultures of human/value-oriented explanations (BLUE XAI) and model/validation-oriented explanations (RED XAI). This position paper argues that the area of RED XAI is currently under-explored, i.e., more methods for explaina",
+    "categories": [
+      "cs.AI",
+      "cs.CR",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13891v2",
+    "title": "Overcoming Saturation in Density Ratio Estimation by Iterated Regularization",
+    "abstract": "Estimating the ratio of two probability densities from finitely many samples, is a central task in machine learning and statistics. In this work, we show that a large class of kernel methods for density ratio estimation suffers from error saturation, which prevents algorithms from achieving fast error convergence rates on highly regular learning problems. To resolve saturation, we introduce iterated regularization in density ratio estimation to achieve fast error rates. Our methods outperform it",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13754v4",
+    "title": "Reinforcement learning-assisted quantum architecture search for variational quantum algorithms",
+    "abstract": "A significant hurdle in the noisy intermediate-scale quantum (NISQ) era is identifying functional quantum circuits. These circuits must also adhere to the constraints imposed by current quantum hardware limitations. Variational quantum algorithms (VQAs), a class of quantum-classical optimization algorithms, were developed to address these challenges in the currently available quantum devices. However, the overall performance of VQAs depends on the initialization strategy of the variational circu",
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13700v2",
+    "title": "On the Conflict of Robustness and Learning in Collaborative Machine Learning",
+    "abstract": "Collaborative Machine Learning (CML) allows participants to jointly train a machine learning model while keeping their training data private. In many scenarios where CML is seen as the solution to privacy issues, such as health-related applications, safety is also a primary concern. To ensure that CML processes produce models that output correct and reliable decisions \\emph{even in the presence of potentially untrusted participants}, researchers propose to use \\textit{robust aggregators} to filt",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13641v1",
+    "title": "FlexHB: a More Efficient and Flexible Framework for Hyperparameter Optimization",
+    "abstract": "Given a Hyperparameter Optimization(HPO) problem, how to design an algorithm to find optimal configurations efficiently? Bayesian Optimization(BO) and the multi-fidelity BO methods employ surrogate models to sample configurations based on history evaluations. More recent studies obtain better performance by integrating BO with HyperBand(HB), which accelerates evaluation by early stopping mechanism. However, these methods ignore the advantage of a suitable evaluation scheme over the default Hyper",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13571v2",
+    "title": "Multilingual Coreference Resolution in Low-resource South Asian Languages",
+    "abstract": "Coreference resolution involves the task of identifying text spans within a discourse that pertain to the same real-world entity. While this task has been extensively explored in the English language, there has been a notable scarcity of publicly accessible resources and models for coreference resolution in South Asian languages. We introduce a Translated dataset for Multilingual Coreference Resolution (TransMuCoRes) in 31 South Asian languages using off-the-shelf tools for translation and word-",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13531v1",
+    "title": "Private Gradient Descent for Linear Regression: Tighter Error Bounds and Instance-Specific Uncertainty Estimation",
+    "abstract": "We provide an improved analysis of standard differentially private gradient descent for linear regression under the squared error loss. Under modest assumptions on the input, we characterize the distribution of the iterate at each time step.   Our analysis leads to new results on the algorithm's accuracy: for a proper fixed choice of hyperparameters, the sample complexity depends only linearly on the dimension of the data. This matches the dimension-dependence of the (non-private) ordinary least",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13505v4",
+    "title": "SimPro: A Simple Probabilistic Framework Towards Realistic Long-Tailed Semi-Supervised Learning",
+    "abstract": "Recent advancements in semi-supervised learning have focused on a more realistic yet challenging task: addressing imbalances in labeled data while the class distribution of unlabeled data remains both unknown and potentially mismatched. Current approaches in this sphere often presuppose rigid assumptions regarding the class distribution of unlabeled data, thereby limiting the adaptability of models to only certain distribution ranges. In this study, we propose a novel approach, introducing a hig",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2402.14862v1",
+    "title": "SISSA: Real-time Monitoring of Hardware Functional Safety and Cybersecurity with In-vehicle SOME/IP Ethernet Traffic",
+    "abstract": "Scalable service-Oriented Middleware over IP (SOME/IP) is an Ethernet communication standard protocol in the Automotive Open System Architecture (AUTOSAR), promoting ECU-to-ECU communication over the IP stack. However, SOME/IP lacks a robust security architecture, making it susceptible to potential attacks. Besides, random hardware failure of ECU will disrupt SOME/IP communication. In this paper, we propose SISSA, a SOME/IP communication traffic-based approach for modeling and analyzing in-vehic",
+    "categories": [
+      "cs.CR",
+      "cs.LG",
+      "cs.NI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13425v2",
+    "title": "Investigating the Histogram Loss in Regression",
+    "abstract": "It is becoming increasingly common in regression to train neural networks that model the entire distribution even if only the mean is required for prediction. This additional modeling often comes with performance gain and the reasons behind the improvement are not fully known. This paper investigates a recent approach to regression, the Histogram Loss, which involves learning the conditional distribution of the target variable by minimizing the cross-entropy between a target distribution and a f",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13219v1",
+    "title": "Analyzing Operator States and the Impact of AI-Enhanced Decision Support in Control Rooms: A Human-in-the-Loop Specialized Reinforcement Learning Framework for Intervention Strategies",
+    "abstract": "In complex industrial and chemical process control rooms, effective decision-making is crucial for safety and efficiency. The experiments in this paper evaluate the impact and applications of an AI-based decision support system integrated into an improved human-machine interface, using dynamic influence diagrams, a hidden Markov model, and deep reinforcement learning. The enhanced support system aims to reduce operator workload, improve situational awareness, and provide different intervention s",
+    "categories": [
+      "cs.AI",
+      "cs.HC",
+      "cs.LG",
+      "cs.MA",
+      "eess.SY"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13058v2",
+    "title": "Random Graph Set and Evidence Pattern Reasoning Model",
+    "abstract": "Evidence theory is widely used in decision-making and reasoning systems. In previous research, Transferable Belief Model (TBM) is a commonly used evidential decision making model, but TBM is a non-preference model. In order to better fit the decision making goals, the Evidence Pattern Reasoning Model (EPRM) is proposed. By defining pattern operators and decision making operators, corresponding preferences can be set for different tasks. Random Permutation Set (RPS) expands order information for ",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13037v2",
+    "title": "Align Your Intents: Offline Imitation Learning via Optimal Transport",
+    "abstract": "Offline Reinforcement Learning (RL) addresses the problem of sequential decision-making by learning optimal policy through pre-collected data, without interacting with the environment. As yet, it has remained somewhat impractical, because one rarely knows the reward explicitly and it is hard to distill it retrospectively. Here, we show that an imitating agent can still learn the desired behavior merely from observing the expert, despite the absence of explicit rewards or action labels. In our me",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.13019v1",
+    "title": "Improving Neural-based Classification with Logical Background Knowledge",
+    "abstract": "Neurosymbolic AI is a growing field of research aiming to combine neural networks learning capabilities with the reasoning abilities of symbolic systems. This hybridization can take many shapes. In this paper, we propose a new formalism for supervised multi-label classification with propositional background knowledge. We introduce a new neurosymbolic technique called semantic conditioning at inference, which only constrains the system during inference while leaving the training unaffected. We di",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.SC"
+    ]
+  },
+  {
+    "arxiv_id": "2402.12940v2",
+    "title": "Normalized Orthography for Tunisian Arabic",
+    "abstract": "Tunisian Arabic (ISO 693-3: aeb) isa distinct variety native to Tunisia, derived from Arabic and enriched by various historical influences. This research introduces the \"Normalized Orthography for Tunisian Arabic\" (NOTA), an adaptation of CODA* guidelines for transcribing Tunisian Arabic using Arabic script. The aim is to enhance language resource development by ensuring user-friendliness and consistency. The updated standard addresses challenges in accurately representing Tunisian phonology and",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2402.12737v1",
+    "title": "Guarantee Regions for Local Explanations",
+    "abstract": "Interpretability methods that utilise local surrogate models (e.g. LIME) are very good at describing the behaviour of the predictive model at a point of interest, but they are not guaranteed to extrapolate to the local region surrounding the point. However, overfitting to the local curvature of the predictive model and malicious tampering can significantly limit extrapolation. We propose an anchor-based algorithm for identifying regions in which local explanations are guaranteed to be correct by",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.12733v1",
+    "title": "BMLP: Behavior-aware MLP for Heterogeneous Sequential Recommendation",
+    "abstract": "In real recommendation scenarios, users often have different types of behaviors, such as clicking and buying. Existing research methods show that it is possible to capture the heterogeneous interests of users through different types of behaviors. However, most multi-behavior approaches have limitations in learning the relationship between different behaviors. In this paper, we propose a novel multilayer perceptron (MLP)-based heterogeneous sequential recommendation method, namely behavior-aware ",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.14029v3",
+    "title": "Partially Frozen Random Networks Contain Compact Strong Lottery Tickets",
+    "abstract": "Randomly initialized dense networks contain subnetworks that achieve high accuracy without weight learning--strong lottery tickets (SLTs). Recently, Gadhikar et al. (2023) demonstrated that SLTs could also be found within a randomly pruned source network. This phenomenon can be exploited to further compress the small memory size required by SLTs. However, their method is limited to SLTs that are even sparser than the source, leading to worse accuracy due to unintentionally high sparsity. This pa",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.12554v2",
+    "title": "Archer: A Human-Labeled Text-to-SQL Dataset with Arithmetic, Commonsense and Hypothetical Reasoning",
+    "abstract": "We present Archer, a challenging bilingual text-to-SQL dataset specific to complex reasoning, including arithmetic, commonsense and hypothetical reasoning. It contains 1,042 English questions and 1,042 Chinese questions, along with 521 unique SQL queries, covering 20 English databases across 20 domains. Notably, this dataset demonstrates a significantly higher level of complexity compared to existing publicly available datasets. Our evaluation shows that Archer challenges the capabilities of cur",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2402.12354v2",
+    "title": "LoRA+: Efficient Low Rank Adaptation of Large Models",
+    "abstract": "In this paper, we show that Low Rank Adaptation (LoRA) as originally introduced in Hu et al. (2021) leads to suboptimal finetuning of models with large width (embedding dimension). This is due to the fact that adapter matrices A and B in LoRA are updated with the same learning rate. Using scaling arguments for large width networks, we demonstrate that using the same learning rate for A and B does not allow efficient feature learning. We then show that this suboptimality of LoRA can be corrected ",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.12074v1",
+    "title": "HIP Network: Historical Information Passing Network for Extrapolation Reasoning on Temporal Knowledge Graph",
+    "abstract": "In recent years, temporal knowledge graph (TKG) reasoning has received significant attention. Most existing methods assume that all timestamps and corresponding graphs are available during training, which makes it difficult to predict future events. To address this issue, recent works learn to infer future events based on historical information. However, these methods do not comprehensively consider the latent patterns behind temporal changes, to pass historical information selectively, update r",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.11866v1",
+    "title": "Two Online Map Matching Algorithms Based on Analytic Hierarchy Process and Fuzzy Logic",
+    "abstract": "Our aim of this paper is to develop new map matching algorithms and to improve upon previous work. We address two key approaches: Analytic Hierarchy Process (AHP) map matching and fuzzy logic map matching. AHP is a decision-making method that combines mathematical analysis with human judgment, and fuzzy logic is an approach to computing based on the degree of truth and aims at modeling the imprecise modes of reasoning from 0 to 1 rather than the usual boolean logic. Of these algorithms, the way ",
+    "categories": [
+      "cs.CG",
+      "cs.AI",
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2402.11740v3",
+    "title": "Extraction of nonlinearity in neural networks with Koopman operator",
+    "abstract": "Nonlinearity plays a crucial role in deep neural networks. In this paper, we investigate the degree to which the nonlinearity of the neural network is essential. For this purpose, we employ the Koopman operator, extended dynamic mode decomposition, and the tensor-train format. The Koopman operator approach has been recently developed in physics and nonlinear sciences; the Koopman operator deals with the time evolution in the observable space instead of the state space. Since we can replace the n",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.11565v1",
+    "title": "Continual Learning on Graphs: Challenges, Solutions, and Opportunities",
+    "abstract": "Continual learning on graph data has recently attracted paramount attention for its aim to resolve the catastrophic forgetting problem on existing tasks while adapting the sequentially updated model to newly emerged graph tasks. While there have been efforts to summarize progress on continual learning research over Euclidean data, e.g., images and texts, a systematic review of progress in continual learning on graphs, a.k.a, continual graph learning (CGL) or lifelong graph learning, is still dem",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.11461v3",
+    "title": "FGeo-HyperGNet: Geometric Problem Solving Integrating FormalGeo Symbolic System and Hypergraph Neural Network",
+    "abstract": "Geometric problem solving has always been a long-standing challenge in the fields of mathematical reasoning and artificial intelligence. We built a neural-symbolic system, called FGeo-HyperGNet, to automatically perform human-like geometric problem solving. The symbolic component is a formal system built on FormalGeo, which can automatically perform geometric relational reasoning and algebraic calculations and organize the solution into a hypergraph with conditions as hypernodes and theorems as ",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.11422v1",
+    "title": "Mitigating Catastrophic Forgetting in Multi-domain Chinese Spelling Correction by Multi-stage Knowledge Transfer Framework",
+    "abstract": "Chinese Spelling Correction (CSC) aims to detect and correct spelling errors in given sentences. Recently, multi-domain CSC has gradually attracted the attention of researchers because it is more practicable. In this paper, we focus on the key flaw of the CSC model when adapting to multi-domain scenarios: the tendency to forget previously acquired knowledge upon learning new domain-specific knowledge (i.e., catastrophic forgetting). To address this, we propose a novel model-agnostic Multi-stage ",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2402.11345v2",
+    "title": "Variational Entropy Search for Adjusting Expected Improvement",
+    "abstract": "Bayesian optimization is a widely used technique for optimizing black-box functions, with Expected Improvement (EI) being the most commonly utilized acquisition function in this domain. While EI is often viewed as distinct from other information-theoretic acquisition functions, such as entropy search (ES) and max-value entropy search (MES), our work reveals that EI can be considered a special case of MES when approached through variational inference (VI). In this context, we have developed the V",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2402.11262v1",
+    "title": "Mirror Gradient: Towards Robust Multimodal Recommender Systems via Exploring Flat Local Minima",
+    "abstract": "Multimodal recommender systems utilize various types of information to model user preferences and item features, helping users discover items aligned with their interests. The integration of multimodal information mitigates the inherent challenges in recommender systems, e.g., the data sparsity problem and cold-start issues. However, it simultaneously magnifies certain risks from multimodal information inputs, such as information adjustment risk and inherent noise risk. These risks pose crucial ",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.12398v1",
+    "title": "Primary and Secondary Factor Consistency as Domain Knowledge to Guide Happiness Computing in Online Assessment",
+    "abstract": "Happiness computing based on large-scale online web data and machine learning methods is an emerging research topic that underpins a range of issues, from personal growth to social stability. Many advanced Machine Learning (ML) models with explanations are used to compute the happiness online assessment while maintaining high accuracy of results. However, domain knowledge constraints, such as the primary and secondary relations of happiness factors, are absent from these models, which limits the",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.11139v1",
+    "title": "LiGNN: Graph Neural Networks at LinkedIn",
+    "abstract": "In this paper, we present LiGNN, a deployed large-scale Graph Neural Networks (GNNs) Framework. We share our insight on developing and deployment of GNNs at large scale at LinkedIn. We present a set of algorithmic improvements to the quality of GNN representation learning including temporal graph architectures with long term losses, effective cold start solutions via graph densification, ID embeddings and multi-hop neighbor sampling. We explain how we built and sped up by 7x our large-scale trai",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.10898v3",
+    "title": "The Price of Adaptivity in Stochastic Convex Optimization",
+    "abstract": "We prove impossibility results for adaptivity in non-smooth stochastic convex optimization. Given a set of problem parameters we wish to adapt to, we define a \"price of adaptivity\" (PoA) that, roughly speaking, measures the multiplicative increase in suboptimality due to uncertainty in these parameters. When the initial distance to the optimum is unknown but a gradient norm bound is known, we show that the PoA is at least logarithmic for expected suboptimality, and double-logarithmic for median ",
+    "categories": [
+      "math.OC",
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.10870v3",
+    "title": "Best of Three Worlds: Adaptive Experimentation for Digital Marketing in Practice",
+    "abstract": "Adaptive experimental design (AED) methods are increasingly being used in industry as a tool to boost testing throughput or reduce experimentation cost relative to traditional A/B/N testing methods. However, the behavior and guarantees of such methods are not well-understood beyond idealized stationary settings. This paper shares lessons learned regarding the challenges of naively using AED systems in industrial settings where non-stationarity is prevalent, while also providing perspectives on t",
+    "categories": [
+      "cs.LG",
+      "stat.ME"
+    ]
+  },
+  {
+    "arxiv_id": "2402.11000v3",
+    "title": "ASGEA: Exploiting Logic Rules from Align-Subgraphs for Entity Alignment",
+    "abstract": "Entity alignment (EA) aims to identify entities across different knowledge graphs that represent the same real-world objects. Recent embedding-based EA methods have achieved state-of-the-art performance in EA yet faced interpretability challenges as they purely rely on the embedding distance and neglect the logic rules behind a pair of aligned entities. In this paper, we propose the Align-Subgraph Entity Alignment (ASGEA) framework to exploit logic rules from Align-Subgraphs. ASGEA uses anchor l",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.10474v2",
+    "title": "One-Bit Quantization and Sparsification for Multiclass Linear Classification with Strong Regularization",
+    "abstract": "We study the use of linear regression for multiclass classification in the over-parametrized regime where some of the training data is mislabeled. In such scenarios it is necessary to add an explicit regularization term, $\u03bbf(w)$, for some convex function $f(\\cdot)$, to avoid overfitting the mislabeled data. In our analysis, we assume that the data is sampled from a Gaussian Mixture Model with equal class sizes, and that a proportion $c$ of the training labels is corrupted for each class. Under t",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2402.10457v2",
+    "title": "Learning-Augmented Search Data Structures",
+    "abstract": "We study the integration of machine learning advice to improve upon traditional data structure designed for efficient search queries. Although there has been recent effort in improving the performance of binary search trees using machine learning advice, e.g., Lin et. al. (ICML 2022), the resulting constructions nevertheless suffer from inherent weaknesses of binary search trees, such as complexity of maintaining balance across multiple updates and the inability to handle partially-ordered or hi",
+    "categories": [
+      "cs.DS",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.10416v2",
+    "title": "Grounding Language about Belief in a Bayesian Theory-of-Mind",
+    "abstract": "Despite the fact that beliefs are mental states that cannot be directly observed, humans talk about each others' beliefs on a regular basis, often using rich compositional language to describe what others think and know. What explains this capacity to interpret the hidden epistemic content of other minds? In this paper, we take a step towards an answer by grounding the semantics of belief statements in a Bayesian theory-of-mind: By modeling how humans jointly infer coherent sets of goals, belief",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2404.08471v1",
+    "title": "Revisiting Feature Prediction for Learning Visual Representations from Video",
+    "abstract": "This paper explores feature prediction as a stand-alone objective for unsupervised learning from video and introduces V-JEPA, a collection of vision models trained solely using a feature prediction objective, without the use of pretrained image encoders, text, negative examples, reconstruction, or other sources of supervision. The models are trained on 2 million videos collected from public datasets and are evaluated on downstream image and video tasks. Our results show that learning by predicti",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.17771v1",
+    "title": "Utilizing Machine Learning for Signal Classification and Noise Reduction in Amateur Radio",
+    "abstract": "In the realm of amateur radio, the effective classification of signals and the mitigation of noise play crucial roles in ensuring reliable communication. Traditional methods for signal classification and noise reduction often rely on manual intervention and predefined thresholds, which can be labor-intensive and less adaptable to dynamic radio environments. In this paper, we explore the application of machine learning techniques for signal classification and noise reduction in amateur radio oper",
+    "categories": [
+      "eess.SP",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09881v1",
+    "title": "Explaining Kernel Clustering via Decision Trees",
+    "abstract": "Despite the growing popularity of explainable and interpretable machine learning, there is still surprisingly limited work on inherently interpretable clustering methods. Recently, there has been a surge of interest in explaining the classic k-means algorithm, leading to efficient algorithms that approximate k-means clusters using axis-aligned decision trees. However, interpretable variants of k-means have limited applicability in practice, where more flexible clustering methods are often needed",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09796v1",
+    "title": "Closed-form Filtering for Non-linear Systems",
+    "abstract": "Sequential Bayesian Filtering aims to estimate the current state distribution of a Hidden Markov Model, given the past observations. The problem is well-known to be intractable for most application domains, except in notable cases such as the tabular setting or for linear dynamical systems with gaussian noise. In this work, we propose a new class of filters based on Gaussian PSD Models, which offer several advantages in terms of density approximation and computational efficiency. We show that fi",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "cs.RO"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09769v3",
+    "title": "Learning Using a Single Forward Pass",
+    "abstract": "We propose a learning algorithm to overcome the limitations of traditional backpropagation in resource-constrained environments: Solo Pass Embedded Learning Algorithm (SPELA). SPELA operates with local loss functions to update weights, significantly saving on resources allocated to the propagation of gradients and storing computational graphs while being sufficiently accurate. Consequently, SPELA can closely match backpropagation using less memory. Moreover, SPELA can effectively fine-tune pre-t",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09738v1",
+    "title": "Align before Attend: Aligning Visual and Textual Features for Multimodal Hateful Content Detection",
+    "abstract": "Multimodal hateful content detection is a challenging task that requires complex reasoning across visual and textual modalities. Therefore, creating a meaningful multimodal representation that effectively captures the interplay between visual and textual features through intermediate fusion is critical. Conventional fusion techniques are unable to attend to the modality-specific features effectively. Moreover, most studies exclusively concentrated on English and overlooked other low-resource lan",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09265v2",
+    "title": "Computational Complexity of Preferred Subset Repairs on Data-Graphs",
+    "abstract": "Preferences are a pivotal component in practical reasoning, especially in tasks that involve decision-making over different options or courses of action that could be pursued. In this work, we focus on repairing and querying inconsistent knowledge bases in the form of graph databases, which involves finding a way to solve conflicts in the knowledge base and considering answers that are entailed from every possible repair, respectively. Without a priori domain knowledge, all possible repairs are ",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "cs.LO"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09167v1",
+    "title": "Evolving Restricted Boltzmann Machine-Kohonen Network for Online Clustering",
+    "abstract": "A novel online clustering algorithm is presented where an Evolving Restricted Boltzmann Machine (ERBM) is embedded with a Kohonen Network called ERBM-KNet. The proposed ERBM-KNet efficiently handles streaming data in a single-pass mode using the ERBM, employing a bias-variance strategy for neuron growing and pruning, as well as online clustering based on a cluster update strategy for cluster prediction and cluster center update using KNet. Initially, ERBM evolves its architecture while processin",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09142v2",
+    "title": "When Representations Align: Universality in Representation Learning Dynamics",
+    "abstract": "Deep neural networks come in many sizes and architectures. The choice of architecture, in conjunction with the dataset and learning algorithm, is commonly understood to affect the learned neural representations. Yet, recent results have shown that different architectures learn representations with striking qualitative similarities. Here we derive an effective theory of representation learning under the assumption that the encoding map from input to hidden representation and the decoding map from",
+    "categories": [
+      "cs.LG",
+      "q-bio.NC"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09492v2",
+    "title": "PMGDA: A Preference-based Multiple Gradient Descent Algorithm",
+    "abstract": "It is desirable in many multi-objective machine learning applications, such as multi-task learning with conflicting objectives and multi-objective reinforcement learning, to find a Pareto solution that can match a given preference of a decision maker. These problems are often large-scale with available gradient information but cannot be handled very well by the existing algorithms. To tackle this critical issue, this paper proposes a novel predict-and-correct framework for locating a Pareto solu",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09046v1",
+    "title": "Inference of Abstraction for a Unified Account of Reasoning and Learning",
+    "abstract": "Inspired by Bayesian approaches to brain function in neuroscience, we give a simple theory of probabilistic inference for a unified account of reasoning and learning. We simply model how data cause symbolic knowledge in terms of its satisfiability in formal logic. The underlying idea is that reasoning is a process of deriving symbolic knowledge from data via abstraction, i.e., selective ignorance. The logical consequence relation is discussed for its proof-based theoretical correctness. The MNIS",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.LO"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09033v2",
+    "title": "Cross-Temporal Forecast Reconciliation at Digital Platforms with Machine Learning",
+    "abstract": "Platform businesses operate on a digital core and their decision making requires high-dimensional accurate forecast streams at different levels of cross-sectional (e.g., geographical regions) and temporal aggregation (e.g., minutes to days). It also necessitates coherent forecasts across all levels of the hierarchy to ensure aligned decision making across different planning units such as pricing, product, controlling and strategy. Given that platform data streams feature complex characteristics ",
+    "categories": [
+      "econ.EM",
+      "stat.AP",
+      "stat.ME",
+      "stat.ML"
+    ]
+  }
+]

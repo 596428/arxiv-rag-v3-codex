@@ -1,0 +1,578 @@
+[
+  {
+    "arxiv_id": "2506.00592v1",
+    "title": "Mitigating Plasticity Loss in Continual Reinforcement Learning by Reducing Churn",
+    "abstract": "Plasticity, or the ability of an agent to adapt to new tasks, environments, or distributions, is crucial for continual learning. In this paper, we study the loss of plasticity in deep continual RL from the lens of churn: network output variability for out-of-batch data induced by mini-batch training. We demonstrate that (1) the loss of plasticity is accompanied by the exacerbation of churn due to the gradual rank decrease of the Neural Tangent Kernel (NTK) matrix; (2) reducing churn helps preven",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2506.00453v1",
+    "title": "TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction",
+    "abstract": "Dynamic graphs evolve continuously, presenting challenges for traditional graph learning due to their changing structures and temporal dependencies. Recent advancements have shown potential in addressing these challenges by developing suitable meta-learning-based dynamic graph neural network models. However, most meta-learning approaches for dynamic graphs rely on fixed weight update parameters, neglecting the essential intrinsic complex high-order topological information of dynamically evolving",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2506.00436v2",
+    "title": "Learning from Double Positive and Unlabeled Data for Potential-Customer Identification",
+    "abstract": "In this study, we propose a method for identifying potential customers in targeted marketing by applying learning from positive and unlabeled data (PU learning). We consider a scenario in which a company sells a product and can observe only the customers who purchased it. Decision-makers seek to market products effectively based on whether people have loyalty to the company. Individuals with loyalty are those who are likely to remain interested in the company even without additional advertising.",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "econ.EM",
+      "stat.ME",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2506.00388v3",
+    "title": "CLARIFY: Contrastive Preference Reinforcement Learning for Untangling Ambiguous Queries",
+    "abstract": "Preference-based reinforcement learning (PbRL) bypasses explicit reward engineering by inferring reward functions from human preference comparisons, enabling better alignment with human intentions. However, humans often struggle to label a clear preference between similar segments, reducing label efficiency and limiting PbRL's real-world applicability. To address this, we propose an offline PbRL method: Contrastive LeArning for ResolvIng Ambiguous Feedback (CLARIFY), which learns a trajectory em",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2506.00358v3",
+    "title": "$\\texttt{AVROBUSTBENCH}$: Benchmarking the Robustness of Audio-Visual Recognition Models at Test-Time",
+    "abstract": "While recent audio-visual models have demonstrated impressive performance, their robustness to distributional shifts at test-time remains not fully understood. Existing robustness benchmarks mainly focus on single modalities, making them insufficient for thoroughly assessing the robustness of audio-visual models. Motivated by real-world scenarios where shifts can occur $\\textit{simultaneously}$ in both audio and visual modalities, we introduce $\\texttt{AVROBUSTBENCH}$, a comprehensive benchmark ",
+    "categories": [
+      "cs.SD",
+      "cs.AI",
+      "cs.LG",
+      "eess.AS"
+    ]
+  },
+  {
+    "arxiv_id": "2506.00189v1",
+    "title": "Control-R: Towards controllable test-time scaling",
+    "abstract": "This paper target in addressing the challenges of underthinking and overthinking in long chain-of-thought (CoT) reasoning for Large Reasoning Models (LRMs) by introducing Reasoning Control Fields (RCF)--a novel test-time approach that injects structured control signals to guide reasoning from a tree search perspective. RCF enables models to adjust reasoning effort according to given control conditions when solving complex tasks. Additionally, we present the Control-R-4K dataset, which consists o",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2506.00107v1",
+    "title": "Gated Multimodal Graph Learning for Personalized Recommendation",
+    "abstract": "Multimodal recommendation has emerged as a promising solution to alleviate the cold-start and sparsity problems in collaborative filtering by incorporating rich content information, such as product images and textual descriptions. However, effectively integrating heterogeneous modalities into a unified recommendation framework remains a challenge. Existing approaches often rely on fixed fusion strategies or complex architectures , which may fail to adapt to modality quality variance or introduce",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.24737v1",
+    "title": "Adapting to Linear Separable Subsets with Large-Margin in Differentially Private Learning",
+    "abstract": "This paper studies the problem of differentially private empirical risk minimization (DP-ERM) for binary linear classification. We obtain an efficient $(\\varepsilon,\u03b4)$-DP algorithm with an empirical zero-one risk bound of $\\tilde{O}\\left(\\frac{1}{\u03b3^2\\varepsilon n} + \\frac{|S_{\\mathrm{out}}|}{\u03b3n}\\right)$ where $n$ is the number of data points, $S_{\\mathrm{out}}$ is an arbitrary subset of data one can remove and $\u03b3$ is the margin of linear separation of the remaining data points (after $S_{\\mathr",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.24473v2",
+    "title": "Train One Sparse Autoencoder Across Multiple Sparsity Budgets to Preserve Interpretability and Accuracy",
+    "abstract": "Sparse Autoencoders (SAEs) have proven to be powerful tools for interpreting neural networks by decomposing hidden representations into disentangled, interpretable features via sparsity constraints. However, conventional SAEs are constrained by the fixed sparsity level chosen during training; meeting different sparsity requirements therefore demands separate models and increases the computational footprint during both training and evaluation. We introduce a novel training objective, \\emph{Hierar",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.24452v4",
+    "title": "Stepsize anything: A unified learning rate schedule for budgeted-iteration training",
+    "abstract": "The expanding computational costs and limited resources underscore the critical need for budgeted-iteration training, which aims to achieve optimal learning within predetermined iteration budgets. While learning rate schedules fundamentally govern the performance of different networks and tasks, particularly in budgeted-iteration scenarios, their design remains largely heuristic, lacking theoretical foundations. In addition, the optimal learning rate schedule requires extensive trial-and-error s",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.24133v4",
+    "title": "R-KV: Redundancy-aware KV Cache Compression for Reasoning Models",
+    "abstract": "Reasoning models have demonstrated impressive performance in self-reflection and chain-of-thought reasoning. However, they often produce excessively long outputs, leading to prohibitively large key-value (KV) caches during inference. While chain-of-thought inference significantly improves performance on complex reasoning tasks, it can also lead to reasoning failures when deployed with existing KV cache compression approaches. To address this, we propose Redundancy-aware KV Cache Compression for ",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.24061v2",
+    "title": "Measure gradients, not activations! Enhancing neuronal activity in deep reinforcement learning",
+    "abstract": "Deep reinforcement learning (RL) agents frequently suffer from neuronal activity loss, which impairs their ability to adapt to new data and learn continually. A common method to quantify and address this issue is the tau-dormant neuron ratio, which uses activation statistics to measure the expressive ability of neurons. While effective for simple MLP-based agents, this approach loses statistical power in more complex architectures. To address this, we argue that in advanced RL agents, maintainin",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23930v1",
+    "title": "Exploring Societal Concerns and Perceptions of AI: A Thematic Analysis through the Lens of Problem-Seeking",
+    "abstract": "This study introduces a novel conceptual framework distinguishing problem-seeking from problem-solving to clarify the unique features of human intelligence in contrast to AI. Problem-seeking refers to the embodied, emotionally grounded process by which humans identify and set goals, while problem-solving denotes the execution of strategies aimed at achieving such predefined objectives. The framework emphasizes that while AI excels at efficiency and optimization, it lacks the orientation derived ",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23760v1",
+    "title": "Model Immunization from a Condition Number Perspective",
+    "abstract": "Model immunization aims to pre-train models that are difficult to fine-tune on harmful tasks while retaining their utility on other non-harmful tasks. Though prior work has shown empirical evidence for immunizing text-to-image models, the key understanding of when immunization is possible and a precise definition of an immunized model remain unclear. In this work, we propose a framework, based on the condition number of a Hessian matrix, to analyze model immunization for linear models. Building ",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23737v1",
+    "title": "On the Convergence Analysis of Muon",
+    "abstract": "The majority of parameters in neural networks are naturally represented as matrices. However, most commonly used optimizers treat these matrix parameters as flattened vectors during optimization, potentially overlooking their inherent structural properties. Recently, an optimizer called Muon has been proposed, specifically designed to optimize matrix-structured parameters. Extensive empirical evidence shows that Muon can significantly outperform traditional optimizers when training neural networ",
+    "categories": [
+      "stat.ML",
+      "cs.IT",
+      "cs.LG",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23506v4",
+    "title": "Position: Epistemic uncertainty estimation methods are fundamentally incomplete",
+    "abstract": "Identifying and disentangling sources of predictive uncertainty is essential for trustworthy supervised learning. We argue that widely used second-order methods that disentangle aleatoric and epistemic uncertainty are fundamentally incomplete. First, we show that unaccounted bias contaminates uncertainty estimates by overestimating aleatoric (data-related) uncertainty and underestimating the epistemic (model-related) counterpart, leading to incorrect uncertainty quantification. Second, we demons",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23378v2",
+    "title": "Meta-Learning Approaches for Speaker-Dependent Voice Fatigue Models",
+    "abstract": "Speaker-dependent modelling can substantially improve performance in speech-based health monitoring applications. While mixed-effect models are commonly used for such speaker adaptation, they require computationally expensive retraining for each new observation, making them impractical in a production environment. We reformulate this task as a meta-learning problem and explore three approaches of increasing complexity: ensemble-based distance models, prototypical networks, and transformer-based ",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23369v1",
+    "title": "Dynamic Spectral Backpropagation for Efficient Neural Network Training",
+    "abstract": "Dynamic Spectral Backpropagation (DSBP) enhances neural network training under resource constraints by projecting gradients onto principal eigenvectors, reducing complexity and promoting flat minima. Five extensions are proposed, dynamic spectral inference, spectral architecture optimization, spectral meta learning, spectral transfer regularization, and Lie algebra inspired dynamics, to address challenges in robustness, fewshot learning, and hardware efficiency. Supported by a third order stocha",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23260v1",
+    "title": "Stable Thompson Sampling: Valid Inference via Variance Inflation",
+    "abstract": "We consider the problem of statistical inference when the data is collected via a Thompson Sampling-type algorithm. While Thompson Sampling (TS) is known to be both asymptotically optimal and empirically effective, its adaptive sampling scheme poses challenges for constructing confidence intervals for model parameters. We propose and analyze a variant of TS, called Stable Thompson Sampling, in which the posterior variance is inflated by a logarithmic factor. We show that this modification leads ",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23081v2",
+    "title": "Gradient Methods with Online Scaling Part I. Theoretical Foundations",
+    "abstract": "This paper establishes the theoretical foundations of the online scaled gradient methods (OSGM), a framework that utilizes online learning to adapt stepsizes and provably accelerate first-order methods. OSGM quantifies the effectiveness of a stepsize by a feedback function motivated from a convergence measure and uses the feedback to adjust the stepsize through an online learning algorithm. Consequently, instantiations of OSGM achieve convergence rates that are asymptotically no worse than the o",
+    "categories": [
+      "math.OC",
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23032v3",
+    "title": "Bayesian Neural Scaling Law Extrapolation with Prior-Data Fitted Networks",
+    "abstract": "Scaling has been a major driver of recent advancements in deep learning. Numerous empirical studies have found that scaling laws often follow the power-law and proposed several variants of power-law functions to predict the scaling behavior at larger scales. However, existing methods mostly rely on point estimation and do not quantify uncertainty, which is crucial for real-world applications involving decision-making problems such as determining the expected performance improvements achievable b",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23029v2",
+    "title": "Uncovering Visual-Semantic Psycholinguistic Properties from the Distributional Structure of Text Embedding Space",
+    "abstract": "Imageability (potential of text to evoke a mental image) and concreteness (perceptibility of text) are two psycholinguistic properties that link visual and semantic spaces. It is little surprise that computational methods that estimate them do so using parallel visual and semantic spaces, such as collections of image-caption pairs or multi-modal models. In this paper, we work on the supposition that text itself in an image-caption dataset offers sufficient signals to accurately estimate these pr",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22899v2",
+    "title": "On the Dynamic Regret of Following the Regularized Leader: Optimism with History Pruning",
+    "abstract": "We revisit the Follow the Regularized Leader (FTRL) framework for Online Convex Optimization (OCO) over compact sets, focusing on achieving dynamic regret guarantees. Prior work has highlighted the framework's limitations in dynamic environments due to its tendency to produce \"lazy\" iterates. However, building on insights showing FTRL's ability to produce \"agile\" iterates, we show that it can indeed recover known dynamic regret bounds through optimistic composition of future costs and careful li",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22881v1",
+    "title": "Smart Surrogate Losses for Contextual Stochastic Linear Optimization with Robust Constraints",
+    "abstract": "We study an extension of contextual stochastic linear optimization (CSLO) that, in contrast to most of the existing literature, involves inequality constraints that depend on uncertain parameters predicted by a machine learning model. To handle the constraint uncertainty, we use contextual uncertainty sets constructed via methods like conformal prediction. Given a contextual uncertainty set method, we introduce the \"Smart Predict-then-Optimize with Robust Constraints\" (SPO-RC) loss, a feasibilit",
+    "categories": [
+      "cs.LG",
+      "math.OC",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22798v2",
+    "title": "Efficient Preimage Approximation for Neural Network Certification",
+    "abstract": "The growing reliance on artificial intelligence in safety- and security-critical applications demands effective neural network certification. A challenging real-world use case is \"patch attacks\", where adversarial patches or lighting conditions obscure parts of images, for example, traffic signs. A significant step towards certification against patch attacks was recently achieved using PREMAP, which uses under- and over-approximations of the preimage, the set of inputs that lead to a specified o",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22627v2",
+    "title": "Chain-of-Talkers (CoTalk): Fast Human Annotation of Dense Image Captions",
+    "abstract": "While densely annotated image captions significantly facilitate the learning of robust vision-language alignment, methodologies for systematically optimizing human annotation efforts remain underexplored. We introduce Chain-of-Talkers (CoTalk), an AI-in-the-loop methodology designed to maximize the number of annotated samples and improve their comprehensiveness under fixed budget constraints (e.g., total human annotation time). The framework is built upon two key insights. First, sequential anno",
+    "categories": [
+      "cs.CL",
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2506.00047v1",
+    "title": "Risks of AI-driven product development and strategies for their mitigation",
+    "abstract": "Humanity is progressing towards automated product development, a trend that promises faster creation of better products and thus the acceleration of technological progress. However, increasing reliance on non-human agents for this process introduces many risks. This perspective aims to initiate a discussion on these risks and appropriate mitigation strategies. To this end, we outline a set of principles for safer AI-driven product development which emphasize human oversight, accountability, and ",
+    "categories": [
+      "cs.CY",
+      "cs.AI",
+      "cs.CE"
+    ]
+  },
+  {
+    "arxiv_id": "2506.14791v1",
+    "title": "SemIRNet: A Semantic Irony Recognition Network for Multimodal Sarcasm Detection",
+    "abstract": "Aiming at the problem of difficulty in accurately identifying graphical implicit correlations in multimodal irony detection tasks, this paper proposes a Semantic Irony Recognition Network (SemIRNet). The model contains three main innovations: (1) The ConceptNet knowledge base is introduced for the first time to acquire conceptual knowledge, which enhances the model's common-sense reasoning ability; (2) Two cross-modal semantic similarity detection modules at the word level and sample level are d",
+    "categories": [
+      "cs.CV",
+      "cs.CL",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22454v1",
+    "title": "Depth-Based Matrix Classification for the HHL Quantum Algorithm",
+    "abstract": "Under the nearing error-corrected era of quantum computing, it is necessary to understand the suitability of certain post-NISQ algorithms for practical problems. One of the most promising, applicable and yet difficult to implement in practical terms is the Harrow, Hassidim and Lloyd (HHL) algorithm for linear systems of equations. An enormous number of problems can be expressed as linear systems of equations, from Machine Learning to fluid dynamics. However, in most cases, HHL will not be able t",
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22451v1",
+    "title": "AI Mathematician: Towards Fully Automated Frontier Mathematical Research",
+    "abstract": "Large Reasoning Models (LRMs) have made significant progress in mathematical capabilities in recent times. However, these successes have been primarily confined to competition-level problems. In this work, we propose AI Mathematician (AIM) framework, which harnesses the reasoning strength of LRMs to support frontier mathematical research. We have identified two critical challenges of mathematical research compared to competition, {\\it the intrinsic complexity of research problems} and {\\it the r",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22384v1",
+    "title": "Exact Algorithms and Lower Bounds for Forming Coalitions of Constrained Maximum Size",
+    "abstract": "Imagine we want to split a group of agents into teams in the most \\emph{efficient} way, considering that each agent has their own preferences about their teammates. This scenario is modeled by the extensively studied \\textsc{Coalition Formation} problem. Here, we study a version of this problem where each team must additionally be of bounded size.   We conduct a systematic algorithmic study, providing several intractability results as well as multiple exact algorithms that scale well as the inpu",
+    "categories": [
+      "cs.DS",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22370v3",
+    "title": "SplitLoRA: Balancing Stability and Plasticity in Continual Learning Through Gradient Space Splitting",
+    "abstract": "Continual Learning requires a model to learn multiple tasks in sequence while maintaining both stability:preserving knowledge from previously learned tasks, and plasticity:effectively learning new tasks. Gradient projection has emerged as an effective and popular paradigm in CL, where it partitions the gradient space of previously learned tasks into two orthogonal subspaces: a primary subspace and a minor subspace. New tasks are learned effectively within the minor subspace, thereby reducing int",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22356v1",
+    "title": "Suitability Filter: A Statistical Framework for Classifier Evaluation in Real-World Deployment Settings",
+    "abstract": "Deploying machine learning models in safety-critical domains poses a key challenge: ensuring reliable model performance on downstream user data without access to ground truth labels for direct validation. We propose the suitability filter, a novel framework designed to detect performance deterioration by utilizing suitability signals -- model output features that are sensitive to covariate shifts and indicative of potential prediction errors. The suitability filter evaluates whether classifier a",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CY",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2506.04241v1",
+    "title": "Improving Out-of-Distribution Detection with Markov Logic Networks",
+    "abstract": "Out-of-distribution (OOD) detection is essential for ensuring the reliability of deep learning models operating in open-world scenarios. Current OOD detectors mainly rely on statistical models to identify unusual patterns in the latent representations of a deep neural network. This work proposes to augment existing OOD detectors with probabilistic reasoning, utilizing Markov logic networks (MLNs). MLNs connect first-order logic with probabilistic reasoning to assign probabilities to inputs based",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22257v2",
+    "title": "Revisiting Group Relative Policy Optimization: Insights into On-Policy and Off-Policy Training",
+    "abstract": "We revisit Group Relative Policy Optimization (GRPO) in both on-policy and off-policy optimization regimes. Our motivation comes from recent work on off-policy Proximal Policy Optimization (PPO), which improves training stability, sampling efficiency, and memory usage. In addition, a recent analysis of GRPO suggests that estimating the advantage function with off-policy samples could be beneficial. Building on these observations, we adapt GRPO to the off-policy setting. We show that both on-poli",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22176v2",
+    "title": "TabXEval: Why this is a Bad Table? An eXhaustive Rubric for Table Evaluation",
+    "abstract": "Evaluating tables qualitatively and quantitatively poses a significant challenge, as standard metrics often overlook subtle structural and content-level discrepancies. To address this, we propose a rubric-based evaluation framework that integrates multi-level structural descriptors with fine-grained contextual signals, enabling more precise and consistent table comparison. Building on this, we introduce TabXEval, an eXhaustive and eXplainable two-phase evaluation framework. TabXEval first aligns",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22054v1",
+    "title": "Voice Adaptation for Swiss German",
+    "abstract": "This work investigates the performance of Voice Adaptation models for Swiss German dialects, i.e., translating Standard German text to Swiss German dialect speech. For this, we preprocess a large dataset of Swiss podcasts, which we automatically transcribe and annotate with dialect classes, yielding approximately 5000 hours of weakly labeled training material. We fine-tune the XTTSv2 model on this dataset and show that it achieves good scores in human and automated evaluations and can correctly ",
+    "categories": [
+      "cs.CL",
+      "cs.SD",
+      "eess.AS"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21852v1",
+    "title": "A Provable Approach for End-to-End Safe Reinforcement Learning",
+    "abstract": "A longstanding goal in safe reinforcement learning (RL) is a method to ensure the safety of a policy throughout the entire process, from learning to operation. However, existing safe RL paradigms inherently struggle to achieve this objective. We propose a method, called Provably Lifetime Safe RL (PLS), that integrates offline safe RL with safe policy deployment to address this challenge. Our proposed method learns a policy offline using return-conditioned supervised learning and then deploys the",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.IT",
+      "cs.RO"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21806v1",
+    "title": "Towards Operational Automated Greenhouse Gas Plume Detection",
+    "abstract": "Operational deployment of a fully automated greenhouse gas (GHG) plume detection system remains an elusive goal for imaging spectroscopy missions, despite recent advances in deep learning approaches. With the dramatic increase in data availability, however, automation continues to increase in importance for natural and anthropogenic emissions monitoring. This work reviews and addresses several key obstacles in the field: data and label quality control, prevention of spatiotemporal biases, and co",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21742v1",
+    "title": "What is Adversarial Training for Diffusion Models?",
+    "abstract": "We answer the question in the title, showing that adversarial training (AT) for diffusion models (DMs) fundamentally differs from classifiers: while AT in classifiers enforces output invariance, AT in DMs requires equivariance to keep the diffusion process aligned with the data distribution. AT is a way to enforce smoothness in the diffusion flow, improving robustness to outliers and corrupted data. Unlike prior art, our method makes no assumptions about the noise model and integrates seamlessly",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21664v1",
+    "title": "Expert Survey: AI Reliability & Security Research Priorities",
+    "abstract": "Our survey of 53 specialists across 105 AI reliability and security research areas identifies the most promising research prospects to guide strategic AI R&D investment. As companies are seeking to develop AI systems with broadly human-level capabilities, research on reliability and security is urgently needed to ensure AI's benefits can be safely and broadly realized and prevent severe harms. This study is the first to quantify expert priorities across a comprehensive taxonomy of AI safety and ",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2506.15693v1",
+    "title": "Verifiable Safety Q-Filters via Hamilton-Jacobi Reachability and Multiplicative Q-Networks",
+    "abstract": "Recent learning-based safety filters have outperformed conventional methods, such as hand-crafted Control Barrier Functions (CBFs), by effectively adapting to complex constraints. However, these learning-based approaches lack formal safety guarantees. In this work, we introduce a verifiable model-free safety filter based on Hamilton-Jacobi reachability analysis. Our primary contributions include: 1) extending verifiable self-consistency properties for Q value functions, 2) proposing a multiplica",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21438v1",
+    "title": "Measuring Fine-Grained Relatedness in Multitask Learning via Data Attribution",
+    "abstract": "Measuring task relatedness and mitigating negative transfer remain a critical open challenge in Multitask Learning (MTL). This work extends data attribution -- which quantifies the influence of individual training data points on model predictions -- to MTL setting for measuring task relatedness. We propose the MultiTask Influence Function (MTIF), a method that adapts influence functions to MTL models with hard or soft parameter sharing. Compared to conventional task relatedness measurements, MTI",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21410v1",
+    "title": "MRSD: Multi-Resolution Skill Discovery for HRL Agents",
+    "abstract": "Hierarchical reinforcement learning (HRL) relies on abstract skills to solve long-horizon tasks efficiently. While existing skill discovery methods learns these skills automatically, they are limited to a single skill per task. In contrast, humans learn and use both fine-grained and coarse motor skills simultaneously. Inspired by human motor control, we propose Multi-Resolution Skill Discovery (MRSD), an HRL framework that learns multiple skill encoders at different temporal resolutions in paral",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.RO"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21388v4",
+    "title": "From Aggregation to Selection: User-Validated Distributed Social Recommendation",
+    "abstract": "Social recommender systems facilitate social connections by identifying potential friends for users. Each user maintains a local social network centered around themselves, resulting in a naturally distributed social structure. Recent research on distributed modeling for social recommender systems has gained increasing attention, as it naturally aligns with the user-centric structure of user interactions. Current distributed social recommender systems rely on automatically combining predictions f",
+    "categories": [
+      "cs.SI",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21339v2",
+    "title": "An Uncertainty-Aware ED-LSTM for Probabilistic Suffix Prediction",
+    "abstract": "Suffix prediction of business processes forecasts the remaining sequence of events until process completion. Current approaches focus on predicting the most likely suffix, representing a single scenario. However, when the future course of a process is subject to uncertainty and high variability, the expressiveness of such a single scenario can be limited, since other possible scenarios, which together may have a higher overall probability, are overlooked. To address this limitation, we propose p",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21288v2",
+    "title": "Are Graph Attention Networks Able to Model Structural Information?",
+    "abstract": "Graph Attention Networks (GATs) have emerged as powerful models for learning expressive representations from such data by adaptively weighting neighboring nodes through attention mechanisms. However, most existing approaches primarily rely on node attributes and direct neighborhood connections, often overlooking rich structural patterns that capture higher-order topological information crucial for many real-world datasets. In this work, we present the Graph Structure Attention Network (GSAT), a ",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21587v1",
+    "title": "CellCLAT: Preserving Topology and Trimming Redundancy in Self-Supervised Cellular Contrastive Learning",
+    "abstract": "Self-supervised topological deep learning (TDL) represents a nascent but underexplored area with significant potential for modeling higher-order interactions in simplicial complexes and cellular complexes to derive representations of unlabeled graphs. Compared to simplicial complexes, cellular complexes exhibit greater expressive power. However, the advancement in self-supervised learning for cellular TDL is largely hindered by two core challenges: \\textit{extrinsic structural constraints} inher",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21005v2",
+    "title": "Efficient and Unbiased Sampling from Boltzmann Distributions via Variance-Tuned Diffusion Models",
+    "abstract": "Score-based diffusion models (SBDMs) are powerful amortized samplers for Boltzmann distributions; however, imperfect score estimates bias downstream Monte Carlo estimates. Classical importance sampling (IS) can correct this bias, but computing exact likelihoods requires solving the probability-flow ordinary differential equation (PF-ODE), a procedure that is prohibitively costly and scales poorly with dimensionality. We introduce Variance-Tuned Diffusion Importance Sampling (VT-DIS), a lightweig",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.20761v2",
+    "title": "Practical estimation of the optimal classification error with soft labels and calibration",
+    "abstract": "While the performance of machine learning systems has experienced significant improvement in recent years, relatively little attention has been paid to the fundamental question: to what extent can we improve our models? This paper provides a means of answering this question in the setting of binary classification, which is practical and theoretically supported. We extend a previous work that utilizes soft labels for estimating the Bayes error, the optimal error rate, in two important ways. First",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.20269v1",
+    "title": "Comparing Neural Network Encodings for Logic-based Explainability",
+    "abstract": "Providing explanations for the outputs of artificial neural networks (ANNs) is crucial in many contexts, such as critical systems, data protection laws and handling adversarial examples. Logic-based methods can offer explanations with correctness guarantees, but face scalability challenges. Due to these issues, it is necessary to compare different encodings of ANNs into logical constraints, which are used in logic-based explainability. This work compares two encodings of ANNs: one has been used ",
+    "categories": [
+      "cs.LO",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.20215v2",
+    "title": "Dependency Parsing is More Parameter-Efficient with Normalization",
+    "abstract": "Dependency parsing is the task of inferring natural language structure, often approached by modeling word interactions via attention through biaffine scoring. This mechanism works like self-attention in Transformers, where scores are calculated for every pair of words in a sentence. However, unlike Transformer attention, biaffine scoring does not use normalization prior to taking the softmax of the scores. In this paper, we provide theoretical evidence and empirical results revealing that a lack",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2505.20178v1",
+    "title": "No Free Lunch: Non-Asymptotic Analysis of Prediction-Powered Inference",
+    "abstract": "Prediction-Powered Inference (PPI) is a popular strategy for combining gold-standard and possibly noisy pseudo-labels to perform statistical estimation. Prior work has shown an asymptotic \"free lunch\" for PPI++, an adaptive form of PPI, showing that the *asymptotic* variance of PPI++ is always less than or equal to the variance obtained from using gold-standard labels alone. Notably, this result holds *regardless of the quality of the pseudo-labels*. In this work, we demystify this result by con",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.20130v3",
+    "title": "Balancing Interference and Correlation in Spatial Experimental Designs: A Causal Graph Cut Approach",
+    "abstract": "This paper focuses on the design of spatial experiments to optimize the amount of information derived from the experimental data and enhance the accuracy of the resulting causal effect estimator. We propose a surrogate function for the mean squared error (MSE) of the estimator, which facilitates the use of classical graph cut algorithms to learn the optimal design. Our proposal offers three key advances: (1) it accommodates moderate to large spatial interference effects; (2) it adapts to differe",
+    "categories": [
+      "cs.LG",
+      "stat.CO",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.20089v3",
+    "title": "Homophily Enhanced Graph Domain Adaptation",
+    "abstract": "Graph Domain Adaptation (GDA) transfers knowledge from labeled source graphs to unlabeled target graphs, addressing the challenge of label scarcity. In this paper, we highlight the significance of graph homophily, a pivotal factor for graph domain alignment, which, however, has long been overlooked in existing approaches. Specifically, our analysis first reveals that homophily discrepancies exist in benchmarks. Moreover, we also show that homophily discrepancies degrade GDA performance from both",
+    "categories": [
+      "cs.SI",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.19827v1",
+    "title": "Revisiting Glorot Initialization for Long-Range Linear Recurrences",
+    "abstract": "Proper initialization is critical for Recurrent Neural Networks (RNNs), particularly in long-range reasoning tasks, where repeated application of the same weight matrix can cause vanishing or exploding signals. A common baseline for linear recurrences is Glorot initialization, designed to ensure stable signal propagation--but derived under the infinite-width, fixed-length regime--an unrealistic setting for RNNs processing long sequences. In this work, we show that Glorot initialization is in fac",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.19614v1",
+    "title": "Multiplicity is an Inevitable and Inherent Challenge in Multimodal Learning",
+    "abstract": "Multimodal learning has seen remarkable progress, particularly with the emergence of large-scale pre-training across various modalities. However, most current approaches are built on the assumption of a deterministic, one-to-one alignment between modalities. This oversimplifies real-world multimodal relationships, where their nature is inherently many-to-many. This phenomenon, named multiplicity, is not a side-effect of noise or annotation error, but an inevitable outcome of semantic abstraction",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2505.19531v1",
+    "title": "Minimalist Softmax Attention Provably Learns Constrained Boolean Functions",
+    "abstract": "We study the computational limits of learning $k$-bit Boolean functions (specifically, $\\mathrm{AND}$, $\\mathrm{OR}$, and their noisy variants), using a minimalist single-head softmax-attention mechanism, where $k=\u0398(d)$ relevant bits are selected from $d$ inputs. We show that these simple $\\mathrm{AND}$ and $\\mathrm{OR}$ functions are unsolvable with a single-head softmax-attention mechanism alone. However, with teacher forcing, the same minimalist attention is capable of solving them. These fin",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.19384v1",
+    "title": "GSA-TTS : Toward Zero-Shot Speech Synthesis based on Gradual Style Adaptor",
+    "abstract": "We present the gradual style adaptor TTS (GSA-TTS) with a novel style encoder that gradually encodes speaking styles from an acoustic reference for zero-shot speech synthesis. GSA first captures the local style of each semantic sound unit. Then the local styles are combined by self-attention to obtain a global style condition. This semantic and hierarchical encoding strategy provides a robust and rich style representation for an acoustic model. We test GSA-TTS on unseen speakers and obtain promi",
+    "categories": [
+      "cs.CL",
+      "cs.SD",
+      "eess.AS"
+    ]
+  },
+  {
+    "arxiv_id": "2505.19245v2",
+    "title": "To CoT or To Loop? A Formal Comparison Between Chain-of-Thought and Looped Transformers",
+    "abstract": "Chain-of-Thought (CoT) and Looped Transformers have been shown to empirically improve performance on reasoning tasks and to theoretically enhance expressivity by recursively increasing the number of computational steps. However, their comparative capabilities are still not well understood. In this paper, we provide a formal analysis of their respective strengths and limitations. We show that Looped Transformers can efficiently simulate parallel computations for deterministic tasks, which we form",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.19220v1",
+    "title": "DeCoDe: Defer-and-Complement Decision-Making via Decoupled Concept Bottleneck Models",
+    "abstract": "In human-AI collaboration, a central challenge is deciding whether the AI should handle a task, be deferred to a human expert, or be addressed through collaborative effort. Existing Learning to Defer approaches typically make binary choices between AI and humans, neglecting their complementary strengths. They also lack interpretability, a critical property in high-stakes scenarios where users must understand and, if necessary, correct the model's reasoning. To overcome these limitations, we prop",
+    "categories": [
+      "cs.AI",
+      "cs.CY"
+    ]
+  },
+  {
+    "arxiv_id": "2505.19186v1",
+    "title": "PosePilot: An Edge-AI Solution for Posture Correction in Physical Exercises",
+    "abstract": "Automated pose correction remains a significant challenge in AI-driven fitness systems, despite extensive research in activity recognition. This work presents PosePilot, a novel system that integrates pose recognition with real-time personalized corrective feedback, overcoming the limitations of traditional fitness solutions. Using Yoga, a discipline requiring precise spatio-temporal alignment as a case study, we demonstrate PosePilot's ability to analyze complex physical movements. Designed for",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.19020v1",
+    "title": "HGCL: Hierarchical Graph Contrastive Learning for User-Item Recommendation",
+    "abstract": "Graph Contrastive Learning (GCL), which fuses graph neural networks with contrastive learning, has evolved as a pivotal tool in user-item recommendations. While promising, existing GCL methods often lack explicit modeling of hierarchical item structures, which represent item similarities across varying resolutions. Such hierarchical item structures are ubiquitous in various items (e.g., online products and local businesses), and reflect their inherent organizational properties that serve as crit",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ]
+  }
+]

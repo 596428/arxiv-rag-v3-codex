@@ -106,9 +106,36 @@ async def update_db_paths(papers: list[Paper]) -> int:
     return updated
 
 
+async def load_papers_from_json(json_path: str) -> list[Paper]:
+    """Load papers from JSON file (final_papers.json format)."""
+    import json
+    with open(json_path, 'r') as f:
+        data = json.load(f)
+
+    # Handle both formats: list or {"papers": [...]}
+    papers_data = data.get("papers", data) if isinstance(data, dict) else data
+
+    papers = []
+    for row in papers_data:
+        paper = Paper(
+            arxiv_id=row['arxiv_id'],
+            title=row['title'],
+            abstract=row.get('abstract', ''),
+            authors=row.get('authors', []),
+            categories=row.get('categories', []),
+            published_date=row.get('published_date'),
+            pdf_url=row.get('pdf_url'),
+            citation_count=row.get('citation_count', 0),
+        )
+        papers.append(paper)
+
+    return papers
+
+
 async def main():
     parser = argparse.ArgumentParser(description="Download papers from database")
     parser.add_argument("--limit", type=int, help="Limit number of papers to download")
+    parser.add_argument("--input", "-i", type=str, help="Input JSON file with papers (e.g., final_papers.json)")
     parser.add_argument("--pdf-only", action="store_true", help="Download PDF only")
     parser.add_argument("--latex-only", action="store_true", help="Download LaTeX only")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be downloaded")
@@ -119,9 +146,17 @@ async def main():
     import logging
     setup_logging(level=logging.DEBUG if args.verbose else logging.INFO)
 
-    # Load papers from DB
-    logger.info("Loading papers from database...")
-    papers = await load_papers_from_db(limit=args.limit)
+    # Load papers from JSON or DB
+    if args.input:
+        logger.info(f"Loading papers from {args.input}...")
+        papers = await load_papers_from_json(args.input)
+    else:
+        logger.info("Loading papers from database...")
+        papers = await load_papers_from_db(limit=args.limit)
+
+    if args.limit and len(papers) > args.limit:
+        papers = papers[:args.limit]
+
     logger.info(f"Loaded {len(papers)} papers")
 
     if args.dry_run:

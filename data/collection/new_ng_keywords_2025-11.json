@@ -1,0 +1,31 @@
+{
+  "month": "2025-11",
+  "keywords": [
+    "asr",
+    "audio",
+    "discrete fuzzy numbers",
+    "fuzzy logic",
+    "graph edit distance",
+    "graph neural networks",
+    "graph similarity",
+    "high-dimensional statistics",
+    "image classification",
+    "m-estimation",
+    "mpc",
+    "multi-view classification",
+    "multilingual",
+    "nonlinear regression",
+    "ood detection",
+    "phase retrieval",
+    "residual learning",
+    "retrieval",
+    "robotics",
+    "scaling laws",
+    "sparse optimization",
+    "speech recognition",
+    "trustworthy learning",
+    "universal approximation"
+  ],
+  "count": 24,
+  "status": "auto_added"
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "arxiv_id": "2504.21787v3",
+    "title": "Estimation of discrete distributions in relative entropy, and the deviations of the missing mass",
+    "abstract": "We study the problem of estimating a distribution over a finite alphabet from an i.i.d. sample, with accuracy measured in relative entropy (Kullback-Leibler divergence). While optimal bounds on the expected risk are known, high-probability guarantees remain less well-understood. First, we analyze the classical Laplace (add-one) estimator, obtaining matching upper and lower bounds on its performance and establishing its optimality among confidence-independent estimators. We then characterize the ",
+    "categories": [
+      "math.ST",
+      "cs.IT",
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2504.21136v1",
+    "title": "Legilimens: Performant Video Analytics on the System-on-Chip Edge",
+    "abstract": "Continually retraining models has emerged as a primary technique to enable high-accuracy video analytics on edge devices. Yet, existing systems employ such adaptation by relying on the spare compute resources that traditional (memory-constrained) edge servers afford. In contrast, mobile edge devices such as drones and dashcams offer a fundamentally different resource profile: weak(er) compute with abundant unified memory pools. We present Legilimens, a continuous learning system for the mobile e",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2504.20854v1",
+    "title": "Towards Easy and Realistic Network Infrastructure Testing for Large-scale Machine Learning",
+    "abstract": "This paper lays the foundation for Genie, a testing framework that captures the impact of real hardware network behavior on ML workload performance, without requiring expensive GPUs. Genie uses CPU-initiated traffic over a hardware testbed to emulate GPU to GPU communication, and adapts the ASTRA-sim simulator to model interaction between the network and the ML workload.",
+    "categories": [
+      "cs.NI",
+      "cs.AI",
+      "cs.DC",
+      "eess.SY"
+    ]
+  },
+  {
+    "arxiv_id": "2504.20322v2",
+    "title": "Fine-Grained Classification: Connecting Metadata via Cross-Contrastive Pre-Training",
+    "abstract": "Fine-grained visual classification aims to recognize objects belonging to many subordinate categories of a supercategory, where appearance alone often fails to distinguish highly similar classes. We propose a unified framework that integrates image, text, and metadata via cross-contrastive pre-training. We first align the three modality encoders in a shared embedding space and then fine-tune the image and metadata encoders for classification. On NABirds, our approach improves over the baseline b",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2504.19590v1",
+    "title": "Arabic Metaphor Sentiment Classification Using Semantic Information",
+    "abstract": "In this paper, I discuss the testing of the Arabic Metaphor Corpus (AMC) [1] using newly designed automatic tools for sentiment classification for AMC based on semantic tags. The tool incorporates semantic emotional tags for sentiment classification. I evaluate the tool using standard methods, which are F-score, recall, and precision. The method is to show the impact of Arabic online metaphors on sentiment through the newly designed tools. To the best of our knowledge, this is the first approach",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2504.18695v1",
+    "title": "Local Polynomial Lp-norm Regression",
+    "abstract": "The local least squares estimator for a regression curve cannot provide optimal results when non-Gaussian noise is present. Both theoretical and empirical evidence suggests that residuals often exhibit distributional properties different from those of a normal distribution, making it worthwhile to consider estimation based on other norms. It is suggested that $L_p$-norm estimators be used to minimize the residuals when these exhibit non-normal kurtosis. In this paper, we propose a local polynomi",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "stat.OT"
+    ]
+  },
+  {
+    "arxiv_id": "2504.13979v1",
+    "title": "Framework, Standards, Applications and Best practices of Responsible AI : A Comprehensive Survey",
+    "abstract": "Responsible Artificial Intelligence (RAI) is a combination of ethics associated with the usage of artificial intelligence aligned with the common and standard frameworks. This survey paper extensively discusses the global and national standards, applications of RAI, current technology and ongoing projects using RAI, and possible challenges in implementing and designing RAI in the industries and projects based on AI. Currently, ethical standards and implementation of RAI are decoupled which cater",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2504.11564v1",
+    "title": "Perceptions of Agentic AI in Organizations: Implications for Responsible AI and ROI",
+    "abstract": "As artificial intelligence (AI) systems rapidly gain autonomy, the need for robust responsible AI frameworks becomes paramount. This paper investigates how organizations perceive and adapt such frameworks amidst the emerging landscape of increasingly sophisticated agentic AI. Employing an interpretive qualitative approach, the study explores the lived experiences of AI professionals. Findings highlight that the inherent complexity of agentic AI systems and their responsible implementation, roote",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2504.10620v1",
+    "title": "SPreV",
+    "abstract": "SPREV, short for hyperSphere Reduced to two-dimensional Regular Polygon for Visualisation, is a novel dimensionality reduction technique developed to address the challenges of reducing dimensions and visualizing labeled datasets that exhibit a unique combination of three characteristics: small class size, high dimensionality, and low sample size. SPREV is designed not only to uncover but also to visually represent hidden patterns within such datasets. Its distinctive integration of geometric pri",
+    "categories": [
+      "cs.GR",
+      "cs.HC",
+      "cs.LG",
+      "stat.ML"
+    ]
+  }
+]

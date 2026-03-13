@@ -1,0 +1,95 @@
+[
+  {
+    "arxiv_id": "2502.20934v3",
+    "title": "Revisiting the Evaluation Bias Introduced by Frame Sampling Strategies in Surgical Video Segmentation Using SAM2",
+    "abstract": "Real-time video segmentation is a promising opportunity for AI-assisted surgery, offering intraoperative guidance by identifying tools and anatomical structures. Despite growing interest in surgical video segmentation, annotation protocols vary widely across datasets -- some provide dense, frame-by-frame labels, while others rely on sparse annotations sampled at low frame rates such as 1 FPS. In this study, we investigate how such inconsistencies in annotation density and frame rate sampling inf",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2502.18682v2",
+    "title": "AI Mismatches: Identifying Potential Algorithmic Harms Before AI Development",
+    "abstract": "AI systems are often introduced with high expectations, yet many fail to deliver, resulting in unintended harm and missed opportunities for benefit. We frequently observe significant \"AI Mismatches\", where the system's actual performance falls short of what is needed to ensure safety and co-create value. These mismatches are particularly difficult to address once development is underway, highlighting the need for early-stage intervention. Navigating complex, multi-dimensional risk factors that c",
+    "categories": [
+      "cs.HC",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2502.20497v1",
+    "title": "Creator-Side Recommender System: Challenges, Designs, and Applications",
+    "abstract": "Users and creators are two crucial components of recommender systems. Typical recommender systems focus on the user side, providing the most suitable items based on each user's request. In such scenarios, a few items receive a majority of exposures, while many items receive very few. This imbalance leads to poorer experiences and decreased activity among the creators receiving less feedback, harming the recommender system in the long term. To this end, we develop a creator-side recommender syste",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2502.18529v1",
+    "title": "Heterogeneous Decision Making in Mixed Traffic: Uncertainty-aware Planning and Bounded Rationality",
+    "abstract": "The past few years have witnessed a rapid growth of the deployment of automated vehicles (AVs). Clearly, AVs and human-driven vehicles (HVs) will co-exist for many years, and AVs will have to operate around HVs, pedestrians, cyclists, and more, calling for fundamental breakthroughs in AI designed for mixed traffic to achieve mixed autonomy. Thus motivated, we study heterogeneous decision making by AVs and HVs in a mixed traffic environment, aiming to capture the interactions between human and ma",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.HC"
+    ]
+  },
+  {
+    "arxiv_id": "2502.16376v1",
+    "title": "Does Your AI Agent Get You? A Personalizable Framework for Approximating Human Models from Argumentation-based Dialogue Traces",
+    "abstract": "Explainable AI is increasingly employing argumentation methods to facilitate interactive explanations between AI agents and human users. While existing approaches typically rely on predetermined human user models, there remains a critical gap in dynamically learning and updating these models during interactions. In this paper, we present a framework that enables AI agents to adapt their understanding of human users through argumentation-based dialogues. Our approach, called Persona, draws on pro",
+    "categories": [
+      "cs.AI",
+      "cs.HC",
+      "cs.LO"
+    ]
+  },
+  {
+    "arxiv_id": "2503.05758v1",
+    "title": "ADAPT Centre Contribution on Implementation of the EU AI Act and Fundamental Right Protection",
+    "abstract": "This document represents the ADAPT Centre's submission to the Irish Department of Enterprise, Trade and Employment (DETE) regarding the public consultation on implementation of the EU AI Act.",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2502.15287v1",
+    "title": "Time Warp: The Gap Between Developers' Ideal vs Actual Workweeks in an AI-Driven Era",
+    "abstract": "Software developers balance a variety of different tasks in a workweek, yet the allocation of time often differs from what they consider ideal. Identifying and addressing these deviations is crucial for organizations aiming to enhance the productivity and well-being of the developers. In this paper, we present the findings from a survey of 484 software developers at Microsoft, which aims to identify the key differences between how developers would like to allocate their time during an ideal work",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.HC"
+    ]
+  },
+  {
+    "arxiv_id": "2502.15834v1",
+    "title": "Challenges of Multi-Modal Coreset Selection for Depth Prediction",
+    "abstract": "Coreset selection methods are effective in accelerating training and reducing memory requirements but remain largely unexplored in applied multimodal settings. We adapt a state-of-the-art (SoTA) coreset selection technique for multimodal data, focusing on the depth prediction task. Our experiments with embedding aggregation and dimensionality reduction approaches reveal the challenges of extending unimodal algorithms to multimodal scenarios, highlighting the need for specialized methods to bette",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2502.14166v3",
+    "title": "Prediction-Powered Adaptive Shrinkage Estimation",
+    "abstract": "Prediction-Powered Inference (PPI) is a powerful framework for enhancing statistical estimates by combining limited gold-standard data with machine learning (ML) predictions. While prior work has demonstrated PPI's benefits for individual statistical problems, modern applications require answering numerous parallel statistical questions. We introduce Prediction-Powered Adaptive Shrinkage (PAS), a method that bridges PPI with empirical Bayes shrinkage to improve the estimation of multiple means. ",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "stat.ME"
+    ]
+  },
+  {
+    "arxiv_id": "2502.13308v3",
+    "title": "A Label-Free Heterophily-Guided Approach for Unsupervised Graph Fraud Detection",
+    "abstract": "Graph fraud detection (GFD) has rapidly advanced in protecting online services by identifying malicious fraudsters. Recent supervised GFD research highlights that heterophilic connections between fraudsters and users can greatly impact detection performance, since fraudsters tend to camouflage themselves by building more connections to benign users. Despite the promising performance of supervised GFD methods, the reliance on labels limits their applications to unsupervised scenarios; Additionall",
+    "categories": [
+      "cs.LG"
+    ]
+  }
+]

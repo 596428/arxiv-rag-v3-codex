@@ -1,0 +1,132 @@
+[
+  {
+    "arxiv_id": "2508.00028v1",
+    "title": "Scalable Spectrum Availability Prediction using a Markov Chain Framework and ITU-R Propagation Models",
+    "abstract": "Spectrum resources are often underutilized across time and space, motivating dynamic spectrum access strategies that allow secondary users to exploit unused frequencies. A key challenge is predicting when and where spectrum will be available (i.e., unused by primary licensed users) in order to enable proactive and interference-free access. This paper proposes a scalable framework for spectrum availability prediction that combines a two-state Markov chain model of primary user activity with high-",
+    "categories": [
+      "cs.NI",
+      "cs.AI",
+      "cs.CL",
+      "math.NA"
+    ]
+  },
+  {
+    "arxiv_id": "2507.22197v1",
+    "title": "Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence",
+    "abstract": "This paper argues that explainability is only one facet of a broader ideal that shapes our expectations towards artificial intelligence (AI). Fundamentally, the issue is to what extent AI exhibits systematicity--not merely in being sensitive to how thoughts are composed of recombinable constituents, but in striving towards an integrated body of thought that is consistent, coherent, comprehensive, and parsimoniously principled. This richer conception of systematicity has been obscured by the long",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CY"
+    ]
+  },
+  {
+    "arxiv_id": "2507.19869v1",
+    "title": "The Polish Vocabulary Size Test: A Novel Adaptive Test for Receptive Vocabulary Assessment",
+    "abstract": "We present the Polish Vocabulary Size Test (PVST), a novel tool for assessing the receptive vocabulary size of both native and non-native Polish speakers. Based on Item Response Theory and Computerized Adaptive Testing, PVST dynamically adjusts to each test-taker's proficiency level, ensuring high accuracy while keeping the test duration short. To validate the test, a pilot study was conducted with 1.475 participants. Native Polish speakers demonstrated significantly larger vocabularies compared",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2507.21169v1",
+    "title": "Trustworthy AI: UK Air Traffic Control Revisited",
+    "abstract": "Exploring the socio-technical challenges confronting the adoption of AI in organisational settings is something that has so far been largely absent from the related literature. In particular, research into requirements for trustworthy AI typically overlooks how people deal with the problems of trust in the tools that they use as part of their everyday work practices. This article presents some findings from an ongoing ethnographic study of how current tools are used in air traffic control work a",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2507.19137v1",
+    "title": "Assessment of Personality Dimensions Across Situations Using Conversational Speech",
+    "abstract": "Prior research indicates that users prefer assistive technologies whose personalities align with their own. This has sparked interest in automatic personality perception (APP), which aims to predict an individual's perceived personality traits. Previous studies in APP have treated personalities as static traits, independent of context. However, perceived personalities can vary by context and situation as shown in psychological research. In this study, we investigate the relationship between conv",
+    "categories": [
+      "eess.AS",
+      "cs.AI",
+      "cs.SD"
+    ]
+  },
+  {
+    "arxiv_id": "2507.17348v2",
+    "title": "TOC-UCO: a comprehensive repository of tabular ordinal classification datasets",
+    "abstract": "An ordinal classification (OC) problem corresponds to a special type of classification characterised by the presence of a natural order relationship among the classes. This type of problem can be found in a number of real-world applications, motivating the design and development of many ordinal methodologies over the last years. However, it is important to highlight that the development of the OC field suffers from one main disadvantage: the lack of a comprehensive set of datasets on which novel",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2507.17776v1",
+    "title": "Axiomatizing Rumsfeld Ignorance",
+    "abstract": "In a recent paper, Kit Fine presents some striking results concerning the logical properties of (first-order) ignorance, second-order ignorance and Rumsfeld ignorance. However, Rumsfeld ignorance is definable in terms of ignorance, which makes some existing results and the axiomatization problem trivial. A main reason is that the accessibility relations for the implicit knowledge operator contained in the packaged operators of ignorance and Rumsfeld ignorance are the same. In this work, we assum",
+    "categories": [
+      "math.LO",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2507.13700v2",
+    "title": "Tight Bounds for Answering Adaptively Chosen Concentrated Queries",
+    "abstract": "Most work on adaptive data analysis assumes that samples in the dataset are independent. When correlations are allowed, even the non-adaptive setting can become intractable, unless some structural constraints are imposed. To address this, Bassily and Freund [2016] introduced the elegant framework of concentrated queries, which requires the analyst to restrict itself to queries that are concentrated around their expected value. While this assumption makes the problem trivial in the non-adaptive s",
+    "categories": [
+      "cs.DS",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2508.02680v1",
+    "title": "AnnoSense: A Framework for Physiological Emotion Data Collection in Everyday Settings for AI",
+    "abstract": "Emotional and mental well-being are vital components of quality of life, and with the rise of smart devices like smartphones, wearables, and artificial intelligence (AI), new opportunities for monitoring emotions in everyday settings have emerged. However, for AI algorithms to be effective, they require high-quality data and accurate annotations. As the focus shifts towards collecting emotion data in real-world environments to capture more authentic emotional experiences, the process of gatherin",
+    "categories": [
+      "cs.HC",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2507.12900v2",
+    "title": "Learning to Reject Low-Quality Explanations via User Feedback",
+    "abstract": "Machine Learning predictors are increasingly being employed in high-stakes applications such as credit scoring. Explanations help users unpack the reasons behind their predictions, but are not always \"high quality''. That is, end-users may have difficulty interpreting or believing them, which can complicate trust assessment and downstream decision-making. We argue that classifiers should have the option to refuse handling inputs whose predictions cannot be explained properly and introduce a fram",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2507.12837v1",
+    "title": "Understanding the Evolution of the Neural Tangent Kernel at the Edge of Stability",
+    "abstract": "The study of Neural Tangent Kernels (NTKs) in deep learning has drawn increasing attention in recent years. NTKs typically actively change during training and are related to feature learning. In parallel, recent work on Gradient Descent (GD) has found a phenomenon called Edge of Stability (EoS), in which the largest eigenvalue of the NTK oscillates around a value inversely proportional to the step size. However, although follow-up works have explored the underlying mechanism of such eigenvalue b",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2507.12767v1",
+    "title": "Autonomy for Older Adult-Agent Interaction",
+    "abstract": "As the global population ages, artificial intelligence (AI)-powered agents have emerged as potential tools to support older adults' caregiving. Prior research has explored agent autonomy by identifying key interaction stages in task processes and defining the agent's role at each stage. However, ensuring that agents align with older adults' autonomy preferences remains a critical challenge. Drawing on interdisciplinary conceptualizations of autonomy, this paper examines four key dimensions of au",
+    "categories": [
+      "cs.HC",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2507.12366v1",
+    "title": "FactorHD: A Hyperdimensional Computing Model for Multi-Object Multi-Class Representation and Factorization",
+    "abstract": "Neuro-symbolic artificial intelligence (neuro-symbolic AI) excels in logical analysis and reasoning. Hyperdimensional Computing (HDC), a promising brain-inspired computational model, is integral to neuro-symbolic AI. Various HDC models have been proposed to represent class-instance and class-class relations, but when representing the more complex class-subclass relation, where multiple objects associate different levels of classes and subclasses, they face challenges for factorization, a crucial",
+    "categories": [
+      "cs.SC",
+      "cs.AI",
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2507.12108v3",
+    "title": "Multimodal Coordinated Online Behavior: Trade-offs and Strategies",
+    "abstract": "Coordinated online behavior, which spans from beneficial collective actions to harmful manipulation such as disinformation campaigns, has become a key focus in digital ecosystem analysis. Traditional methods often rely on monomodal approaches, focusing on single types of interactions like co-retweets or co-hashtags, or consider multiple modalities independently of each other. However, these approaches may overlook the complex dynamics inherent in multimodal coordination. This study compares diff",
+    "categories": [
+      "cs.SI",
+      "cs.AI",
+      "cs.CY",
+      "cs.HC",
+      "cs.LG"
+    ]
+  }
+]

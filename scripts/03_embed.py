@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """
-arXiv RAG v1 - Embedding Pipeline
+arXiv RAG v2 - Embedding Pipeline
 
 Chunks parsed documents and generates embeddings using BGE-M3.
 Optionally adds OpenAI embeddings for comparison.
+
+v2 Architecture:
+- Supabase: metadata only (no vectors)
+- Qdrant: vector storage (dense, sparse, colbert)
 
 Usage:
     python scripts/03_embed.py                     # Process all parsed papers
@@ -11,6 +15,7 @@ Usage:
     python scripts/03_embed.py --with-openai       # Include OpenAI embeddings
     python scripts/03_embed.py --dry-run           # Preview only
     python scripts/03_embed.py --limit 10          # Process first N papers
+    python scripts/03_embed.py --supabase-only     # Skip Qdrant (metadata only)
 """
 
 import argparse
@@ -31,7 +36,7 @@ from src.embedding import (
     EmbeddingStats,
 )
 from src.parsing.models import ParsedDocument
-from src.storage import get_supabase_client
+from src.storage import get_supabase_client, get_qdrant_client
 from src.utils.config import settings
 from src.utils.logging import setup_logging, get_logger
 
@@ -97,9 +102,14 @@ def run_embedding_pipeline(
     with_openai: bool = False,
     dry_run: bool = False,
     save_to_db: bool = True,
+    supabase_only: bool = False,
 ) -> tuple[ChunkingStats, EmbeddingStats]:
     """
-    Run the full embedding pipeline.
+    Run the full embedding pipeline (v2 architecture).
+
+    v2 Storage Strategy:
+    - Supabase: metadata only (chunk_id, paper_id, content, section_title, etc.)
+    - Qdrant: vectors only (dense_bge, sparse, dense_openai)
 
     Args:
         documents: List of parsed documents
@@ -107,7 +117,8 @@ def run_embedding_pipeline(
         embedding_config: Embedding configuration
         with_openai: Whether to add OpenAI embeddings
         dry_run: Preview only, don't save
-        save_to_db: Whether to save to Supabase
+        save_to_db: Whether to save to databases
+        supabase_only: Skip Qdrant, save metadata to Supabase only
 
     Returns:
         Tuple of (chunking stats, embedding stats)
@@ -117,9 +128,21 @@ def run_embedding_pipeline(
     bge_embedder = BGEEmbedder(embedding_config)
     openai_embedder = OpenAIEmbedder(embedding_config) if with_openai else None
 
-    db_client = get_supabase_client() if save_to_db and not dry_run else None
+    # v2: Initialize both storage clients
+    supabase_client = get_supabase_client() if save_to_db and not dry_run else None
+    qdrant_client = get_qdrant_client() if save_to_db and not dry_run and not supabase_only else None
 
-    total_chunks_saved = 0
+    if qdrant_client:
+        # Ensure collection exists
+        try:
+            qdrant_client.ensure_collection()
+            logger.info("Qdrant collection ready")
+        except Exception as e:
+            logger.warning(f"Qdrant collection setup failed: {e}")
+            qdrant_client = None
+
+    total_chunks_supabase = 0
+    total_chunks_qdrant = 0
     embedding_stats = EmbeddingStats()
 
     for doc in documents:
@@ -176,30 +199,46 @@ def run_embedding_pipeline(
                 logger.error(f"  OpenAI embedding failed: {e}")
                 embedding_stats.openai_failed += len(embedded_chunks)
 
-        # Step 4: Save to database
-        if db_client:
+        # Step 4a: Save metadata to Supabase (v2 - no vectors)
+        if supabase_client:
             try:
-                # Convert to DB format
-                chunks_data = [ec.to_db_dict() for ec in embedded_chunks]
+                # v2: Convert to metadata-only format
+                metadata_chunks = [ec.to_supabase_dict() for ec in embedded_chunks]
 
-                # Batch insert
-                inserted = db_client.batch_insert_chunks(chunks_data)
-                total_chunks_saved += inserted
-                logger.info(f"  Saved {inserted} chunks to database")
+                # Batch insert metadata only
+                inserted = supabase_client.batch_insert_chunks_metadata(metadata_chunks)
+                total_chunks_supabase += inserted
+                logger.info(f"  Supabase: {inserted} chunks (metadata)")
 
                 # Update paper status
                 from src.collection.models import PaperStatus
-                db_client.update_paper_status(doc.arxiv_id, PaperStatus.EMBEDDED)
+                supabase_client.update_paper_status(doc.arxiv_id, PaperStatus.EMBEDDED)
 
             except Exception as e:
-                logger.error(f"  Database save failed: {e}")
+                logger.error(f"  Supabase save failed: {e}")
+
+        # Step 4b: Save vectors to Qdrant (v2)
+        if qdrant_client:
+            try:
+                # v2: Convert to Qdrant format with vectors
+                qdrant_points = [ec.to_qdrant_dict() for ec in embedded_chunks]
+
+                # Batch upsert to Qdrant
+                upserted = qdrant_client.upsert_chunks(qdrant_points)
+                total_chunks_qdrant += upserted
+                logger.info(f"  Qdrant: {upserted} chunks (vectors)")
+
+            except Exception as e:
+                logger.error(f"  Qdrant save failed: {e}")
 
     # Cleanup
     bge_embedder.unload()
 
     embedding_stats.total_chunks = chunker.stats.total_chunks
 
-    logger.info(f"\nPipeline complete. Saved {total_chunks_saved} chunks to database.")
+    logger.info(f"\nPipeline complete.")
+    logger.info(f"  Supabase: {total_chunks_supabase} chunks (metadata)")
+    logger.info(f"  Qdrant: {total_chunks_qdrant} chunks (vectors)")
 
     return chunker.stats, embedding_stats
 
@@ -259,6 +298,17 @@ def main():
         default=50,
         help="Overlap tokens between chunks (default: 50)",
     )
+    parser.add_argument(
+        "--add-paper-context",
+        action="store_true",
+        help="Prepend paper title/abstract to chunks for better conceptual query retrieval",
+    )
+    parser.add_argument(
+        "--paper-context-tokens",
+        type=int,
+        default=100,
+        help="Max tokens for paper context prefix (default: 100)",
+    )
 
     # Processing options
     parser.add_argument(
@@ -270,6 +320,11 @@ def main():
         "--no-db",
         action="store_true",
         help="Don't save to database",
+    )
+    parser.add_argument(
+        "--supabase-only",
+        action="store_true",
+        help="Save metadata to Supabase only, skip Qdrant (v2)",
     )
     parser.add_argument(
         "--device",
@@ -302,6 +357,8 @@ def main():
         max_tokens=args.max_tokens,
         overlap_tokens=args.overlap_tokens,
         include_abstract=True,
+        add_paper_context=args.add_paper_context,
+        paper_context_tokens=args.paper_context_tokens,
     )
 
     embedding_config = EmbeddingConfig(
@@ -313,6 +370,8 @@ def main():
     )
 
     logger.info(f"Chunking: max_tokens={args.max_tokens}, overlap={args.overlap_tokens}")
+    if args.add_paper_context:
+        logger.info(f"Paper context: enabled ({args.paper_context_tokens} tokens)")
     logger.info(f"Embedding: device={args.device}, sparse_top_k={args.sparse_top_k}")
 
     if args.dry_run:
@@ -344,6 +403,7 @@ def main():
         with_openai=args.with_openai,
         dry_run=args.dry_run,
         save_to_db=not args.no_db,
+        supabase_only=args.supabase_only,
     )
 
     elapsed = time.time() - start_time

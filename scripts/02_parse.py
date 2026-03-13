@@ -253,22 +253,39 @@ def get_papers_to_parse(
 
     if arxiv_id:
         # Get specific paper
-        result = supabase_client.table("papers").select("*").eq("arxiv_id", arxiv_id).execute()
+        result = supabase_client.client.table("papers").select("*").eq("arxiv_id", arxiv_id).execute()
         return result.data if result.data else []
 
-    # Get papers with status = collected (downloaded but not parsed)
-    query = (
-        supabase_client.table("papers")
-        .select("arxiv_id, pdf_path, latex_path, citation_count")
-        .eq("parse_status", "pending")
-        .order("citation_count", desc=True)
-    )
+    # Get papers with status = pending (need parsing)
+    # Use pagination to get all papers (Supabase default limit is 1000)
+    all_papers = []
+    batch_size = 1000
+    offset = 0
 
-    if limit:
-        query = query.limit(limit)
+    while True:
+        query = (
+            supabase_client.client.table("papers")
+            .select("arxiv_id, pdf_path, latex_path, citation_count")
+            .eq("parse_status", "pending")
+            .order("citation_count", desc=True)
+            .range(offset, offset + batch_size - 1)
+        )
 
-    result = query.execute()
-    return result.data if result.data else []
+        result = query.execute()
+        batch = result.data if result.data else []
+
+        if not batch:
+            break
+
+        all_papers.extend(batch)
+        offset += batch_size
+
+        # Check if we've reached user-specified limit
+        if limit and len(all_papers) >= limit:
+            all_papers = all_papers[:limit]
+            break
+
+    return all_papers
 
 
 def update_paper_status(
@@ -285,7 +302,7 @@ def update_paper_status(
     if parse_method:
         update_data["parse_method"] = parse_method
 
-    supabase_client.table("papers").update(update_data).eq("arxiv_id", arxiv_id).execute()
+    supabase_client.client.table("papers").update(update_data).eq("arxiv_id", arxiv_id).execute()
 
 
 def main():

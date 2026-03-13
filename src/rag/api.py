@@ -15,6 +15,11 @@ from ..storage.supabase_client import get_supabase_client
 from ..utils.logging import get_logger
 from .retriever import HybridRetriever, SearchResponse, SearchResult
 from .reranker import BGEReranker
+from .qdrant_retriever import (
+    QdrantHybridRetriever,
+    qdrant_adaptive_search,
+    qdrant_hybrid_search,
+)
 
 logger = get_logger("api")
 
@@ -36,6 +41,7 @@ app.add_middleware(
 
 # Global instances (lazy loaded)
 _retriever: Optional[HybridRetriever] = None
+_qdrant_retriever: Optional[QdrantHybridRetriever] = None
 _reranker: Optional[BGEReranker] = None
 
 
@@ -45,6 +51,14 @@ def get_retriever() -> HybridRetriever:
     if _retriever is None:
         _retriever = HybridRetriever()
     return _retriever
+
+
+def get_qdrant_retriever() -> QdrantHybridRetriever:
+    """Get or create Qdrant retriever instance."""
+    global _qdrant_retriever
+    if _qdrant_retriever is None:
+        _qdrant_retriever = QdrantHybridRetriever()
+    return _qdrant_retriever
 
 
 def get_reranker() -> BGEReranker:
@@ -66,7 +80,11 @@ class SearchRequest(BaseModel):
     top_k: int = Field(default=10, ge=1, le=50, description="Number of results")
     use_reranker: bool = Field(default=True, description="Apply reranking")
     rerank_top_k: int = Field(default=5, ge=1, le=20, description="Results after reranking")
-    search_mode: str = Field(default="hybrid", description="Search mode: hybrid, dense, sparse")
+    search_mode: str = Field(
+        default="adaptive",
+        description="Search mode: adaptive (auto strategy), qdrant_hybrid, hybrid (legacy), dense, sparse"
+    )
+    use_hyde: bool = Field(default=True, description="Enable HyDE expansion for conceptual queries (adaptive mode)")
 
 
 class ChunkResponse(BaseModel):
@@ -88,6 +106,12 @@ class SearchResponseModel(BaseModel):
     total_found: int
     search_time_ms: float
     reranked: bool = False
+    # Adaptive search metadata
+    search_mode: Optional[str] = None
+    query_type: Optional[str] = None
+    query_type_confidence: Optional[float] = None
+    rrf_preset: Optional[str] = None
+    hyde_used: Optional[bool] = None
 
 
 class PaperResponse(BaseModel):
@@ -154,30 +178,76 @@ async def search(request: SearchRequest):
     """
     Search for relevant paper chunks.
 
-    Performs hybrid search (dense + sparse) with optional reranking.
+    Supports multiple search modes:
+    - adaptive: Auto-selects strategy based on query type (recommended)
+    - qdrant_hybrid: Qdrant RRF hybrid search
+    - hybrid: Legacy Supabase hybrid search
+    - dense: Dense-only semantic search
+    - sparse: Sparse-only lexical search
     """
     import time
     start = time.time()
 
     try:
-        retriever = get_retriever()
+        response = None
+        adaptive_metadata = {}
 
         # Perform search based on mode
-        if request.search_mode == "dense":
-            response = retriever.search_dense_only(request.query, top_k=request.top_k)
+        if request.search_mode == "adaptive":
+            # Adaptive search with auto query classification and HyDE
+            qdrant_retriever = get_qdrant_retriever()
+            response = qdrant_retriever.search_adaptive(
+                request.query,
+                top_k=request.top_k,
+                use_hyde=request.use_hyde,
+                use_reranker=request.use_reranker,
+                rerank_top_k=request.rerank_top_k,
+            )
+            # Extract adaptive metadata
+            if response.metadata:
+                adaptive_metadata = {
+                    "query_type": response.metadata.get("query_type"),
+                    "query_type_confidence": response.metadata.get("query_type_confidence"),
+                    "rrf_preset": response.metadata.get("rrf_preset"),
+                    "hyde_used": response.metadata.get("hyde_used"),
+                }
+
+        elif request.search_mode == "qdrant_hybrid":
+            # Qdrant RRF hybrid search
+            qdrant_retriever = get_qdrant_retriever()
+            response = qdrant_retriever.search(
+                request.query,
+                top_k=request.top_k,
+                use_reranker=request.use_reranker,
+                rerank_top_k=request.rerank_top_k,
+            )
+
+        elif request.search_mode == "dense":
+            # Dense-only search (Qdrant)
+            qdrant_retriever = get_qdrant_retriever()
+            response = qdrant_retriever.search_dense_only(request.query, top_k=request.top_k)
+
         elif request.search_mode == "sparse":
-            response = retriever.search_sparse_only(request.query, top_k=request.top_k)
+            # Sparse-only search (Qdrant)
+            qdrant_retriever = get_qdrant_retriever()
+            response = qdrant_retriever.search_sparse_only(request.query, top_k=request.top_k)
+
         else:
+            # Legacy Supabase hybrid search
+            retriever = get_retriever()
             response = retriever.search(request.query, top_k=request.top_k)
 
         results = response.results
         reranked = False
 
-        # Apply reranking if requested
-        if request.use_reranker and len(results) > request.rerank_top_k:
-            reranker = get_reranker()
-            results = reranker.rerank(request.query, results, top_k=request.rerank_top_k)
-            reranked = True
+        # Apply reranking if not already done by adaptive/qdrant_hybrid
+        if request.search_mode not in ("adaptive", "qdrant_hybrid"):
+            if request.use_reranker and len(results) > request.rerank_top_k:
+                reranker = get_reranker()
+                results = reranker.rerank(request.query, results, top_k=request.rerank_top_k)
+                reranked = True
+        else:
+            reranked = request.use_reranker
 
         # Convert to response model
         chunks = []
@@ -190,7 +260,7 @@ async def search(request: SearchRequest):
                 score=r.score,
                 dense_score=r.dense_score,
                 sparse_score=r.sparse_score,
-                reranker_score=r.metadata.get("reranker_score"),
+                reranker_score=r.metadata.get("reranker_score") if r.metadata else None,
             )
             chunks.append(chunk)
 
@@ -202,6 +272,11 @@ async def search(request: SearchRequest):
             total_found=len(chunks),
             search_time_ms=elapsed_ms,
             reranked=reranked,
+            search_mode=request.search_mode,
+            query_type=adaptive_metadata.get("query_type"),
+            query_type_confidence=adaptive_metadata.get("query_type_confidence"),
+            rrf_preset=adaptive_metadata.get("rrf_preset"),
+            hyde_used=adaptive_metadata.get("hyde_used"),
         )
 
     except Exception as e:
@@ -408,13 +483,17 @@ async def startup_event():
 @app.on_event("shutdown")
 async def shutdown_event():
     """Cleanup resources on shutdown."""
-    global _retriever, _reranker
+    global _retriever, _qdrant_retriever, _reranker
 
     logger.info("arXiv RAG API shutting down...")
 
     if _retriever:
         _retriever.embedder.unload()
         _retriever = None
+
+    if _qdrant_retriever:
+        _qdrant_retriever.unload_models()
+        _qdrant_retriever = None
 
     if _reranker:
         _reranker.unload()

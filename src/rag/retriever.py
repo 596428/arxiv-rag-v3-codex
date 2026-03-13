@@ -43,6 +43,7 @@ class SearchResponse:
     sparse_count: int = 0
     colbert_count: int = 0
     search_time_ms: float = 0.0
+    metadata: dict = field(default_factory=dict)  # Additional search metadata
 
 
 class DenseRetriever:

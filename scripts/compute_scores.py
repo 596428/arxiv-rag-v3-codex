@@ -11,6 +11,7 @@ Computes final paper scores using 4 metrics:
 Usage:
     python scripts/compute_scores.py --input data/collection/semantic_filtered.json
     python scripts/compute_scores.py --output data/collection/scored_papers.json
+    python scripts/compute_scores.py --fetch-citations  # Fetch latest from DB
 """
 
 import argparse
@@ -24,6 +25,7 @@ from collections import defaultdict
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from src.storage.supabase_client import get_supabase_client
 from src.utils.logging import get_logger
 
 logger = get_logger("compute_scores")
@@ -72,6 +74,33 @@ TOPIC_KEYWORDS = {
         "assessment", "capability",
     ],
 }
+
+
+def fetch_citation_counts() -> dict[str, int]:
+    """Fetch citation counts from database."""
+    supabase = get_supabase_client()
+    citation_map = {}
+    offset = 0
+    batch_size = 1000
+
+    while True:
+        result = (
+            supabase.client.table("papers")
+            .select("arxiv_id, citation_count")
+            .range(offset, offset + batch_size - 1)
+            .execute()
+        )
+        batch = result.data or []
+        if not batch:
+            break
+
+        for row in batch:
+            citation_map[row["arxiv_id"]] = row.get("citation_count") or 0
+
+        offset += batch_size
+
+    logger.info(f"Fetched citation counts for {len(citation_map)} papers from DB")
+    return citation_map
 
 
 def compute_citation_score(citation_count: int, months_since_pub: float) -> float:
@@ -246,6 +275,11 @@ def main():
         type=str,
         help="Reference date for recency (default: today)"
     )
+    parser.add_argument(
+        "--fetch-citations",
+        action="store_true",
+        help="Fetch latest citation counts from database"
+    )
 
     args = parser.parse_args()
 
@@ -259,6 +293,29 @@ def main():
         papers = json.load(f)
 
     logger.info(f"Loaded {len(papers)} papers from {input_file}")
+
+    # Fetch and merge citation counts from database
+    if args.fetch_citations:
+        logger.info("Fetching citation counts from database...")
+        citation_map = fetch_citation_counts()
+
+        updated = 0
+        for paper in papers:
+            arxiv_id = paper.get("arxiv_id")
+            if arxiv_id and arxiv_id in citation_map:
+                old_count = paper.get("citation_count", 0)
+                new_count = citation_map[arxiv_id]
+                if new_count != old_count:
+                    paper["citation_count"] = new_count
+                    updated += 1
+
+        logger.info(f"Updated citation counts for {updated} papers")
+
+        # Show citation stats
+        with_citations = sum(1 for p in papers if p.get("citation_count", 0) > 0)
+        total_citations = sum(p.get("citation_count", 0) for p in papers)
+        logger.info(f"Papers with citations: {with_citations}/{len(papers)}")
+        logger.info(f"Total citations: {total_citations}")
 
     # Reference date
     if args.reference_date:

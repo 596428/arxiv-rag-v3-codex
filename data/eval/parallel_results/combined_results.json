@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "benchmark_file": "data/eval/test_v2_benchmark.json",
+    "total_time_seconds": 23.458417654037476,
+    "phases_run": [
+      1
+    ],
+    "top_k": 10,
+    "rerank_top_k": 10
+  },
+  "phase_summaries": [
+    {
+      "phase": 1,
+      "description": "API-only + Dense embedding (VRAM: 1)",
+      "modes": [
+        "qdrant_dense",
+        "qdrant_3large"
+      ],
+      "successful": [
+        "qdrant_dense",
+        "qdrant_3large"
+      ],
+      "failed": []
+    }
+  ],
+  "results": {
+    "qdrant_dense": {
+      "avg_mrr": 0.019333333333333334,
+      "avg_ndcg@5": 0.016026555073485944,
+      "avg_ndcg@10": 0.023532149767383274,
+      "avg_precision@5": 0.013999999999999999,
+      "avg_precision@10": 0.016,
+      "avg_search_time_ms": 104.68305587768555,
+      "num_queries": 100
+    },
+    "qdrant_3large": {
+      "avg_mrr": 0.0,
+      "avg_ndcg@5": 0.0,
+      "avg_ndcg@10": 0.0,
+      "avg_precision@5": 0.0,
+      "avg_precision@10": 0.0,
+      "avg_search_time_ms": 205.59823513031006,
+      "num_queries": 100
+    }
+  }
+}

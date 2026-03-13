@@ -1,0 +1,87 @@
+[
+  {
+    "arxiv_id": "2512.23973v2",
+    "title": "A Community-Aware Framework for Influence Maximization with Explicit Accounting for Inter-Community Influence",
+    "abstract": "Influence Maximization (IM) seeks to identify a small set of seed nodes in a social network to maximize expected information spread under a diffusion model. While community-based approaches improve scalability by exploiting modular structure, they typically assume independence between communities, overlooking inter-community influence$\\unicode{x2014}$a limitation that reduces effectiveness in real-world networks. We introduce Community-IM++, a scalable framework that explicitly models cross-comm",
+    "categories": [
+      "cs.SI",
+      "cs.AI",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2512.23943v1",
+    "title": "Statistical Guarantees in the Search for Less Discriminatory Algorithms",
+    "abstract": "Recent scholarship has argued that firms building data-driven decision systems in high-stakes domains like employment, credit, and housing should search for \"less discriminatory algorithms\" (LDAs) (Black et al., 2024). That is, for a given decision problem, firms considering deploying a model should make a good-faith effort to find equally performant models with lower disparate impact across social groups. Evidence from the literature on model multiplicity shows that randomness in training pipel",
+    "categories": [
+      "cs.CY",
+      "cs.LG",
+      "stat.ME"
+    ]
+  },
+  {
+    "arxiv_id": "2601.00844v1",
+    "title": "Value-guided action planning with JEPA world models",
+    "abstract": "Building deep learning models that can reason about their environment requires capturing its underlying dynamics. Joint-Embedded Predictive Architectures (JEPA) provide a promising framework to model such dynamics by learning representations and predictors through a self-supervised prediction objective. However, their ability to support effective action planning remains limited. We propose an approach to enhance planning with JEPA world models by shaping their representation space so that the ne",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.RO"
+    ]
+  },
+  {
+    "arxiv_id": "2512.19190v1",
+    "title": "PEDESTRIAN: An Egocentric Vision Dataset for Obstacle Detection on Pavements",
+    "abstract": "Walking has always been a primary mode of transportation and is recognized as an essential activity for maintaining good health. Despite the need for safe walking conditions in urban environments, sidewalks are frequently obstructed by various obstacles that hinder free pedestrian movement. Any object obstructing a pedestrian's path can pose a safety hazard. The advancement of pervasive computing and egocentric vision techniques offers the potential to design systems that can automatically detec",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2512.17820v2",
+    "title": "Exploiting ID-Text Complementarity via Ensembling for Sequential Recommendation",
+    "abstract": "Modern Sequential Recommendation (SR) models commonly utilize modality features to represent items, motivated in large part by recent advancements in language and vision modeling. To do so, several works completely replace ID embeddings with modality embeddings, claiming that modality embeddings render ID embeddings unnecessary because they can match or even exceed ID embedding performance. On the other hand, many works jointly utilize ID and modality features, but posit that complex fusion stra",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2512.17968v1",
+    "title": "A Critical Review of Monte Carlo Algorithms Balancing Performance and Probabilistic Accuracy with AI Augmented Framework",
+    "abstract": "Monte Carlo algorithms are a foundational pillar of modern computational science, yet their effective application hinges on a deep understanding of their performance trade offs. This paper presents a critical analysis of the evolution of Monte Carlo algorithms, focusing on the persistent tension between statistical efficiency and computational cost. We describe the historical development from the foundational Metropolis Hastings algorithm to contemporary methods like Hamiltonian Monte Carlo. A c",
+    "categories": [
+      "stat.CO",
+      "cs.AI",
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2512.15462v1",
+    "title": "Intent-Driven UAM Rescheduling",
+    "abstract": "Due to the restricted resources, efficient scheduling in vertiports has received much more attention in the field of Urban Air Mobility (UAM). For the scheduling problem, we utilize a Mixed Integer Linear Programming (MILP), which is often formulated in a resource-restricted project scheduling problem (RCPSP). In this paper, we show our approach to handle both dynamic operation requirements and vague rescheduling requests from humans. Particularly, we utilize a three-valued logic for interpretin",
+    "categories": [
+      "cs.AI",
+      "cs.HC",
+      "cs.SC"
+    ]
+  },
+  {
+    "arxiv_id": "2512.13505v1",
+    "title": "Defending the Hierarchical Result Models of Precedential Constraint",
+    "abstract": "In recent years, hierarchical case-based-reasoning models of precedential constraint have been proposed. In various papers, Trevor Bench-Capon criticised these models on the grounds that they would give incorrect outcomes in some cases. In particular, the models would not account for the possibility that intermediate factors are established with different strengths by different base-level factors. In this paper we respond to these criticisms for van Woerkom's result-based hierarchical models. We",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2512.22153v1",
+    "title": "Sampling with Shielded Langevin Monte Carlo Using Navigation Potentials",
+    "abstract": "We introduce shielded Langevin Monte Carlo (LMC), a constrained sampler inspired by navigation functions, capable of sampling from unnormalized target distributions defined over punctured supports. In other words, this approach samples from non-convex spaces defined as convex sets with convex holes. This defines a novel and challenging problem in constrained sampling. To do so, the sampler incorporates a combination of a spatially adaptive temperature and a repulsive drift to ensure that samples",
+    "categories": [
+      "stat.CO",
+      "cs.LG",
+      "stat.ML"
+    ]
+  }
+]

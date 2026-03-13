@@ -46,7 +46,47 @@ class HybridChunker:
         """Count tokens in text."""
         if not text:
             return 0
-        return len(self.tokenizer.encode(text))
+        # allowed_special="all" to handle <|endoftext|> and similar tokens in papers
+        return len(self.tokenizer.encode(text, allowed_special="all"))
+
+    def _build_paper_context(self, doc: ParsedDocument) -> str:
+        """
+        Build paper context prefix for chunks.
+
+        Args:
+            doc: Parsed document
+
+        Returns:
+            Context string to prepend to chunks
+        """
+        if not self.config.add_paper_context:
+            return ""
+
+        # Build context: Paper title + truncated abstract
+        context_parts = []
+
+        if doc.title:
+            context_parts.append(f"Paper: {doc.title}")
+
+        if doc.abstract:
+            # Truncate abstract to fit within token budget
+            abstract_budget = self.config.paper_context_tokens - 20  # Reserve for "Paper:" prefix
+            abstract_tokens = self.tokenizer.encode(doc.abstract, allowed_special="all")
+
+            if len(abstract_tokens) > abstract_budget:
+                truncated = self.tokenizer.decode(abstract_tokens[:abstract_budget])
+                # Clean truncation at word boundary
+                truncated = truncated.rsplit(" ", 1)[0] + "..."
+                context_parts.append(f"Topic: {truncated}")
+            else:
+                # Use first sentence or two as topic
+                sentences = doc.abstract.split(". ")[:2]
+                topic = ". ".join(sentences)
+                if not topic.endswith("."):
+                    topic += "."
+                context_parts.append(f"Topic: {topic}")
+
+        return "\n".join(context_parts) + "\n\n" if context_parts else ""
 
     def chunk_document(self, doc: ParsedDocument) -> list[Chunk]:
         """
@@ -61,6 +101,9 @@ class HybridChunker:
         chunks = []
         chunk_index = 0
 
+        # Build paper context prefix (if enabled)
+        paper_context = self._build_paper_context(doc)
+
         # 1. Abstract chunk (if enabled and present)
         if self.config.include_abstract and doc.abstract:
             abstract_chunk = self._create_abstract_chunk(doc, chunk_index)
@@ -71,14 +114,14 @@ class HybridChunker:
 
         # 2. Section-based chunking
         for section in doc.sections:
-            section_chunks = list(self._chunk_section(doc.arxiv_id, section, chunk_index))
+            section_chunks = list(self._chunk_section(doc.arxiv_id, section, chunk_index, paper_context))
             for chunk in section_chunks:
                 chunks.append(chunk)
                 chunk_index += 1
 
         # 3. Equation chunks (if enabled)
         if self.config.include_equations and doc.equations:
-            for chunk in self._create_equation_chunks(doc, chunk_index):
+            for chunk in self._create_equation_chunks(doc, chunk_index, paper_context):
                 chunks.append(chunk)
                 chunk_index += 1
                 self.stats.equation_chunks += 1
@@ -126,7 +169,7 @@ class HybridChunker:
         )
 
     def _create_equation_chunks(
-        self, doc: ParsedDocument, start_index: int
+        self, doc: ParsedDocument, start_index: int, paper_context: str = ""
     ) -> Generator[Chunk, None, None]:
         """
         Create chunks from equation text descriptions.
@@ -137,6 +180,7 @@ class HybridChunker:
         Args:
             doc: Parsed document with equations
             start_index: Starting chunk index
+            paper_context: Paper context prefix to prepend
 
         Yields:
             Chunks for each equation with description
@@ -163,6 +207,11 @@ class HybridChunker:
                 content_parts.append(f"Following context: {eq.context_after.strip()}")
 
             content = "\n\n".join(content_parts)
+
+            # Prepend paper context if provided
+            if paper_context:
+                content = paper_context + content
+
             token_count = self.count_tokens(content)
 
             # For equations, use a much lower minimum threshold (10 tokens)
@@ -192,7 +241,7 @@ class HybridChunker:
             chunk_index += 1
 
     def _chunk_section(
-        self, arxiv_id: str, section: Section, start_index: int
+        self, arxiv_id: str, section: Section, start_index: int, paper_context: str = ""
     ) -> Generator[Chunk, None, None]:
         """
         Chunk a section, splitting if too long.
@@ -206,7 +255,7 @@ class HybridChunker:
         if not paragraphs:
             # Process subsections directly
             for subsection in section.subsections:
-                for chunk in self._chunk_section(arxiv_id, subsection, chunk_index):
+                for chunk in self._chunk_section(arxiv_id, subsection, chunk_index, paper_context):
                     yield chunk
                     chunk_index += 1
             return
@@ -215,21 +264,27 @@ class HybridChunker:
         section_text = section.full_text
         total_tokens = self.count_tokens(section_text)
 
+        # Account for paper context in token budget
+        context_tokens = self.count_tokens(paper_context) if paper_context else 0
+        effective_max = self.config.max_tokens - context_tokens
+
         # If section fits in one chunk
-        if total_tokens <= self.config.max_tokens:
+        if total_tokens <= effective_max:
             if total_tokens >= self.config.min_chunk_tokens:
+                # Prepend paper context
+                content = paper_context + section_text if paper_context else section_text
                 chunk = Chunk(
                     chunk_id=f"{arxiv_id}_chunk_{chunk_index}",
                     paper_id=arxiv_id,
-                    content=section_text,
+                    content=content,
                     section_id=section.section_id,
                     section_title=section.title,
                     paragraph_ids=[p.paragraph_id for p in paragraphs],
                     chunk_type=ChunkType.TEXT,
                     chunk_index=chunk_index,
-                    token_count=total_tokens,
-                    char_count=len(section_text),
-                    metadata={"section_level": section.level},
+                    token_count=self.count_tokens(content),
+                    char_count=len(content),
+                    metadata={"section_level": section.level, "has_paper_context": bool(paper_context)},
                 )
                 yield chunk
                 self.stats.text_chunks += 1
@@ -237,7 +292,7 @@ class HybridChunker:
         else:
             # Split by paragraphs
             for chunk in self._split_paragraphs(
-                arxiv_id, section.section_id, section.title, paragraphs, chunk_index
+                arxiv_id, section.section_id, section.title, paragraphs, chunk_index, paper_context
             ):
                 yield chunk
                 self.stats.text_chunks += 1
@@ -245,7 +300,7 @@ class HybridChunker:
 
         # Process subsections
         for subsection in section.subsections:
-            for chunk in self._chunk_section(arxiv_id, subsection, chunk_index):
+            for chunk in self._chunk_section(arxiv_id, subsection, chunk_index, paper_context):
                 yield chunk
                 chunk_index += 1
 
@@ -256,6 +311,7 @@ class HybridChunker:
         section_title: str,
         paragraphs: list[Paragraph],
         start_index: int,
+        paper_context: str = "",
     ) -> Generator[Chunk, None, None]:
         """
         Split paragraphs into chunks respecting token limits.
@@ -267,16 +323,20 @@ class HybridChunker:
         current_tokens = 0
         current_text_parts: list[str] = []
 
+        # Account for paper context in token budget
+        context_tokens = self.count_tokens(paper_context) if paper_context else 0
+        effective_max = self.config.max_tokens - context_tokens
+
         for para in paragraphs:
             para_tokens = self.count_tokens(para.content)
 
             # If single paragraph exceeds max, split it further
-            if para_tokens > self.config.max_tokens:
+            if para_tokens > effective_max:
                 # Flush current buffer first
                 if current_paragraphs:
                     chunk = self._create_chunk_from_paragraphs(
                         arxiv_id, section_id, section_title,
-                        current_paragraphs, current_text_parts, chunk_index
+                        current_paragraphs, current_text_parts, chunk_index, paper_context
                     )
                     yield chunk
                     chunk_index += 1
@@ -286,19 +346,19 @@ class HybridChunker:
 
                 # Split large paragraph
                 for chunk in self._split_large_paragraph(
-                    arxiv_id, section_id, section_title, para, chunk_index
+                    arxiv_id, section_id, section_title, para, chunk_index, paper_context
                 ):
                     yield chunk
                     chunk_index += 1
                 continue
 
             # Check if adding this paragraph exceeds limit
-            if current_tokens + para_tokens > self.config.max_tokens:
+            if current_tokens + para_tokens > effective_max:
                 # Create chunk from current buffer
                 if current_paragraphs:
                     chunk = self._create_chunk_from_paragraphs(
                         arxiv_id, section_id, section_title,
-                        current_paragraphs, current_text_parts, chunk_index
+                        current_paragraphs, current_text_parts, chunk_index, paper_context
                     )
                     yield chunk
                     chunk_index += 1
@@ -327,7 +387,7 @@ class HybridChunker:
         if current_paragraphs and current_tokens >= self.config.min_chunk_tokens:
             chunk = self._create_chunk_from_paragraphs(
                 arxiv_id, section_id, section_title,
-                current_paragraphs, current_text_parts, chunk_index
+                current_paragraphs, current_text_parts, chunk_index, paper_context
             )
             yield chunk
 
@@ -339,9 +399,15 @@ class HybridChunker:
         paragraphs: list[Paragraph],
         text_parts: list[str],
         chunk_index: int,
+        paper_context: str = "",
     ) -> Chunk:
         """Create a chunk from accumulated paragraphs."""
         content = "\n\n".join(text_parts)
+
+        # Prepend paper context if provided
+        if paper_context:
+            content = paper_context + content
+
         token_count = self.count_tokens(content)
 
         return Chunk(
@@ -355,6 +421,7 @@ class HybridChunker:
             chunk_index=chunk_index,
             token_count=token_count,
             char_count=len(content),
+            metadata={"has_paper_context": bool(paper_context)},
         )
 
     def _split_large_paragraph(
@@ -364,6 +431,7 @@ class HybridChunker:
         section_title: str,
         para: Paragraph,
         start_index: int,
+        paper_context: str = "",
     ) -> Generator[Chunk, None, None]:
         """
         Split a large paragraph by sentences.
@@ -379,14 +447,20 @@ class HybridChunker:
         current_sentences: list[str] = []
         current_tokens = 0
 
+        # Account for paper context in token budget
+        context_tokens = self.count_tokens(paper_context) if paper_context else 0
+        effective_max = self.config.max_tokens - context_tokens
+
         for sentence in sentences:
             sent_tokens = self.count_tokens(sentence)
 
             # If single sentence exceeds limit, truncate
-            if sent_tokens > self.config.max_tokens:
+            if sent_tokens > effective_max:
                 # Flush current
                 if current_sentences:
                     content = " ".join(current_sentences)
+                    if paper_context:
+                        content = paper_context + content
                     yield Chunk(
                         chunk_id=f"{arxiv_id}_chunk_{chunk_index}",
                         paper_id=arxiv_id,
@@ -398,14 +472,16 @@ class HybridChunker:
                         chunk_index=chunk_index,
                         token_count=self.count_tokens(content),
                         char_count=len(content),
-                        metadata={"split_from_large_paragraph": True},
+                        metadata={"split_from_large_paragraph": True, "has_paper_context": bool(paper_context)},
                     )
                     chunk_index += 1
                     current_sentences = []
                     current_tokens = 0
 
                 # Truncate long sentence
-                truncated = self._truncate_to_tokens(sentence, self.config.max_tokens)
+                truncated = self._truncate_to_tokens(sentence, effective_max)
+                if paper_context:
+                    truncated = paper_context + truncated
                 yield Chunk(
                     chunk_id=f"{arxiv_id}_chunk_{chunk_index}",
                     paper_id=arxiv_id,
@@ -417,15 +493,17 @@ class HybridChunker:
                     chunk_index=chunk_index,
                     token_count=self.count_tokens(truncated),
                     char_count=len(truncated),
-                    metadata={"truncated": True},
+                    metadata={"truncated": True, "has_paper_context": bool(paper_context)},
                 )
                 chunk_index += 1
                 continue
 
-            if current_tokens + sent_tokens > self.config.max_tokens:
+            if current_tokens + sent_tokens > effective_max:
                 # Create chunk
                 if current_sentences:
                     content = " ".join(current_sentences)
+                    if paper_context:
+                        content = paper_context + content
                     yield Chunk(
                         chunk_id=f"{arxiv_id}_chunk_{chunk_index}",
                         paper_id=arxiv_id,
@@ -437,7 +515,7 @@ class HybridChunker:
                         chunk_index=chunk_index,
                         token_count=self.count_tokens(content),
                         char_count=len(content),
-                        metadata={"split_from_large_paragraph": True},
+                        metadata={"split_from_large_paragraph": True, "has_paper_context": bool(paper_context)},
                     )
                     chunk_index += 1
 
@@ -456,6 +534,8 @@ class HybridChunker:
         # Flush remaining
         if current_sentences and current_tokens >= self.config.min_chunk_tokens:
             content = " ".join(current_sentences)
+            if paper_context:
+                content = paper_context + content
             yield Chunk(
                 chunk_id=f"{arxiv_id}_chunk_{chunk_index}",
                 paper_id=arxiv_id,
@@ -467,7 +547,7 @@ class HybridChunker:
                 chunk_index=chunk_index,
                 token_count=self.count_tokens(content),
                 char_count=len(content),
-                metadata={"split_from_large_paragraph": True},
+                metadata={"split_from_large_paragraph": True, "has_paper_context": bool(paper_context)},
             )
 
     def _split_sentences(self, text: str) -> list[str]:
@@ -480,7 +560,7 @@ class HybridChunker:
 
     def _get_overlap_text(self, text: str) -> str:
         """Get overlap text from end of previous chunk."""
-        tokens = self.tokenizer.encode(text)
+        tokens = self.tokenizer.encode(text, allowed_special="all")
         if len(tokens) <= self.config.overlap_tokens:
             return text
         overlap_tokens = tokens[-self.config.overlap_tokens:]
@@ -506,7 +586,7 @@ class HybridChunker:
 
     def _truncate_to_tokens(self, text: str, max_tokens: int) -> str:
         """Truncate text to max tokens."""
-        tokens = self.tokenizer.encode(text)
+        tokens = self.tokenizer.encode(text, allowed_special="all")
         if len(tokens) <= max_tokens:
             return text
         truncated_tokens = tokens[:max_tokens]

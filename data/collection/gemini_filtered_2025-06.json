@@ -1,0 +1,159 @@
+[
+  {
+    "arxiv_id": "2506.23803v1",
+    "title": "SGD with Adaptive Preconditioning: Unified Analysis and Momentum Acceleration",
+    "abstract": "In this paper, we revisit stochastic gradient descent (SGD) with AdaGrad-type preconditioning. Our contributions are twofold. First, we develop a unified convergence analysis of SGD with adaptive preconditioning under anisotropic or matrix smoothness and noise assumptions. This allows us to recover state-of-the-art convergence results for several popular adaptive gradient methods, including AdaGrad-Norm, AdaGrad, and ASGO/One-sided Shampoo. In addition, we establish the fundamental connection be",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2506.23773v1",
+    "title": "BayesL: Towards a Logical Framework for Bayesian Networks",
+    "abstract": "We introduce BayesL, a novel logical framework for specifying, querying, and verifying the behaviour of Bayesian networks (BNs). BayesL (pronounced \"Basil\") is a structured language that allows for the creation of queries over BNs. It facilitates versatile reasoning concerning causal and evidence-based relationships, and permits comprehensive what-if scenario evaluations without the need for manual modifications to the model.",
+    "categories": [
+      "cs.AI",
+      "cs.LO"
+    ]
+  },
+  {
+    "arxiv_id": "2506.23137v3",
+    "title": "Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion",
+    "abstract": "Knowledge graph completion demands effective modeling of multifaceted semantic relationships between entities. Yet, prevailing methods, which rely on static scoring functions over learned embeddings, struggling to simultaneously capture rich semantic context and the dynamic nature of relations. To overcome this limitation, we propose the Flow-Modulated Scoring (FMS) framework, conceptualizing a relation as a dynamic evolutionary process governed by its static semantic environment. FMS operates i",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2506.22095v4",
+    "title": "Beyond Simple Graphs: Neural Multi-Objective Routing on Multigraphs",
+    "abstract": "Learning-based methods for routing have gained significant attention in recent years, both in single-objective and multi-objective contexts. Yet, existing methods are unsuitable for routing on multigraphs, which feature multiple edges with distinct attributes between node pairs, despite their strong relevance in real-world scenarios. In this paper, we propose two graph neural network-based methods to address multi-objective routing on multigraphs. Our first approach operates directly on the mult",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2506.21712v1",
+    "title": "Identifying Speaker Information in Feed-Forward Layers of Self-Supervised Speech Transformers",
+    "abstract": "In recent years, the impact of self-supervised speech Transformers has extended to speaker-related applications. However, little research has explored how these models encode speaker information. In this work, we address this gap by identifying neurons in the feed-forward layers that are correlated with speaker information. Specifically, we analyze neurons associated with k-means clusters of self-supervised features and i-vectors. Our analysis reveals that these clusters correspond to broad phon",
+    "categories": [
+      "cs.CL",
+      "cs.SD",
+      "eess.AS"
+    ]
+  },
+  {
+    "arxiv_id": "2507.02929v1",
+    "title": "OBSER: Object-Based Sub-Environment Recognition for Zero-Shot Environmental Inference",
+    "abstract": "We present the Object-Based Sub-Environment Recognition (OBSER) framework, a novel Bayesian framework that infers three fundamental relationships between sub-environments and their constituent objects. In the OBSER framework, metric and self-supervised learning models estimate the object distributions of sub-environments on the latent space to compute these measures. Both theoretically and empirically, we validate the proposed framework by introducing the ($\u03b5,\u03b4$) statistically separable (EDS) fu",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2506.20980v1",
+    "title": "Enhancing Homophily-Heterophily Separation: Relation-Aware Learning in Heterogeneous Graphs",
+    "abstract": "Real-world networks usually have a property of node heterophily, that is, the connected nodes usually have different features or different labels. This heterophily issue has been extensively studied in homogeneous graphs but remains under-explored in heterogeneous graphs, where there are multiple types of nodes and edges. Capturing node heterophily in heterogeneous graphs is very challenging since both node/edge heterogeneity and node heterophily should be carefully taken into consideration. Exi",
+    "categories": [
+      "cs.SI",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2506.20748v1",
+    "title": "Exploring the Effects of Chatbot Anthropomorphism and Human Empathy on Human Prosocial Behavior Toward Chatbots",
+    "abstract": "Chatbots are increasingly integrated into people's lives and are widely used to help people. Recently, there has also been growing interest in the reverse direction-humans help chatbots-due to a wide range of benefits including better chatbot performance, human well-being, and collaborative outcomes. However, little research has explored the factors that motivate people to help chatbots. To address this gap, we draw on the Computers Are Social Actors (CASA) framework to examine how chatbot anthr",
+    "categories": [
+      "cs.HC",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2506.22503v1",
+    "title": "What Makes a Dribble Successful? Insights From 3D Pose Tracking Data",
+    "abstract": "Data analysis plays an increasingly important role in soccer, offering new ways to evaluate individual and team performance. One specific application is the evaluation of dribbles: one-on-one situations where an attacker attempts to bypass a defender with the ball. While previous research has primarily relied on 2D positional tracking data, this fails to capture aspects like balance, orientation, and ball control, limiting the depth of current insights. This study explores how pose tracking data",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2506.20381v1",
+    "title": "Exploiting Lightweight Hierarchical ViT and Dynamic Framework for Efficient Visual Tracking",
+    "abstract": "Transformer-based visual trackers have demonstrated significant advancements due to their powerful modeling capabilities. However, their practicality is limited on resource-constrained devices because of their slow processing speeds. To address this challenge, we present HiT, a novel family of efficient tracking models that achieve high performance while maintaining fast operation across various devices. The core innovation of HiT lies in its Bridge Module, which connects lightweight transformer",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2506.20329v1",
+    "title": "Producer-Fairness in Sequential Bundle Recommendation",
+    "abstract": "We address fairness in the context of sequential bundle recommendation, where users are served in turn with sets of relevant and compatible items. Motivated by real-world scenarios, we formalize producer-fairness, that seeks to achieve desired exposure of different item groups across users in a recommendation session. Our formulation combines naturally with building high quality bundles. Our problem is solved in real time as users arrive. We propose an exact solution that caters to small instanc",
+    "categories": [
+      "cs.LG",
+      "cs.IR"
+    ]
+  },
+  {
+    "arxiv_id": "2506.22490v1",
+    "title": "MENGLAN: Multiscale Enhanced Nonparametric Gas Analyzer with Lightweight Architecture and Networks",
+    "abstract": "Accurate detection of ethylene concentrations in mixed gases is crucial in chemical production for safety and health purposes. Traditional methods are hindered by high cost and complexity, limiting their practical application. This study proposes MENGLAN, a Multiscale Enhanced Nonparametric Gas Analyzer that integrates a dual-stream structure, a Hybrid Multi-Head Attention mechanism, and a Feature Reactivation Module to enable real-time, lightweight, and high-precision ethylene concentration pre",
+    "categories": [
+      "eess.SP",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2507.01974v1",
+    "title": "Acoustic evaluation of a neural network dedicated to the detection of animal vocalisations",
+    "abstract": "The accessibility of long-duration recorders, adapted to sometimes demanding field conditions, has enabled the deployment of extensive animal population monitoring campaigns through ecoacoustics. The effectiveness of automatic signal detection methods, increasingly based on neural approaches, is frequently evaluated solely through machine learning metrics, while acoustic analysis of performance remains rare. As part of the acoustic monitoring of Rock Ptarmigan populations, we propose here a simp",
+    "categories": [
+      "cs.SD",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2506.17892v2",
+    "title": "BeltCrack: the First Sequential-image Industrial Conveyor Belt Crack Detection Dataset and Its Baseline with Triple-domain Feature Learning",
+    "abstract": "Conveyor belts are important equipment in modern industry, widely applied in production and manufacturing. Their health is much critical to operational efficiency and safety. Cracks are a major threat to belt health. Currently, considering safety, how to intelligently detect belt cracks is catching an increasing attention. To implement the intelligent detection with machine learning, real crack samples are believed to be necessary. However, existing crack datasets primarily focus on pavement sce",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2506.17488v3",
+    "title": "Online Adaptation for Flying Quadrotors in Tight Formations",
+    "abstract": "The task of flying in tight formations is challenging for teams of quadrotors because the complex aerodynamic wake interactions can destabilize individual team members as well as the team. Furthermore, these aerodynamic effects are highly nonlinear and fast-paced, making them difficult to model and predict. To overcome these challenges, we present L1 KNODE-DW MPC, an adaptive, mixed expert learning based control framework that allows individual quadrotors to accurately track trajectories while a",
+    "categories": [
+      "cs.RO",
+      "cs.LG",
+      "eess.SY"
+    ]
+  },
+  {
+    "arxiv_id": "2506.16754v1",
+    "title": "Metapath-based Hyperbolic Contrastive Learning for Heterogeneous Graph Embedding",
+    "abstract": "The hyperbolic space, characterized by a constant negative curvature and exponentially expanding space, aligns well with the structural properties of heterogeneous graphs. However, although heterogeneous graphs inherently possess diverse power-law structures, most hyperbolic heterogeneous graph embedding models rely on a single hyperbolic space. This approach may fail to effectively capture the diverse power-law structures within heterogeneous graphs. To address this limitation, we propose a Met",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.SI"
+    ]
+  },
+  {
+    "arxiv_id": "2506.14213v1",
+    "title": "Chaining Event Spans for Temporal Relation Grounding",
+    "abstract": "Accurately understanding temporal relations between events is a critical building block of diverse tasks, such as temporal reading comprehension (TRC) and relation extraction (TRE). For example in TRC, we need to understand the temporal semantic differences between the following two questions that are lexically near-identical: \"What finished right before the decision?\" or \"What finished right after the decision?\". To discern the two questions, existing solutions have relied on answer overlaps as",
+    "categories": [
+      "cs.CL"
+    ]
+  }
+]

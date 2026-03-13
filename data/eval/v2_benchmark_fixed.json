@@ -1,0 +1,1402 @@
+[
+  {
+    "query": "DeepSeek-R1 reinforcement learning reasoning LLM emergent patterns",
+    "style": "keyword",
+    "relevant_papers": [
+      "2501.12948v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How does DeepSeek-R1 achieve superior reasoning through reinforcement learning?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2501.12948v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "Can large language models develop advanced self-reflection and verification behaviors using pure reinforcement learning without the need for human-labeled reasoning demonstrations?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2501.12948v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "word_count": 21
+    }
+  },
+  {
+    "query": "Enhancing machine intelligence logic by rewarding successful outcomes instead of following manual step-by-step examples written by people.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2501.12948v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "word_count": 17
+    }
+  },
+  {
+    "query": "DAPO decoupled clip reinforcement learning Qwen2.5-32B",
+    "style": "keyword",
+    "relevant_papers": [
+      "2503.14476v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+      "word_count": 6
+    }
+  },
+  {
+    "query": "How does DAPO improve reinforcement learning for language models?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2503.14476v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "What specific techniques does the DAPO system use to achieve high performance on reasoning benchmarks using the verl framework?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2503.14476v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+      "word_count": 19
+    }
+  },
+  {
+    "query": "A public collection of tools for refining how big digital brains handle complex logic through high-volume feedback mechanisms.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2503.14476v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+      "word_count": 18
+    }
+  },
+  {
+    "query": "Kimi k1.5 scaling reinforcement learning multi-modal policy optimization",
+    "style": "keyword",
+    "relevant_papers": [
+      "2501.12599v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+      "word_count": 8
+    }
+  },
+  {
+    "query": "How does Kimi k1.5 scale reinforcement learning for multi-modal reasoning?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2501.12599v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "How does Kimi k1.5 achieve state-of-the-art reasoning without Monte Carlo tree search by scaling reinforcement learning and using long-CoT for short-CoT improvement?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2501.12599v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "Advancing complex problem solving in versatile software agents through incentive-based learning and using detailed internal deliberation to refine brief output performance",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2501.12599v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+      "word_count": 21
+    }
+  },
+  {
+    "query": "RLVR reinforcement learning verifiable rewards LLM reasoning",
+    "style": "keyword",
+    "relevant_papers": [
+      "2504.13837v5"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "Does reinforcement learning with verifiable rewards improve base model reasoning?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2504.13837v5"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "Does reinforcement learning with verifiable rewards allow large language models to exceed the reasoning performance limits of their underlying pre-trained versions?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2504.13837v5"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?",
+      "word_count": 21
+    }
+  },
+  {
+    "query": "Determining if instructing software through automated feedback develops original intellectual strategies or merely improves the surfacing of information already present inside.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2504.13837v5"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?",
+      "word_count": 21
+    }
+  },
+  {
+    "query": "SigLIP 2 multilingual vision-language encoders self-distillation",
+    "style": "keyword",
+    "relevant_papers": [
+      "2502.14786v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, ",
+      "word_count": 6
+    }
+  },
+  {
+    "query": "How does SigLIP 2 improve image-text retrieval and localization performance?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2502.14786v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, ",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "What combination of self-supervised losses and captioning-based pretraining techniques allows SigLIP 2 to achieve superior results in dense prediction and multilingual tasks?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2502.14786v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, ",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "Combining multiple learning objectives to help cross-modal systems understand fine-grained visual details and context across various global languages.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2502.14786v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, ",
+      "word_count": 18
+    }
+  },
+  {
+    "query": "OpenAI o1 DeepSeek-R1 overthinking efficient reasoning Chain-of-Thought",
+    "style": "keyword",
+    "relevant_papers": [
+      "2503.16419v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How can we minimize the overthinking phenomenon in large language models?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2503.16419v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models",
+      "word_count": 11
+    }
+  },
+  {
+    "query": "What are the latest techniques for reducing computational overhead and verbosity in the chain of thought processes of modern large reasoning models?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2503.16419v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "A study on helping advanced text generation systems solve complex problems more quickly by removing repetitive internal deliberation and wordy descriptions.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2503.16419v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models",
+      "word_count": 21
+    }
+  },
+  {
+    "query": "Humanity's Last Exam HLE multi-modal academic benchmark",
+    "style": "keyword",
+    "relevant_papers": [
+      "2501.14249v9"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Humanity's Last Exam",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How does the HLE benchmark test advanced model capabilities?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2501.14249v9"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Humanity's Last Exam",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "How does the Humanity's Last Exam dataset use expert-level multi-modal questions to challenge large language models that have saturated existing performance metrics?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2501.14249v9"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Humanity's Last Exam",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "A rigorous assessment of sophisticated intelligence using diverse inquiries that cover various fields and surpass current standardized testing hurdles.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2501.14249v9"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Humanity's Last Exam",
+      "word_count": 19
+    }
+  },
+  {
+    "query": "GSPO sequence-level clipping reinforcement learning MoE",
+    "style": "keyword",
+    "relevant_papers": [
+      "2507.18071v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Group Sequence Policy Optimization",
+      "word_count": 6
+    }
+  },
+  {
+    "query": "How does GSPO improve large language model training efficiency?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2507.18071v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Group Sequence Policy Optimization",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "What are the advantages of using sequence-level importance ratios and clipping in the GSPO algorithm for training large-scale mixture of experts models?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2507.18071v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Group Sequence Policy Optimization",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "Enhancing the consistency of teaching linguistic AI by applying feedback to full blocks of text instead of small components.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2507.18071v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Group Sequence Policy Optimization",
+      "word_count": 19
+    }
+  },
+  {
+    "query": "ReTool reinforcement learning code execution long-form reasoning outcome feedback",
+    "style": "keyword",
+    "relevant_papers": [
+      "2504.11536v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "ReTool: Reinforcement Learning for Strategic Tool Use in LLMs",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "How does ReTool integrate code execution into long-form reasoning models?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2504.11536v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "ReTool: Reinforcement Learning for Strategic Tool Use in LLMs",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "How does the ReTool framework use outcome-based feedback to teach models the autonomous discovery of optimal tool invocation patterns for mathematical problem solving?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2504.11536v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "ReTool: Reinforcement Learning for Strategic Tool Use in LLMs",
+      "word_count": 23
+    }
+  },
+  {
+    "query": "Training automated systems to improve their logical deduction by learning to interact with external computational aids through reward-based feedback loops.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2504.11536v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "ReTool: Reinforcement Learning for Strategic Tool Use in LLMs",
+      "word_count": 20
+    }
+  },
+  {
+    "query": "WebThinker reasoning models Deep Web Explorer DPO",
+    "style": "keyword",
+    "relevant_papers": [
+      "2504.21776v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "WebThinker: Empowering Large Reasoning Models with Deep Research Capability",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How does WebThinker improve large reasoning models using web search?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2504.21776v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "WebThinker: Empowering Large Reasoning Models with Deep Research Capability",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "How does WebThinker integrate a deep web explorer and direct preference optimization to enable autonomous web navigation and report generation in reasoning models?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2504.21776v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "WebThinker: Empowering Large Reasoning Models with Deep Research Capability",
+      "word_count": 23
+    }
+  },
+  {
+    "query": "A system for improving complex analytical software by enabling independent internet browsing and automated document creation through reward-based learning techniques.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2504.21776v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "WebThinker: Empowering Large Reasoning Models with Deep Research Capability",
+      "word_count": 20
+    }
+  },
+  {
+    "query": "OpenAI o1 DeepSeek R1 System 2 reasoning",
+    "style": "keyword",
+    "relevant_papers": [
+      "2502.17419v6"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "From System 1 to System 2: A Survey of Reasoning Large Language Models",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How do reasoning language models mimic human deliberate thinking processes?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2502.17419v6"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "From System 1 to System 2: A Survey of Reasoning Large Language Models",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "What are the core methodologies and benchmarks used to develop slow and deliberate thinking capabilities in the latest generation of large language models?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2502.17419v6"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "From System 1 to System 2: A Survey of Reasoning Large Language Models",
+      "word_count": 23
+    }
+  },
+  {
+    "query": "A broad evaluation of methodologies that enable software to perform multi-stage analytical deduction instead of relying on immediate and reflexive output generation.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2502.17419v6"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "From System 1 to System 2: A Survey of Reasoning Large Language Models",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "OpenAI o1 reinforcement learning reasoning models scaling",
+    "style": "keyword",
+    "relevant_papers": [
+      "2501.09686v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How do large reasoning models use reinforcement learning to improve accuracy?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2501.09686v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models",
+      "word_count": 11
+    }
+  },
+  {
+    "query": "What are the key technical components and scaling strategies involved in developing large reasoning models through reinforcement learning and extended inference computation?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2501.09686v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "Improving automated problem solving capabilities by allowing software to learn from mistakes and spend more resources during the answering process",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2501.09686v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models",
+      "word_count": 20
+    }
+  },
+  {
+    "query": "Chain of Draft CoD reasoning token efficiency",
+    "style": "keyword",
+    "relevant_papers": [
+      "2502.18600v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Chain of Draft: Thinking Faster by Writing Less",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How does Chain of Draft reduce reasoning tokens in LLMs?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2502.18600v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Chain of Draft: Thinking Faster by Writing Less",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "How does the Chain of Draft method improve LLM efficiency by generating concise intermediate reasoning steps compared to the traditional Chain-of-Thought approach?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2502.18600v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Chain of Draft: Thinking Faster by Writing Less",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "Enhancing problem-solving speed in digital models by producing brief mental shorthand instead of long-winded justifications.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2502.18600v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Chain of Draft: Thinking Faster by Writing Less",
+      "word_count": 15
+    }
+  },
+  {
+    "query": "1-shot RLVR Qwen2.5-Math GRPO reasoning LLM",
+    "style": "keyword",
+    "relevant_papers": [
+      "2504.20571v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+      "word_count": 6
+    }
+  },
+  {
+    "query": "How can a single training example improve LLM math reasoning?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2504.20571v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "What are the effects of applying reinforcement learning with verifiable rewards to improve mathematical problem-solving capabilities using only one training sample?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2504.20571v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+      "word_count": 21
+    }
+  },
+  {
+    "query": "Improving systematic thinking in artificial text generators by utilizing an individual exercise and automated success feedback.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2504.20571v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+      "word_count": 16
+    }
+  },
+  {
+    "query": "Agentic RAG reflection planning multiagent collaboration taxonomy",
+    "style": "keyword",
+    "relevant_papers": [
+      "2501.09136v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How does Agentic RAG improve traditional retrieval augmented generation?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2501.09136v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "How do autonomous AI agents incorporate reflection and planning to address the limitations of static workflows in standard retrieval augmented generation systems?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2501.09136v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "Boosting automated fact collection by using self-directed software units to oversee layered problem-solving and verify the quality of the gathered material.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2501.09136v3"
+    ],
+    "hard_negatives": [],
+    "category": "cs.AI",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG",
+      "word_count": 21
+    }
+  },
+  {
+    "query": "ToolRL GRPO reinforcement learning reward design tool selection",
+    "style": "keyword",
+    "relevant_papers": [
+      "2504.13958v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "ToolRL: Reward is All Tool Learning Needs",
+      "word_count": 8
+    }
+  },
+  {
+    "query": "How can reinforcement learning enhance large language model tool use?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2504.13958v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "ToolRL: Reward is All Tool Learning Needs",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "What is the impact of systematic reward design on the ability of language models to select and apply external utilities using group relative policy optimization?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2504.13958v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "ToolRL: Reward is All Tool Learning Needs",
+      "word_count": 25
+    }
+  },
+  {
+    "query": "Training digital assistants to better utilize external helper applications by optimizing the evaluation metrics during their learning phase.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2504.13958v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "ToolRL: Reward is All Tool Learning Needs",
+      "word_count": 18
+    }
+  },
+  {
+    "query": "Dream 7B discrete diffusion modeling iterative denoising rescheduling",
+    "style": "keyword",
+    "relevant_papers": [
+      "2508.15487v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Dream 7B: Diffusion Large Language Models",
+      "word_count": 8
+    }
+  },
+  {
+    "query": "How does the Dream 7B model use diffusion for language generation?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2508.15487v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Dream 7B: Diffusion Large Language Models",
+      "word_count": 11
+    }
+  },
+  {
+    "query": "How do autoregressive initialization and adaptive noise rescheduling help Dream 7B outperform sequential models on mathematical and coding benchmarks?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2508.15487v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Dream 7B: Diffusion Large Language Models",
+      "word_count": 19
+    }
+  },
+  {
+    "query": "A strategy for creating written content that transforms random data into meaningful language through repeated correction instead of step-by-step prediction.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2508.15487v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Dream 7B: Diffusion Large Language Models",
+      "word_count": 20
+    }
+  },
+  {
+    "query": "Logic-RL DeepSeek-R1 rule-based reinforcement learning reasoning LLM",
+    "style": "keyword",
+    "relevant_papers": [
+      "2502.14768v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Logic-RL: Unleashing LLM Reasoning with Rule-Based Reinforcement Learning",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How does Logic-RL improve reasoning using rule-based reinforcement learning?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2502.14768v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Logic-RL: Unleashing LLM Reasoning with Rule-Based Reinforcement Learning",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "What technical contributions allow Logic-RL to achieve stable reinforcement learning convergence and generalize from synthetic puzzles to advanced mathematics benchmarks?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2502.14768v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Logic-RL: Unleashing LLM Reasoning with Rule-Based Reinforcement Learning",
+      "word_count": 20
+    }
+  },
+  {
+    "query": "Enhancing the problem-solving abilities of language software by applying automated feedback to the organizational quality of their step-by-step deliberations.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2502.14768v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Logic-RL: Unleashing LLM Reasoning with Rule-Based Reinforcement Learning",
+      "word_count": 19
+    }
+  },
+  {
+    "query": "SWE-RL reinforcement learning software evolution LLM reasoning",
+    "style": "keyword",
+    "relevant_papers": [
+      "2502.18449v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.SE",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How does SWE-RL improve model reasoning using software evolution data?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2502.18449v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.SE",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "How does scaling reinforcement learning on software evolution data enable large language models to solve real-world engineering tasks and improve general reasoning?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2502.18449v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.SE",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "Improving logical problem-solving in text generation systems by training on historical program version logs using automated quality-based feedback loops.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2502.18449v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.SE",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution",
+      "word_count": 19
+    }
+  },
+  {
+    "query": "GUI-R1 GRPO reinforcement learning LVLM GUI agents",
+    "style": "keyword",
+    "relevant_papers": [
+      "2504.10458v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "GUI-R1 : A Generalist R1-Style Vision-Language Action Model For GUI Agents",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How does GUI-R1 improve graphical interface agents using reinforcement learning?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2504.10458v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "GUI-R1 : A Generalist R1-Style Vision-Language Action Model For GUI Agents",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "What is the impact of using unified action space rule modeling and GRPO for training GUI-R1 with very little data?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2504.10458v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "GUI-R1 : A Generalist R1-Style Vision-Language Action Model For GUI Agents",
+      "word_count": 20
+    }
+  },
+  {
+    "query": "Teaching computer systems to navigate visual interfaces through trial and error rewards instead of copying human behavior.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2504.10458v4"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "GUI-R1 : A Generalist R1-Style Vision-Language Action Model For GUI Agents",
+      "word_count": 17
+    }
+  },
+  {
+    "query": "RAGEN StarPO multi-turn reinforcement learning LLM agents",
+    "style": "keyword",
+    "relevant_papers": [
+      "2504.20073v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+      "word_count": 7
+    }
+  },
+  {
+    "query": "How does RAGEN improve multi-turn reinforcement learning for agents?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2504.20073v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "How does the StarPO framework address gradient instability and echo traps during multi-turn reinforcement learning for autonomous agents?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2504.20073v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+      "word_count": 18
+    }
+  },
+  {
+    "query": "Enhancing how digital systems learn to perform complex sequences of actions through trial and error in changing environments.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2504.20073v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.LG",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+      "word_count": 18
+    }
+  },
+  {
+    "query": "DeepSeek-Prover-V2 Lean 4 reinforcement learning subgoal decomposition formal reasoning",
+    "style": "keyword",
+    "relevant_papers": [
+      "2504.21801v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal D",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "How does DeepSeek-Prover-V2 improve formal mathematical reasoning using Lean 4?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2504.21801v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal D",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "How does the DeepSeek-Prover-V2 model integrate reinforcement learning and subgoal decomposition to bridge the gap between formal and informal mathematical proof generation?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2504.21801v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal D",
+      "word_count": 22
+    }
+  },
+  {
+    "query": "Enhancing automated symbolic logic verification by breaking down complex proofs into smaller tasks through trial-and-error optimization of machine-generated reasoning chains.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2504.21801v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal D",
+      "word_count": 20
+    }
+  },
+  {
+    "query": "MVoT Multimodal Visualization-of-Thought spatial reasoning token discrepancy loss",
+    "style": "keyword",
+    "relevant_papers": [
+      "2501.07542v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Imagine while Reasoning in Space: Multimodal Visualization-of-Thought",
+      "word_count": 8
+    }
+  },
+  {
+    "query": "How does Multimodal Visualization-of-Thought enhance spatial reasoning in MLLMs?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2501.07542v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Imagine while Reasoning in Space: Multimodal Visualization-of-Thought",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "How does incorporating visual reasoning traces and token discrepancy loss help multimodal models solve challenging spatial tasks where verbal logic fails?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2501.07542v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Imagine while Reasoning in Space: Multimodal Visualization-of-Thought",
+      "word_count": 21
+    }
+  },
+  {
+    "query": "Enabling software to create pictures of its own logic steps to better understand how things move and interact in three dimensions.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2501.07542v1"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Imagine while Reasoning in Space: Multimodal Visualization-of-Thought",
+      "word_count": 21
+    }
+  },
+  {
+    "query": "VideoReward Flow-DPO Flow-RWR rectified flow video generation human feedback",
+    "style": "keyword",
+    "relevant_papers": [
+      "2501.13918v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Improving Video Generation with Human Feedback",
+      "word_count": 9
+    }
+  },
+  {
+    "query": "How can human feedback improve video generation using rectified flow?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2501.13918v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "Improving Video Generation with Human Feedback",
+      "word_count": 10
+    }
+  },
+  {
+    "query": "How does the VideoReward model and Flow-DPO algorithm enhance video quality and motion smoothness through multi-dimensional human preference alignment?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2501.13918v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "Improving Video Generation with Human Feedback",
+      "word_count": 19
+    }
+  },
+  {
+    "query": "Improving synthetic moving images by training on subjective ratings to achieve more lifelike action and better adherence to written instructions.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2501.13918v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CV",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "Improving Video Generation with Human Feedback",
+      "word_count": 20
+    }
+  },
+  {
+    "query": "DeepMath-103K RL verifiable mathematical dataset reasoning",
+    "style": "keyword",
+    "relevant_papers": [
+      "2504.11456v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "DeepMath-103K: A Large-Scale, Challenging, Decontaminated, and Verifiable Mathematical Dataset for A",
+      "word_count": 6
+    }
+  },
+  {
+    "query": "How does the DeepMath-103K dataset advance mathematical reasoning?",
+    "style": "natural_short",
+    "relevant_papers": [
+      "2504.11456v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "medium",
+    "metadata": {
+      "source_paper_title": "DeepMath-103K: A Large-Scale, Challenging, Decontaminated, and Verifiable Mathematical Dataset for A",
+      "word_count": 8
+    }
+  },
+  {
+    "query": "What are the benefits of using a large-scale decontaminated dataset like DeepMath-103K for training reinforcement learning models on difficult problems?",
+    "style": "natural_long",
+    "relevant_papers": [
+      "2504.11456v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "easy",
+    "metadata": {
+      "source_paper_title": "DeepMath-103K: A Large-Scale, Challenging, Decontaminated, and Verifiable Mathematical Dataset for A",
+      "word_count": 20
+    }
+  },
+  {
+    "query": "Generating massive collections of hard logic puzzles with provable solutions to help computer programs master multi-step problem solving.",
+    "style": "conceptual",
+    "relevant_papers": [
+      "2504.11456v2"
+    ],
+    "hard_negatives": [],
+    "category": "cs.CL",
+    "difficulty": "hard",
+    "metadata": {
+      "source_paper_title": "DeepMath-103K: A Large-Scale, Challenging, Decontaminated, and Verifiable Mathematical Dataset for A",
+      "word_count": 18
+    }
+  }
+]

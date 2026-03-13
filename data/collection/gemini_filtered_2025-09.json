@@ -1,0 +1,75 @@
+[
+  {
+    "arxiv_id": "2509.25429v1",
+    "title": "Feedback Control for Small Budget Pacing",
+    "abstract": "Budget pacing is critical in online advertising to align spend with campaign goals under dynamic auctions. Existing pacing methods often rely on ad-hoc parameter tuning, which can be unstable and inefficient. We propose a principled controller that combines bucketized hysteresis with proportional feedback to provide stable and adaptive spend control. Our method provides a framework and analysis for parameter selection that enables accurate tracking of desired spend rates across campaigns. Experi",
+    "categories": [
+      "cs.LG",
+      "cs.GT"
+    ]
+  },
+  {
+    "arxiv_id": "2509.24801v1",
+    "title": "Physics-informed learning under mixing: How physical knowledge speeds up learning",
+    "abstract": "A major challenge in physics-informed machine learning is to understand how the incorporation of prior domain knowledge affects learning rates when data are dependent. Focusing on empirical risk minimization with physics-informed regularization, we derive complexity-dependent bounds on the excess risk in probability and in expectation. We prove that, when the physical prior information is aligned, the learning rate improves from the (slow) Sobolev minimax rate to the (fast) optimal i.i.d. one wi",
+    "categories": [
+      "cs.LG",
+      "eess.SY"
+    ]
+  },
+  {
+    "arxiv_id": "2510.00043v1",
+    "title": "Linear Regression in p-adic metric spaces",
+    "abstract": "Many real-world machine learning problems involve inherently hierarchical data, yet traditional approaches rely on Euclidean metrics that fail to capture the discrete, branching nature of hierarchical relationships. We present a theoretical foundation for machine learning in p-adic metric spaces, which naturally respect hierarchical structure. Our main result proves that an n-dimensional plane minimizing the p-adic sum of distances to points in a dataset must pass through at least n + 1 of those",
+    "categories": [
+      "cs.LG",
+      "cs.CL",
+      "math.NT"
+    ]
+  },
+  {
+    "arxiv_id": "2509.22161v3",
+    "title": "Pushing Toward the Simplex Vertices: A Simple Remedy for Code Collapse in Smoothed Vector Quantization",
+    "abstract": "Vector quantization, which discretizes a continuous vector space into a finite set of representative vectors (a codebook), has been widely adopted in modern machine learning. Despite its effectiveness, vector quantization poses a fundamental challenge: the non-differentiable quantization step blocks gradient backpropagation. Smoothed vector quantization addresses this issue by relaxing the hard assignment of a codebook vector into a weighted combination of codebook entries, represented as the ma",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2509.21940v1",
+    "title": "Sequential 1-bit Mean Estimation with Near-Optimal Sample Complexity",
+    "abstract": "In this paper, we study the problem of distributed mean estimation with 1-bit communication constraints. We propose a mean estimator that is based on (randomized and sequentially-chosen) interval queries, whose 1-bit outcome indicates whether the given sample lies in the specified interval. Our estimator is $(\u03b5, \u03b4)$-PAC for all distributions with bounded mean ($-\u03bb\\le \\mathbb{E}(X) \\le \u03bb$) and variance ($\\mathrm{Var}(X) \\le \u03c3^2$) for some known parameters $\u03bb$ and $\u03c3$. We derive a sample complexit",
+    "categories": [
+      "stat.ML",
+      "cs.IT",
+      "cs.LG",
+      "math.ST"
+    ]
+  },
+  {
+    "arxiv_id": "2509.20736v1",
+    "title": "The Impact of Audio Watermarking on Audio Anti-Spoofing Countermeasures",
+    "abstract": "This paper presents the first study on the impact of audio watermarking on spoofing countermeasures. While anti-spoofing systems are essential for securing speech-based applications, the influence of widely used audio watermarking, originally designed for copyright protection, remains largely unexplored. We construct watermark-augmented training and evaluation datasets, named the Watermark-Spoofing dataset, by applying diverse handcrafted and neural watermarking methods to existing anti-spoofing",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2509.20433v1",
+    "title": "Distinguishability of causal structures under latent confounding and selection",
+    "abstract": "Statistical relationships in observed data can arise for several different reasons: the observed variables may be causally related, they may share a latent common cause, or there may be selection bias. Each of these scenarios can be modelled using different causal graphs. Not all such causal graphs, however, can be distinguished by experimental data. In this paper, we formulate the equivalence class of causal graphs as a novel graphical structure, the selected-marginalized directed graph (smDG).",
+    "categories": [
+      "math.ST",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2509.20138v1",
+    "title": "Formal Verification of Minimax Algorithms",
+    "abstract": "Using the Dafny verification system, we formally verify a range of minimax search algorithms, including variations with alpha-beta pruning and transposition tables. For depth-limited search with transposition tables, we introduce a witness-based correctness criterion and apply it to two representative algorithms. All verification artifacts, including proofs and Python implementations, are publicly available.",
+    "categories": [
+      "cs.AI"
+    ]
+  }
+]

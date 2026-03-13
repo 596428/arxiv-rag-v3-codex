@@ -30,6 +30,7 @@ from .qdrant_retriever import (
     qdrant_hybrid_search,
     qdrant_dense_search,
     qdrant_sparse_search,
+    qdrant_adaptive_search,
 )
 
 from .reranker import (
@@ -63,6 +64,7 @@ __all__ = [
     "qdrant_hybrid_search",
     "qdrant_dense_search",
     "qdrant_sparse_search",
+    "qdrant_adaptive_search",
     # Reranker
     "BGEReranker",
     "LightweightReranker",

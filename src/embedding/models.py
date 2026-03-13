@@ -224,7 +224,7 @@ class EmbeddedChunk(BaseModel):
         if self.embedding_dense:
             result["dense_bge"] = self.embedding_dense
         if self.embedding_openai:
-            result["dense_openai"] = self.embedding_openai
+            result["dense_3large"] = self.embedding_openai
 
         # Add sparse vector
         if self.embedding_sparse:
@@ -266,6 +266,10 @@ class ChunkingConfig(BaseModel):
     include_equations: bool = Field(default=False, description="Create equation chunks (with descriptions)")
     include_tables: bool = Field(default=False, description="Create table chunks")
 
+    # Paper context propagation (helps with conceptual query matching)
+    add_paper_context: bool = Field(default=False, description="Prepend paper title/abstract to chunks")
+    paper_context_tokens: int = Field(default=100, description="Max tokens for paper context prefix")
+
     # Token counting
     tokenizer_name: str = Field(default="cl100k_base", description="tiktoken tokenizer name")
 
@@ -283,7 +287,7 @@ class EmbeddingConfig(BaseModel):
     use_openai: bool = Field(default=False, description="Generate OpenAI embeddings")
     openai_model: str = Field(default="text-embedding-3-large", description="OpenAI model")
     openai_batch_size: int = Field(default=100, description="OpenAI batch size")
-    openai_dimensions: int = Field(default=1024, description="OpenAI embedding dimensions (MRL reduced)")
+    openai_dimensions: int = Field(default=3072, description="OpenAI embedding dimensions (full 3-large)")
 
     # Processing
     device: str = Field(default="cuda", description="Device for local models")

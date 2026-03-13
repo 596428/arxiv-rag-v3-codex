@@ -1,0 +1,66 @@
+[
+  {
+    "arxiv_id": "2503.21284v2",
+    "title": "Multi-Scale Invertible Neural Network for Wide-Range Variable-Rate Learned Image Compression",
+    "abstract": "Autoencoder-based structures have dominated recent learned image compression methods. However, the inherent information loss associated with autoencoders limits their rate-distortion performance at high bit rates and restricts their flexibility of rate adaptation. In this paper, we present a variable-rate image compression model based on invertible transform to overcome these limitations. Specifically, we design a lightweight multi-scale invertible neural network, which bijectively maps the inpu",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2503.20231v1",
+    "title": "Dynamics of Algorithmic Content Amplification on TikTok",
+    "abstract": "Intelligent algorithms increasingly shape the content we encounter and engage with online. TikTok's For You feed exemplifies extreme algorithm-driven curation, tailoring the stream of video content almost exclusively based on users' explicit and implicit interactions with the platform. Despite growing attention, the dynamics of content amplification on TikTok remain largely unquantified. How quickly, and to what extent, does TikTok's algorithm amplify content aligned with users' interests? To ad",
+    "categories": [
+      "physics.soc-ph",
+      "cs.AI",
+      "cs.SI"
+    ]
+  },
+  {
+    "arxiv_id": "2503.19466v3",
+    "title": "A Probabilistic Neuro-symbolic Layer for Algebraic Constraint Satisfaction",
+    "abstract": "In safety-critical applications, guaranteeing the satisfaction of constraints over continuous environments is crucial, e.g., an autonomous agent should never crash into obstacles or go off-road. Neural models struggle in the presence of these constraints, especially when they involve intricate algebraic relationships. To address this, we introduce a differentiable probabilistic layer that guarantees the satisfaction of non-convex algebraic constraints over continuous variables. This probabilisti",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2503.17993v1",
+    "title": "Predicting Multitasking in Manual and Automated Driving with Optimal Supervisory Control",
+    "abstract": "Modern driving involves interactive technologies that can divert attention, increasing the risk of accidents. This paper presents a computational cognitive model that simulates human multitasking while driving. Based on optimal supervisory control theory, the model predicts how multitasking adapts to variations in driving demands, interactive tasks, and automation levels. Unlike previous models, it accounts for context-dependent multitasking across different degrees of driving automation. The mo",
+    "categories": [
+      "cs.HC",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2503.17763v1",
+    "title": "Lifelong Evolution of Swarms",
+    "abstract": "Adapting to task changes without forgetting previous knowledge is a key skill for intelligent systems, and a crucial aspect of lifelong learning. Swarm controllers, however, are typically designed for specific tasks, lacking the ability to retain knowledge across changing tasks. Lifelong learning, on the other hand, focuses on individual agents with limited insights into the emergent abilities of a collective like a swarm. To address this gap, we introduce a lifelong evolutionary framework for s",
+    "categories": [
+      "cs.NE",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2503.16557v1",
+    "title": "Investigating Cultural Dimensions and Technological Acceptance: The Adoption of Electronic Performance and Tracking Systems in Qatar's Football Sector",
+    "abstract": "Qatar's football sector has undergone a substantial technological transformation with the implementation of Electronic Performance and Tracking Systems (EPTS). This study examines the impact of cultural and technological factors on EPTS adoption, using Hofstede's Cultural Dimensions Theory and the Technology Acceptance Model (TAM) as theoretical frameworks. An initial exploratory study involved ten participants, followed by an expanded dataset comprising thirty stakeholders, including players, c",
+    "categories": [
+      "cs.CY",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2503.14469v4",
+    "title": "Causality-Based Scores Alignment in Explainable Data Management",
+    "abstract": "Different attribution scores have been proposed to quantify the relevance of database tuples for query answering in databases; e.g. Causal Responsibility, the Shapley Value, the Banzhaf Power-Index, and the Causal Effect. They have been analyzed in isolation. This work is a first investigation of score alignment depending on the query and the database; i.e. on whether they induce compatible rankings of tuples. We concentrate mostly on causality-based scores; and provide a syntactic dichotomy res",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "arxiv_id": "2510.25000v1",
+    "title": "What Really Matters in Matrix-Whitening Optimizers?",
+    "abstract": "A range of recent optimizers have emerged that approximate the same \"matrix-whitening\" transformation in various ways. In this work, we systematically deconstruct such optimizers, aiming to disentangle the key components that explain performance. Across tuned hyperparameters across the board, all flavors of matrix-whitening methods reliably outperform elementwise counterparts, such as Adam. Matrix-whitening is often related to spectral descent -- however, experiments reveal that performance gain",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2510.24647v1",
+    "title": "Quantifying the Effects of Word Length, Frequency, and Predictability on Dyslexia",
+    "abstract": "We ask where, and under what conditions, dyslexic reading costs arise in a large-scale naturalistic reading dataset. Using eye-tracking aligned to word-level features (word length, frequency, and predictability), we model how each feature influences dyslexic time costs. We find that all three features robustly change reading times in both typical and dyslexic readers, and that dyslexic readers show stronger sensitivities to each, especially predictability. Counterfactual manipulations of these f",
+    "categories": [
+      "cs.CL",
+      "q-bio.NC"
+    ]
+  },
+  {
+    "arxiv_id": "2510.23989v1",
+    "title": "Learning Individual Movement Shifts After Urban Disruptions with Social Infrastructure Reliance",
+    "abstract": "Shifts in individual movement patterns following disruptive events can reveal changing demands for community resources. However, predicting such shifts before disruptive events remains challenging for several reasons. First, measures are lacking for individuals' heterogeneous social infrastructure resilience (SIR), which directly influences their movement patterns, and commonly used features are often limited or unavailable at scale, e.g., sociodemographic characteristics. Second, the complex in",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2510.21178v1",
+    "title": "Instance-Adaptive Hypothesis Tests with Heterogeneous Agents",
+    "abstract": "We study hypothesis testing over a heterogeneous population of strategic agents with private information. Any single test applied uniformly across the population yields statistical error that is sub-optimal relative to the performance of an oracle given access to the private information. We show how it is possible to design menus of statistical contracts that pair type-optimal tests with payoff structures, inducing agents to self-select according to their private information. This separating men",
+    "categories": [
+      "cs.GT",
+      "cs.LG",
+      "econ.EM",
+      "math.ST",
+      "stat.ME"
+    ]
+  },
+  {
+    "arxiv_id": "2510.20467v1",
+    "title": "FLORA: Unsupervised Knowledge Graph Alignment by Fuzzy Logic",
+    "abstract": "Knowledge graph alignment is the task of matching equivalent entities (that is, instances and classes) and relations across two knowledge graphs. Most existing methods focus on pure entity-level alignment, computing the similarity of entities in some embedding space. They lack interpretable reasoning and need training data to work. In this paper, we propose FLORA, a simple yet effective method that (1) is unsupervised, i.e., does not require training data, (2) provides a holistic alignment for e",
+    "categories": [
+      "cs.AI",
+      "cs.DB"
+    ]
+  }
+]

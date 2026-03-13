@@ -1,0 +1,732 @@
+[
+  {
+    "arxiv_id": "2504.13842v1",
+    "title": "The Model Counting Competitions 2021-2023",
+    "abstract": "Modern society is full of computational challenges that rely on probabilistic reasoning, statistics, and combinatorics. Interestingly, many of these questions can be formulated by encoding them into propositional formulas and then asking for its number of models. With a growing interest in practical problem-solving for tasks that involve model counting, the community established the Model Counting (MC) Competition in fall of 2019 with its first iteration in 2020. The competition aims at advancin",
+    "categories": [
+      "cs.AI",
+      "cs.DS",
+      "cs.LO"
+    ]
+  },
+  {
+    "arxiv_id": "2502.00108v1",
+    "title": "Tracking Most Significant Shifts in Infinite-Armed Bandits",
+    "abstract": "We study an infinite-armed bandit problem where actions' mean rewards are initially sampled from a reservoir distribution. Most prior works in this setting focused on stationary rewards (Berry et al., 1997; Wang et al., 2008; Bonald and Proutiere, 2013; Carpentier and Valko, 2015) with the more challenging adversarial/non-stationary variant only recently studied in the context of rotting/decreasing rewards (Kim et al., 2022; 2024). Furthermore, optimal regret upper bounds were only achieved usin",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.19285v1",
+    "title": "OneBatchPAM: A Fast and Frugal K-Medoids Algorithm",
+    "abstract": "This paper proposes a novel k-medoids approximation algorithm to handle large-scale datasets with reasonable computational time and memory complexity. We develop a local-search algorithm that iteratively improves the medoid selection based on the estimation of the k-medoids objective. A single batch of size m << n provides the estimation, which reduces the required memory size and the number of pairwise dissimilarities computations to O(mn), instead of O(n^2) compared to most k-medoids baselines",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.19155v2",
+    "title": "SWAT: Sliding Window Adversarial Training for Gradual Domain Adaptation",
+    "abstract": "Domain shifts are critical issues that harm the performance of machine learning. Unsupervised Domain Adaptation (UDA) mitigates this issue but suffers when the domain shifts are steep and drastic. Gradual Domain Adaptation (GDA) alleviates this problem in a mild way by gradually adapting from the source to the target domain using multiple intermediate domains. In this paper, we propose Sliding Window Adversarial Training (SWAT) for GDA. SWAT first formulates adversarial streams to connect the fe",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.19111v2",
+    "title": "A Benchmark for Incremental Micro-expression Recognition",
+    "abstract": "Micro-expression recognition plays a pivotal role in understanding hidden emotions and has applications across various fields. Traditional recognition methods assume access to all training data at once, but real-world scenarios involve continuously evolving data streams. To respond to the requirement of adapting to new data while retaining previously learned knowledge, we introduce the first benchmark specifically designed for incremental micro-expression recognition. Our contributions include: ",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.19102v2",
+    "title": "Reinforcement Learning on Reconfigurable Hardware: Overcoming Material Variability in Laser Material Processing",
+    "abstract": "Ensuring consistent processing quality is challenging in laser processes due to varying material properties and surface conditions. Although some approaches have shown promise in solving this problem via automation, they often rely on predetermined targets or are limited to simulated environments. To address these shortcomings, we propose a novel real-time reinforcement learning approach for laser process control, implemented on a Field Programmable Gate Array to achieve real-time execution. Our",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.18859v1",
+    "title": "A Deep Spatio-Temporal Architecture for Dynamic Effective Connectivity Network Analysis Based on Dynamic Causal Discovery",
+    "abstract": "Dynamic effective connectivity networks (dECNs) reveal the changing directed brain activity and the dynamic causal influences among brain regions, which facilitate the identification of individual differences and enhance the understanding of human brain. Although the existing causal discovery methods have shown promising results in effective connectivity network analysis, they often overlook the dynamics of causality, in addition to the incorporation of spatio-temporal information in brain activ",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.18734v1",
+    "title": "STaleX: A Spatiotemporal-Aware Adaptive Auto-scaling Framework for Microservices",
+    "abstract": "While cloud environments and auto-scaling solutions have been widely applied to traditional monolithic applications, they face significant limitations when it comes to microservices-based architectures. Microservices introduce additional challenges due to their dynamic and spatiotemporal characteristics, which require more efficient and specialized auto-scaling strategies. Centralized auto-scaling for the entire microservice application is insufficient, as each service within a chain has distinc",
+    "categories": [
+      "cs.SE",
+      "cs.DC",
+      "cs.LG",
+      "eess.SY"
+    ]
+  },
+  {
+    "arxiv_id": "2501.18582v3",
+    "title": "A Control Perspective on Training PINNs",
+    "abstract": "We investigate the training of Physics-Informed Neural Networks (PINNs) from a control-theoretic perspective. Using gradient descent with resampling, we interpret the training dynamics as asymptotically equivalent to a stochastic control-affine system, where sampling effects act as process disturbances and measurement noise. Within this framework, we introduce two controllers for dynamically adapting the physics weight: an integral controller and a leaky integral controller. We theoretically ana",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.18501v1",
+    "title": "Beyond Prior Limits: Addressing Distribution Misalignment in Particle Filtering",
+    "abstract": "Particle filtering is a Bayesian inference method and a fundamental tool in state estimation for dynamic systems, but its effectiveness is often limited by the constraints of the initial prior distribution, a phenomenon we define as the Prior Boundary Phenomenon. This challenge arises when target states lie outside the prior's support, rendering traditional particle filtering methods inadequate for accurate estimation. Although techniques like unbounded priors and larger particle sets have been ",
+    "categories": [
+      "stat.ML",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.18494v1",
+    "title": "Runway vs. Taxiway: Challenges in Automated Line Identification and Notation Approaches",
+    "abstract": "The increasing complexity of autonomous systems has amplified the need for accurate and reliable labeling of runway and taxiway markings to ensure operational safety. Precise detection and labeling of these markings are critical for tasks such as navigation, landing assistance, and ground control automation. Existing labeling algorithms, like the Automated Line Identification and Notation Algorithm (ALINA), have demonstrated success in identifying taxiway markings but encounter significant chall",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.18331v1",
+    "title": "Stream-Based Monitoring of Algorithmic Fairness",
+    "abstract": "Automatic decision and prediction systems are increasingly deployed in applications where they significantly impact the livelihood of people, such as for predicting the creditworthiness of loan applicants or the recidivism risk of defendants. These applications have given rise to a new class of algorithmic-fairness specifications that require the systems to decide and predict without bias against social groups. Verifying these specifications statically is often out of reach for realistic systems",
+    "categories": [
+      "cs.LG",
+      "cs.LO",
+      "cs.SE"
+    ]
+  },
+  {
+    "arxiv_id": "2501.17848v2",
+    "title": "Improving Genetic Programming for Symbolic Regression with Equality Graphs",
+    "abstract": "The search for symbolic regression models with genetic programming (GP) has a tendency of revisiting expressions in their original or equivalent forms. Repeatedly evaluating equivalent expressions is inefficient, as it does not immediately lead to better solutions. However, evolutionary algorithms require diversity and should allow the accumulation of inactive building blocks that can play an important role at a later point. The equality graph is a data structure capable of compactly storing exp",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.17688v3",
+    "title": "ContourFormer: Real-Time Contour-Based End-to-End Instance Segmentation Transformer",
+    "abstract": "This paper presents Contourformer, a real-time contour-based instance segmentation algorithm. The method is fully based on the DETR paradigm and achieves end-to-end inference through iterative and progressive mechanisms to optimize contours. To improve efficiency and accuracy, we develop two novel techniques: sub-contour decoupling mechanisms and contour fine-grained distribution refinement. In the sub-contour decoupling mechanism, we propose a deformable attention-based module that adaptively s",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.17493v1",
+    "title": "Certifying Pareto-Optimality in Multi-Objective Maximum Satisfiability",
+    "abstract": "Due to the wide employment of automated reasoning in the analysis and construction of correct systems, the results reported by automated reasoning engines must be trustworthy. For Boolean satisfiability (SAT) solvers - and more recently SAT-based maximum satisfiability (MaxSAT) solvers - trustworthiness is obtained by integrating proof logging into solvers, making solvers capable of emitting machine-verifiable proofs to certify correctness of the reasoning steps performed. In this work, we enabl",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.17370v1",
+    "title": "Breaking the $\\log(1/\u0394_2)$ Barrier: Better Batched Best Arm Identification with Adaptive Grids",
+    "abstract": "We investigate the problem of batched best arm identification in multi-armed bandits, where we aim to identify the best arm from a set of $n$ arms while minimizing both the number of samples and batches. We introduce an algorithm that achieves near-optimal sample complexity and features an instance-sensitive batch complexity, which breaks the $\\log(1/\u0394_2)$ barrier. The main contribution of our algorithm is a novel sample allocation scheme that effectively balances exploration and exploitation fo",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.17894v1",
+    "title": "Progress in Artificial Intelligence and its Determinants",
+    "abstract": "We study long-run progress in artificial intelligence in a quantitative way. Many measures, including traditional ones such as patents and publications, machine learning benchmarks, and a new Aggregate State of the Art in ML (or ASOTA) Index we have constructed from these, show exponential growth at roughly constant rates over long periods. Production of patents and publications doubles every ten years, by contrast with the growth of computing resources driven by Moore's Law, roughly a doubling ",
+    "categories": [
+      "econ.GN",
+      "cs.AI",
+      "cs.CY",
+      "cs.LG",
+      "physics.soc-ph"
+    ]
+  },
+  {
+    "arxiv_id": "2501.17265v1",
+    "title": "Giving the Old a Fresh Spin: Quality Estimation-Assisted Constrained Decoding for Automatic Post-Editing",
+    "abstract": "Automatic Post-Editing (APE) systems often struggle with over-correction, where unnecessary modifications are made to a translation, diverging from the principle of minimal editing. In this paper, we propose a novel technique to mitigate over-correction by incorporating word-level Quality Estimation (QE) information during the decoding process. This method is architecture-agnostic, making it adaptable to any APE system, regardless of the underlying model or training approach. Our experiments on ",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2501.17037v1",
+    "title": "Standardised schema and taxonomy for AI incident databases in critical digital infrastructure",
+    "abstract": "The rapid deployment of Artificial Intelligence (AI) in critical digital infrastructure introduces significant risks, necessitating a robust framework for systematically collecting AI incident data to prevent future incidents. Existing databases lack the granularity as well as the standardized structure required for consistent data collection and analysis, impeding effective incident management. This work proposes a standardized schema and taxonomy for AI incident databases, addressing these cha",
+    "categories": [
+      "cs.CY",
+      "cs.AI",
+      "cs.HC"
+    ]
+  },
+  {
+    "arxiv_id": "2501.16703v1",
+    "title": "Consistent support recovery for high-dimensional diffusions",
+    "abstract": "Statistical inference for stochastic processes has advanced significantly due to applications in diverse fields, but challenges remain in high-dimensional settings where parameters are allowed to grow with the sample size. This paper analyzes a d-dimensional ergodic diffusion process under sparsity constraints, focusing on the adaptive Lasso estimator, which improves variable selection and bias over the standard Lasso. We derive conditions under which the adaptive Lasso achieves support recovery",
+    "categories": [
+      "math.ST",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.16614v1",
+    "title": "FUNU: Boosting Machine Unlearning Efficiency by Filtering Unnecessary Unlearning",
+    "abstract": "Machine unlearning is an emerging field that selectively removes specific data samples from a trained model. This capability is crucial for addressing privacy concerns, complying with data protection regulations, and correcting errors or biases introduced by certain data. Unlike traditional machine learning, where models are typically static once trained, machine unlearning facilitates dynamic updates that enable the model to ``forget'' information without requiring complete retraining from scra",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.16520v2",
+    "title": "Safe Gradient Flow for Bilevel Optimization",
+    "abstract": "Bilevel optimization is a key framework in hierarchical decision-making, where one problem is embedded within the constraints of another. In this work, we propose a control-theoretic approach to solving bilevel optimization problems. Our method consists of two components: a gradient flow mechanism to minimize the upper-level objective and a safety filter to enforce the constraints imposed by the lower-level problem. Together, these components form a safe gradient flow that solves the bilevel pro",
+    "categories": [
+      "math.OC",
+      "cs.LG",
+      "eess.SY"
+    ]
+  },
+  {
+    "arxiv_id": "2501.16322v2",
+    "title": "Implicit Bias in Matrix Factorization and its Explicit Realization in a New Architecture",
+    "abstract": "Gradient descent for matrix factorization exhibits an implicit bias toward approximately low-rank solutions. While existing theories often assume the boundedness of iterates, empirically the bias persists even with unbounded sequences. This reflects a dynamic where factors develop low-rank structure while their magnitudes increase, tending to align with certain directions. To capture this behavior in a stable way, we introduce a new factorization model: $X\\approx UDV^\\top$, where $U$ and $V$ are",
+    "categories": [
+      "cs.LG",
+      "math.OC",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.16130v2",
+    "title": "ReFill: Reinforcement Learning for Fill-In Minimization",
+    "abstract": "Efficiently solving sparse linear systems $Ax=b$, where $A$ is a large, sparse, symmetric positive semi-definite matrix, is a core challenge in scientific computing, machine learning, and optimization. A major bottleneck in Gaussian elimination for these systems is fill-in, the creation of non-zero entries that increase memory and computational cost. Minimizing fill-in is NP-hard, and existing heuristics like Minimum Degree and Nested Dissection offer limited adaptability across diverse problem ",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.15990v1",
+    "title": "3CEL: A corpus of legal Spanish contract clauses",
+    "abstract": "Legal corpora for Natural Language Processing (NLP) are valuable and scarce resources in languages like Spanish due to two main reasons: data accessibility and legal expert knowledge availability. INESData 2024 is a European Union funded project lead by the Universidad Polit\u00e9cnica de Madrid (UPM) and developed by Instituto de Ingenier\u00eda del Conocimiento (IIC) to create a series of state-of-the-art NLP resources applied to the legal/administrative domain in Spanish. The goal of this paper is to p",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2501.15760v1",
+    "title": "Investigating Application of Deep Neural Networks in Intrusion Detection System Design",
+    "abstract": "Despite decades of development, existing IDSs still face challenges in improving detection accuracy, evasion, and detection of unknown attacks. To solve these problems, many researchers have focused on designing and developing IDSs that use Deep Neural Networks (DNN) which provides advanced methods of threat investigation and detection. Given this reason, the motivation of this research then, is to learn how effective applications of Deep Neural Networks (DNN) can accurately detect and identify ",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.15739v1",
+    "title": "Automatic Machine Learning Framework to Study Morphological Parameters of AGN Host Galaxies within $z < 1.4$ in the Hyper Supreme-Cam Wide Survey",
+    "abstract": "We present a composite machine learning framework to estimate posterior probability distributions of bulge-to-total light ratio, half-light radius, and flux for Active Galactic Nucleus (AGN) host galaxies within $z<1.4$ and $m<23$ in the Hyper Supreme-Cam Wide survey. We divide the data into five redshift bins: low ($0<z<0.25$), mid ($0.25<z<0.5$), high ($0.5<z<0.9$), extra ($0.9<z<1.1$) and extreme ($1.1<z<1.4$), and train our models independently in each bin. We use PSFGAN to decompose the AGN",
+    "categories": [
+      "astro-ph.GA",
+      "astro-ph.IM",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.15618v3",
+    "title": "Your Learned Constraint is Secretly a Backward Reachable Tube",
+    "abstract": "Inverse Constraint Learning (ICL) is the problem of inferring constraints from safe (i.e., constraint-satisfying) demonstrations. The hope is that these inferred constraints can then be used downstream to search for safe policies for new tasks and, potentially, under different dynamics. Our paper explores the question of what mathematical entity ICL recovers. Somewhat surprisingly, we show that both in theory and in practice, ICL recovers the set of states where failure is inevitable, rather tha",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.15461v2",
+    "title": "Mamba-Based Graph Convolutional Networks: Tackling Over-smoothing with Selective State Space",
+    "abstract": "Graph Neural Networks (GNNs) have shown great success in various graph-based learning tasks. However, it often faces the issue of over-smoothing as the model depth increases, which causes all node representations to converge to a single value and become indistinguishable. This issue stems from the inherent limitations of GNNs, which struggle to distinguish the importance of information from different neighborhoods. In this paper, we introduce MbaGCN, a novel graph convolutional architecture that",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.15458v2",
+    "title": "Amortized Safe Active Learning for Real-Time Data Acquisition: Pretrained Neural Policies from Simulated Nonparametric Functions",
+    "abstract": "Safe active learning (AL) is a sequential scheme for learning unknown systems while respecting safety constraints during data acquisition. Existing methods often rely on Gaussian processes (GPs) to model the task and safety constraints, requiring repeated GP updates and constrained acquisition optimization-incurring in significant computations which are challenging for real-time decision-making. We propose an amortized safe AL framework that replaces expensive online computations with a pretrain",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.15223v1",
+    "title": "Efficient and Interpretable Neural Networks Using Complex Lehmer Transform",
+    "abstract": "We propose an efficient and interpretable neural network with a novel activation function called the weighted Lehmer transform. This new activation function enables adaptive feature selection and extends to the complex domain, capturing phase-sensitive and hierarchical relationships within data. Notably, it provides greater interpretability and transparency compared to existing machine learning models, facilitating a deeper understanding of its functionality and decision-making processes. We ana",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.15190v1",
+    "title": "A Floating Normalization Scheme for Deep Learning-Based Custom-Range Parameter Extraction in BSIM-CMG Compact Models",
+    "abstract": "A deep-learning (DL) based methodology for automated extraction of BSIM-CMG compact model parameters from experimental gate capacitance vs gate voltage (Cgg-Vg) and drain current vs gate voltage (Id-Vg) measurements is proposed in this paper. The proposed method introduces a floating normalization scheme within a cascaded forward and inverse ANN architecture enabling user-defined parameter extraction ranges. Unlike conventional DL-based extraction techniques, which are often constrained by fixed",
+    "categories": [
+      "cs.LG",
+      "eess.SP"
+    ]
+  },
+  {
+    "arxiv_id": "2501.14617v1",
+    "title": "Funzac at CoMeDi Shared Task: Modeling Annotator Disagreement from Word-In-Context Perspectives",
+    "abstract": "In this work, we evaluate annotator disagreement in Word-in-Context (WiC) tasks exploring the relationship between contextual meaning and disagreement as part of the CoMeDi shared task competition. While prior studies have modeled disagreement by analyzing annotator attributes with single-sentence inputs, this shared task incorporates WiC to bridge the gap between sentence-level semantic representation and annotator judgment variability. We describe three different methods that we developed for ",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2501.14496v1",
+    "title": "A Note on Implementation Errors in Recent Adaptive Attacks Against Multi-Resolution Self-Ensembles",
+    "abstract": "This note documents an implementation issue in recent adaptive attacks (Zhang et al. [2024]) against the multi-resolution self-ensemble defense (Fort and Lakshminarayanan [2024]). The implementation allowed adversarial perturbations to exceed the standard $L_\\infty = 8/255$ bound by up to a factor of 20$\\times$, reaching magnitudes of up to $L_\\infty = 160/255$. When attacks are properly constrained within the intended bounds, the defense maintains non-trivial robustness. Beyond highlighting the",
+    "categories": [
+      "cs.CR",
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.14474v1",
+    "title": "The Pseudo-Dimension of Contracts",
+    "abstract": "Algorithmic contract design studies scenarios where a principal incentivizes an agent to exert effort on her behalf. In this work, we focus on settings where the agent's type is drawn from an unknown distribution, and formalize an offline learning framework for learning near-optimal contracts from sample agent types. A central tool in our analysis is the notion of pseudo-dimension from statistical learning theory. Beyond its role in establishing upper bounds on the sample complexity, pseudo-dime",
+    "categories": [
+      "cs.GT",
+      "cs.AI",
+      "cs.LG",
+      "econ.TH"
+    ]
+  },
+  {
+    "arxiv_id": "2501.14360v1",
+    "title": "In System Alignments we Trust! Explainable Alignments via Projections",
+    "abstract": "Alignments are a well-known process mining technique for reconciling system logs and normative process models. Evidence of certain behaviors in a real system may only be present in one representation - either a log or a model - but not in the other. Since for processes in which multiple entities, like objects and resources, are involved in the activities, their interactions affect the behavior and are therefore essential to take into account in the alignments.   Additionally, both logged and mod",
+    "categories": [
+      "cs.AI",
+      "cs.FL"
+    ]
+  },
+  {
+    "arxiv_id": "2502.10412v1",
+    "title": "Identifying relevant indicators for monitoring a National Artificial Intelligence Strategy",
+    "abstract": "How can a National Artificial Intelligence Strategy be effectively monitored? To address this question, we propose a methodology consisting of two key components. First, it involves identifying relevant indicators within national AI strategies. Second, it assesses the alignment between these indicators and the strategic actions of a specific government's AI strategy, allowing for a critical evaluation of its monitoring measures. Moreover, identifying these indicators helps assess the overall qua",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.14007v1",
+    "title": "Adaptive Genetic Algorithms for Pulse-Level Quantum Error Mitigation",
+    "abstract": "Noise remains a fundamental challenge in quantum computing, significantly affecting pulse fidelity and overall circuit performance. This paper introduces an adaptive algorithm for pulse-level quantum error mitigation, designed to enhance fidelity by dynamically responding to noise conditions without modifying circuit gates. By targeting pulse parameters directly, this method reduces the impact of various noise sources, improving algorithm resilience in quantum circuits. We show the latter by app",
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "cs.AR"
+    ]
+  },
+  {
+    "arxiv_id": "2501.13597v2",
+    "title": "A Comprehensive Survey on Spectral Clustering with Graph Structure Learning",
+    "abstract": "Spectral clustering is a powerful technique for clustering high-dimensional data, utilizing graph-based representations to detect complex, non-linear structures and non-convex clusters. The construction of a similarity graph is essential for ensuring accurate and effective clustering, making graph structure learning (GSL) central for enhancing spectral clustering performance in response to the growing demand for scalable solutions. Despite advancements in GSL, there is a lack of comprehensive su",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.13551v1",
+    "title": "Minimizing Queue Length Regret for Arbitrarily Varying Channels",
+    "abstract": "We consider an online channel scheduling problem for a single transmitter-receiver pair equipped with $N$ arbitrarily varying wireless channels. The transmission rates of the channels might be non-stationary and could be controlled by an oblivious adversary. At every slot, incoming data arrives at an infinite-capacity data queue located at the transmitter. A scheduler, which is oblivious to the current channel rates, selects one of the $N$ channels for transmission. At the end of the slot, the s",
+    "categories": [
+      "cs.IT",
+      "cs.LG",
+      "cs.NI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.13394v3",
+    "title": "Concurrent Learning with Aggregated States via Randomized Least Squares Value Iteration",
+    "abstract": "Designing learning agents that explore efficiently in a complex environment has been widely recognized as a fundamental challenge in reinforcement learning. While a number of works have demonstrated the effectiveness of techniques based on randomized value functions on a single agent, it remains unclear, from a theoretical point of view, whether injecting randomization can help a society of agents {\\it concurently} explore an environment. The theoretical results %that we established in this work",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.16370v3",
+    "title": "Advanced Physics-Informed Neural Network with Residuals for Solving Complex Integral Equations",
+    "abstract": "In this paper, we present the Residual Integral Solver Network (RISN), a novel neural network architecture designed to solve a wide range of integral and integro-differential equations, including one-dimensional, multi-dimensional, ordinary and partial integro-differential, systems, fractional types, and Helmholtz-type integral equations involving oscillatory kernels. RISN integrates residual connections with high-accuracy numerical methods such as Gaussian quadrature and fractional derivative o",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.NE",
+      "math.NA"
+    ]
+  },
+  {
+    "arxiv_id": "2501.13052v1",
+    "title": "One-Class Domain Adaptation via Meta-Learning",
+    "abstract": "The deployment of IoT (Internet of Things) sensor-based machine learning models in industrial systems for anomaly classification tasks poses significant challenges due to distribution shifts, as the training data acquired in controlled laboratory settings may significantly differ from real-time data in production environments. Furthermore, many real-world applications cannot provide a substantial number of labeled examples for each anomalous class in every new environment. It is therefore crucia",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2502.06789v1",
+    "title": "Information-theoretic Bayesian Optimization: Survey and Tutorial",
+    "abstract": "Several scenarios require the optimization of non-convex black-box functions, that are noisy expensive to evaluate functions with unknown analytical expression, whose gradients are hence not accessible. For example, the hyper-parameter tuning problem of machine learning models. Bayesian optimization is a class of methods with state-of-the-art performance delivering a solution to this problem in real scenarios. It uses an iterative process that employs a probabilistic surrogate model, typically a",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.IT",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.12236v1",
+    "title": "Fast sparse optimization via adaptive shrinkage",
+    "abstract": "The need for fast sparse optimization is emerging, e.g., to deal with large-dimensional data-driven problems and to track time-varying systems. In the framework of linear sparse optimization, the iterative shrinkage-thresholding algorithm is a valuable method to solve Lasso, which is particularly appreciated for its ease of implementation. Nevertheless, it converges slowly. In this paper, we develop a proximal method, based on logarithmic regularization, which turns out to be an iterative shrink",
+    "categories": [
+      "math.OC",
+      "cs.LG",
+      "eess.SY"
+    ]
+  },
+  {
+    "arxiv_id": "2501.12216v2",
+    "title": "RL-RC-DoT: A Block-level RL agent for Task-Aware Video Compression",
+    "abstract": "Video encoders optimize compression for human perception by minimizing reconstruction error under bit-rate constraints. In many modern applications such as autonomous driving, an overwhelming majority of videos serve as input for AI systems performing tasks like object recognition or segmentation, rather than being watched by humans. It is therefore useful to optimize the encoder for a downstream task instead of for perceptual image quality. However, a major challenge is how to combine such down",
+    "categories": [
+      "cs.LG",
+      "cs.CV",
+      "eess.IV"
+    ]
+  },
+  {
+    "arxiv_id": "2501.12121v5",
+    "title": "Learning Dynamic Representations via An Optimally-Weighted Maximum Mean Discrepancy Optimization Framework for Continual Learning",
+    "abstract": "Continual learning has emerged as a pivotal area of research, primarily due to its advantageous characteristic that allows models to persistently acquire and retain information. However, catastrophic forgetting can severely impair model performance. In this study, we address network forgetting by introducing a novel framework termed Optimally-Weighted Maximum Mean Discrepancy (OWMMD), which imposes penalties on representation alterations via a Multi-Level Feature Matching Mechanism (MLFMM). Furt",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.12119v2",
+    "title": "ENTIRE: Learning-based Volume Rendering Time Prediction",
+    "abstract": "We introduce ENTIRE, a novel deep learning-based approach for fast and accurate volume rendering time prediction. Predicting rendering time is inherently challenging due to its dependence on multiple factors, including volume data characteristics, image resolution, camera configuration, and transfer function settings. Our method addresses this by first extracting a feature vector that encodes structural volume properties relevant to rendering performance. This feature vector is then integrated w",
+    "categories": [
+      "cs.GR",
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.11899v2",
+    "title": "LASER: Lip Landmark Assisted Speaker Detection for Robustness",
+    "abstract": "Active Speaker Detection (ASD) aims to identify who is speaking in complex visual scenes. While humans naturally rely on lip-audio synchronization, existing ASD models often misclassify non-speaking instances when lip movements and audio are unsynchronized. To address this, we propose Lip landmark Assisted Speaker dEtection for Robustness (LASER), which explicitly incorporates lip landmarks during training to guide the model's attention to speech-relevant regions. Given a face track, LASER extra",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.11870v2",
+    "title": "Coarse-to-Fine Lightweight Meta-Embedding for ID-Based Recommendation",
+    "abstract": "The state-of-the-art recommendation systems have shifted the attention to efficient recommendation, e.g., on-device recommendation, under memory constraints. To this end, the existing methods either focused on the lightweight embeddings for both users and items, or involved on-device systems enjoying the compact embeddings to enhance reusability and reduces space complexity. However, they focus solely on the coarse granularity of embedding, while overlook the fine-grained semantic nuances, to ad",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.11799v1",
+    "title": "Policy-Adaptable Methods For Resolving Normative Conflicts Through Argumentation and Graph Colouring",
+    "abstract": "In a multi-agent system, one may choose to govern the behaviour of an agent by imposing norms, which act as guidelines for how agents should act either all of the time or in given situations. However, imposing multiple norms on one or more agents may result in situations where these norms conflict over how the agent should behave. In any system with normative conflicts (such as safe reinforcement models or systems which monitor safety protocols), one must decide which norms should be followed su",
+    "categories": [
+      "cs.AI",
+      "cs.LO",
+      "math.LO"
+    ]
+  },
+  {
+    "arxiv_id": "2501.11673v2",
+    "title": "Randomized Kaczmarz Methods with Beyond-Krylov Convergence",
+    "abstract": "Randomized Kaczmarz methods form a family of linear system solvers which converge by repeatedly projecting their iterates onto randomly sampled equations. While effective in some contexts, such as highly over-determined least squares, Kaczmarz methods are traditionally deemed secondary to Krylov subspace methods, since this latter family of solvers can exploit outliers in the input's singular value distribution to attain fast convergence on ill-conditioned systems.   In this paper, we introduce ",
+    "categories": [
+      "math.NA",
+      "cs.DS",
+      "cs.LG",
+      "math.OC",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.11526v1",
+    "title": "Meta-Instance Selection. Instance Selection as a Classification Problem with Meta-Features",
+    "abstract": "Data pruning, or instance selection, is an important problem in machine learning especially in terms of nearest neighbour classifier. However, in data pruning which speeds up the prediction phase, there is an issue related to the speed and efficiency of the process itself. In response, the study proposes an approach involving transforming the instance selection process into a classification task conducted in a unified meta-feature space where each instance can be classified and assigned to eithe",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.11222v1",
+    "title": "An Imbalanced Learning-based Sampling Method for Physics-informed Neural Networks",
+    "abstract": "This paper introduces Residual-based Smote (RSmote), an innovative local adaptive sampling technique tailored to improve the performance of Physics-Informed Neural Networks (PINNs) through imbalanced learning strategies. Traditional residual-based adaptive sampling methods, while effective in enhancing PINN accuracy, often struggle with efficiency and high memory consumption, particularly in high-dimensional problems. RSmote addresses these challenges by targeting regions with high residuals and",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.11190v1",
+    "title": "Reinforcement Learning Based Goodput Maximization with Quantized Feedback in URLLC",
+    "abstract": "This paper presents a comprehensive system model for goodput maximization with quantized feedback in Ultra-Reliable Low-Latency Communication (URLLC), focusing on dynamic channel conditions and feedback schemes. The study investigates a communication system, where the receiver provides quantized channel state information to the transmitter. The system adapts its feedback scheme based on reinforcement learning, aiming to maximize goodput while accommodating varying channel statistics. We introduc",
+    "categories": [
+      "cs.IT",
+      "cs.LG",
+      "eess.SP"
+    ]
+  },
+  {
+    "arxiv_id": "2501.11007v3",
+    "title": "HFGCN:Hypergraph Fusion Graph Convolutional Networks for Skeleton-Based Action Recognition",
+    "abstract": "In recent years, action recognition has received much attention and wide application due to its important role in video understanding. Most of the researches on action recognition methods focused on improving the performance via various deep learning methods rather than the classification of skeleton points. The topological modeling between skeleton points and body parts was seldom considered. Although some studies have used a data-driven approach to classify the topology of the skeleton point, ",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2503.15498v1",
+    "title": "Revival: Collaborative Artistic Creation through Human-AI Interactions in Musical Creativity",
+    "abstract": "Revival is an innovative live audiovisual performance and music improvisation by our artist collective K-Phi-A, blending human and AI musicianship to create electronic music with audio-reactive visuals. The performance features real-time co-creative improvisation between a percussionist, an electronic music artist, and AI musical agents. Trained in works by deceased composers and the collective's compositions, these agents dynamically respond to human input and emulate complex musical styles. An",
+    "categories": [
+      "cs.HC",
+      "cs.AI",
+      "cs.MA",
+      "cs.MM",
+      "cs.SD",
+      "eess.AS"
+    ]
+  },
+  {
+    "arxiv_id": "2501.10935v2",
+    "title": "TSVC:Tripartite Learning with Semantic Variation Consistency for Robust Image-Text Retrieval",
+    "abstract": "Cross-modal retrieval maps data under different modality via semantic relevance. Existing approaches implicitly assume that data pairs are well-aligned and ignore the widely existing annotation noise, i.e., noisy correspondence (NC). Consequently, it inevitably causes performance degradation. Despite attempts that employ the co-teaching paradigm with identical architectures to provide distinct data perspectives, the differences between these architectures are primarily stemmed from random initia",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.10667v1",
+    "title": "Precision Adaptive Imputation Network : An Unified Technique for Mixed Datasets",
+    "abstract": "The challenge of missing data remains a significant obstacle across various scientific domains, necessitating the development of advanced imputation techniques that can effectively address complex missingness patterns. This study introduces the Precision Adaptive Imputation Network (PAIN), a novel algorithm designed to enhance data reconstruction by dynamically adapting to diverse data types, distributions, and missingness mechanisms. PAIN employs a tri-step process that integrates statistical m",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.10605v2",
+    "title": "Wasserstein Adaptive Value Estimation for Actor-Critic Reinforcement Learning",
+    "abstract": "We present Wasserstein Adaptive Value Estimation for Actor-Critic (WAVE), an approach to enhance stability in deep reinforcement learning through adaptive Wasserstein regularization. Our method addresses the inherent instability of actor-critic algorithms by incorporating an adaptively weighted Wasserstein regularization term into the critic's loss function. We prove that WAVE achieves $\\mathcal{O}\\left(\\frac{1}{k}\\right)$ convergence rate for the critic's mean squared error and provide theoreti",
+    "categories": [
+      "cs.LG",
+      "eess.SY",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.10190v2",
+    "title": "Temporal Causal Reasoning with (Non-Recursive) Structural Equation Models",
+    "abstract": "Structural Equation Models (SEM) are the standard approach to representing causal dependencies between variables in causal models. In this paper we propose a new interpretation of SEMs when reasoning about Actual Causality, in which SEMs are viewed as mechanisms transforming the dynamics of exogenous variables into the dynamics of endogenous variables. This allows us to combine counterfactual causal reasoning with existing temporal logic formalisms, and to introduce a temporal logic, CPLTL, for ",
+    "categories": [
+      "cs.AI",
+      "cs.LO"
+    ]
+  },
+  {
+    "arxiv_id": "2501.10179v1",
+    "title": "A Simple but Effective Closed-form Solution for Extreme Multi-label Learning",
+    "abstract": "Extreme multi-label learning (XML) is a task of assigning multiple labels from an extremely large set of labels to each data instance. Many current high-performance XML models are composed of a lot of hyperparameters, which complicates the tuning process. Additionally, the models themselves are adapted specifically to XML, which complicates their reimplementation. To remedy this problem, we propose a simple method based on ridge regression for XML. The proposed method not only has a closed-form ",
+    "categories": [
+      "cs.IR",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.09734v1",
+    "title": "Random Subspace Cubic-Regularization Methods, with Applications to Low-Rank Functions",
+    "abstract": "We propose and analyze random subspace variants of the second-order Adaptive Regularization using Cubics (ARC) algorithm. These methods iteratively restrict the search space to some random subspace of the parameters, constructing and minimizing a local model only within this subspace. Thus, our variants only require access to (small-dimensional) projections of first- and second-order problem derivatives and calculate a reduced step inexpensively. Under suitable assumptions, the ensuing methods m",
+    "categories": [
+      "math.OC",
+      "cs.LG",
+      "math.NA"
+    ]
+  },
+  {
+    "arxiv_id": "2501.09621v2",
+    "title": "Weight for Robustness: A Comprehensive Approach towards Optimal Fault-Tolerant Asynchronous ML",
+    "abstract": "We address the challenges of Byzantine-robust training in asynchronous distributed machine learning systems, aiming to enhance efficiency amid massive parallelization and heterogeneous computing resources. Asynchronous systems, marked by independently operating workers and intermittent updates, uniquely struggle with maintaining integrity against Byzantine failures, which encompass malicious or erroneous actions that disrupt learning. The inherent delays in such settings not only introduce addit",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.09561v1",
+    "title": "Stylomech: Unveiling Authorship via Computational Stylometry in English and Romanized Sinhala",
+    "abstract": "With the advent of Web 2.0, the development in social technology coupled with global communication systematically brought positive and negative impacts to society. Copyright claims and Author identification are deemed crucial as there has been a considerable amount of increase in content violation owing to the lack of proper ethics in society. The Author's attribution in both English and Romanized Sinhala became a major requirement in the last few decades. As an area largely unexplored, particul",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2502.00019v1",
+    "title": "Growth Patterns of Inference",
+    "abstract": "What properties of a first-order search space support/hinder inference? What kinds of facts would be most effective to learn? Answering these questions is essential for understanding the dynamics of deductive reasoning and creating large-scale knowledge-based learning systems that support efficient inference. We address these questions by developing a model of how the distribution of ground facts affects inference performance in search spaces. Experiments suggest that uniform search spaces are s",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.09163v1",
+    "title": "Towards Understanding Extrapolation: a Causal Lens",
+    "abstract": "Canonical work handling distribution shifts typically necessitates an entire target distribution that lands inside the training distribution. However, practical scenarios often involve only a handful of target samples, potentially lying outside the training support, which requires the capability of extrapolation. In this work, we aim to provide a theoretical understanding of when extrapolation is possible and offer principled methods to achieve it without requiring an on-support target distribut",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.08653v2",
+    "title": "Fine-grained Spatio-temporal Event Prediction with Self-adaptive Anchor Graph",
+    "abstract": "Event prediction tasks often handle spatio-temporal data distributed in a large spatial area. Different regions in the area exhibit different characteristics while having latent correlations. This spatial heterogeneity and correlations greatly affect the spatio-temporal distributions of event occurrences, which has not been addressed by state-of-the-art models. Learning spatial dependencies of events in a continuous space is challenging due to its fine granularity and a lack of prior knowledge. ",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.SI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.08561v3",
+    "title": "ANSR-DT: An Adaptive Neuro-Symbolic Learning and Reasoning Framework for Digital Twins",
+    "abstract": "In this paper, we propose an Adaptive Neuro-Symbolic Learning and Reasoning Framework for digital twin technology called \"ANSR-DT.\" Digital twins in industrial environments often struggle with interpretability, real-time adaptation, and human input integration. Our approach addresses these challenges by combining CNN-LSTM dynamic event detection with reinforcement learning and symbolic reasoning to enable adaptive intelligence with interpretable decision processes. This integration enhances envi",
+    "categories": [
+      "cs.AI",
+      "cs.HC",
+      "cs.LG",
+      "cs.SC"
+    ]
+  },
+  {
+    "arxiv_id": "2501.08202v2",
+    "title": "Data-driven system identification using quadratic embeddings of nonlinear dynamics",
+    "abstract": "We propose a novel data-driven method called QENDy (Quadratic Embedding of Nonlinear Dynamics) that not only allows us to learn quadratic representations of highly nonlinear dynamical systems, but also to identify the governing equations. The approach is based on an embedding of the system into a higher-dimensional feature space in which the dynamics become quadratic. Just like SINDy (Sparse Identification of Nonlinear Dynamics), our method requires trajectory data, time derivatives for the trai",
+    "categories": [
+      "math.DS",
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.08099v1",
+    "title": "Smooth Handovers via Smoothed Online Learning",
+    "abstract": "With users demanding seamless connectivity, handovers (HOs) have become a fundamental element of cellular networks. However, optimizing HOs is a challenging problem, further exacerbated by the growing complexity of mobile networks. This paper presents the first countrywide study of HO optimization, through the prism of Smoothed Online Learning (SOL). We first analyze an extensive dataset from a commercial mobile network operator (MNO) in Europe with more than 40M users, to understand and reveal ",
+    "categories": [
+      "cs.NI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2501.07930v3",
+    "title": "An Adaptive Orthogonal Convolution Scheme for Efficient and Flexible CNN Architectures",
+    "abstract": "Orthogonal convolutional layers are valuable components in multiple areas of machine learning, such as adversarial robustness, normalizing flows, GANs, and Lipschitz-constrained models. Their ability to preserve norms and ensure stable gradient propagation makes them valuable for a large range of problems. Despite their promise, the deployment of orthogonal convolution in large-scale applications is a significant challenge due to computational overhead and limited support for modern features lik",
+    "categories": [
+      "cs.AI",
+      "cs.NE"
+    ]
+  },
+  {
+    "arxiv_id": "2501.07911v1",
+    "title": "Deep Learning and Natural Language Processing in the Field of Construction",
+    "abstract": "This article presents a complete process to extract hypernym relationships in the field of construction using two main steps: terminology extraction and detection of hypernyms from these terms. We first describe the corpus analysis method to extract terminology from a collection of technical specifications in the field of construction. Using statistics and word n-grams analysis, we extract the domain's terminology and then perform pruning steps with linguistic patterns and internet queries to im",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2501.07903v1",
+    "title": "Optimal Classification Trees for Continuous Feature Data Using Dynamic Programming with Branch-and-Bound",
+    "abstract": "Computing an optimal classification tree that provably maximizes training performance within a given size limit, is NP-hard, and in practice, most state-of-the-art methods do not scale beyond computing optimal trees of depth three. Therefore, most methods rely on a coarse binarization of continuous features to maintain scalability. We propose a novel algorithm that optimizes trees directly on the continuous feature data using dynamic programming with branch-and-bound. We develop new pruning tech",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DS"
+    ]
+  },
+  {
+    "arxiv_id": "2501.07700v4",
+    "title": "Adaptive Collocation Point Strategies For Physics Informed Neural Networks via the QR Discrete Empirical Interpolation Method",
+    "abstract": "Physics-informed neural networks (PINNs) have gained significant attention for solving forward and inverse problems related to partial differential equations (PDEs). While advancements in loss functions and network architectures have improved PINN accuracy, the impact of collocation point sampling on their performance remains underexplored. Fixed sampling methods, such as uniform random sampling and equispaced grids, can fail to capture critical regions with high solution gradients, limiting the",
+    "categories": [
+      "cs.LG",
+      "cs.CE",
+      "math.NA"
+    ]
+  },
+  {
+    "arxiv_id": "2501.07400v1",
+    "title": "Derivation of effective gradient flow equations and dynamical truncation of training data in Deep Learning",
+    "abstract": "We derive explicit equations governing the cumulative biases and weights in Deep Learning with ReLU activation function, based on gradient descent for the Euclidean cost in the input layer, and under the assumption that the weights are, in a precise sense, adapted to the coordinate system distinguished by the activations. We show that gradient descent corresponds to a dynamical process in the input layer, whereby clusters of data are progressively reduced in complexity (\"truncated\") at an expone",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "math.AP",
+      "math.OC",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2501.07306v2",
+    "title": "Variable Bregman Majorization-Minimization Algorithm and its Application to Dirichlet Maximum Likelihood Estimation",
+    "abstract": "We propose a novel Bregman descent algorithm for minimizing a convex function that is expressed as the sum of a differentiable part (defined over an open set) and a possibly nonsmooth term. The approach, referred to as the Variable Bregman Majorization-Minimization (VBMM) algorithm, extends the Bregman Proximal Gradient method by allowing the Bregman function used in the divergence to adaptively vary at each iteration, provided it satisfies a majorizing condition on the objective function. This ",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2501.07021v2",
+    "title": "Neural Probabilistic Circuits: Enabling Compositional and Interpretable Predictions through Logical Reasoning",
+    "abstract": "End-to-end deep neural networks have achieved remarkable success across various domains but are often criticized for their lack of interpretability. While post hoc explanation methods attempt to address this issue, they often fail to accurately represent these black-box models, resulting in misleading or incomplete explanations. To overcome these challenges, we propose an inherently transparent model architecture called Neural Probabilistic Circuits (NPCs), which enable compositional and interpr",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  }
+]

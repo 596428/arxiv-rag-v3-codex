@@ -1,0 +1,88 @@
+[
+  {
+    "arxiv_id": "2602.17144v1",
+    "title": "When More Experts Hurt: Underfitting in Multi-Expert Learning to Defer",
+    "abstract": "Learning to Defer (L2D) enables a classifier to abstain from predictions and defer to an expert, and has recently been extended to multi-expert settings. In this work, we show that multi-expert L2D is fundamentally more challenging than the single-expert case. With multiple experts, the classifier's underfitting becomes inherent, which seriously degrades prediction performance, whereas in the single-expert setting it arises only under specific conditions. We theoretically reveal that this stems ",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2602.16827v1",
+    "title": "An order-oriented approach to scoring hesitant fuzzy elements",
+    "abstract": "Traditional scoring approaches on hesitant fuzzy sets often lack a formal base in order theory. This paper proposes a unified framework, where each score is explicitly defined with respect to a given order. This order-oriented perspective enables more flexible and coherent scoring mechanisms. We examine several classical orders on hesitant fuzzy elements, that is, nonempty subsets in [0,1], and show that, contrary to prior claims, they do not induce lattice structures. In contrast, we prove that",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2602.16217v1",
+    "title": "Multi-Class Boundary Extraction from Implicit Representations",
+    "abstract": "Surface extraction from implicit neural representations modelling a single class surface is a well-known task. However, there exist no surface extraction methods from an implicit representation of multiple classes that guarantee topological correctness and no holes. In this work, we lay the groundwork by introducing a 2D boundary extraction algorithm for the multi-class case focusing on topological consistency and water-tightness, which also allows for setting minimum detail restraint on the app",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2602.14994v1",
+    "title": "On the Semantics of Primary Cause in Hybrid Dynamic Domains",
+    "abstract": "Reasoning about actual causes of observed effects is fundamental to the study of rationality. This important problem has been studied since the time of Aristotle, with formal mathematical accounts emerging recently. We live in a world where change due to actions can be both discrete and continuous, that is, hybrid. Yet, despite extensive research on actual causation, only few recent studies looked into causation with continuous change. Building on recent progress, in this paper we propose two de",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2602.14272v1",
+    "title": "Radial-VCReg: More Informative Representation Learning Through Radial Gaussianization",
+    "abstract": "Self-supervised learning aims to learn maximally informative representations, but explicit information maximization is hindered by the curse of dimensionality. Existing methods like VCReg address this by regularizing first and second-order feature statistics, which cannot fully achieve maximum entropy. We propose Radial-VCReg, which augments VCReg with a radial Gaussianization loss that aligns feature norms with the Chi distribution-a defining property of high-dimensional Gaussians. We prove tha",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2602.14020v1",
+    "title": "Computable Bernstein Certificates for Cross-Fitted Clipped Covariance Estimation",
+    "abstract": "We study operator-norm covariance estimation from heavy-tailed samples that may include a small fraction of arbitrary outliers. A simple and widely used safeguard is \\emph{Euclidean norm clipping}, but its accuracy depends critically on an unknown clipping level. We propose a cross-fitted clipped covariance estimator equipped with \\emph{fully computable} Bernstein-type deviation certificates, enabling principled data-driven tuning via a selector (\\emph{MinUpper}) that balances certified stochast",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2602.13112v1",
+    "title": "AdaGrad-Diff: A New Version of the Adaptive Gradient Algorithm",
+    "abstract": "Vanilla gradient methods are often highly sensitive to the choice of stepsize, which typically requires manual tuning. Adaptive methods alleviate this issue and have therefore become widely used. Among them, AdaGrad has been particularly influential. In this paper, we propose an AdaGrad-style adaptive method in which the adaptation is driven by the cumulative squared norms of successive gradient differences rather than gradient norms themselves. The key idea is that when gradients vary little ac",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2602.10401v1",
+    "title": "Experimental Demonstration of Online Learning-Based Concept Drift Adaptation for Failure Detection in Optical Networks",
+    "abstract": "We present a novel online learning-based approach for concept drift adaptation in optical network failure detection, achieving up to a 70% improvement in performance over conventional static models while maintaining low latency.",
+    "categories": [
+      "cs.LG",
+      "eess.SP",
+      "physics.optics"
+    ]
+  },
+  {
+    "arxiv_id": "2602.08353v1",
+    "title": "Towards Better Evolution Modeling for Temporal Knowledge Graphs",
+    "abstract": "Temporal knowledge graphs (TKGs) structurally preserve evolving human knowledge. Recent research has focused on designing models to learn the evolutionary nature of TKGs to predict future facts, achieving impressive results. For instance, Hits@10 scores over 0.9 on YAGO dataset. However, we find that existing benchmarks inadvertently introduce a shortcut. Near state-of-the-art performance can be simply achieved by counting co-occurrences, without using any temporal information. In this work, we ",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2602.07973v1",
+    "title": "On Improving Neurosymbolic Learning by Exploiting the Representation Space",
+    "abstract": "We study the problem of learning neural classifiers in a neurosymbolic setting where the hidden gold labels of input instances must satisfy a logical formula. Learning in this setting proceeds by first computing (a subset of) the possible combinations of labels that satisfy the formula and then computing a loss using those combinations and the classifiers' scores. One challenge is that the space of label combinations can grow exponentially, making learning difficult. We propose a technique that ",
+    "categories": [
+      "cs.LG"
+    ]
+  }
+]

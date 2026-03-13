@@ -125,9 +125,26 @@ def main():
             papers = json.load(f)
         logger.info(f"Loaded {len(papers)} papers from {args.input}")
     else:
-        # Fetch from database
+        # Fetch all papers from database
         supabase = get_supabase_client()
-        papers = supabase.get_top_papers_by_citations(limit=10000)
+        # Use pagination to fetch all papers (Supabase has 1000 row limit per request)
+        all_papers = []
+        offset = 0
+        batch_size = 1000
+        while True:
+            result = (
+                supabase.client.table("papers")
+                .select("arxiv_id, title, abstract, categories, citation_count, published_date")
+                .range(offset, offset + batch_size - 1)
+                .execute()
+            )
+            batch = result.data or []
+            if not batch:
+                break
+            all_papers.extend(batch)
+            logger.info(f"Fetched {len(all_papers)} papers...")
+            offset += batch_size
+        papers = all_papers
         logger.info(f"Loaded {len(papers)} papers from database")
 
     if not papers:

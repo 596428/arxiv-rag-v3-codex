@@ -73,6 +73,44 @@ WHERE query_sparse ? key
 
 ---
 
+### ISSUE-002: Marker PDF Parser GPU OOM
+
+**Status:** Open (Workaround: Skip)
+**Priority:** Low
+**Created:** 2026-02-20
+**Category:** Resource
+
+#### Problem
+
+Marker PDF 파서가 GPU 메모리 부족으로 실행 불가.
+
+- **GPU:** RTX 4060 Ti (8GB)
+- **에러:** `CUDA error: out of memory`
+- **영향:** 95개 논문 (LaTeX 소스 없음) 파싱 불가
+
+#### Root Cause
+
+Marker가 여러 모델을 동시에 로드 (Layout Detection, OCR, Table Detection 등)
+- 필요 VRAM: ~10-12GB 추정
+- 가용 VRAM: ~6.5GB
+
+#### Workaround
+
+95개 논문 스킵, LaTeX 파싱 성공한 2402개 (96.1%)로 진행.
+
+#### Potential Solutions
+
+1. **CPU 모드 실행** - 매우 느림 (논문당 수분)
+2. **Cloud GPU 사용** - 비용 발생
+3. **경량화 PDF 파서** - PyMuPDF + 자체 구조화
+
+#### Related Files
+
+- `src/parsing/marker_parser.py`
+- `scripts/02_parse.py`
+
+---
+
 ## Closed Issues
 
 (None yet)

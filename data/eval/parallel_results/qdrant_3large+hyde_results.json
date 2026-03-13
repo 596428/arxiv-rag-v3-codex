@@ -1,0 +1,54 @@
+{
+  "qdrant_3large+hyde": {
+    "avg_mrr": 0.5926666666666667,
+    "avg_ndcg@10": 0.6148314730190717,
+    "avg_precision@5": 0.136,
+    "avg_hit@10": 0.68,
+    "avg_time_ms": 828.6375856399536,
+    "num_queries": 200,
+    "hyde_applied_count": 50,
+    "by_style": {
+      "keyword": {
+        "avg_mrr": 0.8816666666666667,
+        "avg_ndcg@10": 0.8964693163757553,
+        "hit_rate@10": 0.94,
+        "count": 50
+      },
+      "natural_short": {
+        "avg_mrr": 0.7816666666666667,
+        "avg_ndcg@10": 0.7964693163757554,
+        "hit_rate@10": 0.84,
+        "count": 50
+      },
+      "natural_long": {
+        "avg_mrr": 0.5666666666666667,
+        "avg_ndcg@10": 0.610794417965798,
+        "hit_rate@10": 0.74,
+        "count": 50
+      },
+      "conceptual": {
+        "avg_mrr": 0.14066666666666666,
+        "avg_ndcg@10": 0.15559284135897827,
+        "hit_rate@10": 0.2,
+        "count": 50
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "avg_mrr": 0.8263888888888888,
+        "hit_rate@10": 0.875,
+        "count": 96
+      },
+      "medium": {
+        "avg_mrr": 0.5880503144654088,
+        "hit_rate@10": 0.7735849056603774,
+        "count": 53
+      },
+      "hard": {
+        "avg_mrr": 0.15751633986928104,
+        "hit_rate@10": 0.21568627450980393,
+        "count": 51
+      }
+    }
+  }
+}

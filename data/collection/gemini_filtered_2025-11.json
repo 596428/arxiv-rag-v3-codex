@@ -1,0 +1,95 @@
+[
+  {
+    "arxiv_id": "2511.21021v1",
+    "title": "Structure-Aware Prototype Guided Trusted Multi-View Classification",
+    "abstract": "Trustworthy multi-view classification (TMVC) addresses the challenge of achieving reliable decision-making in complex scenarios where multi-source information is heterogeneous, inconsistent, or even conflicting. Existing TMVC approaches predominantly rely on globally dense neighbor relationships to model intra-view dependencies, leading to high computational costs and an inability to directly ensure consistency across inter-view relationships. Furthermore, these methods typically aggregate evide",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2511.19996v1",
+    "title": "RankOOD -- Class Ranking-based Out-of-Distribution Detection",
+    "abstract": "We propose RankOOD, a rank-based Out-of-Distribution (OOD) detection approach based on training a model with the Placket-Luce loss, which is now extensively used for preference alignment tasks in foundational models. Our approach is based on the insight that with a deep learning model trained using the Cross Entropy Loss, in-distribution (ID) class prediction induces a ranking pattern for each ID class prediction. The RankOOD framework formalizes the insight by first extracting a rank list for e",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2511.19837v1",
+    "title": "GED-Consistent Disentanglement of Aligned and Unaligned Substructures for Graph Similarity Learning",
+    "abstract": "Graph Similarity Computation (GSC) is a fundamental graph related task where Graph Edit Distance (GED) serves as a prevalent metric. GED is determined by an optimal alignment between a pair of graphs that partitions each into aligned (zero-cost) and unaligned (cost-incurring) substructures. Due to NP-hard nature of exact GED computation, GED approximations based on Graph Neural Network(GNN) have emerged. Existing GNN-based GED approaches typically learn node embeddings for each graph and then ag",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DB"
+    ]
+  },
+  {
+    "arxiv_id": "2511.18661v1",
+    "title": "Fast Escape, Slow Convergence: Learning Dynamics of Phase Retrieval under Power-Law Data",
+    "abstract": "Scaling laws describe how learning performance improves with data, compute, or training time, and have become a central theme in modern deep learning. We study this phenomenon in a canonical nonlinear model: phase retrieval with anisotropic Gaussian inputs whose covariance spectrum follows a power law. Unlike the isotropic case, where dynamics collapse to a two-dimensional system, anisotropy yields a qualitatively new regime in which an infinite hierarchy of coupled equations governs the evoluti",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2511.18167v1",
+    "title": "Sparse Polyak with optimal thresholding operators for high-dimensional M-estimation",
+    "abstract": "We propose and analyze a variant of Sparse Polyak for high dimensional M-estimation problems. Sparse Polyak proposes a novel adaptive step-size rule tailored to suitably estimate the problem's curvature in the high-dimensional setting, guaranteeing that the algorithm's performance does not deteriorate when the ambient dimension increases. However, convergence guarantees can only be obtained by sacrificing solution sparsity and statistical accuracy. In this work, we introduce a variant of Sparse ",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2511.17233v1",
+    "title": "Algorithmic design and implementation considerations of deep MPC",
+    "abstract": "Deep Model Predictive Control (Deep MPC) is an evolving field that integrates model predictive control and deep learning. This manuscript is focused on a particular approach, which employs deep neural network in the loop with MPC. This class of approaches distributes control authority between a neural network and an MPC controller, in such a way that the neural network learns the model uncertainties while the MPC handles constraints. The approach is appealing because training data collected whil",
+    "categories": [
+      "eess.SY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2511.17080v1",
+    "title": "An Efficient Computational Framework for Discrete Fuzzy Numbers Based on Total Orders",
+    "abstract": "Discrete fuzzy numbers, and in particular those defined over a finite chain $L_n = \\{0, \\ldots, n\\}$, have been effectively employed to represent linguistic information within the framework of fuzzy systems. Research on total (admissible) orderings of such types of fuzzy subsets, and specifically those belonging to the set $\\mathcal{D}_1^{L_n\\rightarrow Y_m}$ consisting of discrete fuzzy numbers $A$ whose support is a closed subinterval of the finite chain $L_n = \\{0, 1, \\ldots, n\\}$ and whose m",
+    "categories": [
+      "cs.LO",
+      "cs.CL",
+      "cs.DM",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2511.16550v1",
+    "title": "Broad stochastic configuration residual learning system for norm-convergent universal approximation",
+    "abstract": "Universal approximation serves as the foundation of neural network learning algorithms. However, some networks establish their universal approximation property by demonstrating that the iterative errors converge in probability measure rather than the more rigorous norm convergence, which makes the universal approximation property of randomized learning networks highly sensitive to random parameter selection, Broad residual learning system (BRLS), as a member of randomized learning models, also e",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2511.15418v1",
+    "title": "Building Robust and Scalable Multilingual ASR for Indian Languages",
+    "abstract": "This paper describes the systems developed by SPRING Lab, Indian Institute of Technology Madras, for the ASRU MADASR 2.0 challenge. The systems developed focuses on adapting ASR systems to improve in predicting the language and dialect of the utterance among 8 languages across 33 dialects. We participated in Track 1 and Track 2, which restricts the use of additional data and develop from-the-scratch multilingual systems. We presented a novel training approach using Multi-Decoder architecture wit",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2511.15131v2",
+    "title": "CASTELLA: Long Audio Dataset with Captions and Temporal Boundaries",
+    "abstract": "We introduce CASTELLA, a human-annotated audio benchmark for the task of audio moment retrieval (AMR). Although AMR has various useful potential applications, there is still no established benchmark with real-world data. The initial study of AMR trained the models solely on synthetic datasets. Moreover, the evaluation is based on an annotated dataset of fewer than 100 samples. This resulted in less reliable reported performance. To ensure performance for applications in real-world environments, ",
+    "categories": [
+      "eess.AS",
+      "cs.CL",
+      "cs.SD"
+    ]
+  }
+]

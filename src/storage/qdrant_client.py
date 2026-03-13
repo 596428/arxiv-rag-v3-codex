@@ -33,7 +33,8 @@ logger = get_logger("qdrant")
 
 # Collection configuration
 COLLECTION_NAME = "arxiv_chunks"
-DENSE_VECTOR_SIZE = 1024  # BGE-M3 and OpenAI text-embedding-3-large (with MRL)
+DENSE_BGE_SIZE = 1024      # BGE-M3 dense
+DENSE_3LARGE_SIZE = 3072   # OpenAI text-embedding-3-large (full)
 
 
 @dataclass
@@ -132,16 +133,17 @@ class QdrantVectorClient:
                 self.client.delete_collection(COLLECTION_NAME)
 
             # Create collection with multi-vector support
+            # v2: dense_bge (1024), dense_3large (3072), sparse_bge
             self.client.create_collection(
                 collection_name=COLLECTION_NAME,
                 vectors_config={
                     "dense_bge": VectorParams(
-                        size=DENSE_VECTOR_SIZE,
+                        size=DENSE_BGE_SIZE,
                         distance=Distance.COSINE,
                         on_disk=True,
                     ),
-                    "dense_openai": VectorParams(
-                        size=DENSE_VECTOR_SIZE,
+                    "dense_3large": VectorParams(
+                        size=DENSE_3LARGE_SIZE,
                         distance=Distance.COSINE,
                         on_disk=True,
                     ),
@@ -298,8 +300,11 @@ class QdrantVectorClient:
                     vectors = {}
                     if chunk.get("dense_bge"):
                         vectors["dense_bge"] = chunk["dense_bge"]
-                    if chunk.get("dense_openai"):
-                        vectors["dense_openai"] = chunk["dense_openai"]
+                    if chunk.get("dense_3large"):
+                        vectors["dense_3large"] = chunk["dense_3large"]
+                    # Legacy support for dense_openai
+                    if chunk.get("dense_openai") and not chunk.get("dense_3large"):
+                        vectors["dense_3large"] = chunk["dense_openai"]
 
                     # Build payload
                     payload = {
@@ -406,7 +411,7 @@ class QdrantVectorClient:
                     "paper_id": r.payload.get("paper_id"),
                     "content": r.payload.get("content"),
                     "section_title": r.payload.get("section_title"),
-                    "similarity": r.score,
+                    "score": r.score,
                     "metadata": r.payload.get("metadata", {}),
                 }
                 for r in results.points
@@ -589,6 +594,138 @@ class QdrantVectorClient:
             Number of chunks successfully upserted
         """
         return self.batch_upsert_chunks(chunks, batch_size)
+
+    def scroll_chunks(
+        self,
+        limit: int = 100,
+        filter_conditions: list[dict] = None,
+        with_payload: bool = True,
+        offset: str = None,
+    ) -> list[dict]:
+        """
+        Scroll through chunks with optional filtering.
+
+        Args:
+            limit: Maximum chunks to return
+            filter_conditions: List of filter condition dicts
+            with_payload: Include payload in results
+            offset: Pagination offset (point ID)
+
+        Returns:
+            List of chunk dicts
+        """
+        try:
+            # Build filter
+            query_filter = None
+            if filter_conditions:
+                must_conditions = []
+                for cond in filter_conditions:
+                    key = cond.get("key")
+                    match = cond.get("match", {})
+                    value = match.get("value")
+                    if key and value is not None:
+                        must_conditions.append(
+                            FieldCondition(
+                                key=key,
+                                match=MatchValue(value=value),
+                            )
+                        )
+                if must_conditions:
+                    query_filter = Filter(must=must_conditions)
+
+            # Scroll through collection
+            results, next_offset = self.client.scroll(
+                collection_name=COLLECTION_NAME,
+                limit=limit,
+                offset=offset,
+                with_payload=with_payload,
+                with_vectors=False,
+                scroll_filter=query_filter,
+            )
+
+            chunks = []
+            for point in results:
+                chunk = {
+                    "id": point.id,
+                    "chunk_id": point.payload.get("chunk_id"),
+                    "paper_id": point.payload.get("paper_id"),
+                    "content": point.payload.get("content"),
+                    "payload": point.payload,
+                }
+                chunks.append(chunk)
+
+            return chunks
+
+        except Exception as e:
+            logger.error(f"Scroll failed: {e}")
+            return []
+
+    def update_payload(
+        self,
+        chunk_id: str,
+        payload: dict,
+    ) -> bool:
+        """
+        Update payload fields for a chunk.
+
+        Args:
+            chunk_id: Chunk identifier
+            payload: Payload fields to update (merged with existing)
+
+        Returns:
+            True if successful
+        """
+        try:
+            # Generate point ID from chunk_id
+            point_id = abs(hash(chunk_id)) % (2**63)
+
+            self.client.set_payload(
+                collection_name=COLLECTION_NAME,
+                payload=payload,
+                points=[point_id],
+                wait=True,
+            )
+
+            logger.debug(f"Updated payload for chunk: {chunk_id}")
+            return True
+
+        except Exception as e:
+            logger.error(f"Failed to update payload for {chunk_id}: {e}")
+            return False
+
+    def get_chunk_by_id(self, chunk_id: str) -> Optional[dict]:
+        """
+        Get a single chunk by ID.
+
+        Args:
+            chunk_id: Chunk identifier
+
+        Returns:
+            Chunk dict or None
+        """
+        try:
+            point_id = abs(hash(chunk_id)) % (2**63)
+
+            points = self.client.retrieve(
+                collection_name=COLLECTION_NAME,
+                ids=[point_id],
+                with_payload=True,
+            )
+
+            if points:
+                point = points[0]
+                return {
+                    "id": point.id,
+                    "chunk_id": point.payload.get("chunk_id"),
+                    "paper_id": point.payload.get("paper_id"),
+                    "content": point.payload.get("content"),
+                    "payload": point.payload,
+                }
+            return None
+
+        except Exception as e:
+            logger.error(f"Failed to get chunk {chunk_id}: {e}")
+            return None
 
     def close(self):
         """Close the client connection."""

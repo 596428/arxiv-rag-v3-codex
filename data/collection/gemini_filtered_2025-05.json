@@ -1,0 +1,97 @@
+[
+  {
+    "arxiv_id": "2505.23506v4",
+    "title": "Position: Epistemic uncertainty estimation methods are fundamentally incomplete",
+    "abstract": "Identifying and disentangling sources of predictive uncertainty is essential for trustworthy supervised learning. We argue that widely used second-order methods that disentangle aleatoric and epistemic uncertainty are fundamentally incomplete. First, we show that unaccounted bias contaminates uncertainty estimates by overestimating aleatoric (data-related) uncertainty and underestimating the epistemic (model-related) counterpart, leading to incorrect uncertainty quantification. Second, we demons",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.23260v1",
+    "title": "Stable Thompson Sampling: Valid Inference via Variance Inflation",
+    "abstract": "We consider the problem of statistical inference when the data is collected via a Thompson Sampling-type algorithm. While Thompson Sampling (TS) is known to be both asymptotically optimal and empirically effective, its adaptive sampling scheme poses challenges for constructing confidence intervals for model parameters. We propose and analyze a variant of TS, called Stable Thompson Sampling, in which the posterior variance is inflated by a logarithmic factor. We show that this modification leads ",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2506.14791v1",
+    "title": "SemIRNet: A Semantic Irony Recognition Network for Multimodal Sarcasm Detection",
+    "abstract": "Aiming at the problem of difficulty in accurately identifying graphical implicit correlations in multimodal irony detection tasks, this paper proposes a Semantic Irony Recognition Network (SemIRNet). The model contains three main innovations: (1) The ConceptNet knowledge base is introduced for the first time to acquire conceptual knowledge, which enhances the model's common-sense reasoning ability; (2) Two cross-modal semantic similarity detection modules at the word level and sample level are d",
+    "categories": [
+      "cs.CV",
+      "cs.CL",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22384v1",
+    "title": "Exact Algorithms and Lower Bounds for Forming Coalitions of Constrained Maximum Size",
+    "abstract": "Imagine we want to split a group of agents into teams in the most \\emph{efficient} way, considering that each agent has their own preferences about their teammates. This scenario is modeled by the extensively studied \\textsc{Coalition Formation} problem. Here, we study a version of this problem where each team must additionally be of bounded size.   We conduct a systematic algorithmic study, providing several intractability results as well as multiple exact algorithms that scale well as the inpu",
+    "categories": [
+      "cs.DS",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22356v1",
+    "title": "Suitability Filter: A Statistical Framework for Classifier Evaluation in Real-World Deployment Settings",
+    "abstract": "Deploying machine learning models in safety-critical domains poses a key challenge: ensuring reliable model performance on downstream user data without access to ground truth labels for direct validation. We propose the suitability filter, a novel framework designed to detect performance deterioration by utilizing suitability signals -- model output features that are sensitive to covariate shifts and indicative of potential prediction errors. The suitability filter evaluates whether classifier a",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CY",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22054v1",
+    "title": "Voice Adaptation for Swiss German",
+    "abstract": "This work investigates the performance of Voice Adaptation models for Swiss German dialects, i.e., translating Standard German text to Swiss German dialect speech. For this, we preprocess a large dataset of Swiss podcasts, which we automatically transcribe and annotate with dialect classes, yielding approximately 5000 hours of weakly labeled training material. We fine-tune the XTTSv2 model on this dataset and show that it achieves good scores in human and automated evaluations and can correctly ",
+    "categories": [
+      "cs.CL",
+      "cs.SD",
+      "eess.AS"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21339v2",
+    "title": "An Uncertainty-Aware ED-LSTM for Probabilistic Suffix Prediction",
+    "abstract": "Suffix prediction of business processes forecasts the remaining sequence of events until process completion. Current approaches focus on predicting the most likely suffix, representing a single scenario. However, when the future course of a process is subject to uncertainty and high variability, the expressiveness of such a single scenario can be limited, since other possible scenarios, which together may have a higher overall probability, are overlooked. To address this limitation, we propose p",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21288v2",
+    "title": "Are Graph Attention Networks Able to Model Structural Information?",
+    "abstract": "Graph Attention Networks (GATs) have emerged as powerful models for learning expressive representations from such data by adaptively weighting neighboring nodes through attention mechanisms. However, most existing approaches primarily rely on node attributes and direct neighborhood connections, often overlooking rich structural patterns that capture higher-order topological information crucial for many real-world datasets. In this work, we present the Graph Structure Attention Network (GSAT), a ",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2505.21005v2",
+    "title": "Efficient and Unbiased Sampling from Boltzmann Distributions via Variance-Tuned Diffusion Models",
+    "abstract": "Score-based diffusion models (SBDMs) are powerful amortized samplers for Boltzmann distributions; however, imperfect score estimates bias downstream Monte Carlo estimates. Classical importance sampling (IS) can correct this bias, but computing exact likelihoods requires solving the probability-flow ordinary differential equation (PF-ODE), a procedure that is prohibitively costly and scales poorly with dimensionality. We introduce Variance-Tuned Diffusion Importance Sampling (VT-DIS), a lightweig",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2505.20130v3",
+    "title": "Balancing Interference and Correlation in Spatial Experimental Designs: A Causal Graph Cut Approach",
+    "abstract": "This paper focuses on the design of spatial experiments to optimize the amount of information derived from the experimental data and enhance the accuracy of the resulting causal effect estimator. We propose a surrogate function for the mean squared error (MSE) of the estimator, which facilitates the use of classical graph cut algorithms to learn the optimal design. Our proposal offers three key advances: (1) it accommodates moderate to large spatial interference effects; (2) it adapts to differe",
+    "categories": [
+      "cs.LG",
+      "stat.CO",
+      "stat.ML"
+    ]
+  }
+]

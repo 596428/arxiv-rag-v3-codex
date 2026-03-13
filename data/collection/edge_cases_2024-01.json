@@ -1,0 +1,948 @@
+[
+  {
+    "arxiv_id": "2401.17865v1",
+    "title": "Manipulating Predictions over Discrete Inputs in Machine Teaching",
+    "abstract": "Machine teaching often involves the creation of an optimal (typically minimal) dataset to help a model (referred to as the `student') achieve specific goals given by a teacher. While abundant in the continuous domain, the studies on the effectiveness of machine teaching in the discrete domain are relatively limited. This paper focuses on machine teaching in the discrete domain, specifically on manipulating student models' predictions based on the goals of teachers via changing the training data ",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.17789v3",
+    "title": "Robustly overfitting latents for flexible neural image compression",
+    "abstract": "Neural image compression has made a great deal of progress. State-of-the-art models are based on variational autoencoders and are outperforming classical models. Neural compression models learn to encode an image into a quantized latent representation that can be efficiently sent to the decoder, which decodes the quantized latent into a reconstructed image. While these models have proven successful in practice, they lead to sub-optimal results due to imperfect optimization and limitations in the",
+    "categories": [
+      "cs.CV",
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2401.17269v1",
+    "title": "Effect of Weight Quantization on Learning Models by Typical Case Analysis",
+    "abstract": "This paper examines the quantization methods used in large-scale data analysis models and their hyperparameter choices. The recent surge in data analysis scale has significantly increased computational resource requirements. To address this, quantizing model weights has become a prevalent practice in data analysis applications such as deep learning. Quantization is particularly vital for deploying large models on devices with limited computational resources. However, the selection of quantizatio",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.01762v1",
+    "title": "Commercial AI, Conflict, and Moral Responsibility: A theoretical analysis and practical approach to the moral responsibilities associated with dual-use AI technology",
+    "abstract": "This paper presents a theoretical analysis and practical approach to the moral responsibilities when developing AI systems for non-military applications that may nonetheless be used for conflict applications. We argue that AI represents a form of crossover technology that is different from previous historical examples of dual- or multi-use technology as it has a multiplicative effect across other technologies. As a result, existing analyses of ethical responsibilities around dual-use technologie",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.17036v2",
+    "title": "Data organization limits the predictability of binary classification",
+    "abstract": "The structure of data organization is widely recognized as having a substantial influence on the efficacy of machine learning algorithms, particularly in binary classification tasks. Our research provides a theoretical framework suggesting that the maximum potential of binary classifiers on a given dataset is primarily constrained by the inherent qualities of the data. Through both theoretical reasoning and empirical examination, we employed standard objective functions, evaluative metrics, and ",
+    "categories": [
+      "cs.LG",
+      "cs.DS",
+      "physics.data-an"
+    ]
+  },
+  {
+    "arxiv_id": "2403.08789v1",
+    "title": "Bridging Human Concepts and Computer Vision for Explainable Face Verification",
+    "abstract": "With Artificial Intelligence (AI) influencing the decision-making process of sensitive applications such as Face Verification, it is fundamental to ensure the transparency, fairness, and accountability of decisions. Although Explainable Artificial Intelligence (XAI) techniques exist to clarify AI decisions, it is equally important to provide interpretability of these decisions to humans. In this paper, we present an approach to combine computer and human vision to increase the explanation's inte",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.HC",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16760v1",
+    "title": "One-Step Forward and Backtrack: Overcoming Zig-Zagging in Loss-Aware Quantization Training",
+    "abstract": "Weight quantization is an effective technique to compress deep neural networks for their deployment on edge devices with limited resources. Traditional loss-aware quantization methods commonly use the quantized gradient to replace the full-precision gradient. However, we discover that the gradient error will lead to an unexpected zig-zagging-like issue in the gradient descent learning procedures, where the gradient directions rapidly oscillate or zig-zag, and such issue seriously slows down the ",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16708v2",
+    "title": "Multivariate Beta Mixture Model: Probabilistic Clustering With Flexible Cluster Shapes",
+    "abstract": "This paper introduces the multivariate beta mixture model (MBMM), a new probabilistic model for soft clustering. MBMM adapts to diverse cluster shapes because of the flexible probability density function of the multivariate beta distribution. We introduce the properties of MBMM, describe the parameter learning procedure, and present the experimental results, showing that MBMM fits diverse cluster shapes on synthetic and real datasets. The code is released anonymously at https://github.com/hhchen",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2403.08787v1",
+    "title": "Multi-view Subspace Clustering via An Adaptive Consensus Graph Filter",
+    "abstract": "Multiview subspace clustering (MVSC) has attracted an increasing amount of attention in recent years. Most existing MVSC methods first collect complementary information from different views and consequently derive a consensus reconstruction coefficient matrix to indicate the subspace structure of a multi-view data set. In this paper, we initially assume the existence of a consensus reconstruction coefficient matrix and then use it to build a consensus graph filter. In each view, the filter is em",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16567v2",
+    "title": "Parallel Affine Transformation Tuning of Markov Chain Monte Carlo",
+    "abstract": "The performance of Markov chain Monte Carlo samplers strongly depends on the properties of the target distribution such as its covariance structure, the location of its probability mass and its tail behavior. We explore the use of bijective affine transformations of the sample space to improve the properties of the target distribution and thereby the performance of samplers running in the transformed space. In particular, we propose a flexible and user-friendly scheme for adaptively learning the",
+    "categories": [
+      "stat.ME",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16521v1",
+    "title": "Validation, Robustness, and Accuracy of Perturbation-Based Sensitivity Analysis Methods for Time-Series Deep Learning Models",
+    "abstract": "This work undertakes studies to evaluate Interpretability Methods for Time-Series Deep Learning. Sensitivity analysis assesses how input changes affect the output, constituting a key component of interpretation. Among the post-hoc interpretation methods such as back-propagation, perturbation, and approximation, my work will investigate perturbation-based sensitivity Analysis methods on modern Transformer models to benchmark their performances. Specifically, my work answers three research questio",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16412v4",
+    "title": "Learning to Manipulate under Limited Information",
+    "abstract": "By classic results in social choice theory, any reasonable preferential voting method sometimes gives individuals an incentive to report an insincere preference. The extent to which different voting methods are more or less resistant to such strategic manipulation has become a key consideration for comparing voting methods. Here we measure resistance to manipulation by whether neural networks of various sizes can learn to profitably manipulate a given voting method in expectation, given differen",
+    "categories": [
+      "cs.AI",
+      "cs.GT",
+      "cs.LG",
+      "cs.MA",
+      "econ.TH"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16270v2",
+    "title": "Capturing Knowledge Graphs and Rules with Octagon Embeddings",
+    "abstract": "Region based knowledge graph embeddings represent relations as geometric regions. This has the advantage that the rules which are captured by the model are made explicit, making it straightforward to incorporate prior knowledge and to inspect learned models. Unfortunately, existing approaches are severely restricted in their ability to model relational composition, and hence also their ability to model rules, thus failing to deliver on the main promise of region based models. With the aim of add",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16123v2",
+    "title": "Looking for a better fit? An Incremental Learning Multimodal Object Referencing Framework adapting to Individual Drivers",
+    "abstract": "The rapid advancement of the automotive industry towards automated and semi-automated vehicles has rendered traditional methods of vehicle interaction, such as touch-based and voice command systems, inadequate for a widening range of non-driving related tasks, such as referencing objects outside of the vehicle. Consequently, research has shifted toward gestural input (e.g., hand, gaze, and head pose gestures) as a more suitable mode of interaction during driving. However, due to the dynamic natu",
+    "categories": [
+      "cs.HC",
+      "cs.AI",
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16088v1",
+    "title": "Fairness in Algorithmic Recourse Through the Lens of Substantive Equality of Opportunity",
+    "abstract": "Algorithmic recourse -- providing recommendations to those affected negatively by the outcome of an algorithmic system on how they can take action and change that outcome -- has gained attention as a means of giving persons agency in their interactions with artificial intelligence (AI) systems. Recent work has shown that even if an AI decision-making classifier is ``fair'' (according to some reasonable criteria), recourse itself may be unfair due to differences in the initial circumstances of in",
+    "categories": [
+      "cs.LG",
+      "cs.CY"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16039v2",
+    "title": "Data-Driven Filter Design in FBP: Transforming CT Reconstruction with Trainable Fourier Series",
+    "abstract": "In this study, we introduce a Fourier series-based trainable filter for computed tomography (CT) reconstruction within the filtered backprojection (FBP) framework. This method overcomes the limitation in noise reduction by optimizing Fourier series coefficients to construct the filter, maintaining computational efficiency with minimal increment for the trainable parameters compared to other deep learning frameworks. Additionally, we propose Gaussian edge-enhanced (GEE) loss function that priorit",
+    "categories": [
+      "eess.IV",
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.15970v2",
+    "title": "HEQuant: Marrying Homomorphic Encryption and Quantization for Communication-Efficient Private Inference",
+    "abstract": "Secure two-party computation with homomorphic encryption (HE) protects data privacy with a formal security guarantee but suffers from high communication overhead. While previous works, e.g., Cheetah, Iron, etc, have proposed efficient HE-based protocols for different neural network (NN) operations, they still assume high precision, e.g., fixed point 37 bit, for the NN operations and ignore NNs' native robustness against quantization error. In this paper, we propose HEQuant, which features low-pr",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.15777v1",
+    "title": "cantnlp@LT-EDI-2024: Automatic Detection of Anti-LGBTQ+ Hate Speech in Under-resourced Languages",
+    "abstract": "This paper describes our homophobia/transphobia in social media comments detection system developed as part of the shared task at LT-EDI-2024. We took a transformer-based approach to develop our multiclass classification model for ten language conditions (English, Spanish, Gujarati, Hindi, Kannada, Malayalam, Marathi, Tamil, Tulu, and Telugu). We introduced synthetic and organic instances of script-switched language data during domain adaptation to mirror the linguistic realities of social media",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2401.15487v1",
+    "title": "Artificial Intelligence: Arguments for Catastrophic Risk",
+    "abstract": "Recent progress in artificial intelligence (AI) has drawn attention to the technology's transformative potential, including what some see as its prospects for causing large-scale harm. We review two influential arguments purporting to show how AI could pose catastrophic risks. The first argument -- the Problem of Power-Seeking -- claims that, under certain assumptions, advanced AI systems are likely to engage in dangerous power-seeking behavior in pursuit of their goals. We review reasons for th",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.15304v1",
+    "title": "Adaptive Least Mean Squares Graph Neural Networks and Online Graph Signal Estimation",
+    "abstract": "The online prediction of multivariate signals, existing simultaneously in space and time, from noisy partial observations is a fundamental task in numerous applications. We propose an efficient Neural Network architecture for the online estimation of time-varying graph signals named the Adaptive Least Mean Squares Graph Neural Networks (LMS-GNN). LMS-GNN aims to capture the time variation and bridge the cross-space-time interactions under the condition that signals are corrupted by noise and mis",
+    "categories": [
+      "cs.LG",
+      "eess.SP"
+    ]
+  },
+  {
+    "arxiv_id": "2401.15294v3",
+    "title": "Integral Operator Approaches for Scattered Data Fitting on Spheres",
+    "abstract": "This paper focuses on scattered data fitting problems on spheres. We study the approximation performance of a class of weighted spectral filter algorithms, including Tikhonov regularization, Landaweber iteration, spectral cut-off, and iterated Tikhonov, in fitting noisy data with possibly unbounded random noise. For the analysis, we develop an integral operator approach that can be regarded as an extension of the widely used sampling inequality approach and norming set method in the community of",
+    "categories": [
+      "math.NA",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.14758v2",
+    "title": "Off-Policy Primal-Dual Safe Reinforcement Learning",
+    "abstract": "Primal-dual safe RL methods commonly perform iterations between the primal update of the policy and the dual update of the Lagrange Multiplier. Such a training paradigm is highly susceptible to the error in cumulative cost estimation since this estimation serves as the key bond connecting the primal and dual update processes. We show that this problem causes significant underestimation of cost when using off-policy methods, leading to the failure to satisfy the safety constraint. To address this",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.14732v2",
+    "title": "Residual Quantization with Implicit Neural Codebooks",
+    "abstract": "Vector quantization is a fundamental operation for data compression and vector search. To obtain high accuracy, multi-codebook methods represent each vector using codewords across several codebooks. Residual quantization (RQ) is one such method, which iteratively quantizes the error of the previous step. While the error distribution is dependent on previously-selected codewords, this dependency is not accounted for in conventional RQ as it uses a fixed codebook per quantization step. In this pap",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.14619v1",
+    "title": "Resilient Practical Test-Time Adaptation: Soft Batch Normalization Alignment and Entropy-driven Memory Bank",
+    "abstract": "Test-time domain adaptation effectively adjusts the source domain model to accommodate unseen domain shifts in a target domain during inference. However, the model performance can be significantly impaired by continuous distribution changes in the target domain and non-independent and identically distributed (non-i.i.d.) test samples often encountered in practical scenarios. While existing memory bank methodologies use memory to store samples and mitigate non-i.i.d. effects, they do not inherent",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.14609v1",
+    "title": "Physically Informed Synchronic-adaptive Learning for Industrial Systems Modeling in Heterogeneous Media with Unavailable Time-varying Interface",
+    "abstract": "Partial differential equations (PDEs) are commonly employed to model complex industrial systems characterized by multivariable dependence. Existing physics-informed neural networks (PINNs) excel in solving PDEs in a homogeneous medium. However, their feasibility is diminished when PDE parameters are unknown due to a lack of physical attributions and time-varying interface is unavailable arising from heterogeneous media. To this end, we propose a data-physics-hybrid method, physically informed sy",
+    "categories": [
+      "cs.LG",
+      "cs.CE"
+    ]
+  },
+  {
+    "arxiv_id": "2401.14580v3",
+    "title": "Design Your Own Universe: A Physics-Informed Agnostic Method for Enhancing Graph Neural Networks",
+    "abstract": "Physics-informed Graph Neural Networks have achieved remarkable performance in learning through graph-structured data by mitigating common GNN challenges such as over-smoothing, over-squashing, and heterophily adaption. Despite these advancements, the development of a simple yet effective paradigm that appropriately integrates previous methods for handling all these challenges is still underway. In this paper, we draw an analogy between the propagation of GNNs and particle systems in physics, pr",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.14534v2",
+    "title": "Meta-Learning Linear Quadratic Regulators: A Policy Gradient MAML Approach for Model-free LQR",
+    "abstract": "We investigate the problem of learning linear quadratic regulators (LQR) in a multi-task, heterogeneous, and model-free setting. We characterize the stability and personalization guarantees of a policy gradient-based (PG) model-agnostic meta-learning (MAML) (Finn et al., 2017) approach for the LQR problem under different task-heterogeneity settings. We show that our MAML-LQR algorithm produces a stabilizing controller close to each task-specific optimal controller up to a task-heterogeneity bias",
+    "categories": [
+      "math.OC",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.16433v2",
+    "title": "Within-basket Recommendation via Neural Pattern Associator",
+    "abstract": "Within-basket recommendation (WBR) refers to the task of recommending items to the end of completing a non-empty shopping basket during a shopping session. While the latest innovations in this space demonstrate remarkable performance improvement on benchmark datasets, they often overlook the complexity of user behaviors in practice, such as 1) co-existence of multiple shopping intentions, 2) multi-granularity of such intentions, and 3) interleaving behavior (switching intentions) in a shopping s",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.14400v1",
+    "title": "Modular Adaptation of Multilingual Encoders to Written Swiss German Dialect",
+    "abstract": "Creating neural text encoders for written Swiss German is challenging due to a dearth of training data combined with dialectal variation. In this paper, we build on several existing multilingual encoders and adapt them to Swiss German using continued pre-training. Evaluation on three diverse downstream tasks shows that simply adding a Swiss German adapter to a modular encoder achieves 97.5% of fully monolithic adaptation performance. We further find that for the task of retrieving Swiss German s",
+    "categories": [
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2401.15103v1",
+    "title": "PruneSymNet: A Symbolic Neural Network and Pruning Algorithm for Symbolic Regression",
+    "abstract": "Symbolic regression aims to derive interpretable symbolic expressions from data in order to better understand and interpret data. %which plays an important role in knowledge discovery and interpretable machine learning.   In this study, a symbolic network called PruneSymNet is proposed for symbolic regression. This is a novel neural network whose activation function consists of common elementary functions and operators. The whole network is differentiable and can be trained by gradient descent m",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.14110v1",
+    "title": "Towards Cheaper Inference in Deep Networks with Lower Bit-Width Accumulators",
+    "abstract": "The majority of the research on the quantization of Deep Neural Networks (DNNs) is focused on reducing the precision of tensors visible by high-level frameworks (e.g., weights, activations, and gradients). However, current hardware still relies on high-accuracy core operations. Most significant is the operation of accumulating products. This high-precision accumulation operation is gradually becoming the main computational bottleneck. This is because, so far, the usage of low-precision accumulat",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.AR"
+    ]
+  },
+  {
+    "arxiv_id": "2401.13987v1",
+    "title": "Cross-Domain Few-Shot Learning via Adaptive Transformer Networks",
+    "abstract": "Most few-shot learning works rely on the same domain assumption between the base and the target tasks, hindering their practical applications. This paper proposes an adaptive transformer network (ADAPTER), a simple but effective solution for cross-domain few-shot learning where there exist large domain shifts between the base task and the target task. ADAPTER is built upon the idea of bidirectional cross-attention to learn transferable features between the two domains. The proposed architecture ",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.05940v1",
+    "title": "Causal Relationship Network of Risk Factors Impacting Workday Loss in Underground Coal Mines",
+    "abstract": "This study aims to establish the causal relationship network between various factors leading to workday loss in underground coal mines using a novel causal artificial intelligence (AI) method. The analysis utilizes data obtained from the National Institute for Occupational Safety and Health (NIOSH). A total of 101,010 injury records from 3,982 unique underground coal mines spanning the years from 1990 to 2020 were extracted from the NIOSH database. Causal relationships were analyzed and visualiz",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ME"
+    ]
+  },
+  {
+    "arxiv_id": "2401.13330v3",
+    "title": "NACHOS: Neural Architecture Search for Hardware Constrained Early Exit Neural Networks",
+    "abstract": "Early Exit Neural Networks (EENNs) endow astandard Deep Neural Network (DNN) with Early Exit Classifiers (EECs), to provide predictions at intermediate points of the processing when enough confidence in classification is achieved. This leads to many benefits in terms of effectiveness and efficiency. Currently, the design of EENNs is carried out manually by experts, a complex and time-consuming task that requires accounting for many aspects, including the correct placement, the thresholding, and ",
+    "categories": [
+      "cs.LG",
+      "cs.CV",
+      "cs.NE"
+    ]
+  },
+  {
+    "arxiv_id": "2401.13212v1",
+    "title": "AdCorDA: Classifier Refinement via Adversarial Correction and Domain Adaptation",
+    "abstract": "This paper describes a simple yet effective technique for refining a pretrained classifier network. The proposed AdCorDA method is based on modification of the training set and making use of the duality between network weights and layer inputs. We call this input space training. The method consists of two stages - adversarial correction followed by domain adaptation. Adversarial correction uses adversarial attacks to correct incorrect training-set classifications. The incorrectly classified samp",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.12866v1",
+    "title": "Evaluating Collaborative and Autonomous Agents in Data-Stream-Supported Coordination of Mobile Crowdsourcing",
+    "abstract": "Mobile crowdsourcing refers to systems where the completion of tasks necessarily requires physical movement of crowdworkers in an on-demand workforce. Evidence suggests that in such systems, tasks often get assigned to crowdworkers who struggle to complete those tasks successfully, resulting in high failure rates and low service quality. A promising solution to ensure higher quality of service is to continuously adapt the assignment and respond to failure-causing events by transferring tasks to ",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.MA"
+    ]
+  },
+  {
+    "arxiv_id": "2401.12756v2",
+    "title": "What the Weight?! A Unified Framework for Zero-Shot Knowledge Composition",
+    "abstract": "The knowledge encapsulated in a model is the core factor determining its final performance on downstream tasks. Much research in NLP has focused on efficient methods for storing and adapting different types of knowledge, e.g., in dedicated modularized structures, and on how to effectively combine these, e.g., by learning additional parameters. However, given the many possible options, a thorough understanding of the mechanisms involved in these compositions is missing, and hence it remains uncle",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.12646v1",
+    "title": "Emergent Cooperation under Uncertain Incentive Alignment",
+    "abstract": "Understanding the emergence of cooperation in systems of computational agents is crucial for the development of effective cooperative AI. Interaction among individuals in real-world settings are often sparse and occur within a broad spectrum of incentives, which often are only partially known. In this work, we explore how cooperation can arise among reinforcement learning agents in scenarios characterised by infrequent encounters, and where agents face uncertainty about the alignment of their in",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.GT"
+    ]
+  },
+  {
+    "arxiv_id": "2401.12631v1",
+    "title": "A Reply to Makelov et al. (2023)'s \"Interpretability Illusion\" Arguments",
+    "abstract": "We respond to the recent paper by Makelov et al. (2023), which reviews subspace interchange intervention methods like distributed alignment search (DAS; Geiger et al. 2023) and claims that these methods potentially cause \"interpretability illusions\". We first review Makelov et al. (2023)'s technical notion of what an \"interpretability illusion\" is, and then we show that even intuitive and desirable explanations can qualify as illusions in this sense. As a result, their method of discovering \"ill",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ]
+  },
+  {
+    "arxiv_id": "2401.12418v1",
+    "title": "Towards Improved Variational Inference for Deep Bayesian Models",
+    "abstract": "Deep learning has revolutionized the last decade, being at the forefront of extraordinary advances in a wide range of tasks including computer vision, natural language processing, and reinforcement learning, to name but a few. However, it is well-known that deep models trained via maximum likelihood estimation tend to be overconfident and give poorly-calibrated predictions. Bayesian deep learning attempts to address this by placing priors on the model parameters, which are then combined with a l",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2401.12382v1",
+    "title": "Longitudinal Sentiment Classification of Reddit Posts",
+    "abstract": "We report results of a longitudinal sentiment classification of Reddit posts written by students of four major Canadian universities. We work with the texts of the posts, concentrating on the years 2020-2023. By finely tuning a sentiment threshold to a range of [-0.075,0.075], we successfully built classifiers proficient in categorizing post sentiments into positive and negative categories. Noticeably, our sentiment classification results are consistent across the four university data sets.",
+    "categories": [
+      "cs.CL",
+      "cs.LG",
+      "cs.SI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.11900v1",
+    "title": "Showing Proofs, Assessing Difficulty with GeoGebra Discovery",
+    "abstract": "In our contribution we describe some on-going improvements concerning the Automated Reasoning Tools developed in GeoGebra Discovery, providing different examples of the performance of these new features. We describe the new ShowProof command, that outputs both the sequence of the different steps performed by GeoGebra Discovery to confirm a certain statement, as well as a number intending to grade the difficulty or interest of the assertion. The proposal of this assessment measure, involving the ",
+    "categories": [
+      "cs.SC",
+      "cs.AI",
+      "cs.CG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.11740v1",
+    "title": "Multi-level Cross-modal Alignment for Image Clustering",
+    "abstract": "Recently, the cross-modal pretraining model has been employed to produce meaningful pseudo-labels to supervise the training of an image clustering model. However, numerous erroneous alignments in a cross-modal pre-training model could produce poor-quality pseudo-labels and degrade clustering performance. To solve the aforementioned issue, we propose a novel \\textbf{Multi-level Cross-modal Alignment} method to improve the alignments in a cross-modal pretraining model for downstream tasks, by buil",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.11618v2",
+    "title": "Efficient local linearity regularization to overcome catastrophic overfitting",
+    "abstract": "Catastrophic overfitting (CO) in single-step adversarial training (AT) results in abrupt drops in the adversarial test accuracy (even down to 0%). For models trained with multi-step AT, it has been observed that the loss function behaves locally linearly with respect to the input, this is however lost in single-step AT. To address CO in single-step AT, several methods have been proposed to enforce local linearity of the loss via regularization. However, these regularization terms considerably sl",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2403.08775v1",
+    "title": "Constrained Reinforcement Learning for Adaptive Controller Synchronization in Distributed SDN",
+    "abstract": "In software-defined networking (SDN), the implementation of distributed SDN controllers, with each controller responsible for managing a specific sub-network or domain, plays a critical role in achieving a balance between centralized control, scalability, reliability, and network efficiency. These controllers must be synchronized to maintain a logically centralized view of the entire network. While there are various approaches for synchronizing distributed SDN controllers, most tend to prioritiz",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.11370v1",
+    "title": "Self-sustaining Software Systems (S4): Towards Improved Interpretability and Adaptation",
+    "abstract": "Software systems impact society at different levels as they pervasively solve real-world problems. Modern software systems are often so sophisticated that their complexity exceeds the limits of human comprehension. These systems must respond to changing goals, dynamic data, unexpected failures, and security threats, among other variable factors in real-world environments. Systems' complexity challenges their interpretability and requires autonomous responses to dynamic changes. Two main research",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "eess.SY"
+    ]
+  },
+  {
+    "arxiv_id": "2402.00043v1",
+    "title": "Interactive and Intelligent Root Cause Analysis in Manufacturing with Causal Bayesian Networks and Knowledge Graphs",
+    "abstract": "Root Cause Analysis (RCA) in the manufacturing of electric vehicles is the process of identifying fault causes. Traditionally, the RCA is conducted manually, relying on process expert knowledge. Meanwhile, sensor networks collect significant amounts of data in the manufacturing process. Using this data for RCA makes it more efficient. However, purely data-driven methods like Causal Bayesian Networks have problems scaling to large-scale, real-world manufacturing processes due to the vast amount o",
+    "categories": [
+      "cs.AI",
+      "cs.CE",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.11284v1",
+    "title": "Evaluating Driver Readiness in Conditionally Automated Vehicles from Eye-Tracking Data and Head Pose",
+    "abstract": "As automated driving technology advances, the role of the driver to resume control of the vehicle in conditionally automated vehicles becomes increasingly critical. In the SAE Level 3 or partly automated vehicles, the driver needs to be available and ready to intervene when necessary. This makes it essential to evaluate their readiness accurately. This article presents a comprehensive analysis of driver readiness assessment by combining head pose features and eye-tracking data. The study explore",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.NE"
+    ]
+  },
+  {
+    "arxiv_id": "2402.04882v1",
+    "title": "LMUFormer: Low Complexity Yet Powerful Spiking Model With Legendre Memory Units",
+    "abstract": "Transformer models have demonstrated high accuracy in numerous applications but have high complexity and lack sequential processing capability making them ill-suited for many streaming applications at the edge where devices are heavily resource-constrained. Thus motivated, many researchers have proposed reformulating the transformer models as RNN modules which modify the self-attention computation with explicit states. However, these approaches often incur significant performance degradation. Th",
+    "categories": [
+      "cs.NE",
+      "cs.AI",
+      "cs.LG",
+      "cs.SD",
+      "eess.AS"
+    ]
+  },
+  {
+    "arxiv_id": "2401.10831v3",
+    "title": "Understanding Video Transformers via Universal Concept Discovery",
+    "abstract": "This paper studies the problem of concept-based interpretability of transformer representations for videos. Concretely, we seek to explain the decision-making process of video transformers based on high-level, spatiotemporal concepts that are automatically discovered. Prior research on concept-based interpretability has concentrated solely on image-level tasks. Comparatively, video models deal with the added temporal dimension, increasing complexity and posing challenges in identifying dynamic c",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG",
+      "cs.RO"
+    ]
+  },
+  {
+    "arxiv_id": "2401.10467v2",
+    "title": "Learning Backdoors for Mixed Integer Linear Programs with Contrastive Learning",
+    "abstract": "Many real-world problems can be efficiently modeled as Mixed Integer Linear Programs (MILPs) and solved with the Branch-and-Bound method. Prior work has shown the existence of MILP backdoors, small sets of variables such that prioritizing branching on them when possible leads to faster running times. However, finding high-quality backdoors that improve running times remains an open question. Previous work learns to estimate the relative solver speed of randomly sampled backdoors through ranking ",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2401.10432v1",
+    "title": "A2Q+: Improving Accumulator-Aware Weight Quantization",
+    "abstract": "Quantization techniques commonly reduce the inference costs of neural networks by restricting the precision of weights and activations. Recent studies show that also reducing the precision of the accumulator can further improve hardware efficiency at the risk of numerical overflow, which introduces arithmetic errors that can degrade model accuracy. To avoid numerical overflow while maintaining accuracy, recent work proposed accumulator-aware quantization (A2Q), a quantization-aware training meth",
+    "categories": [
+      "cs.LG",
+      "cs.AR",
+      "cs.PF"
+    ]
+  },
+  {
+    "arxiv_id": "2401.10396v1",
+    "title": "Deep Dict: Deep Learning-based Lossy Time Series Compressor for IoT Data",
+    "abstract": "We propose Deep Dict, a deep learning-based lossy time series compressor designed to achieve a high compression ratio while maintaining decompression error within a predefined range. Deep Dict incorporates two essential components: the Bernoulli transformer autoencoder (BTAE) and a distortion constraint. BTAE extracts Bernoulli representations from time series data, reducing the size of the representations compared to conventional autoencoders. The distortion constraint limits the prediction err",
+    "categories": [
+      "eess.SP",
+      "cs.IT",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.10191v3",
+    "title": "Divide and not forget: Ensemble of selectively trained experts in Continual Learning",
+    "abstract": "Class-incremental learning is becoming more popular as it helps models widen their applicability while not forgetting what they already know. A trend in this area is to use a mixture-of-expert technique, where different models work together to solve the task. However, the experts are usually trained all at once using whole task data, which makes them all prone to forgetting and increasing computational burden. To address this limitation, we introduce a novel approach named SEED. SEED selects onl",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2401.10119v4",
+    "title": "Towards Principled Graph Transformers",
+    "abstract": "Graph learning architectures based on the k-dimensional Weisfeiler-Leman (k-WL) hierarchy offer a theoretically well-understood expressive power. However, such architectures often fail to deliver solid predictive performance on real-world tasks, limiting their practical impact. In contrast, global attention-based models such as graph transformers demonstrate strong performance in practice, but comparing their expressive power with the k-WL hierarchy remains challenging, particularly since these ",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.09693v1",
+    "title": "EfficientRec an unlimited user-item scale recommendation system based on clustering and users interaction embedding profile",
+    "abstract": "Recommendation systems are highly interested in technology companies nowadays. The businesses are constantly growing users and products, causing the number of users and items to continuously increase over time, to very large numbers. Traditional recommendation algorithms with complexity dependent on the number of users and items make them difficult to adapt to the industrial environment. In this paper, we introduce a new method applying graph neural networks with a contrastive learning framework",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.08514v1",
+    "title": "Beyond Weisfeiler-Lehman: A Quantitative Framework for GNN Expressiveness",
+    "abstract": "Designing expressive Graph Neural Networks (GNNs) is a fundamental topic in the graph learning community. So far, GNN expressiveness has been primarily assessed via the Weisfeiler-Lehman (WL) hierarchy. However, such an expressivity measure has notable limitations: it is inherently coarse, qualitative, and may not well reflect practical requirements (e.g., the ability to encode substructures). In this paper, we introduce a unified framework for quantitatively studying the expressiveness of GNN a",
+    "categories": [
+      "cs.LG",
+      "cs.DM",
+      "cs.DS",
+      "math.CO"
+    ]
+  },
+  {
+    "arxiv_id": "2401.08505v4",
+    "title": "Harnessing Orthogonality to Train Low-Rank Neural Networks",
+    "abstract": "This study explores the learning dynamics of neural networks by analyzing the singular value decomposition (SVD) of their weights throughout training. Our investigation reveals that an orthogonal basis within each multidimensional weight's SVD representation stabilizes during training. Building upon this, we introduce Orthogonality-Informed Adaptive Low-Rank (OIALR) training, a novel training method exploiting the intrinsic orthogonality of neural networks. OIALR seamlessly integrates into exist",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.08426v12",
+    "title": "GD doesn't make the cut: Three ways that non-differentiability affects neural network training",
+    "abstract": "This paper critically examines the fundamental distinctions between gradient methods applied to non-differentiable functions (NGDMs) and classical gradient descents (GDs) for differentiable functions, revealing significant gaps in current deep learning optimization theory. We demonstrate that NGDMs exhibit markedly different convergence properties compared to GDs, strongly challenging the applicability of extensive neural network convergence literature based on $L-smoothness$ to non-smooth neura",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ]
+  },
+  {
+    "arxiv_id": "2401.08348v5",
+    "title": "Estimating Model Performance Under Covariate Shift Without Labels",
+    "abstract": "After deployment, machine learning models often experience performance degradation due to shifts in data distribution. It is challenging to assess post-deployment performance accurately when labels are missing or delayed. Existing proxy methods, such as data drift detection, fail to measure the effects of these shifts adequately. To address this, we introduce a new method for evaluating binary classification models on unlabeled tabular data that accurately estimates model performance under covar",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.08718v1",
+    "title": "Investigating Fouling Efficiency in Football Using Expected Booking (xB) Model",
+    "abstract": "This paper introduces the Expected Booking (xB) model, a novel metric designed to estimate the likelihood of a foul resulting in a yellow card in football. Through three iterative experiments, employing ensemble methods, the model demonstrates improved performance with additional features and an expanded dataset. Analysis of FIFA World Cup 2022 data validates the model's efficacy in providing insights into team and player fouling tactics, aligning with actual defensive performance. The xB model ",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.08714v1",
+    "title": "Training program on sign language: social inclusion through Virtual Reality in ISENSE project",
+    "abstract": "Structured hand gestures that incorporate visual motions and signs are used in sign language. Sign language is a valuable means of daily communication for individuals who are deaf or have speech impairments, but it is still rare among hearing people, and fewer are capable of understand it. Within the academic context, parents and teachers play a crucial role in supporting deaf students from childhood by facilitating their learning of sign language. In the last years, among all the teaching tools",
+    "categories": [
+      "cs.HC",
+      "cs.AI",
+      "cs.CV",
+      "cs.GR"
+    ]
+  },
+  {
+    "arxiv_id": "2401.07890v2",
+    "title": "A Strategy for Implementing description Temporal Dynamic Algorithms in Dynamic Knowledge Graphs by SPIN",
+    "abstract": "Planning and reasoning about actions and processes, in addition to reasoning about propositions, are important issues in recent logical and computer science studies. The widespread use of actions in everyday life such as IoT, semantic web services, etc., and the limitations and issues in the action formalisms are two factors that lead us to study how actions are represented.   Since 2007, there have been some ideas to integrate Description Logic (DL) and action formalisms for representing both s",
+    "categories": [
+      "cs.AI",
+      "cs.LO"
+    ]
+  },
+  {
+    "arxiv_id": "2401.07744v2",
+    "title": "Combining Machine Learning and Ontology: A Systematic Literature Review",
+    "abstract": "Motivated by the desire to explore the process of combining inductive and deductive reasoning, we conducted a systematic literature review of articles that investigate the integration of machine learning and ontologies. The objective was to identify diverse techniques that incorporate both inductive reasoning (performed by machine learning) and deductive reasoning (performed by ontologies) into artificial intelligence systems. Our review, which included the analysis of 128 studies, allowed us to",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2402.12381v1",
+    "title": "Constrained Multi-objective Optimization with Deep Reinforcement Learning Assisted Operator Selection",
+    "abstract": "Solving constrained multi-objective optimization problems with evolutionary algorithms has attracted considerable attention. Various constrained multi-objective optimization evolutionary algorithms (CMOEAs) have been developed with the use of different algorithmic strategies, evolutionary operators, and constraint-handling techniques. The performance of CMOEAs may be heavily dependent on the operators used, however, it is usually difficult to select suitable operators for the problem at hand. He",
+    "categories": [
+      "cs.AI",
+      "cs.NE"
+    ]
+  },
+  {
+    "arxiv_id": "2401.07353v2",
+    "title": "Towards Engineering Fair and Equitable Software Systems for Managing Low-Altitude Airspace Authorizations",
+    "abstract": "Small Unmanned Aircraft Systems (sUAS) have gained widespread adoption across a diverse range of applications. This has introduced operational complexities within shared airspaces and an increase in reported incidents, raising safety concerns. In response, the U.S. Federal Aviation Administration (FAA) is developing a UAS Traffic Management (UTM) system to control access to airspace based on an sUAS's predicted ability to safely complete its mission. However, a fully automated system capable of ",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.07085v3",
+    "title": "Three Mechanisms of Feature Learning in a Linear Network",
+    "abstract": "Understanding the dynamics of neural networks in different width regimes is crucial for improving their training and performance. We present an exact solution for the learning dynamics of a one-hidden-layer linear network, with one-dimensional data, across any finite width, uniquely exhibiting both kernel and feature learning phases. This study marks a technical advancement by enabling the analysis of the training trajectory from any initialization and a detailed phase diagram under varying comm",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.08691v1",
+    "title": "Towards Responsible AI in Banking: Addressing Bias for Fair Decision-Making",
+    "abstract": "In an era characterized by the pervasive integration of artificial intelligence into decision-making processes across diverse industries, the demand for trust has never been more pronounced. This thesis embarks on a comprehensive exploration of bias and fairness, with a particular emphasis on their ramifications within the banking sector, where AI-driven decisions bear substantial societal consequences. In this context, the seamless integration of fairness, explainability, and human oversight is",
+    "categories": [
+      "stat.ML",
+      "cs.CY",
+      "cs.LG",
+      "stat.AP"
+    ]
+  },
+  {
+    "arxiv_id": "2401.06925v3",
+    "title": "Foundations of Structural Causal Models with Latent Selection",
+    "abstract": "Three distinct phenomena complicate statistical causal analysis: latent common causes, causal cycles, and latent selection. Foundational works on Structural Causal Models (SCMs), e.g., Bongers et al. (2021, Ann. Stat., 49(5): 2885-2915), treat cycles and latent variables, while an analogous account of latent selection is missing. The goal of this article is to develop a theoretical foundation for modeling latent selection with SCMs. To achieve that, we introduce a conditioning operation for SCMs",
+    "categories": [
+      "stat.ME",
+      "cs.AI",
+      "cs.LG",
+      "math.ST",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2401.06742v1",
+    "title": "Using Natural Language Inference to Improve Persona Extraction from Dialogue in a New Domain",
+    "abstract": "While valuable datasets such as PersonaChat provide a foundation for training persona-grounded dialogue agents, they lack diversity in conversational and narrative settings, primarily existing in the \"real\" world. To develop dialogue agents with unique personas, models are trained to converse given a specific persona, but hand-crafting these persona can be time-consuming, thus methods exist to automatically extract persona information from existing character-specific dialogue. However, these per",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.06646v2",
+    "title": "Block Majorization Minimization with Extrapolation and Application to $\u03b2$-NMF",
+    "abstract": "We propose a Block Majorization Minimization method with Extrapolation (BMMe) for solving a class of multi-convex optimization problems. The extrapolation parameters of BMMe are updated using a novel adaptive update rule. By showing that block majorization minimization can be reformulated as a block mirror descent method, with the Bregman divergence adaptively updated at each iteration, we establish subsequential convergence for BMMe. We use this method to design efficient algorithms to tackle n",
+    "categories": [
+      "cs.LG",
+      "eess.SP",
+      "math.NA",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2401.06834v1",
+    "title": "Optimization of Discrete Parameters Using the Adaptive Gradient Method and Directed Evolution",
+    "abstract": "The problem is considered of optimizing discrete parameters in the presence of constraints. We use the stochastic sigmoid with temperature and put forward the new adaptive gradient method CONGA. The search for an optimal solution is carried out by a population of individuals. Each of them varies according to gradients of the 'environment' and is characterized by two temperature parameters with different annealing schedules. Unadapted individuals die, and optimal ones interbreed, the result is di",
+    "categories": [
+      "math.OC",
+      "cs.LG",
+      "cs.NE"
+    ]
+  },
+  {
+    "arxiv_id": "2401.06633v2",
+    "title": "Ada-Retrieval: An Adaptive Multi-Round Retrieval Paradigm for Sequential Recommendations",
+    "abstract": "Retrieval models aim at selecting a small set of item candidates which match the preference of a given user. They play a vital role in large-scale recommender systems since subsequent models such as rankers highly depend on the quality of item candidates. However, most existing retrieval models employ a single-round inference paradigm, which may not adequately capture the dynamic nature of user preferences and stuck in one area in the item space. In this paper, we propose Ada-Retrieval, an adapt",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.06526v1",
+    "title": "MetaHate: A Dataset for Unifying Efforts on Hate Speech Detection",
+    "abstract": "Hate speech represents a pervasive and detrimental form of online discourse, often manifested through an array of slurs, from hateful tweets to defamatory posts. As such speech proliferates, it connects people globally and poses significant social, psychological, and occasionally physical threats to targeted individuals and communities. Current computational linguistic approaches for tackling this phenomenon rely on labelled social media datasets for training. For unifying efforts, our study adv",
+    "categories": [
+      "cs.CL",
+      "cs.SI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.06465v1",
+    "title": "Sanity Checks Revisited: An Exploration to Repair the Model Parameter Randomisation Test",
+    "abstract": "The Model Parameter Randomisation Test (MPRT) is widely acknowledged in the eXplainable Artificial Intelligence (XAI) community for its well-motivated evaluative principle: that the explanation function should be sensitive to changes in the parameters of the model function. However, recent works have identified several methodological caveats for the empirical interpretation of MPRT. To address these caveats, we introduce two adaptations to the original MPRT -- Smooth MPRT and Efficient MPRT, whe",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "stat.ME"
+    ]
+  },
+  {
+    "arxiv_id": "2401.05840v1",
+    "title": "Decoding AI's Nudge: A Unified Framework to Predict Human Behavior in AI-assisted Decision Making",
+    "abstract": "With the rapid development of AI-based decision aids, different forms of AI assistance have been increasingly integrated into the human decision making processes. To best support humans in decision making, it is essential to quantitatively understand how diverse forms of AI assistance influence humans' decision making behavior. To this end, much of the current research focuses on the end-to-end prediction of human behavior using ``black-box'' models, often lacking interpretations of the nuanced ",
+    "categories": [
+      "cs.HC",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.05700v1",
+    "title": "R-BI: Regularized Batched Inputs enhance Incremental Decoding Framework for Low-Latency Simultaneous Speech Translation",
+    "abstract": "Incremental Decoding is an effective framework that enables the use of an offline model in a simultaneous setting without modifying the original model, making it suitable for Low-Latency Simultaneous Speech Translation. However, this framework may introduce errors when the system outputs from incomplete input. To reduce these output errors, several strategies such as Hold-$n$, LA-$n$, and SP-$n$ can be employed, but the hyper-parameter $n$ needs to be carefully selected for optimal performance. ",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.01656v1",
+    "title": "Promises and pitfalls of artificial intelligence for legal applications",
+    "abstract": "Is AI set to redefine the legal profession? We argue that this claim is not supported by the current evidence. We dive into AI's increasingly prevalent roles in three types of legal tasks: information processing; tasks involving creativity, reasoning, or judgment; and predictions about the future. We find that the ease of evaluating legal applications varies greatly across legal tasks, based on the ease of identifying correct answers and the observability of information relevant to the task at h",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.05518v1",
+    "title": "Correlated Quantization for Faster Nonconvex Distributed Optimization",
+    "abstract": "Quantization (Alistarh et al., 2017) is an important (stochastic) compression technique that reduces the volume of transmitted bits during each communication round in distributed model training. Suresh et al. (2022) introduce correlated quantizers and show their advantages over independent counterparts by analyzing distributed SGD communication complexity. We analyze the forefront distributed non-convex optimization algorithm MARINA (Gorbunov et al., 2022) utilizing the proposed correlated quant",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2401.05509v1",
+    "title": "Optimized Ensemble Model Towards Secured Industrial IoT Devices",
+    "abstract": "The continued growth in the deployment of Internet-of-Things (IoT) devices has been fueled by the increased connectivity demand, particularly in industrial environments. However, this has led to an increase in the number of network related attacks due to the increased number of potential attack surfaces. Industrial IoT (IIoT) devices are prone to various network related attacks that can have severe consequences on the manufacturing process as well as on the safety of the workers in the manufactu",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.18577v1",
+    "title": "Motion Guided Token Compression for Efficient Masked Video Modeling",
+    "abstract": "Recent developments in Transformers have achieved notable strides in enhancing video comprehension. Nonetheless, the O($N^2$) computation complexity associated with attention mechanisms presents substantial computational hurdles when dealing with the high dimensionality of videos. This challenge becomes particularly pronounced when striving to increase the frames per second (FPS) to enhance the motion capturing capabilities. Such a pursuit is likely to introduce redundancy and exacerbate the exi",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.04868v1",
+    "title": "Real-time and Continuous Turn-taking Prediction Using Voice Activity Projection",
+    "abstract": "A demonstration of a real-time and continuous turn-taking prediction system is presented. The system is based on a voice activity projection (VAP) model, which directly maps dialogue stereo audio to future voice activities. The VAP model includes contrastive predictive coding (CPC) and self-attention transformers, followed by a cross-attention transformer. We examine the effect of the input context audio length and demonstrate that the proposed system can operate in real-time with CPU settings, ",
+    "categories": [
+      "cs.CL",
+      "cs.HC",
+      "cs.SD",
+      "eess.AS"
+    ]
+  },
+  {
+    "arxiv_id": "2401.04812v3",
+    "title": "Sample-and-Bound for Non-Convex Optimization",
+    "abstract": "Standard approaches for global optimization of non-convex functions, such as branch-and-bound, maintain partition trees to systematically prune the domain. The tree size grows exponentially in the number of dimensions. We propose new sampling-based methods for non-convex optimization that adapts Monte Carlo Tree Search (MCTS) to improve efficiency. Instead of the standard use of visitation count in Upper Confidence Bounds, we utilize numerical overapproximations of the objective as an uncertaint",
+    "categories": [
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.04405v1",
+    "title": "Optimal Transcoding Resolution Prediction for Efficient Per-Title Bitrate Ladder Estimation",
+    "abstract": "Adaptive video streaming requires efficient bitrate ladder construction to meet heterogeneous network conditions and end-user demands. Per-title optimized encoding typically traverses numerous encoding parameters to search the Pareto-optimal operating points for each video. Recently, researchers have attempted to predict the content-optimized bitrate ladder for pre-encoding overhead reduction. However, existing methods commonly estimate the encoding parameters on the Pareto front and still requi",
+    "categories": [
+      "cs.MM",
+      "cs.AI",
+      "cs.CV",
+      "eess.IV"
+    ]
+  },
+  {
+    "arxiv_id": "2401.04374v2",
+    "title": "Towards Explainable Artificial Intelligence (XAI): A Data Mining Perspective",
+    "abstract": "Given the complexity and lack of transparency in deep neural networks (DNNs), extensive efforts have been made to make these systems more interpretable or explain their behaviors in accessible terms. Unlike most reviews, which focus on algorithmic and model-centric perspectives, this work takes a \"data-centric\" view, examining how data collection, processing, and analysis contribute to explainable AI (XAI). We categorize existing work into three categories subject to their purposes: interpretati",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.04250v1",
+    "title": "Explaining the Power of Topological Data Analysis in Graph Machine Learning",
+    "abstract": "Topological Data Analysis (TDA) has been praised by researchers for its ability to capture intricate shapes and structures within data. TDA is considered robust in handling noisy and high-dimensional datasets, and its interpretability is believed to promote an intuitive understanding of model behavior. However, claims regarding the power and usefulness of TDA have only been partially tested in application domains where TDA-based models are compared to other graph machine learning approaches, suc",
+    "categories": [
+      "cs.LG",
+      "cs.SI"
+    ]
+  },
+  {
+    "arxiv_id": "2402.03326v1",
+    "title": "Slot Structured World Models",
+    "abstract": "The ability to perceive and reason about individual objects and their interactions is a goal to be achieved for building intelligent artificial systems. State-of-the-art approaches use a feedforward encoder to extract object embeddings and a latent graph neural network to model the interaction between these object embeddings. However, the feedforward encoder can not extract {\\it object-centric} representations, nor can it disentangle multiple objects with similar appearance. To solve these issue",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.04013v1",
+    "title": "Weak Correlations as the Underlying Principle for Linearization of Gradient-Based Learning Systems",
+    "abstract": "Deep learning models, such as wide neural networks, can be conceptualized as nonlinear dynamical physical systems characterized by a multitude of interacting degrees of freedom. Such systems in the infinite limit, tend to exhibit simplified dynamics. This paper delves into gradient descent-based learning algorithms, that display a linear structure in their parameter dynamics, reminiscent of the neural tangent kernel. We establish this apparent linearity arises due to weak correlations between th",
+    "categories": [
+      "cs.LG",
+      "cond-mat.stat-mech",
+      "hep-th",
+      "math.PR",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2401.03999v1",
+    "title": "Polynomial Precision Dependence Solutions to Alignment Research Center Matrix Completion Problems",
+    "abstract": "We present solutions to the matrix completion problems proposed by the Alignment Research Center that have a polynomial dependence on the precision $\\varepsilon$. The motivation for these problems is to enable efficient computation of heuristic estimators to formally evaluate and reason about different quantities of deep neural networks in the interest of AI alignment. Our solutions involve reframing the matrix completion problems as a semidefinite program (SDP) and using recent advances in spec",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.03538v1",
+    "title": "Transfer the linguistic representations from TTS to accent conversion with non-parallel data",
+    "abstract": "Accent conversion aims to convert the accent of a source speech to a target accent, meanwhile preserving the speaker's identity. This paper introduces a novel non-autoregressive framework for accent conversion that learns accent-agnostic linguistic representations and employs them to convert the accent in the source speech. Specifically, the proposed system aligns speech representations with linguistic representations obtained from Text-to-Speech (TTS) systems, enabling training of the accent vo",
+    "categories": [
+      "cs.CL",
+      "cs.SD",
+      "eess.AS"
+    ]
+  },
+  {
+    "arxiv_id": "2401.03461v2",
+    "title": "The Dual Impact of Virtual Reality: Examining the Addictive Potential and Therapeutic Applications of Immersive Media in the Metaverse",
+    "abstract": "The emergence of the metaverse - envisioned as a hyperreal virtual universe enabling boundless human interaction - has the potential to revolutionize our conception of media. This transformation could alter society as we know it. This paper identifies addictive features of social media, including immersion, interactivity, real-time access, and personalization. These features are examined within the context of virtual reality through a literature review and content analysis, aimed at exploring th",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2401.03240v1",
+    "title": "Interpreting Adaptive Gradient Methods by Parameter Scaling for Learning-Rate-Free Optimization",
+    "abstract": "We address the challenge of estimating the learning rate for adaptive gradient methods used in training deep neural networks. While several learning-rate-free approaches have been proposed, they are typically tailored for steepest descent. However, although steepest descent methods offer an intuitive approach to finding minima, many deep learning applications require adaptive gradient methods to achieve faster convergence. In this paper, we interpret adaptive gradient methods as steepest descent",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ]
+  },
+  {
+    "arxiv_id": "2401.03077v1",
+    "title": "A Topology-aware Graph Coarsening Framework for Continual Graph Learning",
+    "abstract": "Continual learning on graphs tackles the problem of training a graph neural network (GNN) where graph data arrive in a streaming fashion and the model tends to forget knowledge from previous tasks when updating with new data. Traditional continual learning strategies such as Experience Replay can be adapted to streaming graphs, however, these methods often face challenges such as inefficiency in preserving graph topology and incapability of capturing the correlation between old and new tasks. To",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.02930v1",
+    "title": "Dagma-DCE: Interpretable, Non-Parametric Differentiable Causal Discovery",
+    "abstract": "We introduce Dagma-DCE, an interpretable and model-agnostic scheme for differentiable causal discovery. Current non- or over-parametric methods in differentiable causal discovery use opaque proxies of ``independence'' to justify the inclusion or exclusion of a causal relationship. We show theoretically and empirically that these proxies may be arbitrarily different than the actual causal strength. Juxtaposed to existing differentiable causal discovery algorithms, \\textsc{Dagma-DCE} uses an inter",
+    "categories": [
+      "cs.LG",
+      "stat.ME",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2401.02879v2",
+    "title": "Efficient Parameter Optimisation for Quantum Kernel Alignment: A Sub-sampling Approach in Variational Training",
+    "abstract": "Quantum machine learning with quantum kernels for classification problems is a growing area of research. Recently, quantum kernel alignment techniques that parameterise the kernel have been developed, allowing the kernel to be trained and therefore aligned with a specific dataset. While quantum kernel alignment is a promising technique, it has been hampered by considerable training costs because the full kernel matrix must be constructed at every training iteration. Addressing this challenge, we",
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.02726v1",
+    "title": "Une ontologie pour les syst{\u00e8}mes multi-agents ambiants dans les villes intelligentes",
+    "abstract": "Towns and cities are currently equipping themselves with a host of connected devices, with a view to transforming themselves into ''smart cities''. To manage this mass of connected objects, autonomous software entities, known as agents, can be attached to them to cooperate and use these devices to offer personalized services. However, this object infrastructure needs to be semantically structured in order to be exploited. This is why the proposal of this article is an ontology, formatted in OWL,",
+    "categories": [
+      "cs.AI",
+      "cs.MA"
+    ]
+  },
+  {
+    "arxiv_id": "2401.02652v1",
+    "title": "Adaptive Discounting of Training Time Attacks",
+    "abstract": "Among the most insidious attacks on Reinforcement Learning (RL) solutions are training-time attacks (TTAs) that create loopholes and backdoors in the learned behaviour. Not limited to a simple disruption, constructive TTAs (C-TTAs) are now available, where the attacker forces a specific, target behaviour upon a training RL agent (victim). However, even state-of-the-art C-TTAs focus on target behaviours that could be naturally adopted by the victim if not for a particular feature of the environme",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ]
+  },
+  {
+    "arxiv_id": "2401.02283v4",
+    "title": "DEM: A Method for Certifying Deep Neural Network Classifier Outputs in Aerospace",
+    "abstract": "Software development in the aerospace domain requires adhering to strict, high-quality standards. While there exist regulatory guidelines for commercial software in this domain (e.g., ARP-4754 and DO-178), these do not apply to software with deep neural network (DNN) components. Consequently, it is unclear how to allow aerospace systems to benefit from the deep learning revolution. Our work here seeks to address this challenge with a novel, output-centric approach for DNN certification. Our meth",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.02278v1",
+    "title": "Lightweight Fish Classification Model for Sustainable Marine Management: Indonesian Case",
+    "abstract": "The enormous demand for seafood products has led to exploitation of marine resources and near-extinction of some species. In particular, overfishing is one the main issues in sustainable marine development. In alignment with the protection of marine resources and sustainable fishing, this study proposes to advance fish classification techniques that support identifying protected fish species using state-of-the-art machine learning. We use a custom modification of the MobileNet model to design a ",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2401.02244v1",
+    "title": "Policy-regularized Offline Multi-objective Reinforcement Learning",
+    "abstract": "In this paper, we aim to utilize only offline trajectory data to train a policy for multi-objective RL. We extend the offline policy-regularized method, a widely-adopted approach for single-objective offline RL problems, into the multi-objective setting in order to achieve the above goal. However, such methods face a new challenge in offline MORL settings, namely the preference-inconsistent demonstration problem. We propose two solutions to this problem: 1) filtering out preference-inconsistent ",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "arxiv_id": "2602.00918v1",
+    "title": "Early Classification of Time Series in Non-Stationary Cost Regimes",
+    "abstract": "Early Classification of Time Series (ECTS) addresses decision-making problems in which predictions must be made as early as possible while maintaining high accuracy. Most existing ECTS methods assume that the time-dependent decision costs governing the learning objective are known, fixed, and correctly specified. In practice, however, these costs are often uncertain and may change over time, leading to mismatches between training-time and deployment-time objectives. In this paper, we study ECTS ",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2602.09039v1",
+    "title": "Efficient Distance Pruning for Process Suffix Comparison in Prescriptive Process Monitoring",
+    "abstract": "Prescriptive process monitoring seeks to recommend actions that improve process outcomes by analyzing possible continuations of ongoing cases. A key obstacle is the heavy computational cost of large-scale suffix comparisons, which grows rapidly with log size. We propose an efficient retrieval method exploiting the triangle inequality: distances to a set of optimized pivots define bounds that prune redundant comparisons. This substantially reduces runtime and is fully parallelizable. Crucially, p",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2601.22745v1",
+    "title": "Is Softmax Loss All You Need? A Principled Analysis of Softmax-family Loss",
+    "abstract": "The Softmax loss is one of the most widely employed surrogate objectives for classification and ranking tasks. To elucidate its theoretical properties, the Fenchel-Young framework situates it as a canonical instance within a broad family of surrogates. Concurrently, another line of research has addressed scalability when the number of classes is exceedingly large, in which numerous approximations have been proposed to retain the benefits of the exact objective while improving efficiency. Buildin",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2601.21688v1",
+    "title": "XFACTORS: Disentangled Information Bottleneck via Contrastive Supervision",
+    "abstract": "Disentangled representation learning aims to map independent factors of variation to independent representation components. On one hand, purely unsupervised approaches have proven successful on fully disentangled synthetic data, but fail to recover semantic factors from real data without strong inductive biases. On the other hand, supervised approaches are unstable and hard to scale to large attribute sets because they rely on adversarial objectives or auxiliary classifiers.   We introduce \\text",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2601.20774v1",
+    "title": "When More Data Doesn't Help: Limits of Adaptation in Multitask Learning",
+    "abstract": "Multitask learning and related frameworks have achieved tremendous success in modern applications. In multitask learning problem, we are given a set of heterogeneous datasets collected from related source tasks and hope to enhance the performance above what we could hope to achieve by solving each of them individually. The recent work of arXiv:2006.15785 has showed that, without access to distributional information, no algorithm based on aggregating samples alone can guarantee optimal risk as lo",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2601.19551v1",
+    "title": "Scale-Consistent State-Space Dynamics via Fractal of Stationary Transformations",
+    "abstract": "Recent deep learning models increasingly rely on depth without structural guarantees on the validity of intermediate representations, rendering early stopping and adaptive computation ill-posed. We address this limitation by formulating a structural requirement for state-space model's scale-consistent latent dynamics across iterative refinement, and derive Fractal of Stationary Transformations (FROST), which enforces a self-similar representation manifold through a fractal inductive bias. Under ",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2601.16541v1",
+    "title": "Semi-Supervised Hierarchical Open-Set Classification",
+    "abstract": "Hierarchical open-set classification handles previously unseen classes by assigning them to the most appropriate high-level category in a class taxonomy. We extend this paradigm to the semi-supervised setting, enabling the use of large-scale, uncurated datasets containing a mixture of known and unknown classes to improve the hierarchical open-set performance. To this end, we propose a teacher-student framework based on pseudo-labeling. Two key components are introduced: 1) subtree pseudo-labels,",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ]
+  }
+]

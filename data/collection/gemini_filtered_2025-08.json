@@ -1,0 +1,77 @@
+[
+  {
+    "arxiv_id": "2509.06977v1",
+    "title": "Toward Reproducible Cross-Backend Compatibility for Deep Learning: A Configuration-First Framework with Three-Tier Verification",
+    "abstract": "This paper presents a configuration-first framework for evaluating cross-backend compatibility in deep learning systems deployed on CPU, GPU, and compiled runtimes. The framework decouples experiments from code using YAML, supports both library and repository models, and employs a three-tier verification protocol covering tensor-level closeness, activation alignment, and task-level metrics. Through 672 checks across multiple models and tolerance settings, we observe that 72.0% of runs pass, with",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2509.02581v1",
+    "title": "Charting the Future of Scholarly Knowledge with AI: A Community Perspective",
+    "abstract": "Despite the growing availability of tools designed to support scholarly knowledge extraction and organization, many researchers still rely on manual methods, sometimes due to unfamiliarity with existing technologies or limited access to domain-adapted solutions. Meanwhile, the rapid increase in scholarly publications across disciplines has made it increasingly difficult to stay current, further underscoring the need for scalable, AI-enabled approaches to structuring and synthesizing scholarly kn",
+    "categories": [
+      "cs.DL",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2508.16314v1",
+    "title": "Cyber Physical Awareness via Intent-Driven Threat Assessment: Enhanced Space Networks with Intershell Links",
+    "abstract": "This letter addresses essential aspects of threat assessment by proposing intent-driven threat models that incorporate both capabilities and intents. We propose a holistic framework for cyber physical awareness (CPA) in space networks, pointing out that analyzing reliability and security separately can lead to overfitting on system-specific criteria. We structure our proposed framework in three main steps. First, we suggest an algorithm that extracts characteristic properties of the received sig",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.ET"
+    ]
+  },
+  {
+    "arxiv_id": "2508.16210v2",
+    "title": "Modeling User Preferences as Distributions for Optimal Transport-based Cross-domain Recommendation under Non-overlapping Settings",
+    "abstract": "Cross-domain recommender (CDR) systems aim to transfer knowledge from data-rich domains to data-sparse ones, alleviating sparsity and cold-start issues present in conventional single-domain recommenders. However, many CDR approaches rely on overlapping users or items to establish explicit cross-domain connections, which is unrealistic in practice. Moreover, most methods represent user preferences as fixed discrete vectors, limiting their ability to capture the fine-grained and multi-aspect natur",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2508.16119v1",
+    "title": "ANSC: Probabilistic Capacity Health Scoring for Datacenter-Scale Reliability",
+    "abstract": "We present ANSC, a probabilistic capacity health scoring framework for hyperscale datacenter fabrics. While existing alerting systems detect individual device or link failures, they do not capture the aggregate risk of cascading capacity shortfalls. ANSC provides a color-coded scoring system that indicates the urgency of issues \\emph{not solely by current impact, but by the probability of imminent capacity violations}. Our system accounts for both current residual capacity and the probability of",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ]
+  },
+  {
+    "arxiv_id": "2508.15679v1",
+    "title": "An Efficient Open World Environment for Multi-Agent Social Learning",
+    "abstract": "Many challenges remain before AI agents can be deployed in real-world environments. However, one virtue of such environments is that they are inherently multi-agent and contain human experts. Using advanced social intelligence in such an environment can help an AI agent learn adaptive skills and behaviors that a known expert exhibits. While social intelligence could accelerate training, it is currently difficult to study due to the lack of open-ended multi-agent environments. In this work, we pr",
+    "categories": [
+      "cs.LG"
+    ]
+  },
+  {
+    "arxiv_id": "2508.14234v2",
+    "title": "Optimal Subspace Embeddings: Resolving Nelson-Nguyen Conjecture Up to Sub-Polylogarithmic Factors",
+    "abstract": "We give a proof of the conjecture of Nelson and Nguyen [FOCS 2013] on the optimal dimension and sparsity of oblivious subspace embeddings, up to sub-polylogarithmic factors: For any $n\\geq d$ and $\u03b5\\geq d^{-O(1)}$, there is a random $\\tilde O(d/\u03b5^2)\\times n$ matrix $\u03a0$ with $\\tilde O(\\log(d)/\u03b5)$ non-zeros per column such that for any $A\\in\\mathbb{R}^{n\\times d}$, with high probability, $(1-\u03b5)\\|Ax\\|\\leq\\|\u03a0Ax\\|\\leq(1+\u03b5)\\|Ax\\|$ for all $x\\in\\mathbb{R}^d$, where $\\tilde O(\\cdot)$ hides only sub-poly",
+    "categories": [
+      "cs.DS",
+      "cs.LG",
+      "math.NA",
+      "math.PR",
+      "stat.ML"
+    ]
+  },
+  {
+    "arxiv_id": "2508.12745v1",
+    "title": "DCSCR: A Class-Specific Collaborative Representation based Network for Image Set Classification",
+    "abstract": "Image set classification (ISC), which can be viewed as a task of comparing similarities between sets consisting of unordered heterogeneous images with variable quantities and qualities, has attracted growing research attention in recent years. How to learn effective feature representations and how to explore the similarities between different image sets are two key yet challenging issues in this field. However, existing traditional ISC methods classify image sets based on raw pixel features, ign",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ]
+  }
+]

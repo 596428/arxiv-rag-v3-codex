@@ -13,7 +13,7 @@ services:
   qdrant:
     image: qdrant/qdrant:v1.12.1
     container_name: arxiv-rag-qdrant
-    restart: unless-stopped
+    restart: "no"
     ports:
       - "6333:6333"   # REST API
       - "6334:6334"   # gRPC API
@@ -35,7 +35,7 @@ services:
   api:
     image: arxiv-rag-api:latest
     container_name: arxiv-rag-api
-    restart: unless-stopped
+    restart: "no"
     ports:
       - "8000:8000"
     depends_on:

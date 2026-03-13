@@ -59,7 +59,8 @@ app = FastAPI(
 # CORS configuration
 # Allow GitHub Pages and local development
 ALLOWED_ORIGINS = [
-    "https://ajh428.github.io",  # GitHub Pages
+    "https://ajh428.github.io",  # GitHub Pages (old)
+    "https://596428.github.io",  # GitHub Pages (current)
     "https://acacia.chat",       # Custom domain
     "https://api.acacia.chat",   # API domain
     "http://localhost:3000",     # Local dev
